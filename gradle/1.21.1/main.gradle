@@ -27,8 +27,6 @@ subprojects {
     apply plugin: 'maven-publish'
 
     base {
-        // Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
-        archivesBaseName = "${mod_name.replaceAll("[^a-zA-Z]", "")}"
         archivesName = "$mod_id-$project.name-$project.minecraft_version"
 
     }
@@ -81,8 +79,8 @@ subprojects {
                 "min_neoforge_fml_version": "1",
                 "min_neoforge_version": min_neoforge_version,
                 "minecraft_version": minecraft_version,
-                "main_entrypoint": "${project.group}.fabric.${archivesBaseName}Fabric",
-                "client_entrypoint": "${project.group}.fabric.client.${archivesBaseName}FabricClient",
+                "main_entrypoint": "${project.group}.fabric.${mod_name.replaceAll("[^a-zA-Z]", "")}Fabric",
+                "client_entrypoint": "${project.group}.fabric.client.${mod_name.replaceAll("[^a-zA-Z]", "")}FabricClient",
                 "mod_fabric_environment": mod_fabric_environment,
                 "mod_forge_display_test": mod_forge_display_test,
                 "architectury_api_version": architectury_api_version
