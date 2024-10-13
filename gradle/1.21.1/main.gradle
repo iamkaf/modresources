@@ -6,7 +6,7 @@ architectury {
 }
 
 allprojects {
-    group = rootProject.maven_group
+    group = rootProject.mod_group
     version = rootProject.mod_version
     archivesBaseName = "${mod_name.replaceAll("[^a-zA-Z]", "")}"
 
