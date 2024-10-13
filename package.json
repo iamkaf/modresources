@@ -1,0 +1,26 @@
+{
+  "name": "modresources",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamkaf/modresources.git"
+  },
+  "author": "iamkaf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamkaf/modresources/issues"
+  },
+  "homepage": "https://github.com/iamkaf/modresources#readme",
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

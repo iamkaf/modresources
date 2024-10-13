@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Kaf's Valentine Special",
+    "distributions": {
+      "modrinth": "kafs-valentine-special",
+      "curseforge": "kafs-valentine-special"
+    }
+  },
+  {
+    "name": "Arcane Armory",
+    "distributions": {
+      "modrinth": "arcane-armory",
+      "curseforge": "arcane-armory"
+    }
+  }
+]
