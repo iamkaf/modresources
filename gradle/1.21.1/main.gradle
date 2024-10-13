@@ -77,8 +77,6 @@ subprojects {
                 "mod_license": mod_license,
                 "fabric_loader_version": fabric_loader_version,
                 "fabric_api_version": fabric_api_version,
-                // "minForgeFMLVersion": "1",
-                // "minForgeVersion": libs.versions.minecraftforge.min.get(),
                 "min_neoforge_fml_version": "1",
                 "min_neoforge_version": min_neoforge_version,
                 "minecraft_version": minecraft_version,
