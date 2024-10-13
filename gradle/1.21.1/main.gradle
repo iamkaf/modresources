@@ -84,7 +84,8 @@ subprojects {
                 "main_entrypoint": "${project.group}.fabric.${archivesBaseName}Fabric",
                 "client_entrypoint": "${project.group}.fabric.client.${archivesBaseName}FabricClient",
                 "mod_fabric_environment": mod_fabric_environment,
-                "mod_forge_display_test": mod_forge_display_test
+                "mod_forge_display_test": mod_forge_display_test,
+                "architectury_api_version": architectury_api_version
         ]
 
         inputs.properties resourceProperties
