@@ -12,7 +12,7 @@ loom {
     runs {
         data {
             data()
-            programArgs "--all", "--mod", "amberdreams"
+            programArgs "--all", "--mod", "${rootProject.mod_id}"
             programArgs "--output", "${generatedResources}"
             programArgs "--existing", "${existingResources}"
         }
