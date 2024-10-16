@@ -7,12 +7,13 @@ architectury {
 
 def generatedResources = file('../common/src/main/generated')
 def existingResources = file('../common/src/main/resources')
+def mod_id_arg = rootProject.mod_id
 
 loom {
     runs {
         data {
             data()
-            programArgs "--all", "--mod", "${rootProject.mod_id}"
+            programArgs "--all", "--mod", "${mod_id_arg}"
             programArgs "--output", "${generatedResources}"
             programArgs "--existing", "${existingResources}"
         }
