@@ -2,6 +2,15 @@ architectury {
     common rootProject.subprojects.name.collect { it.toLowerCase() }.findAll { !it.contains("common") }
 }
 
+def generatedResources = file('../common/src/main/generated')
+
+sourceSets {
+    main {
+        resources.srcDirs += [generatedResources]
+    }
+}
+
+
 dependencies {
     // We depend on Fabric Loader here to use the Fabric @Environment annotations,
     // which get remapped to the correct annotations on each platform.
