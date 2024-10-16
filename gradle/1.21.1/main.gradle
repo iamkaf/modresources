@@ -18,6 +18,10 @@ allprojects {
             name = 'ParchmentMC'
             url = 'https://maven.parchmentmc.org'
         }
+        maven {
+            name = "Kaf Mod Resources"
+            url = "https://raw.githubusercontent.com/iamkaf/modresources/main/maven/"
+        }
     }
 }
 
