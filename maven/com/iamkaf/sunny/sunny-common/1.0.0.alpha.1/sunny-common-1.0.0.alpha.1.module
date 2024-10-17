@@ -1,0 +1,103 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.sunny",
+    "module": "sunny-common",
+    "version": "1.0.0.alpha.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "sunny-common-1.0.0.alpha.1.jar",
+          "url": "sunny-common-1.0.0.alpha.1.jar",
+          "size": 59236,
+          "sha512": "f72d1b88e2b7f265a9442a5ad9436bdb99348e4b6a0f650ef619ccb81449471e78a175795e54c0912106c01121f280777c122c5ba132d04b21e16ec03a82011e",
+          "sha256": "23e9b71939b2fb7ff1331dc185fbbf7b47bbc8e78dbfc50a64ed5b3a8a1d74cb",
+          "sha1": "eab1f63d2623aa68ce4f8084ea083f9536156406",
+          "md5": "a0d993884f6b0f6217082b3f085e832c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.5"
+          }
+        },
+        {
+          "group": "dev.architectury",
+          "module": "architectury",
+          "version": {
+            "requires": "13.0.6"
+          }
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "module": "amber-common",
+          "version": {
+            "requires": "1.0.0-alpha.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "sunny-common-1.0.0.alpha.1.jar",
+          "url": "sunny-common-1.0.0.alpha.1.jar",
+          "size": 59236,
+          "sha512": "f72d1b88e2b7f265a9442a5ad9436bdb99348e4b6a0f650ef619ccb81449471e78a175795e54c0912106c01121f280777c122c5ba132d04b21e16ec03a82011e",
+          "sha256": "23e9b71939b2fb7ff1331dc185fbbf7b47bbc8e78dbfc50a64ed5b3a8a1d74cb",
+          "sha1": "eab1f63d2623aa68ce4f8084ea083f9536156406",
+          "md5": "a0d993884f6b0f6217082b3f085e832c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "sunny-common-1.0.0.alpha.1-sources.jar",
+          "url": "sunny-common-1.0.0.alpha.1-sources.jar",
+          "size": 53353,
+          "sha512": "7fd592e02626e301b363345aad828713336a8d1f162ddb974a2bd5d249688f05cc0d329bc2a9cf59d60d58bb69fac4151431e2e8ed1e55b858eca5c9cf1b2ca5",
+          "sha256": "e9b884011a539b0bdea1fefcf7f96f1cf73d27be25d17dd88d2c0adc8f3b4241",
+          "sha1": "be8db154d7cb7c2f7e6033e68c82dcff1c2de328",
+          "md5": "7a12ec82360fa6a26146295b95a7fa01"
+        }
+      ]
+    }
+  ]
+}
