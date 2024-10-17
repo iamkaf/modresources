@@ -102,6 +102,7 @@ subprojects {
                 mod_id + ".fabric.mixins.json",
                 mod_id + ".neoforge.mixins.json",
                 mod_id + ".forge.mixins.json",
+                mod_id + ".mixins.json",
                 "common.mixins.json",
                 "fabric.mixins.json",
                 "neoforge.mixins.json",
