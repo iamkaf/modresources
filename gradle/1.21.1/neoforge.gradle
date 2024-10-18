@@ -10,6 +10,8 @@ def existingResources = file('../common/src/main/resources')
 def mod_id_arg = rootProject.mod_id
 
 loom {
+    accessWidenerPath = project(":common").loom.accessWidenerPath
+
     runs {
         data {
             data()
