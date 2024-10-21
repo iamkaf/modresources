@@ -1,0 +1,123 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.amberdreams",
+    "module": "amberdreams-neoforge",
+    "version": "0.1.0-alpha.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "amberdreams-neoforge-0.1.0-alpha.8.jar",
+          "url": "amberdreams-neoforge-0.1.0-alpha.8.jar",
+          "size": 275767,
+          "sha512": "3f4cff49174c2dc3bd9b5534eef4f108451da9abdf77df4a06e2dc183bf061621b3c64719f6489cb421a07419f454024ce640db2b9ea0b60aa411f097f031e62",
+          "sha256": "be5b4ccdf54aa7359137c5d37e185a5c4b3d85f4516f011decb7f9c0d68775f0",
+          "sha1": "193b67f5a3e18a46bf3e0381a4c59ebe81b90f93",
+          "md5": "cbc300f83c3bf6bb44476b1884ae80c3"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "dev.architectury",
+          "module": "architectury-neoforge",
+          "version": {
+            "requires": "13.0.6"
+          }
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "module": "amber-neoforge",
+          "version": {
+            "requires": "1.0.0-alpha.5"
+          }
+        },
+        {
+          "group": "dev.emi",
+          "module": "emi-neoforge",
+          "version": {
+            "requires": "1.1.13+1.21.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "amberdreams-neoforge-0.1.0-alpha.8.jar",
+          "url": "amberdreams-neoforge-0.1.0-alpha.8.jar",
+          "size": 275767,
+          "sha512": "3f4cff49174c2dc3bd9b5534eef4f108451da9abdf77df4a06e2dc183bf061621b3c64719f6489cb421a07419f454024ce640db2b9ea0b60aa411f097f031e62",
+          "sha256": "be5b4ccdf54aa7359137c5d37e185a5c4b3d85f4516f011decb7f9c0d68775f0",
+          "sha1": "193b67f5a3e18a46bf3e0381a4c59ebe81b90f93",
+          "md5": "cbc300f83c3bf6bb44476b1884ae80c3"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amberdreams-neoforge-0.1.0-alpha.8-sources.jar",
+          "url": "amberdreams-neoforge-0.1.0-alpha.8-sources.jar",
+          "size": 14807,
+          "sha512": "44fe3ca606aa64c167ff96e2ecf9080fe08a33384bcd5801687db3dbaee7201e9edf4f8dfa608b1a5ec56ca4d18b26c4bb94054e469f62ca69ad7c0c00795849",
+          "sha256": "957ed5e70821b478cfc841f78bdf0210dc2e9037e87655a9bb1df7b170ebe7c9",
+          "sha1": "d39e571674b1ea59448a6e2ee99303bccb884ac6",
+          "md5": "fdcb4e5987c92efc2a9660b04360da22"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amberdreams-neoforge-0.1.0-alpha.8-dev-shadow.jar",
+          "url": "amberdreams-neoforge-0.1.0-alpha.8-dev-shadow.jar",
+          "size": 267250,
+          "sha512": "a460ebc6efec19c9a4d2a190a66641b8f6e7ca4f8790c63375079114ccb87c228d5f0280125d4459b6d1de224e4e8ced8e450b669504916dd54fc360e449ddf1",
+          "sha256": "796f4e22b37f0263a98e8590da2ca702851a72e62f6c5c3d6276aa05ea0e2914",
+          "sha1": "22becb0a187a6689afb9e9e9e463f76bf744e09d",
+          "md5": "1b071105fb40459e58ac4ab5f45593e1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.amberdreams",
+    "module": "amberdreams-fabric",
+    "version": "0.1.0-alpha.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "amberdreams-fabric-0.1.0-alpha.8.jar",
+          "url": "amberdreams-fabric-0.1.0-alpha.8.jar",
+          "size": 253268,
+          "sha512": "da2bba6c37ca0d7998227e9583bab00e25eb351ba655a8df746826fe9afed82b443de51a9bfa27e70944681b70f473ceb934044d17fe158e0fe1a0adabd2bd06",
+          "sha256": "dcfa91371159b065892483c265151a49070233a89f4c8f55d0e44eee7f7207b0",
+          "sha1": "f8166083a047587fcc66acf4a713aa7edba8f807",
+          "md5": "64ef7f88c960a1ce8c9a208763025075"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.5"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.105.0+1.21.1"
+          }
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "module": "amber-fabric",
+          "version": {
+            "requires": "1.0.0-alpha.5"
+          }
+        },
+        {
+          "group": "dev.emi",
+          "module": "emi-fabric",
+          "version": {
+            "requires": "1.1.13+1.21.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "amberdreams-fabric-0.1.0-alpha.8.jar",
+          "url": "amberdreams-fabric-0.1.0-alpha.8.jar",
+          "size": 253268,
+          "sha512": "da2bba6c37ca0d7998227e9583bab00e25eb351ba655a8df746826fe9afed82b443de51a9bfa27e70944681b70f473ceb934044d17fe158e0fe1a0adabd2bd06",
+          "sha256": "dcfa91371159b065892483c265151a49070233a89f4c8f55d0e44eee7f7207b0",
+          "sha1": "f8166083a047587fcc66acf4a713aa7edba8f807",
+          "md5": "64ef7f88c960a1ce8c9a208763025075"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amberdreams-fabric-0.1.0-alpha.8-sources.jar",
+          "url": "amberdreams-fabric-0.1.0-alpha.8-sources.jar",
+          "size": 5879,
+          "sha512": "e09be33564b254ed1e1837c026809078deb8791d17030b15fef2adc29e763899bfe2bb0a939a6bc8aa63679f627b4fcc45bc450f47c348c7cfd0d031567be06d",
+          "sha256": "7cdd40b1b2617a7adb0a1a1c084978c636cbfc6858800febc592f97589be9073",
+          "sha1": "1c679bd9de956bc038b9717c10d258ded3490666",
+          "md5": "8530fee4ec40a7ab6280bfecce57817a"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amberdreams-fabric-0.1.0-alpha.8-dev-shadow.jar",
+          "url": "amberdreams-fabric-0.1.0-alpha.8-dev-shadow.jar",
+          "size": 248391,
+          "sha512": "9c0f5ba5bc12681342d649602a34c938e22e5a71a7798844e866f6194e36d134d1dc3c414c40753544295682f76c12a6703059d49bd348be3c067804eb594844",
+          "sha256": "979193dbd2c473301f1a48fdc38b8f31d99d9e663572ec5e8c0f76d56156bbb4",
+          "sha1": "556d2d4e875e88bc879ed7f9dcf1145907a9eed0",
+          "md5": "ad3203caebc8edaf1cad23920e029cc8"
+        }
+      ]
+    }
+  ]
+}
