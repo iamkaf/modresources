@@ -5,7 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\"",
+    "pages": "node tools/page-builder.mjs",
+    "images": "node tools/print-images.mjs"
   },
   "repository": {
     "type": "git",
