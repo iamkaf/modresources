@@ -1,5 +1,11 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import chalk from 'chalk';
+import { fileURLToPath } from 'url';
+
+// Get the directory of the current script file
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Paths to important files and directories
 const modsJsonPath = path.join(__dirname, '../mods.json');
@@ -56,10 +62,11 @@ modsData.forEach((mod) => {
 
   // Write the generated content to the file
   fs.writeFileSync(outputFilePath, content, 'utf-8');
-  console.log(`Generated ${outputFilePath}`);
+  
+  console.log(chalk.green('✔') + chalk.bold(` Generated ${outputFilePath}`));
 });
 
-console.log('All mod pages generated successfully.');
+console.log(chalk.bold.green('\nAll mod pages generated successfully!'));
 modsData.forEach((mod) => {
-  console.log(`- ${mod.name}: ./pages/${mod.slug}/README.md`);
+  console.log(`${chalk.cyan('→')} ${chalk.bold(mod.name)}: ${chalk.magenta(`./pages/${mod.slug}/README.md`)}`);
 });
