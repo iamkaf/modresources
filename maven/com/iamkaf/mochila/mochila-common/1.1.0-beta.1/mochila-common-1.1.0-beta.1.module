@@ -1,0 +1,103 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.mochila",
+    "module": "mochila-common",
+    "version": "1.1.0-beta.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "mochila-common-1.1.0-beta.1.jar",
+          "url": "mochila-common-1.1.0-beta.1.jar",
+          "size": 139531,
+          "sha512": "2a9c5756e42eeda521bb4004d9560dbfaaefd180a69db91cd497035f77088db7283edb2fb5bda617d0da2113d1a8ec3db23fa45be0012d6e10be69f17ce3034f",
+          "sha256": "3864457d2dc8431f0c20ee26057876f810184f1a2b0eb915e1426bafb91da05a",
+          "sha1": "904f954cfff9101f6837f7853cb0923a75fcba4e",
+          "md5": "a1c77d881de1b9dccd706623da0f3572"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.5"
+          }
+        },
+        {
+          "group": "dev.architectury",
+          "module": "architectury",
+          "version": {
+            "requires": "13.0.6"
+          }
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "module": "amber-common",
+          "version": {
+            "requires": "1.0.0-alpha.7"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mochila-common-1.1.0-beta.1.jar",
+          "url": "mochila-common-1.1.0-beta.1.jar",
+          "size": 139531,
+          "sha512": "2a9c5756e42eeda521bb4004d9560dbfaaefd180a69db91cd497035f77088db7283edb2fb5bda617d0da2113d1a8ec3db23fa45be0012d6e10be69f17ce3034f",
+          "sha256": "3864457d2dc8431f0c20ee26057876f810184f1a2b0eb915e1426bafb91da05a",
+          "sha1": "904f954cfff9101f6837f7853cb0923a75fcba4e",
+          "md5": "a1c77d881de1b9dccd706623da0f3572"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "mochila-common-1.1.0-beta.1-sources.jar",
+          "url": "mochila-common-1.1.0-beta.1-sources.jar",
+          "size": 123488,
+          "sha512": "1152943a05f13b47dc7963378b45f3ab21e3a7217b01f5d478063e9467888f3c48d554773486e096aa15ba33c981161c7378928f00bce1a9e3eb5ec6067a77e3",
+          "sha256": "ad5e534578ab39b5f5b438b31b66008cbb521c15690e5396275107a402355aea",
+          "sha1": "b5789a341ff39f7a804898a02e1c8ca38443700e",
+          "md5": "9a3787a915fb5c616d29cd749701f523"
+        }
+      ]
+    }
+  ]
+}
