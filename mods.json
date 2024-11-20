@@ -98,15 +98,16 @@
     "name": "Dynamic Edge",
     "page": {
       "mod_name": "Dynamic Edge",
-      "mod_description": "A gear augmentation mod for Fabric and NeoForge.",
+      "mod_header": "banner.png",
+      "mod_description": "A new way to upgrade your gear!",
       "mod_dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api).",
-      "mod_extra": "\n![The dynamic edge logo.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/dynamicedge/icon5.png)\n",
+      "mod_extra": "\n\n**Dynamic Edge** redefines how you enhance your equipment by introducing **Augments**, unique upgrades earned through gameplay. Each augment reflects how you interact with the world, making your gear feel truly personal.  \n\n### **Augments**  \n- **Cake Destroyer** 🎂: Break cakes to unlock this sweet augment, which occasionally drops sugar.  \n- **Oceanic** 🌊: Spend time underwater to gain this augment, boosting your swimming speed.  \n- **Treehugger** 🌳: Chop down a large number of trees to earn this augment, which occasionally drops extra saplings or apples.  \n- **Blazing Edge** 🔥: Use a sword or axe while on fire to add fire damage to melee attacks.  \n- **Frosty Feet** ❄️: Spend time on snow or ice to prevent slipping and reduce fall damage on snowy surfaces.  \n- **Creeperbane** 💥: Survive multiple creeper explosions with a shield to reduce shield damage from explosions.  \n- **Glowtouched** ✨: Interact with glow squids to make your tools emit a faint glow, illuminating nearby blocks.  \n- **Beekeeper** 🐝: Harvest honey safely to slightly boost crop growth when carrying tools with this augment.  \n- **Windrunner** 💨: Sprint long distances to increase sprinting speed and reduce hunger drain.  \n- **Voidwalker** 🌌: Spend time near the void to reduce fall damage and gain a short slow-falling effect.  \n- And many MANY more.\n\nWith **Dynamic Edge**, your gear evolves alongside your adventures, offering rewards for creativity and exploration.",
       "mod_how_to_use": "Just play the game, you should notice the augments in your gear naturally.",
       "mod_roadmap": ["Add more augments", "Add a config file", "Port to 1.21.3", "Port to 1.20.1"],
       "mod_pictures": [
         {
-          "alt": "The dynamic edge banner.",
-          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/dynamicedge/banner.png"
+          "alt": "Cake gif.",
+          "url": "https://i.imgur.com/m86rg15.gif"
         }
       ],
       "mod_credits": [

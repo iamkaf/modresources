@@ -1,6 +1,6 @@
 # {{mod_name}}
 
-{{mod_description}}
+{{mod_header}}{{mod_description}}
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues)
@@ -46,6 +46,8 @@ A: If enough people request it I'll give it some time, but this really is a 1-ma
 **Q: Can I include it in my modpack?**
 
 A: Yes, no need to give credit or ask.
+
+[![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
 
 ## Compatibility
 

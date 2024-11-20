@@ -18,12 +18,15 @@ const modsData = JSON.parse(fs.readFileSync(modsJsonPath, 'utf-8'));
 // Read the template
 const template = fs.readFileSync(templatePath, 'utf-8');
 
+const header = (slug, png) => `![${slug} banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/${slug}/${png})`;
+
 // Function to generate the content for each mod
 const generateContent = (mod) => {
   let content = template;
 
   // Substitute the placeholders
   content = content.replace(/{{mod_name}}/g, mod.page.mod_name || '');
+  content = content.replace(/{{mod_header}}/g, mod.page.mod_header ? header(mod.slug, mod.page.mod_header) + '\n\n' : '');
   content = content.replace(/{{mod_description}}/g, mod.page.mod_description || '');
   content = content.replace(/{{mod_dependencies}}/g, mod.page.mod_dependencies || '');
   content = content.replace(/{{mod_extra}}/g, mod.page.mod_extra || '');

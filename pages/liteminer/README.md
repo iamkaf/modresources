@@ -63,6 +63,8 @@ A: If enough people request it I'll give it some time, but this really is a 1-ma
 
 A: Yes, no need to give credit or ask.
 
+[![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
+
 ## Compatibility
 
 Let me know if you find any issues (again, beta).
