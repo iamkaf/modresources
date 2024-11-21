@@ -1,0 +1,130 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.mochila",
+    "module": "mochila-fabric",
+    "version": "1.2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "mochila-fabric-1.2.0.jar",
+          "url": "mochila-fabric-1.2.0.jar",
+          "size": 143171,
+          "sha512": "d7348a8d76d2927d5bc6764c032fcc5eb5518033b6f9a84132681422a70fbe775eb0f42d6e6e472a9a6b3a8f9afb32884d9e2ceef2adaeab8b7065138faa7a11",
+          "sha256": "b936ba925a051f279746b7da6b009ade4172c233e7cbf14e471ce3d3e96bbab5",
+          "sha1": "949fd1235a62496b37e30fdc0b795bf5a16a53c3",
+          "md5": "341644de8377467397d0e697255976b6"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.5"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.105.0+1.21.1"
+          }
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "module": "amber-fabric",
+          "version": {
+            "requires": "1.0.0-alpha.7"
+          }
+        },
+        {
+          "group": "dev.emi",
+          "module": "emi-fabric",
+          "version": {
+            "requires": "1.1.13+1.21.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mochila-fabric-1.2.0.jar",
+          "url": "mochila-fabric-1.2.0.jar",
+          "size": 143171,
+          "sha512": "d7348a8d76d2927d5bc6764c032fcc5eb5518033b6f9a84132681422a70fbe775eb0f42d6e6e472a9a6b3a8f9afb32884d9e2ceef2adaeab8b7065138faa7a11",
+          "sha256": "b936ba925a051f279746b7da6b009ade4172c233e7cbf14e471ce3d3e96bbab5",
+          "sha1": "949fd1235a62496b37e30fdc0b795bf5a16a53c3",
+          "md5": "341644de8377467397d0e697255976b6"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "mochila-fabric-1.2.0-sources.jar",
+          "url": "mochila-fabric-1.2.0-sources.jar",
+          "size": 5952,
+          "sha512": "865e20c4658e19ebbacdb74247f8fd51b9c7a8aeb5a8975025b8bcd7aaefdae1685b5e4151ba092aad0e866c79177cb18aab3d40e167dea69662a9eefaf1165b",
+          "sha256": "0097e359738396c010895d3052e3b314241e0475bb2532b68cc51f6ee5082eb5",
+          "sha1": "f52ad6cb834af0509698cfce5148173fa80b6d6a",
+          "md5": "4b1b054a80df02e56f5d9d4511d6b7b6"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "mochila-fabric-1.2.0-dev-shadow.jar",
+          "url": "mochila-fabric-1.2.0-dev-shadow.jar",
+          "size": 139588,
+          "sha512": "2c9cfccfb2c0c3a2bfa5c64fddd6bcc2e127c78d37c6cfc996f370b90f1bc95a790a04fd40d5dd85866526d7f3b8b4b8a3fdb6bad268af56b4ace170f14e566d",
+          "sha256": "922c7b15412e890cfa6dc1b5a4810953adb022098ae8c4ca465df6aec8da7eec",
+          "sha1": "533d562fc2a4e72993f918211c972c3369f2c42f",
+          "md5": "1bae05972e5d8d3d09564e06eb885fda"
+        }
+      ]
+    }
+  ]
+}
