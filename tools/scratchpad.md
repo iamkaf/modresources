@@ -1,12 +1,17 @@
-Use an item on the **Repair Bench** to repair it, consuming 1 of the repair material for that item.
+Craft the backpack and open it by right clicking it or by using the hotkey (default B).
 
-Use an item on the **Tool Bench** to upgrade it to the next tier. The item must be level 10 (configurable) and you must have the upgrade material in your inventory.
+### Recipes
 
+![Recipe for a leather backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe1.png)
 
-![Bonded Demo](https://i.imgur.com/bwwnunt.gif)
+![Upgrade and coloring recipes.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe2.png)
 
-![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot1.png)
+![Ender backpack recipe.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot5.png)
 
-![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot2.png)
+### Quick Stashing
 
-![Repair Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot3.png)
+You can unload the contents of a backpack into a chest or barrel by sneaking and right-clicking it. It also works if there is an item frame or sign in front of it!
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/i_TbV_Vm6RM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+You can view all the recipes with [EMI](https://modrinth.com/mod/emi).
