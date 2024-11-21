@@ -31,6 +31,7 @@ const generateContent = (mod) => {
   content = content.replace(/{{mod_dependencies}}/g, mod.page.mod_dependencies || '');
   content = content.replace(/{{mod_extra}}/g, mod.page.mod_extra || '');
   content = content.replace(/{{mod_how_to_use}}/g, mod.page.mod_how_to_use || '');
+  content = content.replace(/{{mod_compatibility}}/g, mod.page.mod_compatibility || 'Let me know if you find any issues (again, beta).');
 
   // Replace roadmap array with formatted list
   const roadmapList = mod.page.mod_roadmap
@@ -43,6 +44,10 @@ const generateContent = (mod) => {
     ? mod.page.mod_pictures.map((pic) => `![${pic.alt}](${pic.url})`).join('\n\n')
     : 'No pictures available.';
   content = content.replace(/{{mod_pictures}}/g, picturesList);
+
+  if (!mod.page.mod_pictures?.length) {
+    content = content.replace(/## Pics\s+/g, '');
+  }
 
   // Replace credits array with formatted list
   const creditsList = mod.page.mod_credits

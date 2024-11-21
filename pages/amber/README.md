@@ -30,8 +30,6 @@ The development plan is to make the mod more customizable and port it to 1.20.1 
 
 Thank you for the support!
 
-## Pics
-
 No pictures available.
 
 ## Q&A
