@@ -27,7 +27,7 @@ The mod is in the early stages of development and your feedback is invaluable. I
 
 ### Current Plan
 
-The development plan is to make the mod more customizable and port it to 1.20.1 and 1.21.3+ and beyond. If you have any requests for features or mod compats let me know.
+The development plan is to make the mod more customizable and port it to 1.20.1 and 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.
 
 #### Roadmap
 

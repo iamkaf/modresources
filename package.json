@@ -7,7 +7,8 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
     "pages": "node tools/page-builder.mjs",
-    "images": "node tools/print-images.mjs"
+    "images": "node tools/print-images.mjs",
+    "pad": "node tools/scratchpad.mjs"
   },
   "repository": {
     "type": "git",
