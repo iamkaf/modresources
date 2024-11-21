@@ -14,16 +14,27 @@ Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forg
 
 **Bonded** is a gear-focused mod that encourages you to build a deeper connection with your tools and armor as you play.  
 
-- **Level Up Your Gear**: The more you use your tools, weapons, and armor, the stronger they become, gaining bonus stats over time.  
-- **New Stations**: Enhance and maintain your equipment using the new **Tool Bench** and **Repair Bench** introduced by the mod.  
-- **Progression Through Play**: No complicated systems—just play the game and let your equipment grow alongside you.  
+- ✨ **Level Up Your Gear**: The more you use your tools, weapons, and armor, the stronger they become, gaining bonus stats over time.  
+- 🪵 **New Stations**: Enhance and maintain your equipment using the new **Tool Bench** and **Repair Bench** introduced by the mod.  
+- 🎮 **Progression Through Play**: No complicated systems—just play the game and let your equipment grow alongside you.  
 
 With **Bonded**, every item you craft becomes a companion on your journey.
 
 The leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.
 ### How To Use It
 
-TBD.
+Use an item on the **Repair Bench** to repair it, consuming 1 of the repair material for that item.
+
+Use an item on the **Tool Bench** to upgrade it to the next tier. The item must be level 10 (configurable) and you must have the upgrade material in your inventory.
+
+
+![Bonded Demo](https://i.imgur.com/bwwnunt.gif)
+
+![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot1.png)
+
+![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot2.png)
+
+![Repair Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot3.png)
 
 ## Beta
 
@@ -39,10 +50,6 @@ The development plan is to make the mod more customizable and port it to 1.20.1 
 - Port to 1.20.1
 
 Thank you for the support!
-
-## Pics
-
-
 
 ## Q&A
 
@@ -64,7 +71,7 @@ A: Yes, no need to give credit or ask.
 
 ## Compatibility
 
-Let me know if you find any issues (again, beta).
+The leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.
 
 ## Credits
 
