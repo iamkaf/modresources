@@ -25,6 +25,7 @@ const generateContent = (mod) => {
   let content = template;
 
   // Substitute the placeholders
+  content = content.replace(/{{amber_badge}}/g, mod.page.no_dependency ? '' : '[![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)');
   content = content.replace(/{{mod_name}}/g, mod.page.mod_name || '');
   content = content.replace(/{{mod_header}}/g, mod.page.mod_header ? header(mod.slug, mod.page.mod_header) + '\n\n' : '');
   content = content.replace(/{{mod_description}}/g, mod.page.mod_description || '');
