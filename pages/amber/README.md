@@ -52,7 +52,7 @@ A: Yes, no need to give credit or ask.
 
 ## Compatibility
 
-Let me know if you find any issues (again, beta).
+Let me know if you find any issues.
 
 ## Credits
 

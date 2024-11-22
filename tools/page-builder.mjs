@@ -31,7 +31,7 @@ const generateContent = (mod) => {
   content = content.replace(/{{mod_dependencies}}/g, mod.page.mod_dependencies || '');
   content = content.replace(/{{mod_extra}}/g, mod.page.mod_extra || '');
   content = content.replace(/{{mod_how_to_use}}/g, mod.page.mod_how_to_use || '');
-  content = content.replace(/{{mod_compatibility}}/g, mod.page.mod_compatibility || 'Let me know if you find any issues (again, beta).');
+  content = content.replace(/{{mod_compatibility}}/g, mod.page.mod_compatibility || 'Let me know if you find any issues.');
 
   // Replace roadmap array with formatted list
   const roadmapList = mod.page.mod_roadmap
@@ -54,6 +54,11 @@ const generateContent = (mod) => {
     ? mod.page.mod_credits.map((credit) => `- ${credit}`).join('\n')
     : 'No credits available.';
   content = content.replace(/{{mod_credits}}/g, creditsList);
+
+  // Remove beta section if the mod is not in beta
+  if (mod.page.beta === false) {
+    content = content.replace(/## Beta[\s\S]*?(?=\n##|$)/, '');
+  }
 
   return content;
 };
