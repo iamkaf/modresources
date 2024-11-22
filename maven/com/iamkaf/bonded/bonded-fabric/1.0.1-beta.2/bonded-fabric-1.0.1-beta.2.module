@@ -1,0 +1,146 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.bonded",
+    "module": "bonded-fabric",
+    "version": "1.0.1-beta.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.forgeconfigapiport",
+          "module": "forgeconfigapiport-fabric",
+          "version": {
+            "requires": "21.1.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bonded-fabric-1.0.1-beta.2.jar",
+          "url": "bonded-fabric-1.0.1-beta.2.jar",
+          "size": 119298,
+          "sha512": "971da53cd51f168b4c13879445d3d658450db5aab88aba8d814917be701a2615e33df44de519bf0ecc2ce04822e46b3282bc4eda0a1798f4e494d4e44abc7e6f",
+          "sha256": "762c613775eadc855e37f8272c3c05ccfc5085d3fb5d59fc0227a9fb2bff1570",
+          "sha1": "a519db7d1878642c85782986c561de1bd629530f",
+          "md5": "f30d5a3a01cce209877a4d698cd4de6b"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.forgeconfigapiport",
+          "module": "forgeconfigapiport-fabric",
+          "version": {
+            "requires": "21.1.1"
+          }
+        },
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.9"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.107.0+1.21.1"
+          }
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "module": "amber-fabric",
+          "version": {
+            "requires": "1.2.1-beta.1"
+          }
+        },
+        {
+          "group": "dev.emi",
+          "module": "emi-fabric",
+          "version": {
+            "requires": "1.1.13+1.21.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bonded-fabric-1.0.1-beta.2.jar",
+          "url": "bonded-fabric-1.0.1-beta.2.jar",
+          "size": 119298,
+          "sha512": "971da53cd51f168b4c13879445d3d658450db5aab88aba8d814917be701a2615e33df44de519bf0ecc2ce04822e46b3282bc4eda0a1798f4e494d4e44abc7e6f",
+          "sha256": "762c613775eadc855e37f8272c3c05ccfc5085d3fb5d59fc0227a9fb2bff1570",
+          "sha1": "a519db7d1878642c85782986c561de1bd629530f",
+          "md5": "f30d5a3a01cce209877a4d698cd4de6b"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bonded-fabric-1.0.1-beta.2-sources.jar",
+          "url": "bonded-fabric-1.0.1-beta.2-sources.jar",
+          "size": 4470,
+          "sha512": "1d826852bea9866ef482dad23ec4ce410591293500e5daa762a9db41b54043532e01dac6c4d4447c6e4205d1a8bd9e2aaa9a926d9713f3a08a12bae12fee9e96",
+          "sha256": "68836cc1915d52c70df7aafe18cc8404d21c67709ca6bbd71fed8cf2dcd0029f",
+          "sha1": "f2ab4f35543d0749d5d2effa4215f8bd97787087",
+          "md5": "a102fe4874c62e4fab88b55126a719cb"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bonded-fabric-1.0.1-beta.2-dev-shadow.jar",
+          "url": "bonded-fabric-1.0.1-beta.2-dev-shadow.jar",
+          "size": 117054,
+          "sha512": "4e8ddcf5d4e4e7790392e0bdb9afcc505ee4bc97c48b257e3d16b8341407eec9cfced44d10747e33f77dbd14191ace707fb0183ae027e7140a3e8d9a364a56a5",
+          "sha256": "e561a4523b6890af77fa4abed6c0416b31a881a77fe258770ebb03f94285480b",
+          "sha1": "21cf8b6669ad478df0593f1e12fa8ba98d4c4631",
+          "md5": "b47bd20d247d6bc8c2691f00c1d34d95"
+        }
+      ]
+    }
+  ]
+}
