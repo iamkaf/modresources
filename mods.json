@@ -139,14 +139,28 @@
     "slug": "kaf-hud",
     "name": "Kaf HUD",
     "page": {
+      "beta": false,
+      "no_dependency": true,
       "mod_name": "Kaf HUD",
       "mod_header": "banner.png",
       "mod_description": "A minimal location HUD for Fabric and NeoForge.",
       "mod_dependencies": null,
       "mod_extra": null,
-      "mod_how_to_use": "Toggle the HUD with the keybind (default N) and copy your coordinates holding shift + the keybind (default Shift+N).",
+      "mod_how_to_use": "Toggle the HUD with the keybind (default `N`) and copy your coordinates holding shift plus the keybind (default `Shift+N`).",
       "mod_roadmap": ["Port to 1.21.4", "Port to 1.20.1", "Add a config file"],
       "mod_pictures": [
+        {
+          "alt": "Showing the coordinates",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot1.png"
+        },
+        {
+          "alt": "Showing the copy feature",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot2.png"
+        },
+        {
+          "alt": "Showing modded biome",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot3.png"
+        }
       ],
       "mod_compatibility": null,
       "mod_credits": [
