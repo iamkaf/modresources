@@ -1,4 +1,5 @@
 apply plugin: "com.github.johnrengelman.shadow"
+apply plugin: "com.hypherionmc.modutils.modpublisher"
 
 architectury {
     platformSetupLoomIde()
