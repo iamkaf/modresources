@@ -115,3 +115,14 @@ subprojects {
         }
     }
 }
+
+def extractLatestChangelog() {
+    // Read the changelog file
+    def changelogFile = file('changelog.md').text
+
+    // Use regex to match the first section of the changelog (latest version and its changes)
+    def changelog = (changelogFile =~ /## [\s\S]+(?=\n##)/)[0]
+
+    // Return the changelog string
+    return changelog
+}

@@ -1,3 +1,10 @@
+pluginManagement {
+    repositories {
+        // mod publisher
+        maven { url "https://maven.firstdark.dev/releases" }
+    }
+}
+
 dependencyResolutionManagement {
     repositories {
         maven {
