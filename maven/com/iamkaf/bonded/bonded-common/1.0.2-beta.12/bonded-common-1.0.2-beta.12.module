@@ -1,0 +1,119 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.bonded",
+    "module": "bonded-common",
+    "version": "1.0.2-beta.12",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.forgeconfigapiport",
+          "module": "forgeconfigapiport-common-neoforgeapi",
+          "version": {
+            "requires": "21.1.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bonded-common-1.0.2-beta.12.jar",
+          "url": "bonded-common-1.0.2-beta.12.jar",
+          "size": 122141,
+          "sha512": "3ab2da84a617e2a0af8e3196d5446a3846a2e7557866530bb7afa0c45407722262e2891eb4a4d359c6bd03d2ea88fef299717e1576bab974e2301766196893cc",
+          "sha256": "cf784469481cf1315a40aed9ff679b8cba1d3dfa25293aabdc117e2dafc97e6c",
+          "sha1": "cedfbaaf4941822ecbce5867a826392febae933b",
+          "md5": "8d74b3f3114604bb509cf5b738fe45a6"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "fuzs.forgeconfigapiport",
+          "module": "forgeconfigapiport-common-neoforgeapi",
+          "version": {
+            "requires": "21.1.1"
+          }
+        },
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.9"
+          }
+        },
+        {
+          "group": "dev.architectury",
+          "module": "architectury",
+          "version": {
+            "requires": "13.0.8"
+          }
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "module": "amber-common",
+          "version": {
+            "requires": "1.2.1-beta.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bonded-common-1.0.2-beta.12.jar",
+          "url": "bonded-common-1.0.2-beta.12.jar",
+          "size": 122141,
+          "sha512": "3ab2da84a617e2a0af8e3196d5446a3846a2e7557866530bb7afa0c45407722262e2891eb4a4d359c6bd03d2ea88fef299717e1576bab974e2301766196893cc",
+          "sha256": "cf784469481cf1315a40aed9ff679b8cba1d3dfa25293aabdc117e2dafc97e6c",
+          "sha1": "cedfbaaf4941822ecbce5867a826392febae933b",
+          "md5": "8d74b3f3114604bb509cf5b738fe45a6"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bonded-common-1.0.2-beta.12-sources.jar",
+          "url": "bonded-common-1.0.2-beta.12-sources.jar",
+          "size": 76218,
+          "sha512": "74ed7615fc451d569eb3e04277e018b277c84a3a749557d3bb6c025624093ff8966118dddcb6cd4b7d199692d2f9f892f1189211867d979867548854c7a95f23",
+          "sha256": "c590a75a95d6c30f54405c80953ed919d84be0d25b08e799567ef6f92f696fec",
+          "sha1": "f04d7e46f7bbb17480fe05314600c3090273954e",
+          "md5": "6003e632b89e11e72588d27061f72b4d"
+        }
+      ]
+    }
+  ]
+}
