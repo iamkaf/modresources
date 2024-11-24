@@ -62,7 +62,7 @@ publisher {
     }
 
     // Enable Debug mode. When enabled, no files will actually be uploaded
-    setDebug(dry_run?.trim())
+    setDebug(Boolean.valueOf(dry_run))
 
     // Curseforge Project ID
     setCurseID(curse_id)
