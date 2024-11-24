@@ -74,6 +74,17 @@ remapJar {
     input.set shadowJar.archiveFile
 }
 
+def extractLatestChangelog() {
+    // Read the changelog file
+    def changelogFile = file('../changelog.md').text
+
+    // Use regex to match the first section of the changelog (latest version and its changes)
+    def changelog = (changelogFile =~ /## [\s\S]+(?=\n##)/)[0]
+
+    // Return the changelog string
+    return changelog
+}
+
 publisher {
     // Setup the required API keys. You only need to define the keys for
     // the platforms you plan on uploading to
