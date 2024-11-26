@@ -10,7 +10,7 @@ Kaf's Valentine Special adds a bunch of cookies and other valentine's day themed
 [![KoFi](https://img.shields.io/badge/KoFi-iamkaf?style=for-the-badge&logo=kofi&logoColor=%2330d1e3&label=Support%20Me&color=%2330d1e3)](https://ko-fi.com/iamkaffe)
 
 Requires [Architectury API](https://modrinth.com/mod/architectury-api).
-LAMAO
+
 ### How To Use It
 
 #### Cotton Candy
@@ -34,16 +34,37 @@ You can make **20 different cookies** each one with its own flavor and effects.
 
 You can use the Lovey Dovey Infuser to infuse all the cookies in the mod. **The infused versions grant more powerful effects**.
 
-![Lovey Dovey Infuser](https://cdn.modrinth.com/data/cached_images/eef273959c7d1b13795047fd453b9cbd07c830bd.png)
+![Lovey Dovey Infuser](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot4.png)
 
-![Lovey Dovey Infuser GUI](https://i.imgur.com/bkiBTWQ.png)
+![Lovey Dovey Infuser](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot5.png)
 
 #### Aristea
 
 
 **Aristea** is a new flower added to Minecraft, you can find it randomly generating in the world.
 
-![Aristea](https://cdn.modrinth.com/data/cached_images/7dc8417358e52e63a712d047b566810cfd58a578.png)
+![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot1.png)
+
+![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot2.png)
+
+![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot3.png)
+
+#### Lovely Potion
+
+It's a potion, it's lovely, this is how you make it:
+
+![Lovely Potion](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot6.png)
+
+And this is what it does:
+
+![Lovely Potion Effect](https://i.imgur.com/UtlKwtT.gif)
+
+#### Head
+
+You can give your friends head.
+
+![Headpats](https://i.imgur.com/RKWOyUr.gif)
+
 
 
 ### Current Plan

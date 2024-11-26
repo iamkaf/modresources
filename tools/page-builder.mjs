@@ -33,6 +33,8 @@ const generateContent = (mod) => {
   content = content.replace(/{{mod_extra}}/g, mod.page.mod_extra || '');
   content = content.replace(/{{mod_how_to_use}}/g, mod.page.mod_how_to_use || '');
   content = content.replace(/{{mod_compatibility}}/g, mod.page.mod_compatibility || 'Let me know if you find any issues.');
+  content = content.replace(/{{mod_current_plan}}/g, mod.page.mod_current_plan || 'The development plan is to make the mod more customizable and port it to 1.20.1 and 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.');
+  content = content.replace(/{{mod_extra_extra}}/g, mod.page.mod_extra_extra || '');
 
   // Replace roadmap array with formatted list
   const roadmapList = mod.page.mod_roadmap
