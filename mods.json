@@ -168,5 +168,25 @@
         "[Minimal Coords HUD](https://modrinth.com/mod/minimal-coords-hud) go check that out if you want more features, really good mod."
       ]
     }
+  },
+  {
+    "slug": "valentine",
+    "name": "Kaf's Valentine Special",
+    "page": {
+      "mod_name": "Kaf's Valentine Special",
+      "mod_header": "banner.png",
+      "mod_description": "Kaf's Valentine Special adds a bunch of cookies and other valentine's day themed additions to Minecraft, made originally to celebrate Valentine's day.",
+      "mod_dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api).",
+      "mod_extra": "LAMAO",
+      "mod_how_to_use": "TBD",
+      "mod_roadmap": ["Port to NeoForge"],
+      "mod_pictures": [
+      ],
+      "mod_compatibility": null,
+      "mod_credits": [
+        "[Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.",
+        "#### Old 1.20.1 Details\n<details>\n<summary>Spoiler</summary>\n\n\n## Cookie Book Included!\n\n![Cookie Book](https://cdn.modrinth.com/data/cached_images/cabbed8a8f6cdc02b484dd7abf9130d070e07801.jpeg)\n\n## Cotton Candy\n\n\nBy breaking tall grass you may find Cotton Candy Seeds which grow into Cotton Candy.\n\nYou can eat the Cotton Candy or use it to make the Special Chocolate Cookie or the Lovey Dovey Infuser.\n\n![cotton candy](https://cdn.modrinth.com/data/cached_images/fc0ef3002b42f05bccf430319710a0d98658f563.jpeg)\n\n## Special Cookies!\n\n\nYou can make **20 different cookies** each one with its own flavor and effects.\n\n![Many Cookies!](https://i.imgur.com/m79PyE4.png)\n\n## Lovey Dovey Infuser\n\n\nYou can use the Lovey Dovey Infuser to infuse all the cookies in the mod. **The infused versions grant more powerful effects**.\n\n![Lovey Dovey Infuser](https://cdn.modrinth.com/data/cached_images/eef273959c7d1b13795047fd453b9cbd07c830bd.png)\n\n![Lovey Dovey Infuser GUI](https://i.imgur.com/bkiBTWQ.png)\n\n## Aristea\n\n\n**Aristea** is a new flower added to Minecraft, you can find it randomly generating in the world.\n\n![Aristea](https://cdn.modrinth.com/data/cached_images/7dc8417358e52e63a712d047b566810cfd58a578.png)\n\n\n</details>\n\n"
+      ]
+    }
   }
 ]
