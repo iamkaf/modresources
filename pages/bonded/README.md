@@ -82,3 +82,4 @@ The leveling and repairing feature will work with any tool and armor mod out of 
 
 - [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
 - And most importantly, **Aris**, for always being there for me.
+

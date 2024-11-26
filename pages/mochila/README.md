@@ -86,3 +86,4 @@ Let me know if you find any issues.
 - [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
 - [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod.
 - And most importantly, **Aris**, for always being there for me.
+

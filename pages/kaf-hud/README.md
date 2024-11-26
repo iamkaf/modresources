@@ -63,3 +63,4 @@ Let me know if you find any issues.
 - [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
 - [Minimal Coords HUD](https://modrinth.com/mod/minimal-coords-hud) go check that out if you want more features, really good mod.
 - And most importantly, **Aris**, for always being there for me.
+
