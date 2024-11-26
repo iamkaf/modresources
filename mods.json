@@ -175,6 +175,7 @@
     "page": {
       "beta": false,
       "mod_name": "Kaf's Valentine Special",
+      "no_dependency": true,
       "mod_header": "banner.png",
       "mod_description": "Kaf's Valentine Special adds a bunch of cookies and other valentine's day themed additions to Minecraft, made originally to celebrate Valentine's day.",
       "mod_dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api).",
