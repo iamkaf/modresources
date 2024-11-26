@@ -10,7 +10,9 @@ Kaf's Valentine Special adds a bunch of cookies and other valentine's day themed
 [![KoFi](https://img.shields.io/badge/KoFi-iamkaf?style=for-the-badge&logo=kofi&logoColor=%2330d1e3&label=Support%20Me&color=%2330d1e3)](https://ko-fi.com/iamkaffe)
 
 Requires [Architectury API](https://modrinth.com/mod/architectury-api).
-🌸 **This mod is dedicated to my valentine, Aris. 🌸
+
+
+🌸 **This mod is dedicated to my valentine, Aris.** 🌸
 ### How To Use It
 
 #### Cotton Candy
