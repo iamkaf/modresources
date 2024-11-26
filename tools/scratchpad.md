@@ -44,8 +44,8 @@ And this is what it does:
 
 ![Lovely Potion Effect](https://i.imgur.com/UtlKwtT.gif)
 
-#### Head
+#### Headpats
 
-You can give your friends head.
+You can give your friends headpats.
 
 ![Headpats](https://i.imgur.com/RKWOyUr.gif)
