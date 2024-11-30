@@ -1,0 +1,10 @@
+dependencyResolutionManagement {
+    repositories {
+        maven {
+            name = "Kaf Mod Resources"
+            url = "https://raw.githubusercontent.com/iamkaf/modresources/main/maven/"
+        }
+    }
+}
+
+rootProject.name = mod_id
