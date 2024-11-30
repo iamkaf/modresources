@@ -19,21 +19,37 @@
       "mod_name": "Liteminer",
       "mod_description": "Mine an entire vein of ore, chop an entire tree or break any group of blocks by holding a hotkey. A veinmining mod for Fabric and NeoForge.",
       "mod_dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).",
-      "mod_how_to_use": "Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine.",
+      "mod_how_to_use": "Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine. \n\n![Keybord Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot5.png)",
       "mod_roadmap": [
         "~~Configuration File - 0.2.0.beta.1~~",
         "~~Food Exhaustion - 0.2.0.beta.1~~",
         "~~Toggle Mode - 0.2.0.beta.1~~",
         "~~Increased Harvest Time - 0.2.0.beta.1~~",
+        "~~Mining Shapes (3x3, staircase, etc)~~ - 0.3.0-beta.2",
+        "~~Axe Stripping~~ - 0.3.0-beta.2",
+        "~~Shovel Pathing~~ - 0.3.0-beta.2",
         "Tool Blacklist / Whitelist",
         "Block Blacklist / Whitelist",
-        "Mining Shapes (3x3, staircase, etc)",
-        "Axe Stripping",
-        "Shovel Pathing",
         "Hoe Hoeing",
         "Release v1.0"
       ],
       "mod_pictures": [
+        {
+          "alt": "Mining Shapes",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot1.png"
+        },
+        {
+          "alt": "Mining Shapes",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot2.png"
+        },
+        {
+          "alt": "Mining Shapes",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot3.png"
+        },
+        {
+          "alt": "Mining Shapes",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot4.png"
+        },
         {
           "alt": "Liteminer outlines on a tree.",
           "url": "https://cdn.modrinth.com/data/cached_images/2b8d30774e17ff51cf5f2b257f6cb1970f826c3d_0.webp"
@@ -127,8 +143,7 @@
       "mod_extra": "\n\n**Bonded** is a gear-focused mod that encourages you to build a deeper connection with your tools and armor as you play.  \n\n- ✨ **Level Up Your Gear**: The more you use your tools, weapons, and armor, the stronger they become, gaining bonus stats over time.  \n- 🪵 **New Stations**: Enhance and maintain your equipment using the new **Tool Bench** and **Repair Bench** introduced by the mod.  \n- 🎮 **Progression Through Play**: No complicated systems—just play the game and let your equipment grow alongside you.  \n\nWith **Bonded**, every item you craft becomes a companion on your journey.\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.",
       "mod_how_to_use": "Use an item on the **Repair Bench** to repair it, consuming 1 of the repair material for that item.\n\nUse an item on the **Tool Bench** to upgrade it to the next tier. The item must be level 10 (configurable) and you must have the upgrade material in your inventory.\n\n\n![Bonded Demo](https://i.imgur.com/bwwnunt.gif)\n\n![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot1.png)\n\n![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot2.png)\n\n![Repair Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot3.png)",
       "mod_roadmap": ["Port to 1.21.4", "Port to 1.20.1"],
-      "mod_pictures": [
-      ],
+      "mod_pictures": [],
       "mod_compatibility": "### Compat Mods\n\n- [Bonded: Basic Weapons Compat](https://modrinth.com/mod/bonded-basic-weapons-compat)\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.\n",
       "mod_credits": [
         "[Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
@@ -175,16 +190,20 @@
     "page": {
       "beta": false,
       "mod_name": "Kaf's Valentine Special",
-      "no_dependency": true,
+      "no_dependency": false,
       "mod_header": "banner.png",
       "mod_description": "Kaf's Valentine Special adds a bunch of cookies and other valentine's day themed additions to Minecraft, made originally to celebrate Valentine's day.",
       "mod_dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api).",
       "mod_extra": "\n\n🌸 **This mod is dedicated to my valentine, Aris.** 🌸",
       "mod_current_plan": "Keep supporting the mod and updating to new Minecraft versions.",
       "mod_how_to_use": "#### Cotton Candy\n\n\nBy breaking tall grass you may find Cotton Candy Seeds which grow into Cotton Candy.\n\nYou can eat the Cotton Candy or use it to make the Special Chocolate Cookie or the Lovey Dovey Infuser.\n\n![cotton candy](https://cdn.modrinth.com/data/cached_images/fc0ef3002b42f05bccf430319710a0d98658f563.jpeg)\n\n#### Special Cookies!\n\n\nYou can make **20 different cookies** each one with its own flavor and effects.\n\n![Many Cookies!](https://i.imgur.com/m79PyE4.png)\n\n#### Lovey Dovey Infuser\n\n\nYou can use the Lovey Dovey Infuser to infuse all the cookies in the mod. **The infused versions grant more powerful effects**.\n\n![Lovey Dovey Infuser](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot4.png)\n\n![Lovey Dovey Infuser](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot5.png)\n\n#### Aristea\n\n\n**Aristea** is a new flower added to Minecraft, you can find it randomly generating in the world.\n\n![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot1.png)\n\n![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot2.png)\n\n![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot3.png)\n\n#### Lovely Potion\n\nIt's a potion, it's lovely, this is how you make it:\n\n![Lovely Potion](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot6.png)\n\nAnd this is what it does:\n\n![Lovely Potion Effect](https://i.imgur.com/UtlKwtT.gif)\n\n#### Headpats\n\nYou can give your friends headpats.\n\n![Headpats](https://i.imgur.com/RKWOyUr.gif)\n",
-      "mod_roadmap": ["Port to NeoForge"],
-      "mod_pictures": [
+      "mod_roadmap": [
+        "~~Port to NeoForge~~ - 2.1.0",
+        "Backport new features to 1.20.1",
+        "Port to Forge",
+        "MORE COOKIES!!!!!!!1"
       ],
+      "mod_pictures": [],
       "mod_compatibility": null,
       "mod_credits": [
         "[Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."

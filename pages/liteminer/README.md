@@ -11,7 +11,9 @@ Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forg
 
 ### How To Use It
 
-Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine.
+Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine. 
+
+![Keybord Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot5.png)
 
 ## Beta
 
@@ -27,17 +29,25 @@ The development plan is to make the mod more customizable and port it to 1.20.1 
 - ~~Food Exhaustion - 0.2.0.beta.1~~
 - ~~Toggle Mode - 0.2.0.beta.1~~
 - ~~Increased Harvest Time - 0.2.0.beta.1~~
+- ~~Mining Shapes (3x3, staircase, etc)~~ - 0.3.0-beta.2
+- ~~Axe Stripping~~ - 0.3.0-beta.2
+- ~~Shovel Pathing~~ - 0.3.0-beta.2
 - Tool Blacklist / Whitelist
 - Block Blacklist / Whitelist
-- Mining Shapes (3x3, staircase, etc)
-- Axe Stripping
-- Shovel Pathing
 - Hoe Hoeing
 - Release v1.0
 
 Thank you for the support!
 
 ## Pics
+
+![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot1.png)
+
+![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot2.png)
+
+![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot3.png)
+
+![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot4.png)
 
 ![Liteminer outlines on a tree.](https://cdn.modrinth.com/data/cached_images/2b8d30774e17ff51cf5f2b257f6cb1970f826c3d_0.webp)
 
