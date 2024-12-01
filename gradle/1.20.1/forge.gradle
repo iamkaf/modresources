@@ -12,7 +12,7 @@ def mod_id_arg = rootProject.mod_id
 
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
-    mixinConfig "${rootProject.mod_id}.mixins.json"
+    mixinConfig "${mod_id_arg}.mixins.json"
 
     runs {
         data {
