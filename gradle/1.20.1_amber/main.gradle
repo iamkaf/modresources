@@ -108,7 +108,9 @@ subprojects {
                 "common.mixins.json",
                 "fabric.mixins.json",
                 "forge.mixins.json",
-                "forge.mixins.json"
+                "forge.mixins.json",
+                "quilt.mod.json",
+                "quilt.mixins.json"
         ]
 
         filesMatching(matchingFiles) {
