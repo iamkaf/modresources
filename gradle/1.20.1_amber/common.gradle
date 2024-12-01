@@ -1,5 +1,5 @@
 architectury {
-    common rootProject.subprojects.name.collect { it.toLowerCase() }.findAll { !it.contains("common") }
+    common rootProject.enabled_platforms.split(',')
 }
 
 def generatedResources = file('../common/src/main/generated')
