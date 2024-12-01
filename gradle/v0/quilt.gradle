@@ -1,23 +1,17 @@
 apply plugin: "com.github.johnrengelman.shadow"
+apply plugin: "com.hypherionmc.modutils.modpublisher"
+
+repositories {
+    maven { url 'https://maven.quiltmc.org/repository/release/' }
+}
 
 architectury {
     platformSetupLoomIde()
-    neoForge()
+    loader('quilt')
 }
 
-def generatedResources = file('../common/src/main/generated')
-def existingResources = file('../common/src/main/resources')
-def mod_id_arg = rootProject.mod_id
-
 loom {
-    runs {
-        data {
-            data()
-            programArgs "--all", "--mod", "${mod_id_arg}"
-            programArgs "--output", "${generatedResources}"
-            programArgs "--existing", "${existingResources}"
-        }
-    }
+    accessWidenerPath = project(":common").loom.accessWidenerPath
 }
 
 configurations {
@@ -27,7 +21,7 @@ configurations {
     }
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
-    developmentNeoForge.extendsFrom common
+    developmentFabric.extendsFrom common
 
     // Files in this configuration will be bundled into your mod using the Shadow plugin.
     // Don't use the `shadow` configuration from the plugin itself as it's meant for excluding files.
@@ -37,28 +31,29 @@ configurations {
     }
 }
 
-repositories {
-    maven {
-        name = 'NeoForged'
-        url = 'https://maven.neoforged.net/releases'
-    }
-}
-
 dependencies {
-    neoForge "net.neoforged:neoforge:$rootProject.neoforge_version"
+    modImplementation "org.quiltmc:quilt-loader:$rootProject.quilt_loader_version"
+
+    // Quilt Standard Libraries and QSL.
+    modImplementation "org.quiltmc.quilted-fabric-api:quilted-fabric-api:$rootProject.quilted_fabric_api_version"
 
     // Architectury API. This is optional, and you can comment it out if you don't need it.
-    modImplementation "dev.architectury:architectury-neoforge:$rootProject.architectury_api_version"
+    modImplementation("dev.architectury:architectury-fabric:$rootProject.architectury_api_version") {
+        // We must not pull Fabric Loader and Fabric API from Architectury Fabric.
+        exclude group: 'net.fabricmc'
+        exclude group: 'net.fabricmc.fabric-api'
+    }
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
-    shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
+    shadowBundle project(path: ':common', configuration: 'transformProductionQuilt')
 }
 
 processResources {
+    inputs.property 'group', project.mod_group
     inputs.property 'version', project.version
 
-    filesMatching('META-INF/neoforge.mods.toml') {
-        expand version: project.version
+    filesMatching('quilt.mod.json') {
+        expand group: project.mod_group, version: project.version
     }
 }
 
@@ -120,7 +115,7 @@ publisher {
     // The modloaders your upload supports.
     // This can also be an Enum from ModLoader,
     // like setLoaders(ModLoader.FABRIC, ModLoader.FORGE)
-    setLoaders("neoforge")
+    setLoaders("quilt")
 
     // The new Curseforge Environment tag. Optional
     // Valid values are "server", "client" or "both"
