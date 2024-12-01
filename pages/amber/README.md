@@ -25,8 +25,8 @@ The development plan is to make the mod more customizable and port it to 1.20.1 
 
 #### Roadmap
 
+- ~~Port to 1.20.1~~
 - Port to 1.21.3
-- Port to 1.20.1
 
 Thank you for the support!
 

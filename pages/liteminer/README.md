@@ -32,6 +32,7 @@ The development plan is to make the mod more customizable and port it to 1.20.1 
 - ~~Mining Shapes (3x3, staircase, etc)~~ - 0.3.0-beta.2
 - ~~Axe Stripping~~ - 0.3.0-beta.2
 - ~~Shovel Pathing~~ - 0.3.0-beta.2
+- ~~Port to 1.20.1~~ - 0.4.0-beta.6
 - Tool Blacklist / Whitelist
 - Block Blacklist / Whitelist
 - Hoe Hoeing
