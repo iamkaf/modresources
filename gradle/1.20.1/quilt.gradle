@@ -115,7 +115,7 @@ publisher {
     // The modloaders your upload supports.
     // This can also be an Enum from ModLoader,
     // like setLoaders(ModLoader.FABRIC, ModLoader.FORGE)
-    setLoaders("fabric")
+    setLoaders("quilt")
 
     // The new Curseforge Environment tag. Optional
     // Valid values are "server", "client" or "both"
