@@ -15,6 +15,8 @@ const outputDir = path.join(__dirname, '../pages');
 // Read the mods.json file
 const modsData = JSON.parse(fs.readFileSync(modsJsonPath, 'utf-8'));
 
+// TODO: allow each project to specify its own template
+
 // Read the template
 const template = fs.readFileSync(templatePath, 'utf-8');
 
