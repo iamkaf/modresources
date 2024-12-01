@@ -1,0 +1,133 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.amber",
+    "module": "amber-quilt",
+    "version": "1.3.0-beta.2+1.20.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "amber-quilt-1.3.0-beta.2+1.20.1.jar",
+          "url": "amber-quilt-1.3.0-beta.2+1.20.1.jar",
+          "size": 81896,
+          "sha512": "ca41128257ffef905631b27e8438509baff7579d8450faa00d3676caa1e46b59741ebb63b0c6df4e0a132c4e25c8062ad739840fee1cfea3c2f20e4a82792815",
+          "sha256": "f98b678ab62be4c87d6041e180451a1a3c3a8da2b1aa9967d0b5602c3dc58809",
+          "sha1": "d6b850c1103c0d4adaa8a7e8b9492d41395401b3",
+          "md5": "5edb7cfd9aaf9e0c93c9022405a740c9"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.quiltmc",
+          "module": "quilt-loader",
+          "version": {
+            "requires": "0.27.1-beta.1"
+          }
+        },
+        {
+          "group": "org.quiltmc.quilted-fabric-api",
+          "module": "quilted-fabric-api",
+          "version": {
+            "requires": "7.6.0+0.92.2-1.20.1"
+          }
+        },
+        {
+          "group": "dev.architectury",
+          "module": "architectury-fabric",
+          "version": {
+            "requires": "9.2.14"
+          },
+          "excludes": [
+            {
+              "group": "net.fabricmc.fabric-api",
+              "module": "*"
+            },
+            {
+              "group": "net.fabricmc",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "amber-quilt-1.3.0-beta.2+1.20.1.jar",
+          "url": "amber-quilt-1.3.0-beta.2+1.20.1.jar",
+          "size": 81896,
+          "sha512": "ca41128257ffef905631b27e8438509baff7579d8450faa00d3676caa1e46b59741ebb63b0c6df4e0a132c4e25c8062ad739840fee1cfea3c2f20e4a82792815",
+          "sha256": "f98b678ab62be4c87d6041e180451a1a3c3a8da2b1aa9967d0b5602c3dc58809",
+          "sha1": "d6b850c1103c0d4adaa8a7e8b9492d41395401b3",
+          "md5": "5edb7cfd9aaf9e0c93c9022405a740c9"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-quilt-1.3.0-beta.2+1.20.1-sources.jar",
+          "url": "amber-quilt-1.3.0-beta.2+1.20.1-sources.jar",
+          "size": 3244,
+          "sha512": "50b99b24c89c25466235d90dcbb7c81e2cf365dee85e0f10ce41aac1cf2b4cc01f4342f110c35a7ace5894ca72ac69b31cabe65aa1f5924c40ec6e75e3526601",
+          "sha256": "30badc8804de4cbfc1057fd5b60a96f76fcfc0e9cd6c55a153fae12a86676d8d",
+          "sha1": "1b8fe2a1cbed543f1a584fbec50506940f5c026d",
+          "md5": "e2cc62ee61267b4800b966400b40c26f"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-quilt-1.3.0-beta.2+1.20.1-dev-shadow.jar",
+          "url": "amber-quilt-1.3.0-beta.2+1.20.1-dev-shadow.jar",
+          "size": 80524,
+          "sha512": "d42fecfddcc25926c1298b2ce13412d124c1e772112cf30e14538f6f7f9e2a13e637c590f3bb36cdc9cbfce95b5859274f44d83595c7df5179a28d558bca103c",
+          "sha256": "a25280d4fc1ff264d23eea104e9d9bb28b97cea98033d3aae6fcdc7c2ad7bdcf",
+          "sha1": "a3b1325e8090438014057cd36d270d2737f420ae",
+          "md5": "fe47724c7ec4835b6258438e42a0ccb2"
+        }
+      ]
+    }
+  ]
+}
