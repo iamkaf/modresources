@@ -15,18 +15,15 @@ Requires [Architectury API](https://modrinth.com/mod/architectury-api).
 
 Just install it and the mods that require it will be good to go!
 
-## Beta
-
-The mod is in the early stages of development and your feedback is invaluable. If you have any ideas, requests or comments let me know [here](https://github.com/iamkaf/mod-issues) or join the [Discord](https://discord.gg/HV5WgTksaB) and shoot me a message. Not to mention this is one of my first mods so I'm learning on the go. :P
 
 ### Current Plan
 
-The development plan is to make the mod more customizable and port it to 1.20.1 and 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.
+The development plan is to make the mod more customizable and port it to 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.
 
 #### Roadmap
 
-- ~~Port to 1.20.1~~
-- Port to 1.21.3
+- ~~Port to 1.20.1~~ - v1.3.0-beta.2
+- Port to 1.21.4
 
 Thank you for the support!
 

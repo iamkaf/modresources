@@ -4,10 +4,12 @@
     "name": "Amber",
     "page": {
       "mod_name": "Amber",
+      "beta": false,
       "mod_description": "Amber is a library api of common code utilized by iamkaf mods.\n\nIt is built on top of Architectury API and is available for Fabric and NeoForge.",
       "mod_dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api).",
       "mod_how_to_use": "Just install it and the mods that require it will be good to go!",
-      "mod_roadmap": ["~~Port to 1.20.1~~", "Port to 1.21.3"],
+      "mod_current_plan": "The development plan is to make the mod more customizable and port it to 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.",
+      "mod_roadmap": ["~~Port to 1.20.1~~ - v1.3.0-beta.2", "Port to 1.21.4"],
       "mod_pictures": null,
       "mod_credits": ["The Architectury Team for their amazing API."]
     }
@@ -17,9 +19,11 @@
     "name": "Liteminer",
     "page": {
       "mod_name": "Liteminer",
-      "mod_description": "Mine an entire vein of ore, chop an entire tree or break any group of blocks by holding a hotkey. A veinmining mod for Fabric and NeoForge.",
+      "mod_description": "Mine an entire vein of ore, chop an entire tree or break any group of blocks by holding a hotkey. A veinmining mod for Fabric, NeoForge, Forge and Quilt.",
       "mod_dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).",
-      "mod_how_to_use": "Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine. \n\n![Keybord Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot5.png)",
+      "mod_extra": "\n\n![A gif preview of Liteminer, the playing vein mining some diamonds and iron ore.](https://i.imgur.com/ftSpErY.gif)",
+      "mod_how_to_use": "Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine.\n\n![Keybord Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot5.png)\n\nThere are a few shapes you can mine with and to switch between them hold the Liteminer key and scroll your mouse wheel.\n\nThe available shapes are: Shapeless (mines connected blocks), 3x3, Small Tunnel, Staircase Up and Staircase Down.\n",
+      "mod_current_plan": "The development plan is to make the mod more customizable and port it to 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.",
       "mod_roadmap": [
         "~~Configuration File - 0.2.0.beta.1~~",
         "~~Food Exhaustion - 0.2.0.beta.1~~",
@@ -28,10 +32,10 @@
         "~~Mining Shapes (3x3, staircase, etc)~~ - 0.3.0-beta.2",
         "~~Axe Stripping~~ - 0.3.0-beta.2",
         "~~Shovel Pathing~~ - 0.3.0-beta.2",
+        "~~Hoe Hoeing~~ - 0.3.0-beta.2",
         "~~Port to 1.20.1~~ - 0.4.0-beta.6",
         "Tool Blacklist / Whitelist",
         "Block Blacklist / Whitelist",
-        "Hoe Hoeing",
         "Release v1.0"
       ],
       "mod_pictures": [

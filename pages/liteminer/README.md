@@ -1,6 +1,6 @@
 # Liteminer
 
-Mine an entire vein of ore, chop an entire tree or break any group of blocks by holding a hotkey. A veinmining mod for Fabric and NeoForge.
+Mine an entire vein of ore, chop an entire tree or break any group of blocks by holding a hotkey. A veinmining mod for Fabric, NeoForge, Forge and Quilt.
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues)
@@ -9,11 +9,18 @@ Mine an entire vein of ore, chop an entire tree or break any group of blocks by 
 
 Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).
 
+
+![A gif preview of Liteminer, the playing vein mining some diamonds and iron ore.](https://i.imgur.com/ftSpErY.gif)
 ### How To Use It
 
-Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine. 
+Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine.
 
 ![Keybord Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot5.png)
+
+There are a few shapes you can mine with and to switch between them hold the Liteminer key and scroll your mouse wheel.
+
+The available shapes are: Shapeless (mines connected blocks), 3x3, Small Tunnel, Staircase Up and Staircase Down.
+
 
 ## Beta
 
@@ -21,7 +28,7 @@ The mod is in the early stages of development and your feedback is invaluable. I
 
 ### Current Plan
 
-The development plan is to make the mod more customizable and port it to 1.20.1 and 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.
+The development plan is to make the mod more customizable and port it to 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.
 
 #### Roadmap
 
@@ -32,10 +39,10 @@ The development plan is to make the mod more customizable and port it to 1.20.1 
 - ~~Mining Shapes (3x3, staircase, etc)~~ - 0.3.0-beta.2
 - ~~Axe Stripping~~ - 0.3.0-beta.2
 - ~~Shovel Pathing~~ - 0.3.0-beta.2
+- ~~Hoe Hoeing~~ - 0.3.0-beta.2
 - ~~Port to 1.20.1~~ - 0.4.0-beta.6
 - Tool Blacklist / Whitelist
 - Block Blacklist / Whitelist
-- Hoe Hoeing
 - Release v1.0
 
 Thank you for the support!
