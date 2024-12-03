@@ -20,28 +20,44 @@ const modsData = JSON.parse(fs.readFileSync(modsJsonPath, 'utf-8'));
 // Read the template
 const template = fs.readFileSync(templatePath, 'utf-8');
 
-const header = (slug, png) => `![${slug} banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/${slug}/${png})`;
+const header = (name, slug, png) =>
+  `![${name} banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/${slug}/${png})`;
 
 // Function to generate the content for each mod
 const generateContent = (mod) => {
   let content = template;
 
   // Substitute the placeholders
-  content = content.replace(/{{amber_badge}}/g, mod.page.no_dependency ? '' : '[![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)');
+  content = content.replace(
+    /{{amber_badge}}/g,
+    mod.page.no_dependency
+      ? ''
+      : '[![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)',
+  );
   content = content.replace(/{{mod_name}}/g, mod.page.mod_name || '');
-  content = content.replace(/{{mod_header}}/g, mod.page.mod_header ? header(mod.slug, mod.page.mod_header) + '\n\n' : '');
+  content = content.replace(
+    /{{mod_header}}/g,
+    mod.page.mod_header ? header(mod.page.mod_name, mod.slug, mod.page.mod_header) + '\n\n' : '',
+  );
   content = content.replace(/{{mod_description}}/g, mod.page.mod_description || '');
   content = content.replace(/{{mod_dependencies}}/g, mod.page.mod_dependencies || '');
   content = content.replace(/{{mod_extra}}/g, mod.page.mod_extra || '');
   content = content.replace(/{{mod_how_to_use}}/g, mod.page.mod_how_to_use || '');
-  content = content.replace(/{{mod_compatibility}}/g, mod.page.mod_compatibility || 'Let me know if you find any issues.');
-  content = content.replace(/{{mod_current_plan}}/g, mod.page.mod_current_plan || 'The development plan is to make the mod more customizable and port it to 1.20.1 and 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.');
+  content = content.replace(
+    /{{mod_compatibility}}/g,
+    mod.page.mod_compatibility || 'Let me know if you find any issues.',
+  );
+  content = content.replace(
+    /{{mod_current_plan}}/g,
+    mod.page.mod_current_plan ||
+      'The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.',
+  );
   content = content.replace(/{{mod_extra_extra}}/g, mod.page.mod_extra_extra || '');
 
   // Replace roadmap array with formatted list
   const roadmapList = mod.page.mod_roadmap
-    ? mod.page.mod_roadmap.map((item) => `- ${item}`).join('\n')
-    : 'No roadmap available.';
+    ? '#### Roadmap\n\n\n' + mod.page.mod_roadmap.map((item) => `- ${item}`).join('\n')
+    : '';
   content = content.replace(/{{mod_roadmap}}/g, roadmapList);
 
   // Replace pictures array with formatted image list
@@ -80,7 +96,7 @@ modsData.forEach((mod) => {
 
   // Write the generated content to the file
   fs.writeFileSync(outputFilePath, content, 'utf-8');
-  
+
   console.log(chalk.green('✔') + chalk.bold(` Generated ${outputFilePath}`));
 });
 

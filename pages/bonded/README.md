@@ -1,13 +1,15 @@
 # Bonded
 
-![bonded banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/banner.png)
+![Bonded banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/banner.png)
 
-A gear leveling mod for Fabric and NeoForge.
+
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues)
 [![Discord](https://img.shields.io/discord/1207469438719492176?style=for-the-badge&logo=discord&label=DISCORD&color=%235865F2)](https://discord.gg/HV5WgTksaB)
 [![KoFi](https://img.shields.io/badge/KoFi-iamkaf?style=for-the-badge&logo=kofi&logoColor=%2330d1e3&label=Support%20Me&color=%2330d1e3)](https://ko-fi.com/iamkaffe)
+
+A gear leveling mod for Fabric and NeoForge.
 
 Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).
 
@@ -42,9 +44,10 @@ The mod is in the early stages of development and your feedback is invaluable. I
 
 ### Current Plan
 
-The development plan is to make the mod more customizable and port it to 1.20.1 and 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.
+The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.
 
 #### Roadmap
+
 
 - Port to 1.21.4
 - Port to 1.20.1

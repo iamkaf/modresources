@@ -1,11 +1,13 @@
 # {{mod_name}}
 
-{{mod_header}}{{mod_description}}
+{{mod_header}}
 
 {{amber_badge}}
 [![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues)
 [![Discord](https://img.shields.io/discord/1207469438719492176?style=for-the-badge&logo=discord&label=DISCORD&color=%235865F2)](https://discord.gg/HV5WgTksaB)
 [![KoFi](https://img.shields.io/badge/KoFi-iamkaf?style=for-the-badge&logo=kofi&logoColor=%2330d1e3&label=Support%20Me&color=%2330d1e3)](https://ko-fi.com/iamkaffe)
+
+{{mod_description}}
 
 {{mod_dependencies}}
 {{mod_extra}}
@@ -20,8 +22,6 @@ The mod is in the early stages of development and your feedback is invaluable. I
 ### Current Plan
 
 {{mod_current_plan}}
-
-#### Roadmap
 
 {{mod_roadmap}}
 
