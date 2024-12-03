@@ -230,7 +230,12 @@
       "mod_how_to_use": "Position yourself near a mob and wait for the Skeleton to hit and kill it. Once it does, you'll get loot specific to that mob. You can also customize the loot drops by making your own datapacks if you want to tweak things further.",
       "mod_current_plan": "The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.\n\n## Making Your Datapack\n\nYou can use the tags provided by Extended Golf to change or replace the loot.\n\nThe tags follow the format: `extendedgolf:entity_name_here`\n\nSo, for example, to make Pandas drop golden apples:\n\nIn your datapack, make a file at `data/extendedgolf/tags/item/panda.json` with:\n\n```json\n{\n  \"values\": [\n    \"minecraft:golden_apple\"\n  ]\n}\n```\nor if you want to replace the default loot from this mod (pandas drop bamboo and cake 🍰):\n\n```json\n{\n  \"replace\": true,\n  \"values\": [\n    \"minecraft:golden_apple\"\n  ]\n}\n```\n\nNote: there are a few entities that I didn't add loot for because a skeleton can't kill them or it wouldn't make much sense, but if you want to you can (enderman, ender_dragon, player, armor_stand, creeper).\n",
       "mod_roadmap": null,
-      "mod_pictures": [],
+      "mod_pictures": [
+        {
+          "alt": "Golf!",
+          "url": "https://media1.tenor.com/m/7ec6n3tTxg0AAAAd/aoi-amawashi-aoi.gif"
+        }
+      ],
       "mod_compatibility": null,
       "mod_credits": [
         "[Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."

@@ -67,6 +67,10 @@ Note: there are a few entities that I didn't add loot for because a skeleton can
 
 Thank you for the support!
 
+## Pics
+
+![Golf!](https://media1.tenor.com/m/7ec6n3tTxg0AAAAd/aoi-amawashi-aoi.gif)
+
 ## Q&A
 
 **Q: Where can I ask something that is not listed here?**
