@@ -26,7 +26,7 @@ The development plan is to make the mod more customizable and port it to 1.21.4+
 
 
 - ~~Port to 1.20.1~~ - v1.3.0-beta.2
-- Port to 1.21.4
+- ~~Port to 1.21.4~~ - v2.0.0-beta.3
 
 Thank you for the support!
 

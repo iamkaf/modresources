@@ -45,9 +45,9 @@ The development plan is to make the mod more customizable and update it to the l
 #### Roadmap
 
 
-- ~~Add an Ender Backpack~~ (v1.2.0)
+- ~~Add an Ender Backpack~~ v1.2.0
+- ~~Port to 1.21.4~~ - v1.3.0
 - Add a config file
-- Port to 1.21.4
 - Port to 1.20.1
 
 Thank you for the support!

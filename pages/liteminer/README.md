@@ -44,6 +44,7 @@ The development plan is to make the mod more customizable and port it to 1.21.4+
 - ~~Shovel Pathing~~ - 0.3.0-beta.2
 - ~~Hoe Hoeing~~ - 0.3.0-beta.2
 - ~~Port to 1.20.1~~ - 0.4.0-beta.6
+- ~~Port to 1.20.4~~ - 0.5.0-beta.7
 - Tool Blacklist / Whitelist
 - Block Blacklist / Whitelist
 - Release v1.0
