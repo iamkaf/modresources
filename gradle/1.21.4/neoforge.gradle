@@ -15,7 +15,7 @@ loom {
 
     runs {
         data {
-            data()
+            clientData()
             programArgs "--all", "--mod", "${mod_id_arg}"
             programArgs "--output", "${generatedResources}"
             programArgs "--existing", "${existingResources}"
