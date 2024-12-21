@@ -21,9 +21,9 @@ Craft the backpack and open it by right clicking it or by using the hotkey (defa
 
 ![Recipe for a leather backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe1.png)
 
-![Recipe for a netherite backpack upgrade.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe3.png)
-
 ![Upgrade and coloring recipes.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe2.png)
+
+![Recipe for a netherite backpack upgrade.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe3.png)
 
 ![Ender backpack recipe.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot5.png)
 
