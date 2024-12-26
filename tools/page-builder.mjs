@@ -12,6 +12,15 @@ const modsJsonPath = path.join(__dirname, '../mods.json');
 const templatePath = path.join(__dirname, '../pages/common/template.md');
 const outputDir = path.join(__dirname, '../pages');
 
+// Magic strings
+const NO_DEPENDENCY_BADGE =
+  '[![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)';
+const DEFAULT_COMPATIBILITY = 'Let me know if you find any issues.';
+const DEFAULT_PLAN =
+  'The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.';
+const NO_PICTURES_AVAILABLE = 'No pictures available.';
+const NO_CREDITS_AVAILABLE = 'No credits available.';
+
 // Read the mods.json file
 const modsData = JSON.parse(fs.readFileSync(modsJsonPath, 'utf-8'));
 
@@ -20,6 +29,13 @@ const modsData = JSON.parse(fs.readFileSync(modsJsonPath, 'utf-8'));
 // Read the template
 const template = fs.readFileSync(templatePath, 'utf-8');
 
+const replacePlaceholders = (content, placeholders) => {
+  for (const [key, value] of Object.entries(placeholders)) {
+    content = content.replace(new RegExp(`{{${key}}}`, 'g'), value);
+  }
+  return content;
+};
+
 const header = (name, slug, png) =>
   `![${name} banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/${slug}/${png})`;
 
@@ -27,54 +43,33 @@ const header = (name, slug, png) =>
 const generateContent = (mod) => {
   let content = template;
 
-  // Substitute the placeholders
-  content = content.replace(
-    /{{amber_badge}}/g,
-    mod.page.no_dependency
-      ? ''
-      : '[![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)',
-  );
-  content = content.replace(/{{mod_name}}/g, mod.page.mod_name || '');
-  content = content.replace(
-    /{{mod_header}}/g,
-    mod.page.mod_header ? header(mod.page.mod_name, mod.slug, mod.page.mod_header) + '\n\n' : '',
-  );
-  content = content.replace(/{{mod_description}}/g, mod.page.mod_description || '');
-  content = content.replace(/{{mod_dependencies}}/g, mod.page.mod_dependencies || '');
-  content = content.replace(/{{mod_extra}}/g, mod.page.mod_extra || '');
-  content = content.replace(/{{mod_how_to_use}}/g, mod.page.mod_how_to_use || '');
-  content = content.replace(
-    /{{mod_compatibility}}/g,
-    mod.page.mod_compatibility || 'Let me know if you find any issues.',
-  );
-  content = content.replace(
-    /{{mod_current_plan}}/g,
-    mod.page.mod_current_plan ||
-      'The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.',
-  );
-  content = content.replace(/{{mod_extra_extra}}/g, mod.page.mod_extra_extra || '');
+  const placeholders = {
+    amber_badge: mod.page.no_dependency ? '' : NO_DEPENDENCY_BADGE,
+    mod_name: mod.page.mod_name || '',
+    mod_header: mod.page.mod_header ? header(mod.page.mod_name, mod.slug, mod.page.mod_header) + '\n\n' : '',
+    mod_description: mod.page.mod_description || '',
+    mod_dependencies: mod.page.mod_dependencies || '',
+    mod_extra: mod.page.mod_extra || '',
+    mod_how_to_use: mod.page.mod_how_to_use || '',
+    mod_compatibility: mod.page.mod_compatibility || DEFAULT_COMPATIBILITY,
+    mod_current_plan: mod.page.mod_current_plan || DEFAULT_PLAN,
+    mod_extra_extra: mod.page.mod_extra_extra || '',
+    mod_roadmap: mod.page.mod_roadmap
+      ? '#### Roadmap\n\n\n' + mod.page.mod_roadmap.map((item) => `- ${item}`).join('\n')
+      : '',
+    mod_pictures: mod.page.mod_pictures
+      ? mod.page.mod_pictures.map((pic) => `![${pic.alt}](${pic.url})`).join('\n\n')
+      : NO_PICTURES_AVAILABLE,
+    mod_credits: mod.page.mod_credits
+      ? mod.page.mod_credits.map((credit) => `- ${credit}`).join('\n')
+      : NO_CREDITS_AVAILABLE,
+  };
 
-  // Replace roadmap array with formatted list
-  const roadmapList = mod.page.mod_roadmap
-    ? '#### Roadmap\n\n\n' + mod.page.mod_roadmap.map((item) => `- ${item}`).join('\n')
-    : '';
-  content = content.replace(/{{mod_roadmap}}/g, roadmapList);
-
-  // Replace pictures array with formatted image list
-  const picturesList = mod.page.mod_pictures
-    ? mod.page.mod_pictures.map((pic) => `![${pic.alt}](${pic.url})`).join('\n\n')
-    : 'No pictures available.';
-  content = content.replace(/{{mod_pictures}}/g, picturesList);
+  content = replacePlaceholders(content, placeholders);
 
   if (!mod.page.mod_pictures?.length) {
     content = content.replace(/## Pics\s+/g, '');
   }
-
-  // Replace credits array with formatted list
-  const creditsList = mod.page.mod_credits
-    ? mod.page.mod_credits.map((credit) => `- ${credit}`).join('\n')
-    : 'No credits available.';
-  content = content.replace(/{{mod_credits}}/g, creditsList);
 
   // Remove beta section if the mod is not in beta
   if (mod.page.beta === false) {

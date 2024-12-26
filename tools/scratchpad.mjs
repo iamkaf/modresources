@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 const scratchpadPath = path.join(__dirname, 'scratchpad.md');
 
 // Function to escape content for JSON and convert Discord-style emojis
-const processContent = (content) => {
+const sanitizeAndFormatContent = (content) => {
   // Replace Discord-style emoji tags with Unicode emojis
   const withEmojis = content.replace(/:([a-zA-Z0-9_+-]+):/g, (match, emojiName) => {
     const unicodeEmoji = emoji.get(emojiName); // Use the 'get' method
@@ -31,7 +31,7 @@ const processContent = (content) => {
 // Read the scratchpad.md file
 try {
   const content = fs.readFileSync(scratchpadPath, 'utf-8');
-  const processedContent = processContent(content);
+  const processedContent = sanitizeAndFormatContent(content);
 
   // Copy the JSON string to the clipboard
   clipboardy.writeSync(`"${processedContent}"`);
