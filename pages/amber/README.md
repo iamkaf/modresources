@@ -1,6 +1,6 @@
 # Amber
 
-
+![Amber Banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot1.png)
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues)
@@ -9,27 +9,13 @@
 
 Amber is a library api of common code utilized by iamkaf mods.
 
-It is built on top of Architectury API and is available for Fabric and NeoForge.
+Requires [Fabric API](https://modrinth.com/mod/fabric-api) and [Architectury API](https://modrinth.com/mod/architectury-api).
 
-Requires [Architectury API](https://modrinth.com/mod/architectury-api).
 
 ### How To Use It
 
 Just install it and the mods that require it will be good to go!
 
-### Current Plan
-
-The development plan is to make the mod more customizable and port it to 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.
-
-#### Roadmap
-
-
-- ~~Port to 1.20.1~~ - v1.3.0-beta.2
-- ~~Port to 1.21.4~~ - v2.0.0-beta.3
-
-Thank you for the support!
-
-No pictures available.
 
 ## Q&A
 
@@ -49,12 +35,15 @@ A: Yes, no need to give credit or ask.
 
 [![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
 
+
 ## Compatibility
 
 Let me know if you find any issues.
+
 
 ## Credits
 
 - The Architectury Team for their amazing API.
 - And most importantly, **Aris**, for always being there for me.
+
 

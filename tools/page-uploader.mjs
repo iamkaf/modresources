@@ -32,9 +32,21 @@ const __dirname = path.dirname(__filename);
 const modsJsonPath = path.join(__dirname, '../mods.json');
 const modsData = JSON.parse(fs.readFileSync(modsJsonPath, 'utf-8'));
 
+// Get command-line argument for a specific mod, if provided
+const specificMod = process.argv[2];
+
 const api = new ModrinthAPI(process.env.MODRINTH_API_KEY);
 
+if (specificMod && !modsData.some((mod) => mod.slug === specificMod)) {
+  console.error(chalk.red.bold(`✖ Mod "${specificMod}" not found in mods.json`));
+  process.exit(1);
+}
+
 for (const mod of modsData) {
+  if (specificMod && mod.slug !== specificMod) {
+    continue;
+  }
+
   if (!mod.modrinth_id) {
     console.warn(chalk.yellow(`❔ Mod ${mod.slug} does not have a Modrinth ID`));
     continue;
