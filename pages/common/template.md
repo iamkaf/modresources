@@ -15,10 +15,6 @@
 
 {{mod_how_to_use}}
 
-## Beta
-
-The mod is in the early stages of development and your feedback is invaluable. If you have any ideas, requests or comments let me know [here](https://github.com/iamkaf/mod-issues) or join the [Discord](https://discord.gg/HV5WgTksaB) and shoot me a message. Not to mention this is one of my first mods so I'm learning on the go. :P
-
 ### Current Plan
 
 {{mod_current_plan}}

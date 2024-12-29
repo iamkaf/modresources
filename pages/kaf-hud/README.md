@@ -17,7 +17,6 @@ A minimal location HUD for Fabric and NeoForge.
 
 Toggle the HUD with the keybind (default `N`) and copy your coordinates holding shift plus the keybind (default `Shift+N`).
 
-
 ### Current Plan
 
 The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.

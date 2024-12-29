@@ -27,7 +27,6 @@ It’s like Minecraft meets golf... but with mobs, arrows, and lots of loot. Whe
 
 Position yourself near a mob and wait for the Skeleton to hit and kill it. Once it does, you'll get loot specific to that mob. You can also customize the loot drops by making your own datapacks if you want to tweak things further.
 
-
 ### Current Plan
 
 The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.

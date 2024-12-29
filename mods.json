@@ -5,7 +5,6 @@
     "modrinth_id": "vjGZJDu5",
     "page": {
       "mod_name": "Amber",
-      "beta": false,
       "mod_description": "Amber is a library api of common code utilized by iamkaf mods.\n\nIt is built on top of Architectury API and is available for Fabric and NeoForge.",
       "mod_dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api).",
       "mod_how_to_use": "Just install it and the mods that require it will be good to go!",
@@ -166,7 +165,6 @@
     "name": "Kaf HUD",
     "modrinth_id": "fKUQuZsL",
     "page": {
-      "beta": false,
       "no_dependency": true,
       "mod_name": "Kaf HUD",
       "mod_header": "banner.png",
@@ -201,7 +199,6 @@
     "name": "Kaf's Valentine Special",
     "modrinth_id": "BAlSr7dy",
     "page": {
-      "beta": false,
       "mod_name": "Kaf's Valentine Special",
       "no_dependency": false,
       "mod_header": "banner.png",
@@ -229,7 +226,6 @@
     "name": "Extended Golf",
     "modrinth_id": "jVtBevly",
     "page": {
-      "beta": false,
       "no_dependency": false,
       "mod_name": "Extended Golf",
       "mod_header": "banner.png",

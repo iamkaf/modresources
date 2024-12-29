@@ -17,7 +17,6 @@ Requires [Architectury API](https://modrinth.com/mod/architectury-api).
 
 Just install it and the mods that require it will be good to go!
 
-
 ### Current Plan
 
 The development plan is to make the mod more customizable and port it to 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.

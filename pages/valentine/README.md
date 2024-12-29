@@ -70,7 +70,6 @@ You can give your friends headpats.
 ![Headpats](https://i.imgur.com/RKWOyUr.gif)
 
 
-
 ### Current Plan
 
 Keep supporting the mod and updating to new Minecraft versions.

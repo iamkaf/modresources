@@ -71,11 +71,6 @@ const generateContent = (mod) => {
     content = content.replace(/## Pics\s+/g, '');
   }
 
-  // Remove beta section if the mod is not in beta
-  if (mod.page.beta === false) {
-    content = content.replace(/## Beta[\s\S]*?(?=\n##|$)/, '');
-  }
-
   return content;
 };
 
