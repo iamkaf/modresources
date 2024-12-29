@@ -8,7 +8,8 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "pages": "node tools/page-builder.mjs",
     "images": "node tools/print-images.mjs",
-    "pad": "node tools/scratchpad.mjs"
+    "pad": "node tools/scratchpad.mjs",
+    "upload": "node tools/page-uploader.mjs"
   },
   "repository": {
     "type": "git",

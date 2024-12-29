@@ -2,6 +2,7 @@
   {
     "slug": "amber",
     "name": "Amber",
+    "modrinth_id": "vjGZJDu5",
     "page": {
       "mod_name": "Amber",
       "beta": false,
@@ -17,6 +18,7 @@
   {
     "slug": "liteminer",
     "name": "Liteminer",
+    "modrinth_id": "VTnHoofC",
     "page": {
       "mod_name": "Liteminer",
       "mod_description": "Mine an entire vein of ore, chop an entire tree or break any group of blocks by holding a hotkey. A veinmining mod for Fabric, NeoForge, Forge and Quilt.",
@@ -84,6 +86,7 @@
   {
     "slug": "mochila",
     "name": "Mochila",
+    "modrinth_id": "IWGxWQWM",
     "page": {
       "mod_name": "Mochila: Colorful Backpacks!",
       "mod_description": "A colorful upgradable backpack mod for Fabric and NeoForge.",
@@ -118,6 +121,7 @@
   {
     "slug": "dynamicedge",
     "name": "Dynamic Edge",
+    "modrinth_id": "s2sYoUoB",
     "page": {
       "mod_name": "Dynamic Edge",
       "mod_header": "banner.png",
@@ -141,6 +145,7 @@
   {
     "slug": "bonded",
     "name": "Bonded",
+    "modrinth_id": "rTXmXcev",
     "page": {
       "mod_name": "Bonded",
       "mod_header": "banner.png",
@@ -159,6 +164,7 @@
   {
     "slug": "kaf-hud",
     "name": "Kaf HUD",
+    "modrinth_id": "fKUQuZsL",
     "page": {
       "beta": false,
       "no_dependency": true,
@@ -193,6 +199,7 @@
   {
     "slug": "valentine",
     "name": "Kaf's Valentine Special",
+    "modrinth_id": "BAlSr7dy",
     "page": {
       "beta": false,
       "mod_name": "Kaf's Valentine Special",
@@ -220,6 +227,7 @@
   {
     "slug": "extendedgolf",
     "name": "Extended Golf",
+    "modrinth_id": "jVtBevly",
     "page": {
       "beta": false,
       "no_dependency": false,
