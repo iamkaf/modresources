@@ -10,6 +10,16 @@ loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
 }
 
+
+def generatedResources = file('../common/src/main/generated')
+
+fabricApi {
+    configureDataGeneration {
+        client = true
+        outputDirectory = generatedResources
+    }
+}
+
 configurations {
     common {
         canBeResolved = true
