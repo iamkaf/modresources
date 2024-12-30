@@ -174,10 +174,31 @@
       "mod_header": "banner.png",
       "mod_description": "A gear leveling mod for Fabric and NeoForge.",
       "mod_dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).",
-      "mod_extra": "\n\n**Bonded** is a gear-focused mod that encourages you to build a deeper connection with your tools and armor as you play.  \n\n- ✨ **Level Up Your Gear**: The more you use your tools, weapons, and armor, the stronger they become, gaining bonus stats over time.  \n- 🪵 **New Stations**: Enhance and maintain your equipment using the new **Tool Bench** and **Repair Bench** introduced by the mod.  \n- 🎮 **Progression Through Play**: No complicated systems—just play the game and let your equipment grow alongside you.  \n\nWith **Bonded**, every item you craft becomes a companion on your journey.\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.",
-      "mod_how_to_use": "Use an item on the **Repair Bench** to repair it, consuming 1 of the repair material for that item.\n\nUse an item on the **Tool Bench** to upgrade it to the next tier. The item must be level 10 (configurable) and you must have the upgrade material in your inventory.\n\n\n![Bonded Demo](https://i.imgur.com/bwwnunt.gif)\n\n![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot1.png)\n\n![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot2.png)\n\n![Repair Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot3.png)",
-      "mod_roadmap": ["Port to 1.21.4", "Port to 1.20.1"],
-      "mod_pictures": [],
+      "mod_extra": "\n\n**Bonded** is a gear-focused mod that encourages you to build a deeper connection with your tools and armor as you play.  \n\n- ✨ **Level Up Your Gear**: The more you use your tools, weapons, and armor, the stronger they become, gaining bonus stats over time.  \n- 🪵 **New Stations**: Enhance and maintain your equipment using the new **Tool Bench** and **Repair Bench** introduced by the mod.  \n- 🎮 **Progression Through Play**: No complicated systems—just play the game and let your equipment grow alongside you.  \n\nWith **Bonded**, every item you craft becomes a companion on your journey.\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.\n\n",
+      "mod_how_to_use": "Use an item on the **Repair Bench** to repair it, consuming 1 of the repair material for that item.\n\nUse an item on the **Tool Bench** to upgrade it to the next tier. The item must be level 10 (configurable) and you must have the upgrade material in your inventory.\n\n\n![Bonded Demo](https://i.imgur.com/bwwnunt.gif)",
+      "mod_roadmap": null,
+      "mod_pictures": [
+        {
+          "alt": "Tool Bench recipe",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot1.png"
+        },
+        {
+          "alt": "Tool Bench recipe",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot2.png"
+        },
+        {
+          "alt": "Repair Bench recipe",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot3.png"
+        },
+        {
+          "alt": "Tool Bench Overlay",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot5.png"
+        },
+        {
+          "alt": "Repair Bench Overlay",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot6.png"
+        }
+      ],
       "mod_compatibility": "### Compat Mods\n\n- [Bonded: Basic Weapons Compat](https://modrinth.com/mod/bonded-basic-weapons-compat)\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.\n",
       "mod_credits": [
         "[Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."

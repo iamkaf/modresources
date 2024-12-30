@@ -23,6 +23,8 @@ Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forg
 With **Bonded**, every item you craft becomes a companion on your journey.
 
 The leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.
+
+
 ### How To Use It
 
 Use an item on the **Repair Bench** to repair it, consuming 1 of the repair material for that item.
@@ -32,23 +34,25 @@ Use an item on the **Tool Bench** to upgrade it to the next tier. The item must 
 
 ![Bonded Demo](https://i.imgur.com/bwwnunt.gif)
 
+### Current Plan
+
+The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.
+
+
+
+Thank you for the support!
+
+## Pics
+
 ![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot1.png)
 
 ![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot2.png)
 
 ![Repair Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot3.png)
 
-### Current Plan
+![Tool Bench Overlay](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot5.png)
 
-The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.
-
-#### Roadmap
-
-
-- Port to 1.21.4
-- Port to 1.20.1
-
-Thank you for the support!
+![Repair Bench Overlay](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot6.png)
 
 ## Q&A
 
