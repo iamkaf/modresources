@@ -111,7 +111,12 @@
       "mod_dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api).",
       "mod_extra": "\n![A gif of all the backpacks.](https://cdn.modrinth.com/data/cached_images/f4723d0598b20a3229b2d53f5c329c16f14947d5.gif)\n",
       "mod_how_to_use": "Craft the backpack and open it by right clicking it or by using the hotkey (default B).\n\n### Recipes\n\n![Recipe for a leather backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe1.png)\n\n![Upgrade and coloring recipes.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe2.png)\n\n![Recipe for a netherite backpack upgrade.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe3.png)\n\n![Ender backpack recipe.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot5.png)\n\n### Quick Stashing\n\nYou can unload the contents of a backpack into a chest or barrel by sneaking and right-clicking it. It also works if there is an item frame or sign in front of it!\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/i_TbV_Vm6RM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n\nYou can view all the recipes with [EMI](https://modrinth.com/mod/emi).\n",
-      "mod_roadmap": ["~~Add an Ender Backpack~~ v1.2.0", "~~Port to 1.21.4~~ - v1.3.0", "Add a config file", "Port to 1.20.1"],
+      "mod_roadmap": [
+        "~~Add an Ender Backpack~~ v1.2.0",
+        "~~Port to 1.21.4~~ - v1.3.0",
+        "Add a config file",
+        "Port to 1.20.1"
+      ],
       "mod_pictures": [
         {
           "alt": "Several backpacks being displayed.",
