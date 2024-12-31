@@ -22,6 +22,8 @@ Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forg
 
 With **Bonded**, every item you craft becomes a companion on your journey.
 
+![Bonded Benches GIF](https://i.imgur.com/mHjZWtm.gif)
+
 The leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.
 
 
