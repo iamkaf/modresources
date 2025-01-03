@@ -1,31 +1,13 @@
-The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.
+### Tags
 
-## Making Your Datapack
+#### Item Tags
 
-You can use the tags provided by Extended Golf to change or replace the loot.
+* `liteminer:excluded_tools` - items in this tag can't be used for litemining (applies to main hand slot)
+* `liteminer:included_tools` - if `require_tool` is true in server config, by default only "tool" items can be used (tiered items with durability); this can be used to allow extra items
 
-The tags follow the format: `extendedgolf:entity_name_here`
+#### Block Tags
 
-So, for example, to make Pandas drop golden apples:
+* `liteminer:excluded_blocks` - blocks in this tag may never be litemined
+* `liteminer:block_whitelist` - if this tag is non-empty, then _only_ blocks in this tag may be litemined
 
-In your datapack, make a file at `data/extendedgolf/tags/item/panda.json` with:
-
-```json
-{
-  "values": [
-    "minecraft:golden_apple"
-  ]
-}
-```
-or if you want to replace the default loot from this mod (pandas drop bamboo and cake 🍰):
-
-```json
-{
-  "replace": true,
-  "values": [
-    "minecraft:golden_apple"
-  ]
-}
-```
-
-Note: there are a few entities that I didn't add loot for because a skeleton can't kill them or it wouldn't make much sense, but if you want to you can (enderman, ender_dragon, player, armor_stand, creeper).
+> Note: these tags are compatible with the FTB Ultimine tags, so you can use the same tags for both mods if you already have a setup you like.

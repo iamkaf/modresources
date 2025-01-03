@@ -26,7 +26,7 @@ The available shapes are: Shapeless (mines connected blocks), 3x3, Small Tunnel,
 
 ### Current Plan
 
-The development plan is to make the mod more customizable and port it to 1.21.4+ and beyond. If you have any requests for features or mod compats let me know.
+I've completed all the features I wanted to add to the mod when I started the project, and I'm happy with how it turned out. The next steps are fixing bugs that might come up and adding new features that I think of or that are requested by the community starting with the Forge port.
 
 #### Roadmap
 
@@ -41,11 +41,26 @@ The development plan is to make the mod more customizable and port it to 1.21.4+
 - ~~Hoe Hoeing~~ - 0.3.0-beta.2
 - ~~Port to 1.20.1~~ - 0.4.0-beta.6
 - ~~Port to 1.20.4~~ - 0.5.0-beta.7
-- Tool Blacklist / Whitelist
-- Block Blacklist / Whitelist
-- Release v1.0
+- ~~Tool Blacklist / Whitelist~~ - 1.0
+- ~~Block Blacklist / Whitelist~~ - 1.0
+- ~~Release v1.0~~ - ✅
 
 Thank you for the support!
+
+### Tags
+
+#### Item Tags
+
+* `liteminer:excluded_tools` - items in this tag can't be used for litemining (applies to main hand slot)
+* `liteminer:included_tools` - if `require_tool` is true in server config, by default only "tool" items can be used (tiered items with durability); this can be used to allow extra items
+
+#### Block Tags
+
+* `liteminer:excluded_blocks` - blocks in this tag may never be litemined
+* `liteminer:block_whitelist` - if this tag is non-empty, then _only_ blocks in this tag may be litemined
+
+> Note: these tags are compatible with the FTB Ultimine tags, so you can use the same tags for both mods if you already have a setup you like.
+
 
 ## Pics
 

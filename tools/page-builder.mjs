@@ -57,6 +57,7 @@ const generateContent = (mod) => {
     mod_roadmap: mod.page.mod_roadmap
       ? '#### Roadmap\n\n\n' + mod.page.mod_roadmap.map((item) => `- ${item}`).join('\n')
       : '',
+    mod_additional: mod.page.mod_additional || '',
     mod_pictures: mod.page.mod_pictures
       ? mod.page.mod_pictures.map((pic) => `![${pic.alt}](${pic.url})`).join('\n\n')
       : NO_PICTURES_AVAILABLE,
