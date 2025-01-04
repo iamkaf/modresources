@@ -173,6 +173,7 @@
     "page": {
       "mod_name": "Bonded",
       "mod_header": "banner.png",
+      "icon": ["background/black.png", "frame/yellow.png", "icon/axe.png", "accent/bonded.png"],
       "mod_description": "A gear leveling mod for Fabric and NeoForge.",
       "mod_dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).",
       "mod_extra": "\n\n**Bonded** is a gear-focused mod that encourages you to build a deeper connection with your tools and armor as you play.  \n\n- ✨ **Level Up Your Gear**: The more you use your tools, weapons, and armor, the stronger they become, gaining bonus stats over time.  \n- 🪵 **New Stations**: Enhance and maintain your equipment using the new **Tool Bench** and **Repair Bench** introduced by the mod.  \n- 🎮 **Progression Through Play**: No complicated systems—just play the game and let your equipment grow alongside you.  \n\nWith **Bonded**, every item you craft becomes a companion on your journey.\n\n![Bonded Benches GIF](https://i.imgur.com/mHjZWtm.gif)\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.\n\n",
