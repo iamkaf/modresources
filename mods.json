@@ -201,7 +201,7 @@
           "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot6.png"
         }
       ],
-      "mod_compatibility": "### Compat Mods\n\n- [Bonded: Basic Weapons Compat](https://modrinth.com/mod/bonded-basic-weapons-compat)\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.\n",
+      "mod_compatibility": "### Compat Mods\n\n- [Bonded: Basic Weapons Compat](https://modrinth.com/mod/bonded-basic-weapons-compat)\n- [Bonded: Advanced Netherite Compat](https://modrinth.com/mod/bonded-advanced-netherite-compat)\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.",
       "mod_credits": [
         "[Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
       ]
