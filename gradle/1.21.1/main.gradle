@@ -86,6 +86,7 @@ subprojects {
                 "minecraft_version": minecraft_version,
                 "main_entrypoint": "${project.group}.fabric.${mod_name.replaceAll("[^a-zA-Z]", "")}Fabric",
                 "client_entrypoint": "${project.group}.fabric.client.${mod_name.replaceAll("[^a-zA-Z]", "")}FabricClient",
+                "fabric_datagen_entrypoint": "${project.group}.fabric.${mod_name.replaceAll("[^a-zA-Z]", "")}Datagen",
                 "main_entrypoint_quilt": "${project.group}.quilt.${mod_name.replaceAll("[^a-zA-Z]", "")}Quilt",
                 "client_entrypoint_quilt": "${project.group}.quilt.client.${mod_name.replaceAll("[^a-zA-Z]", "")}QuiltClient",
                 "mod_fabric_environment": mod_fabric_environment,
