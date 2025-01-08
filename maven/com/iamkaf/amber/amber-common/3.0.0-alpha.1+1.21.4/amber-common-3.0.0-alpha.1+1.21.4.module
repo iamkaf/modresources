@@ -1,0 +1,89 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.amber",
+    "module": "amber-common",
+    "version": "3.0.0-alpha.1+1.21.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "amber-common-3.0.0-alpha.1+1.21.4.jar",
+          "url": "amber-common-3.0.0-alpha.1+1.21.4.jar",
+          "size": 100956,
+          "sha512": "611791e4a349d687805506dfc333baed36480dd50446861a35b813d751085f7ba303d50fe64405d9c3003644a60e8f98467b21f1e091afefedcad01d272dee99",
+          "sha256": "5a5bc71d57ca11187721e03b0698c161f7f11d8807f160886313083af57a9519",
+          "sha1": "ce942c7f118c5e66570f44d90bb5864a52a320e9",
+          "md5": "1a7eab9a5d2e02e167622af4f4d604f2"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.9"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "amber-common-3.0.0-alpha.1+1.21.4.jar",
+          "url": "amber-common-3.0.0-alpha.1+1.21.4.jar",
+          "size": 100956,
+          "sha512": "611791e4a349d687805506dfc333baed36480dd50446861a35b813d751085f7ba303d50fe64405d9c3003644a60e8f98467b21f1e091afefedcad01d272dee99",
+          "sha256": "5a5bc71d57ca11187721e03b0698c161f7f11d8807f160886313083af57a9519",
+          "sha1": "ce942c7f118c5e66570f44d90bb5864a52a320e9",
+          "md5": "1a7eab9a5d2e02e167622af4f4d604f2"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-common-3.0.0-alpha.1+1.21.4-sources.jar",
+          "url": "amber-common-3.0.0-alpha.1+1.21.4-sources.jar",
+          "size": 82055,
+          "sha512": "00d43c84def4dca7739aef7351736c0231aefd2d849e3e114607726d63476019cd75640f9509ab44f27641cd3f166388407b8324b0d1048b02666c510f050af2",
+          "sha256": "5c0e1c2ded7b0eb4cd38bc00b7a2b132cb73a0eddf5c459bdb6bd4f7a862ce46",
+          "sha1": "672ba984c2ca1fcd3b4f0e5581ab13e14f9ac7e7",
+          "md5": "0eb6a8d3a80a1b3ac3d07eba9e998965"
+        }
+      ]
+    }
+  ]
+}

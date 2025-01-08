@@ -1,0 +1,116 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.amber",
+    "module": "amber-fabric",
+    "version": "3.0.0-alpha.1+1.21.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "amber-fabric-3.0.0-alpha.1+1.21.4.jar",
+          "url": "amber-fabric-3.0.0-alpha.1+1.21.4.jar",
+          "size": 103418,
+          "sha512": "958a6e8bff695399abac02b26595b398be1ad33c7b93d7cd500c7aaa9646949dbf1588bcc93a73d2163661ab7a27e6c4cd7bcc7309ea631247be930bf3ac6a90",
+          "sha256": "b33b4d1070997b202be126c6e3a6b0e0fc1ef70cddccb940a87c2dd3767fb7c6",
+          "sha1": "d31a962c66ec937c9b6e89499f693ddc7df8aa74",
+          "md5": "f3021df02f819779a18c22401d21726c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.9"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.110.5+1.21.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "amber-fabric-3.0.0-alpha.1+1.21.4.jar",
+          "url": "amber-fabric-3.0.0-alpha.1+1.21.4.jar",
+          "size": 103418,
+          "sha512": "958a6e8bff695399abac02b26595b398be1ad33c7b93d7cd500c7aaa9646949dbf1588bcc93a73d2163661ab7a27e6c4cd7bcc7309ea631247be930bf3ac6a90",
+          "sha256": "b33b4d1070997b202be126c6e3a6b0e0fc1ef70cddccb940a87c2dd3767fb7c6",
+          "sha1": "d31a962c66ec937c9b6e89499f693ddc7df8aa74",
+          "md5": "f3021df02f819779a18c22401d21726c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-fabric-3.0.0-alpha.1+1.21.4-sources.jar",
+          "url": "amber-fabric-3.0.0-alpha.1+1.21.4-sources.jar",
+          "size": 55824,
+          "sha512": "a1ede944fe0aab92ad09933c86119af7964200d275c77f40cb8ca6a3d58455379f43da8f7bc92ac187b0efdc8682f88ced4b9e2af619751fc768171f209653e6",
+          "sha256": "a6e9c3f51160ce81702020c3a4f057d8aab01081ec8b162f9a28ffbfb60c18a2",
+          "sha1": "2d6effed27b9d66bce58464ced8fd21f17f71c3b",
+          "md5": "f597bb8de949abc0b09aa75d7d3aabc8"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-fabric-3.0.0-alpha.1+1.21.4-dev-shadow.jar",
+          "url": "amber-fabric-3.0.0-alpha.1+1.21.4-dev-shadow.jar",
+          "size": 101736,
+          "sha512": "20a5df93e2da86ae9d9e709e9b393a492efef1544e8e37fba85aa41d91dd1914c78a88c7c8ade9ab51e54becb8232f2237d206c111f309b65ef8bd997d7d56c3",
+          "sha256": "e656492204adb282f7a8d6c5f0c9dfb98062d5fbc9bdb2dfe1a4b4ae2f88eeeb",
+          "sha1": "6aa9d2319dad0fba784f24f2d227f26886094b0b",
+          "md5": "3bc287f9b2717c3e72f935b9d1c3d9b8"
+        }
+      ]
+    }
+  ]
+}
