@@ -83,6 +83,8 @@ subprojects {
                 "fabric_api_version": fabric_api_version,
                 "min_neoforge_fml_version": "1",
                 "min_neoforge_version": min_neoforge_version,
+                "min_forge_fml_version": "1",
+                "min_forge_version": min_forge_version,
                 "minecraft_version": minecraft_version,
                 "main_entrypoint": "${project.group}.fabric.${mod_name.replaceAll("[^a-zA-Z]", "")}Fabric",
                 "client_entrypoint": "${project.group}.fabric.client.${mod_name.replaceAll("[^a-zA-Z]", "")}FabricClient",
