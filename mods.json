@@ -294,5 +294,32 @@
         "[Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
       ]
     }
+  },
+  {
+    "slug": "torchtoss",
+    "name": "Torch Toss",
+    "modrinth_id": "tobecreated",
+    "page": {
+      "icon": ["background/black.png", "frame/pink.png", "icon/torchtoss.png"],
+      "no_dependency": false,
+      "mod_name": "Torch Toss",
+      "mod_header": null,
+      "mod_description": "With Torch Toss, you can throw torches ahead of you, lighting up caves, tunnels, and dark paths with ease!",
+      "mod_dependencies": null,
+      "mod_extra": null,
+      "mod_how_to_use": "Combine two torches on the crafting grid to make the throwable torch. Place it in your hand and right-click to throw it.\n\n![Keybord Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/torchtoss/screenshot1.png)",
+      "mod_current_plan": null,
+      "mod_roadmap": null,
+      "mod_pictures": [
+        {
+          "alt": "Throwing a torch",
+          "url": "https://i.imgur.com/iAEBLkX.gif"
+        }
+      ],
+      "mod_compatibility": null,
+      "mod_credits": [
+        "My awesome community."
+      ]
+    }
   }
 ]
