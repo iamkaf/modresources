@@ -298,7 +298,7 @@
   {
     "slug": "torchtoss",
     "name": "Torch Toss",
-    "modrinth_id": "tobecreated",
+    "modrinth_id": "AIYW9sHq",
     "page": {
       "icon": ["background/black.png", "frame/pink.png", "icon/torchtoss.png"],
       "no_dependency": false,
