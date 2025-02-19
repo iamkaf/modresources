@@ -325,5 +325,40 @@
         "My awesome community."
       ]
     }
+  },
+  {
+    "slug": "endersight",
+    "name": "Ender Sight",
+    "modrinth_id": "y5UyihEq",
+    "page": {
+      "icon": ["background/endersight.png", "frame/purple.png", "icon/enderpearl.png"],
+      "no_dependency": false,
+      "mod_name": "Ender Sight",
+      "mod_header": null,
+      "mod_description": "Harness the power of the End! When holding an **Ender Pearl** or **Eye of Ender**, you can **see Endermen through walls**, revealing their ghostly outlines in the dark. Perfect for hunting Endermen, navigating the End, or just keeping an eye on these elusive creatures!",
+      "mod_dependencies": null,
+      "mod_extra": null,
+      "mod_how_to_use": "Just hold an ender pearl or eye of ender and you'll be able to see endermen through walls.\n\nIf the effect is getting in the way you can hit the hotkey (default N) to disable it.",
+      "mod_current_plan": null,
+      "mod_roadmap": null,
+      "mod_pictures": [
+        {
+          "alt": "Ender Sight showcase",
+          "url": "https://i.imgur.com/eThcpXG.gif"
+        },
+        {
+          "alt": "An enderman with a purple outline around it",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/endersight/screenshot1.png"
+        },
+        {
+          "alt": "A group of endermen with purple outlines around them",
+          "url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/endersight/screenshot2.png"
+        }
+      ],
+      "mod_compatibility": null,
+      "mod_credits": [
+        "My awesome community."
+      ]
+    }
   }
 ]
