@@ -10,7 +10,8 @@
     "images": "node tools/print-images.mjs",
     "pad": "node tools/scratchpad.mjs",
     "upload": "node tools/page-uploader.mjs",
-    "icon": "node tools/icon-generator.mjs"
+    "icon": "node tools/icon-generator.mjs",
+    "renamemod": "node tools/template-renamer.mjs"
   },
   "repository": {
     "type": "git",
