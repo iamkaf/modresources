@@ -28,10 +28,10 @@
           "name": "amber-common-3.0.0+1.21.4.jar",
           "url": "amber-common-3.0.0+1.21.4.jar",
           "size": 107866,
-          "sha512": "cc157be5cded59835ab11111e05fb449b5c0224001ebb02c11fe407e8332f243d865c2c83f472f7e659f5ceeeaa9f0269d57ed28a9145a75cd2fc35e6d741f9a",
-          "sha256": "02bcca30fbed95c451efddffdb4be47c4e95fa9ceb1c6a9752f420f376c43aa8",
-          "sha1": "4d878abdf44e21a1e6014536a28f55ecb2359575",
-          "md5": "6d5f81dd54f3a0ce6fe3bdcd2c91e3ac"
+          "sha512": "a3facf904e2ceec00be514daffffc22434fc77c0577c6bbc43aee65150dca0847dc7ff8bf2026c8d2021f93ee243ce2d3c5169cfed9846658bc5850869597d82",
+          "sha256": "c3e3209e62a816cb3634cca0e9bd5871f40d6b7be09cc9c431aba6064c0b4628",
+          "sha1": "e5abaebc041b45ce89f891d022eb17ad1b979236",
+          "md5": "2edb2f53a10a03d359cbded3cac0984b"
         }
       ]
     },
@@ -58,10 +58,10 @@
           "name": "amber-common-3.0.0+1.21.4.jar",
           "url": "amber-common-3.0.0+1.21.4.jar",
           "size": 107866,
-          "sha512": "cc157be5cded59835ab11111e05fb449b5c0224001ebb02c11fe407e8332f243d865c2c83f472f7e659f5ceeeaa9f0269d57ed28a9145a75cd2fc35e6d741f9a",
-          "sha256": "02bcca30fbed95c451efddffdb4be47c4e95fa9ceb1c6a9752f420f376c43aa8",
-          "sha1": "4d878abdf44e21a1e6014536a28f55ecb2359575",
-          "md5": "6d5f81dd54f3a0ce6fe3bdcd2c91e3ac"
+          "sha512": "a3facf904e2ceec00be514daffffc22434fc77c0577c6bbc43aee65150dca0847dc7ff8bf2026c8d2021f93ee243ce2d3c5169cfed9846658bc5850869597d82",
+          "sha256": "c3e3209e62a816cb3634cca0e9bd5871f40d6b7be09cc9c431aba6064c0b4628",
+          "sha1": "e5abaebc041b45ce89f891d022eb17ad1b979236",
+          "md5": "2edb2f53a10a03d359cbded3cac0984b"
         }
       ]
     },
@@ -77,11 +77,11 @@
         {
           "name": "amber-common-3.0.0+1.21.4-sources.jar",
           "url": "amber-common-3.0.0+1.21.4-sources.jar",
-          "size": 86801,
-          "sha512": "a1005213f05f7618051e294eb50cf492c1979fdad75294e6b67bf414ff9a97fe39d62caf185684c23cba7df3a803f479ec489ac95949fb9ef0c3a0276ca0a1b2",
-          "sha256": "a5698ba1e3c10b4ea8d18d033ca7cf766a007387b301751cf969875611361453",
-          "sha1": "b7a0c219d55c186540ef977605bd86a844ab2804",
-          "md5": "c224d3daf45e81d38f1f079028df4639"
+          "size": 86822,
+          "sha512": "53feb88313cb8d6936fff07aaa63a4475e5feb1c1bbefde24aea3db05fba261e68e9cbf74c9ba0b65c2fbb9cd907011d2b3f27934a67728450f5567ca9e69990",
+          "sha256": "f85b23082d0eb76e775082c6fda32484c07934876f3e8d221ef729f78a3abc65",
+          "sha1": "1a90f09989431c6140b8db7844ee66062822b298",
+          "md5": "a2227f87f2de87428461ce367ac63f30"
         }
       ]
     }

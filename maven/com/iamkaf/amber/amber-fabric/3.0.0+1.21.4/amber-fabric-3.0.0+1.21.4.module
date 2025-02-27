@@ -27,11 +27,11 @@
         {
           "name": "amber-fabric-3.0.0+1.21.4.jar",
           "url": "amber-fabric-3.0.0+1.21.4.jar",
-          "size": 111695,
-          "sha512": "0e66c467efab779651d709c402358840e0879cc77e4749ecce9867814aa3bf266bed026c85f51e487b3ebeb3f0f38c24b7a7d04b72c6838eb8bf5265e70efd17",
-          "sha256": "c7b902a55e57ee2565b92d3ec1091c23088b1a20edfdbdccd410b657e09e0666",
-          "sha1": "24b527a7dbd28dfed3698973340aafd81ecc1e09",
-          "md5": "f5733692aaaef0057277b5d12ab42307"
+          "size": 113380,
+          "sha512": "f99255dcf8c3f94b059557c494eb3fb0af91506adc5f52bd3fe6f70a928a6be3cffbccdd483b731715d67fefcb844bb5336321ca2d1426858bb5c553ec61408e",
+          "sha256": "e446873974dd4c9e2ac7ae400d48f576a961d339f2d326e1be83ac6925669d43",
+          "sha1": "44201d45d0393c0efbf0a06ab744404799670aca",
+          "md5": "513357fd10379af1a616b8a6ccbd4f59"
         }
       ]
     },
@@ -64,11 +64,11 @@
         {
           "name": "amber-fabric-3.0.0+1.21.4.jar",
           "url": "amber-fabric-3.0.0+1.21.4.jar",
-          "size": 111695,
-          "sha512": "0e66c467efab779651d709c402358840e0879cc77e4749ecce9867814aa3bf266bed026c85f51e487b3ebeb3f0f38c24b7a7d04b72c6838eb8bf5265e70efd17",
-          "sha256": "c7b902a55e57ee2565b92d3ec1091c23088b1a20edfdbdccd410b657e09e0666",
-          "sha1": "24b527a7dbd28dfed3698973340aafd81ecc1e09",
-          "md5": "f5733692aaaef0057277b5d12ab42307"
+          "size": 113380,
+          "sha512": "f99255dcf8c3f94b059557c494eb3fb0af91506adc5f52bd3fe6f70a928a6be3cffbccdd483b731715d67fefcb844bb5336321ca2d1426858bb5c553ec61408e",
+          "sha256": "e446873974dd4c9e2ac7ae400d48f576a961d339f2d326e1be83ac6925669d43",
+          "sha1": "44201d45d0393c0efbf0a06ab744404799670aca",
+          "md5": "513357fd10379af1a616b8a6ccbd4f59"
         }
       ]
     },
@@ -84,11 +84,11 @@
         {
           "name": "amber-fabric-3.0.0+1.21.4-sources.jar",
           "url": "amber-fabric-3.0.0+1.21.4-sources.jar",
-          "size": 56994,
-          "sha512": "a7dfe9f4e59703ea4b45167e3635597348f45796ef622737cd0b60e54063c111422c7e15c8ccdc62b625c8398937f42ceeb3fe60fa373b70e289f7c4e198cb9f",
-          "sha256": "6ca0efe127763f7a98677ba881b7e24e27a2b78ba612f11b3e981e00623c4485",
-          "sha1": "3973c22c9101875b454d1747ca66d510ec0b2101",
-          "md5": "33dfeca43b34c2b16e3867c6cb4edcf2"
+          "size": 58240,
+          "sha512": "46008af405baf24833fc7e38e5447d5af86605ccd61090a9c1745ac9145bae35de386edeca8fe94517b27306c407880ccaf0a5428b76e19cc3ab855183075a10",
+          "sha256": "99ebc2c2d5a8343bd021c7c8d5608bb6d34ca187f3b1420b7d4fa5fb34d686f8",
+          "sha1": "f2aa937a3fee2f14334bb7e80ecef60fcef1a808",
+          "md5": "e5400d62329824d7ae48b094adfce2ca"
         }
       ]
     },
@@ -104,11 +104,11 @@
         {
           "name": "amber-fabric-3.0.0+1.21.4-dev-shadow.jar",
           "url": "amber-fabric-3.0.0+1.21.4-dev-shadow.jar",
-          "size": 109648,
-          "sha512": "e119472a3b933f1233c5750a4d0da4902c4d2a3e035910af0b8b92864d402ec8f517abe2cc0033b01ad09355bbd1b52c8fea48b34b014e7ca740b274204b899a",
-          "sha256": "6329da432536e3f4b46497794103354e7703097fac688c1733a2371f1775f21b",
-          "sha1": "88f9f82e15372d23eede5ea9f4ee2fc7268f879b",
-          "md5": "9e199e9f54e1484d279cdc1d41c20aef"
+          "size": 111250,
+          "sha512": "a1d901d5723d3a0296e71b1a2ba2be25ef2390d53f3b401223dd9985a357a9b119540b8187df34bbef2c3d944a18be6355b9701bb188b4872981cd860ddf9eb9",
+          "sha256": "950f42e944763d3a8550667d056f6f9eaa72cfebc793db1f9571f512cd553da8",
+          "sha1": "b90126b738bedf0115e409597e341a81d6a007c0",
+          "md5": "be3e8e649c350c250197a046e982c080"
         }
       ]
     }
