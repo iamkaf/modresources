@@ -1,0 +1,100 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.amber",
+    "module": "amber-forge",
+    "version": "3.0.0+1.20.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "amber-forge-3.0.0+1.20.1.jar",
+          "url": "amber-forge-3.0.0+1.20.1.jar",
+          "size": 106234,
+          "sha512": "408b817e02104deefceb8eaa30012c48d4edcafdaef4e6e4e4c5acdb6cabd683096dbe8ba77269a8059f0d091a86ec298dde9096f2b8e2e1af0a0a9220bea55e",
+          "sha256": "aaba8badd3cc51232065225f6a5b7c9e0f854f7082edbab977c0b68b1d54667c",
+          "sha1": "a7476c34ec417fc20ca3ca04fafd40847e80b8f9",
+          "md5": "86116b59a8d9bed0c2b991313b96c306"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-forge-3.0.0+1.20.1.jar",
+          "url": "amber-forge-3.0.0+1.20.1.jar",
+          "size": 106234,
+          "sha512": "408b817e02104deefceb8eaa30012c48d4edcafdaef4e6e4e4c5acdb6cabd683096dbe8ba77269a8059f0d091a86ec298dde9096f2b8e2e1af0a0a9220bea55e",
+          "sha256": "aaba8badd3cc51232065225f6a5b7c9e0f854f7082edbab977c0b68b1d54667c",
+          "sha1": "a7476c34ec417fc20ca3ca04fafd40847e80b8f9",
+          "md5": "86116b59a8d9bed0c2b991313b96c306"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-forge-3.0.0+1.20.1-sources.jar",
+          "url": "amber-forge-3.0.0+1.20.1-sources.jar",
+          "size": 6352,
+          "sha512": "b3baa090df4651df0873ef74c53f5473ac5a3ddf0708b986b18f0228aab163d0964359952dad0d60475f0099a30e63845faea693838a54c3ff94f8043c3cf7a0",
+          "sha256": "8a829b62be8c2f60e0c9cbe1696233a781742f6a63231bc435158f59c5eb33c2",
+          "sha1": "5de77257674ab61dc99c874ee402db8362394c94",
+          "md5": "707fa233803c038f39adada4c042194f"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-forge-3.0.0+1.20.1-dev-shadow.jar",
+          "url": "amber-forge-3.0.0+1.20.1-dev-shadow.jar",
+          "size": 103905,
+          "sha512": "c72e5d028167a500b2b3ff6e2fe43ab56e2e5fe9b399666747dae6193370444c612d227724d243e6ede152775cba994da735e0e94549bd4648688639ce76ff8e",
+          "sha256": "a809e3351a6fc502ade08463674d67b05a6320b9dde0c8dfc62f4dd2ad848807",
+          "sha1": "fa9cb7872e271600ec7ccdd244aa2124327780a1",
+          "md5": "f30751156dfbce5e58b43e5b6b95d8ca"
+        }
+      ]
+    }
+  ]
+}
