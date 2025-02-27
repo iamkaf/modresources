@@ -28,10 +28,10 @@
           "name": "amber-common-3.0.0+1.21.1.jar",
           "url": "amber-common-3.0.0+1.21.1.jar",
           "size": 108173,
-          "sha512": "2ccc74fcae5aa11e5a753e93471ac71d0ec09e894863b14e5558583e5d9f84a003e3e4ddd8d007fb0dbe138a09f9af88d121c4ba300df312ef0f526cc7562846",
-          "sha256": "ae26b1930fce755e1e78083b2f7e636c4709e664dd54c95154ce6d2948d37073",
-          "sha1": "19240e6e828535cb4f6a0b0266155d5974c56231",
-          "md5": "eb8b2e9b80118a5eb8e38ea30aad8398"
+          "sha512": "27a252db5b04095c18cfa0b41e6c2dd8b047ca39d620c7640bc91dec2d6e600208b4df05dc8864d88e351044d5dbf8d0f4092e927d4aa2b01a4de6f70d1ab40b",
+          "sha256": "f71170f34fb5e29b3ab06cafe5da541d1a79836035594b367ad3153e1532790b",
+          "sha1": "c9759eeaa0f3f399e3c8994d2f15af267c262819",
+          "md5": "0c1091b988a4ee5570ed1b66d6185426"
         }
       ]
     },
@@ -58,10 +58,10 @@
           "name": "amber-common-3.0.0+1.21.1.jar",
           "url": "amber-common-3.0.0+1.21.1.jar",
           "size": 108173,
-          "sha512": "2ccc74fcae5aa11e5a753e93471ac71d0ec09e894863b14e5558583e5d9f84a003e3e4ddd8d007fb0dbe138a09f9af88d121c4ba300df312ef0f526cc7562846",
-          "sha256": "ae26b1930fce755e1e78083b2f7e636c4709e664dd54c95154ce6d2948d37073",
-          "sha1": "19240e6e828535cb4f6a0b0266155d5974c56231",
-          "md5": "eb8b2e9b80118a5eb8e38ea30aad8398"
+          "sha512": "27a252db5b04095c18cfa0b41e6c2dd8b047ca39d620c7640bc91dec2d6e600208b4df05dc8864d88e351044d5dbf8d0f4092e927d4aa2b01a4de6f70d1ab40b",
+          "sha256": "f71170f34fb5e29b3ab06cafe5da541d1a79836035594b367ad3153e1532790b",
+          "sha1": "c9759eeaa0f3f399e3c8994d2f15af267c262819",
+          "md5": "0c1091b988a4ee5570ed1b66d6185426"
         }
       ]
     },
@@ -78,10 +78,10 @@
           "name": "amber-common-3.0.0+1.21.1-sources.jar",
           "url": "amber-common-3.0.0+1.21.1-sources.jar",
           "size": 87011,
-          "sha512": "759f4e0601f60283363b7b40ac3065ba48aee08f404bf7033c622023b48f06e90ea166aee026b4062bd0417700631ecd8138f7d6a1f4b27b9f836bed9d4a3469",
-          "sha256": "3ad30fcc4fd47d3cb37490361903ad500a21a374dae7e7a3647ad80b0eadcc8c",
-          "sha1": "4169c82b7b7b66f48ef8fc8f17d1fe7592d64625",
-          "md5": "d288cbaeb74a4d604a8aa21855e5e7f0"
+          "sha512": "f6c3c38ca8c3a20e4903b9c61a6b1a9af8347cd4f805c4c4bf46f5fcee76fc3cf51203dc2f38c24720a29aabab37c175ee41b3b4903dde332e367e43f589e62b",
+          "sha256": "5e88d656c4116dca2fb8ce3d2bbcfa2427c67c6977e481902cc783771b18509d",
+          "sha1": "c45025546cb0b6f65a9b49b3fa925f86072ea040",
+          "md5": "6ad4f687637c9326ae35b0ab5e4340e5"
         }
       ]
     }
