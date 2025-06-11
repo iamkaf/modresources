@@ -19,7 +19,7 @@
         "title": "Amber",
         "banner": "![Amber Banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot1.png)",
         "description": "Amber is a library api of common code utilized by iamkaf mods.",
-        "dependencies": "Requires [Fabric API](https://modrinth.com/mod/fabric-api) and [Architectury API](https://modrinth.com/mod/architectury-api).",
+        "dependencies": "Requires [Fabric API](https://modrinth.com/mod/fabric-api).",
         "extra": ""
       },
       "howto": {
@@ -27,7 +27,7 @@
       },
       "qna": {},
       "compatibility": {
-        "message": "Let me know if you find any issues."
+        "message": "Let me know if you find any issues.\n\nFor versions 2.X and below Amber requires [Architectury API](https://modrinth.com/mod/architectury-api)."
       },
       "credits": {
         "credits": ["- The Architectury Team for their amazing API."]
@@ -359,6 +359,57 @@
       "mod_credits": [
         "My awesome community."
       ]
+    }
+  },
+  {
+    "slug": "snapshears",
+    "name": "SnapShears",
+    "modrinth_id": "yiKUfwkf",
+    "page": {
+      "no_dependency": false,
+      "mod_name": "SnapShears",
+      "mod_header": null,
+      "mod_description": "Area-of-effect shearing that trims every adult sheep nearby, server side.",
+      "mod_dependencies": "Requires [Amber](https://modrinth.com/mod/amber).",
+      "mod_extra": null,
+      "mod_how_to_use": "Jump on the sheep and use the shears. Like if you were criting with a sword.",
+      "mod_current_plan": null,
+      "mod_roadmap": null,
+      "mod_pictures": [
+        {
+          "alt": "A gif of the mod in action, some gameplay of the player shearing sheep.",
+          "url": "https://i.imgur.com/dwBvLFm.gif"
+        }
+      ],
+      "mod_compatibility": "SnapShears calls Minecraft’s built-in shear() method, so any sheep variant that responds to normal shears will work too",
+      "mod_credits": [
+        "My awesome community."
+      ]
+    },
+    "pagev2": {
+      "header": {
+        "title": "SnapShears",
+        "banner": "![Amber Banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/snapshears/banner.png)",
+        "description": "Area-of-effect shearing that trims every adult sheep nearby, server side.",
+        "dependencies": "Requires [Fabric API](https://modrinth.com/mod/fabric-api) and [Amber](https://modrinth.com/mod/amber).",
+        "extra": ""
+      },
+      "howto": {
+        "how_to_use": "Jump on the sheep and use the shears. Like if you were criting with a sword."
+      },
+      "images": {
+        "images": "![A gif of the mod in action, some gameplay of the player shearing sheep](https://i.imgur.com/dwBvLFm.gif)"
+      },
+      "config": {
+        "config": "In the config `snapshears.json5` you can configure which mods are considered shears.\n\nAdd item ids like `minecraft:shears` or prefix a tag with `#` (e.g. `#c:tools/shear`)."
+      },
+      "qna": {},
+      "compatibility": {
+        "message": "SnapShears calls Minecraft’s built-in shear() method, so any sheep variant that responds to normal shears will work too. If you find any problems, let me know."
+      },
+      "credits": {
+        "credits": ["- My awesome community."]
+      }
     }
   }
 ]

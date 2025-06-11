@@ -9,7 +9,7 @@
 
 Amber is a library api of common code utilized by iamkaf mods.
 
-Requires [Fabric API](https://modrinth.com/mod/fabric-api) and [Architectury API](https://modrinth.com/mod/architectury-api).
+Requires [Fabric API](https://modrinth.com/mod/fabric-api).
 
 
 ### How To Use It
@@ -39,6 +39,8 @@ A: Yes, no need to give credit or ask.
 ## Compatibility
 
 Let me know if you find any issues.
+
+For versions 2.X and below Amber requires [Architectury API](https://modrinth.com/mod/architectury-api).
 
 
 ## Credits
