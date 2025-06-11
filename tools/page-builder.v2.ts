@@ -3,8 +3,8 @@
  *
  * Each mod lists its page content as an array of sections.  For each section the
  * builder either inserts a matching file from `pages/common` (if one exists) or
- * creates a heading with the supplied level and content.  The final Markdown is
- * written to `pages/<slug>/README.md`.
+ * creates a heading with the supplied level and content. The final Markdown is
+ * written to `pages/<id>/README.md`.
  */
 
 import fs from 'fs';
@@ -22,7 +22,7 @@ const modsJsonPath = path.join(__dirname, '../mods.v2.json');
 const commonDir = path.join(__dirname, '../pages/common');
 const outputDir = path.join(__dirname, '../pages');
 const commonPath = (name: string) => path.join(commonDir, `${name}.md`);
-const outputPath = (mod: ModEntry) => path.join(outputDir, mod.slug, 'README.md');
+const outputPath = (mod: ModEntry) => path.join(outputDir, mod.id, 'README.md');
 
 const modsData: ModEntry[] = readMods(modsJsonPath);
 
@@ -60,5 +60,5 @@ console.log(chalk.bold.green('\nAll mod pages generated successfully (v2)!'));
 modsData
   .filter((mod) => mod.pages && mod.pages.length)
   .forEach((mod) => {
-    console.log(`${chalk.cyan('→')} ${chalk.bold(mod.name)}: ${chalk.magenta(`./pages/${mod.slug}/README.md`)}`);
+    console.log(`${chalk.cyan('→')} ${chalk.bold(mod.name)}: ${chalk.magenta(`./pages/${mod.id}/README.md`)}`);
   });

@@ -2,7 +2,7 @@
  * 🖼️ Lists image URLs for each mod.
  *
  * Scans the `pages` directory for PNG files and prints a raw GitHub URL for each
- * one. Optionally pass a mod slug to list only its images.
+ * one. Optionally pass a mod id to list only its images.
  */
 
 import fs from 'fs';

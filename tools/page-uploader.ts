@@ -3,7 +3,7 @@
  *
  * Uploads a single README page to Modrinth and prepares the CurseForge page.
  *
- * Pass the mod slug as the only argument. The script uploads `pages/<slug>/README.md`
+ * Pass the mod id as the only argument. The script uploads `pages/<id>/README.md`
  * to Modrinth using the API key in `.env`, then copies the markdown to the
  * clipboard and opens the CurseForge author portal for easy pasting.
  */
@@ -45,31 +45,31 @@ const __dirname = path.dirname(__filename);
 const modsJsonPath = path.join(__dirname, '../mods.v2.json');
 const modsData: ModEntry[] = readMods(modsJsonPath);
 
-const slug = process.argv[2];
+const id = process.argv[2];
 
-if (!slug) {
-  console.error(chalk.red('Usage: tsx tools/page-uploader.ts <mod-slug>'));
+if (!id) {
+  console.error(chalk.red('Usage: tsx tools/page-uploader.ts <mod-id>'));
   process.exit(1);
 }
 
-const mod = modsData.find((m) => m.slug === slug);
+const mod = modsData.find((m) => m.id === id);
 if (!mod) {
-  console.error(chalk.red.bold(`✖ Mod "${slug}" not found in mods.v2.json`));
+  console.error(chalk.red.bold(`✖ Mod "${id}" not found in mods.v2.json`));
   process.exit(1);
 }
 
 const api = new ModrinthAPI(process.env.MODRINTH_API_KEY);
 
 if (!mod.ids?.modrinth) {
-  console.warn(chalk.yellow(`❔ Mod ${mod.slug} does not have a Modrinth ID`));
+  console.warn(chalk.yellow(`❔ Mod ${mod.id} does not have a Modrinth ID`));
   process.exit(1);
 }
 
 let modPageMd: string;
 try {
-  modPageMd = fs.readFileSync(path.join(__dirname, '../pages', `${mod.slug}`, 'README.md'), 'utf-8');
+  modPageMd = fs.readFileSync(path.join(__dirname, '../pages', `${mod.id}`, 'README.md'), 'utf-8');
 } catch (error) {
-  console.error(chalk.red.bold(`✖ Failed to read README.md for ${mod.slug}: ${error}`));
+  console.error(chalk.red.bold(`✖ Failed to read README.md for ${mod.id}: ${error}`));
   process.exit(1);
 }
 

@@ -19,7 +19,7 @@ const mods: ModEntry[] = readMods(modsPath);
 
 const lines: string[] = ['## Check out my other mods!\n'];
 for (const mod of mods) {
-  const iconUrl = `https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/${mod.slug}/icon.v2.png`;
+  const iconUrl = `https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/${mod.id}/icon.v2.png`;
   lines.push(`<a href="${mod.urls?.modrinth ?? '#'}"><img src="${iconUrl}" alt="${mod.name}" width="100"></a>`);
 }
 

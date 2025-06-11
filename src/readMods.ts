@@ -1,10 +1,9 @@
 /**
  * Typed helper to load `mods.v2.json`.
  *
- * The v2 schema groups related information together (ids, urls, icon) and each
- * page is represented as a list of sections with a title, heading level and
- * content. `readMods` parses the JSON file and returns an array of these typed
- * entries for use by the various tools.
+ * The v2 schema groups related information together (ids, urls, icon). Each mod
+ * also lists its dependencies and page sections. `readMods` parses the JSON file
+ * and returns typed entries for use by the various tools.
  */
 import fs from 'fs';
 import path from 'path';
@@ -15,18 +14,31 @@ export interface PageSection {
   content: string;
 }
 
+export interface Dependency {
+  name: string;
+  loader: 'fabric' | 'forge' | 'neoforge' | 'all';
+  modrinthUrl: string;
+  curseforgeUrl: string;
+  notes?: string;
+}
+
 export interface ModEntry {
-  slug: string;
+  id: string;
   name: string;
   icon?: string[];
   ids?: {
     modrinth?: string;
-    curseforge?: number;
+    curseforge?: string;
   };
   urls?: {
     modrinth?: string;
     curseforge?: string;
+    source?: string;
+    issues?: string;
+    support?: string;
+    discord?: string;
   };
+  dependencies: Dependency[];
   pages: PageSection[];
 }
 

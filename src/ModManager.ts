@@ -8,7 +8,7 @@
  * Example:
  *   const manager = new ModManager();
  *   manager.add({
- *     slug: 'my-mod',
+ *     id: 'my-mod',
  *     name: 'My Mod',
  *     pages: [{ title: 'header', level: 1, content: 'My description' }]
  *   });
@@ -32,31 +32,31 @@ export class ModManager {
     return this.load();
   }
 
-  get(slug: string): ModEntry | undefined {
-    return this.load().find((m) => m.slug === slug);
+  get(id: string): ModEntry | undefined {
+    return this.load().find((m) => m.id === id);
   }
 
   add(entry: ModEntry): void {
     const mods = this.load();
-    if (mods.some((m) => m.slug === entry.slug)) {
-      throw new Error(`Mod ${entry.slug} already exists`);
+    if (mods.some((m) => m.id === entry.id)) {
+      throw new Error(`Mod ${entry.id} already exists`);
     }
     mods.push(entry);
     this.save(mods);
   }
 
-  update(slug: string, partial: Partial<ModEntry>): void {
+  update(id: string, partial: Partial<ModEntry>): void {
     const mods = this.load();
-    const mod = mods.find((m) => m.slug === slug);
-    if (!mod) throw new Error(`Mod ${slug} not found`);
+    const mod = mods.find((m) => m.id === id);
+    if (!mod) throw new Error(`Mod ${id} not found`);
     Object.assign(mod, partial);
     this.save(mods);
   }
 
-  delete(slug: string): void {
+  delete(id: string): void {
     const mods = this.load();
-    const idx = mods.findIndex((m) => m.slug === slug);
-    if (idx === -1) throw new Error(`Mod ${slug} not found`);
+    const idx = mods.findIndex((m) => m.id === id);
+    if (idx === -1) throw new Error(`Mod ${id} not found`);
     mods.splice(idx, 1);
     this.save(mods);
   }

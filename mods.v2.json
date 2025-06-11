@@ -1,6 +1,5 @@
 [
   {
-    "slug": "amber",
     "name": "Amber",
     "icon": [
       "background/black.png",
@@ -9,11 +8,15 @@
     ],
     "ids": {
       "modrinth": "vjGZJDu5",
-      "curseforge": -1
+      "curseforge": "-1"
     },
     "urls": {
       "modrinth": "https://modrinth.com/mod/amber",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/amber"
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/amber",
+      "source": "https://github.com/iamkaf/amber",
+      "issues": "https://github.com/iamkaf/mod-issues",
+      "support": "https://ko-fi.com/iamkaffe",
+      "discord": "https://discord.gg/HV5WgTksaB"
     },
     "pages": [
       {
@@ -36,18 +39,31 @@
         "level": 2,
         "content": "- The Architectury Team for their amazing API."
       }
+    ],
+    "id": "amber",
+    "dependencies": [
+      {
+        "name": "Fabric API",
+        "loader": "fabric",
+        "modrinthUrl": "https://modrinth.com/mod/fabric-api",
+        "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+        "notes": ""
+      }
     ]
   },
   {
-    "slug": "liteminer",
     "name": "Liteminer",
     "ids": {
       "modrinth": "VTnHoofC",
-      "curseforge": -1
+      "curseforge": "-1"
     },
     "urls": {
       "modrinth": "https://modrinth.com/mod/liteminer",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/liteminer"
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/liteminer",
+      "source": "https://github.com/iamkaf/liteminer",
+      "issues": "https://github.com/iamkaf/mod-issues",
+      "support": "https://ko-fi.com/iamkaffe",
+      "discord": "https://discord.gg/HV5WgTksaB"
     },
     "pages": [
       {
@@ -61,6 +77,11 @@
         "content": "Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine.\n\n![Keybord Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot5.png)\n\nThere are a few shapes you can mine with and to switch between them hold the Liteminer key and scroll your mouse wheel.\n\nThe available shapes are: Shapeless (mines connected blocks), 3x3, Small Tunnel, Staircase Up and Staircase Down.\n"
       },
       {
+        "title": "Tags",
+        "level": 2,
+        "content": "\n\n### Tags\n\n#### Item Tags\n\n* `liteminer:excluded_tools` - items in this tag can't be used for litemining (applies to main hand slot)\n* `liteminer:included_tools` - if `require_tool` is true in server config, by default only \"tool\" items can be used (tiered items with durability); this can be used to allow extra items\n\n#### Block Tags\n\n* `liteminer:excluded_blocks` - blocks in this tag may never be litemined\n* `liteminer:block_whitelist` - if this tag is non-empty, then _only_ blocks in this tag may be litemined\n\n> Note: these tags are compatible with the FTB Ultimine tags, so you can use the same tags for both mods if you already have a setup you like.\n\n"
+      },
+      {
         "title": "Images",
         "level": 2,
         "content": "![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot1.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot2.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot3.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot4.png)\n![Liteminer outlines on a tree.](https://cdn.modrinth.com/data/cached_images/2b8d30774e17ff51cf5f2b257f6cb1970f826c3d_0.webp)\n![Liteminer outlines on the ground.](https://cdn.modrinth.com/data/cached_images/079e3e003e55954eed51ede44aa3b92e50c2b1ae.png)\n![Liteminer outlines on diamond ore.](https://cdn.modrinth.com/data/cached_images/22ac03f14cca7375d06cba76b54141e411e6ed62.png)\n![Configuration Screen](https://cdn.modrinth.com/data/cached_images/0255cf113d51e9ebec132a6d0ce0f5fa9c595da5_0.webp)"
@@ -70,18 +91,31 @@
         "level": 2,
         "content": "- [FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-fabric) for the inspiration for the mod.\n- [Simply Tools](https://modrinth.com/mod/simply-tools) for some client side code.\n- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.\n- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod."
       }
+    ],
+    "id": "liteminer",
+    "dependencies": [
+      {
+        "name": "Fabric API",
+        "loader": "fabric",
+        "modrinthUrl": "https://modrinth.com/mod/fabric-api",
+        "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+        "notes": ""
+      }
     ]
   },
   {
-    "slug": "mochila",
     "name": "Mochila",
     "ids": {
       "modrinth": "IWGxWQWM",
-      "curseforge": -1
+      "curseforge": "-1"
     },
     "urls": {
       "modrinth": "https://modrinth.com/mod/mochila",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/mochila"
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/mochila",
+      "source": "https://github.com/iamkaf/mochila",
+      "issues": "https://github.com/iamkaf/mod-issues",
+      "support": "https://ko-fi.com/iamkaffe",
+      "discord": "https://discord.gg/HV5WgTksaB"
     },
     "pages": [
       {
@@ -104,18 +138,31 @@
         "level": 2,
         "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.\n- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod."
       }
+    ],
+    "id": "mochila",
+    "dependencies": [
+      {
+        "name": "Fabric API",
+        "loader": "fabric",
+        "modrinthUrl": "https://modrinth.com/mod/fabric-api",
+        "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+        "notes": ""
+      }
     ]
   },
   {
-    "slug": "dynamicedge",
     "name": "Dynamic Edge",
     "ids": {
       "modrinth": "s2sYoUoB",
-      "curseforge": -1
+      "curseforge": "-1"
     },
     "urls": {
       "modrinth": "https://modrinth.com/mod/dynamicedge",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/dynamicedge"
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/dynamicedge",
+      "source": "https://github.com/iamkaf/dynamicedge",
+      "issues": "https://github.com/iamkaf/mod-issues",
+      "support": "https://ko-fi.com/iamkaffe",
+      "discord": "https://discord.gg/HV5WgTksaB"
     },
     "pages": [
       {
@@ -138,10 +185,19 @@
         "level": 2,
         "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.\n- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod."
       }
+    ],
+    "id": "dynamicedge",
+    "dependencies": [
+      {
+        "name": "Fabric API",
+        "loader": "fabric",
+        "modrinthUrl": "https://modrinth.com/mod/fabric-api",
+        "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+        "notes": ""
+      }
     ]
   },
   {
-    "slug": "bonded",
     "name": "Bonded",
     "icon": [
       "background/black.png",
@@ -151,11 +207,15 @@
     ],
     "ids": {
       "modrinth": "rTXmXcev",
-      "curseforge": -1
+      "curseforge": "-1"
     },
     "urls": {
       "modrinth": "https://modrinth.com/mod/bonded",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/bonded"
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/bonded",
+      "source": "https://github.com/iamkaf/bonded",
+      "issues": "https://github.com/iamkaf/mod-issues",
+      "support": "https://ko-fi.com/iamkaffe",
+      "discord": "https://discord.gg/HV5WgTksaB"
     },
     "pages": [
       {
@@ -183,18 +243,31 @@
         "level": 2,
         "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
       }
+    ],
+    "id": "bonded",
+    "dependencies": [
+      {
+        "name": "Fabric API",
+        "loader": "fabric",
+        "modrinthUrl": "https://modrinth.com/mod/fabric-api",
+        "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+        "notes": ""
+      }
     ]
   },
   {
-    "slug": "kaf-hud",
     "name": "Kaf HUD",
     "ids": {
       "modrinth": "fKUQuZsL",
-      "curseforge": -1
+      "curseforge": "-1"
     },
     "urls": {
       "modrinth": "https://modrinth.com/mod/kaf-hud",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/kaf-hud"
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/kaf-hud",
+      "source": "https://github.com/iamkaf/kaf-hud",
+      "issues": "https://github.com/iamkaf/mod-issues",
+      "support": "https://ko-fi.com/iamkaffe",
+      "discord": "https://discord.gg/HV5WgTksaB"
     },
     "pages": [
       {
@@ -217,18 +290,31 @@
         "level": 2,
         "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.\n- [Minimal Coords HUD](https://modrinth.com/mod/minimal-coords-hud) go check that out if you want more features, really good mod."
       }
+    ],
+    "id": "kaf-hud",
+    "dependencies": [
+      {
+        "name": "Fabric API",
+        "loader": "fabric",
+        "modrinthUrl": "https://modrinth.com/mod/fabric-api",
+        "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+        "notes": ""
+      }
     ]
   },
   {
-    "slug": "valentine",
     "name": "Kaf's Valentine Special",
     "ids": {
       "modrinth": "BAlSr7dy",
-      "curseforge": -1
+      "curseforge": "-1"
     },
     "urls": {
       "modrinth": "https://modrinth.com/mod/valentine",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/valentine"
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/valentine",
+      "source": "https://github.com/iamkaf/valentine",
+      "issues": "https://github.com/iamkaf/mod-issues",
+      "support": "https://ko-fi.com/iamkaffe",
+      "discord": "https://discord.gg/HV5WgTksaB"
     },
     "pages": [
       {
@@ -256,18 +342,31 @@
         "level": 2,
         "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
       }
+    ],
+    "id": "valentine",
+    "dependencies": [
+      {
+        "name": "Fabric API",
+        "loader": "fabric",
+        "modrinthUrl": "https://modrinth.com/mod/fabric-api",
+        "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+        "notes": ""
+      }
     ]
   },
   {
-    "slug": "extendedgolf",
     "name": "Extended Golf",
     "ids": {
       "modrinth": "jVtBevly",
-      "curseforge": -1
+      "curseforge": "-1"
     },
     "urls": {
       "modrinth": "https://modrinth.com/mod/extendedgolf",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/extendedgolf"
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/extendedgolf",
+      "source": "https://github.com/iamkaf/extendedgolf",
+      "issues": "https://github.com/iamkaf/mod-issues",
+      "support": "https://ko-fi.com/iamkaffe",
+      "discord": "https://discord.gg/HV5WgTksaB"
     },
     "pages": [
       {
@@ -281,6 +380,11 @@
         "content": "Position yourself near a mob and wait for the Skeleton to hit and kill it. Once it does, you'll get loot specific to that mob. You can also customize the loot drops by making your own datapacks if you want to tweak things further."
       },
       {
+        "title": "Datapack",
+        "level": 2,
+        "content": "The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.\n\n## Making Your Datapack\n\nYou can use the tags provided by Extended Golf to change or replace the loot.\n\nThe tags follow the format: `extendedgolf:entity_name_here`\n\nSo, for example, to make Pandas drop golden apples:\n\nIn your datapack, make a file at `data/extendedgolf/tags/item/panda.json` with:\n\n```json\n{\n  \"values\": [\n    \"minecraft:golden_apple\"\n  ]\n}\n```\nor if you want to replace the default loot from this mod (pandas drop bamboo and cake 🍰):\n\n```json\n{\n  \"replace\": true,\n  \"values\": [\n    \"minecraft:golden_apple\"\n  ]\n}\n```\n\nNote: there are a few entities that I didn't add loot for because a skeleton can't kill them or it wouldn't make much sense, but if you want to you can (enderman, ender_dragon, player, armor_stand, creeper).\n\n"
+      },
+      {
         "title": "Images",
         "level": 2,
         "content": "![Golf!](https://media1.tenor.com/m/7ec6n3tTxg0AAAAd/aoi-amawashi-aoi.gif)"
@@ -290,10 +394,19 @@
         "level": 2,
         "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
       }
+    ],
+    "id": "extendedgolf",
+    "dependencies": [
+      {
+        "name": "Fabric API",
+        "loader": "fabric",
+        "modrinthUrl": "https://modrinth.com/mod/fabric-api",
+        "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+        "notes": ""
+      }
     ]
   },
   {
-    "slug": "torchtoss",
     "name": "Torch Toss",
     "icon": [
       "background/black.png",
@@ -302,11 +415,15 @@
     ],
     "ids": {
       "modrinth": "AIYW9sHq",
-      "curseforge": -1
+      "curseforge": "-1"
     },
     "urls": {
       "modrinth": "https://modrinth.com/mod/torchtoss",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/torchtoss"
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/torchtoss",
+      "source": "https://github.com/iamkaf/torchtoss",
+      "issues": "https://github.com/iamkaf/mod-issues",
+      "support": "https://ko-fi.com/iamkaffe",
+      "discord": "https://discord.gg/HV5WgTksaB"
     },
     "pages": [
       {
@@ -329,10 +446,19 @@
         "level": 2,
         "content": "- My awesome community."
       }
+    ],
+    "id": "torchtoss",
+    "dependencies": [
+      {
+        "name": "Fabric API",
+        "loader": "fabric",
+        "modrinthUrl": "https://modrinth.com/mod/fabric-api",
+        "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+        "notes": ""
+      }
     ]
   },
   {
-    "slug": "endersight",
     "name": "Ender Sight",
     "icon": [
       "background/endersight.png",
@@ -341,11 +467,15 @@
     ],
     "ids": {
       "modrinth": "y5UyihEq",
-      "curseforge": -1
+      "curseforge": "-1"
     },
     "urls": {
       "modrinth": "https://modrinth.com/mod/endersight",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/endersight"
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/endersight",
+      "source": "https://github.com/iamkaf/endersight",
+      "issues": "https://github.com/iamkaf/mod-issues",
+      "support": "https://ko-fi.com/iamkaffe",
+      "discord": "https://discord.gg/HV5WgTksaB"
     },
     "pages": [
       {
@@ -368,18 +498,31 @@
         "level": 2,
         "content": "- My awesome community."
       }
+    ],
+    "id": "endersight",
+    "dependencies": [
+      {
+        "name": "Fabric API",
+        "loader": "fabric",
+        "modrinthUrl": "https://modrinth.com/mod/fabric-api",
+        "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+        "notes": ""
+      }
     ]
   },
   {
-    "slug": "snapshears",
     "name": "SnapShears",
     "ids": {
       "modrinth": "yiKUfwkf",
-      "curseforge": -1
+      "curseforge": "-1"
     },
     "urls": {
       "modrinth": "https://modrinth.com/mod/snapshears",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/snapshears"
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/snapshears",
+      "source": "https://github.com/iamkaf/snapshears",
+      "issues": "https://github.com/iamkaf/mod-issues",
+      "support": "https://ko-fi.com/iamkaffe",
+      "discord": "https://discord.gg/HV5WgTksaB"
     },
     "pages": [
       {
@@ -411,6 +554,16 @@
         "title": "Credits",
         "level": 2,
         "content": "- My awesome community."
+      }
+    ],
+    "id": "snapshears",
+    "dependencies": [
+      {
+        "name": "Fabric API",
+        "loader": "fabric",
+        "modrinthUrl": "https://modrinth.com/mod/fabric-api",
+        "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+        "notes": ""
       }
     ]
   }

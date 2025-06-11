@@ -22,16 +22,16 @@ const schema = {
   type: 'array',
   items: {
     type: 'object',
-    required: ['slug', 'name', 'pages'],
+    required: ['id', 'name', 'pages', 'dependencies'],
     properties: {
-      slug: { type: 'string' },
+      id: { type: 'string' },
       name: { type: 'string' },
       icon: { type: 'array', items: { type: 'string' } },
       ids: {
         type: 'object',
         properties: {
           modrinth: { type: 'string' },
-          curseforge: { type: 'number' },
+          curseforge: { type: 'string' },
         },
       },
       urls: {
@@ -39,6 +39,24 @@ const schema = {
         properties: {
           modrinth: { type: 'string' },
           curseforge: { type: 'string' },
+          source: { type: 'string' },
+          issues: { type: 'string' },
+          support: { type: 'string' },
+          discord: { type: 'string' },
+        },
+      },
+      dependencies: {
+        type: 'array',
+        items: {
+          type: 'object',
+          required: ['name', 'loader', 'modrinthUrl', 'curseforgeUrl'],
+          properties: {
+            name: { type: 'string' },
+            loader: { enum: ['fabric', 'forge', 'neoforge', 'all'] },
+            modrinthUrl: { type: 'string' },
+            curseforgeUrl: { type: 'string' },
+            notes: { type: 'string' },
+          },
         },
       },
       pages: {

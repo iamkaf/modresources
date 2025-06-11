@@ -4,7 +4,7 @@
  * The script reads `mods.v2.json` to discover icon layers listed under each
  * mod's `icon` array. Each layer references a file in `tools/icon-parts/` which is
  * stitched together using the Sharp library. The resulting `icon.v2.png` is
- * placed next to each mod's README under `pages/<slug>`.
+ * placed next to each mod's README under `pages/<id>`.
  */
 
 import sharp from 'sharp';
@@ -23,10 +23,10 @@ const modsJsonPath = path.join(__dirname, '../mods.v2.json');
 const modsData: ModEntry[] = readMods(modsJsonPath);
 
 const outputDir = path.join(__dirname, '../pages');
-const outputFilePath = (slug) => path.join(outputDir, slug, 'icon.v2.png');
+const outputFilePath = (id: string) => path.join(outputDir, id, 'icon.v2.png');
 
 // Generate an icon from the provided image parts
-const generateIcon = async (filePaths, slug) => {
+const generateIcon = async (filePaths: string[], id: string) => {
   try {
     const images = filePaths.map((filePath) => sharp(path.join('tools/icon-parts', filePath)));
 
@@ -45,13 +45,13 @@ const generateIcon = async (filePaths, slug) => {
       compositeImages.push({ input: await image.toBuffer() });
     }
 
-    const outputPath = outputFilePath(slug);
-    const finalImage = await baseImage.composite(compositeImages).png().toFile(outputPath);
-    console.log(chalk.green(`✅ Icon for ${slug} generated successfully at ${outputPath}`));
-    return finalImage;
-  } catch (error) {
-    console.error(chalk.red(`❌ Error generating icon for ${slug}:`, error));
-  }
+  const outputPath = outputFilePath(id);
+  const finalImage = await baseImage.composite(compositeImages).png().toFile(outputPath);
+  console.log(chalk.green(`✅ Icon for ${id} generated successfully at ${outputPath}`));
+  return finalImage;
+} catch (error) {
+  console.error(chalk.red(`❌ Error generating icon for ${id}:`, error));
+}
 };
 
 console.log(chalk.blue('🔄 Starting icon generation process...'));
@@ -60,7 +60,7 @@ const promises = [];
 
 for (const mod of modsData) {
   if (mod.icon) {
-    promises.push(generateIcon(mod.icon, mod.slug));
+    promises.push(generateIcon(mod.icon, mod.id));
   }
 }
 
