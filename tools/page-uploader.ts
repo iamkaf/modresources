@@ -1,8 +1,17 @@
+/**
+ * ☁️ Uploads generated README pages to the Modrinth API.
+ *
+ * It reads `mods.v2.json` for project IDs, loads each README from `pages/<slug>`
+ * and sends a PATCH request to update the mod description. Use an optional
+ * command line argument to upload a single mod.
+ */
+
 import { config } from 'dotenv';
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
 import { fileURLToPath } from 'url';
+import { readMods, ModEntry } from '../src/readMods.js';
 config();
 
 class ModrinthAPI {
@@ -29,8 +38,8 @@ class ModrinthAPI {
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const modsJsonPath = path.join(__dirname, '../mods.json');
-const modsData = JSON.parse(fs.readFileSync(modsJsonPath, 'utf-8'));
+const modsJsonPath = path.join(__dirname, '../mods.v2.json');
+const modsData: ModEntry[] = readMods(modsJsonPath);
 
 // Get command-line argument for a specific mod, if provided
 const specificMod = process.argv[2];
@@ -38,7 +47,7 @@ const specificMod = process.argv[2];
 const api = new ModrinthAPI(process.env.MODRINTH_API_KEY);
 
 if (specificMod && !modsData.some((mod) => mod.slug === specificMod)) {
-  console.error(chalk.red.bold(`✖ Mod "${specificMod}" not found in mods.json`));
+  console.error(chalk.red.bold(`✖ Mod "${specificMod}" not found in mods.v2.json`));
   process.exit(1);
 }
 
@@ -47,7 +56,7 @@ for (const mod of modsData) {
     continue;
   }
 
-  if (!mod.modrinth_id) {
+  if (!mod.modrinthId) {
     console.warn(chalk.yellow(`❔ Mod ${mod.slug} does not have a Modrinth ID`));
     continue;
   }
@@ -70,11 +79,11 @@ for (const mod of modsData) {
   };
 
   api
-    .updateProject(mod.modrinth_id, payload)
+    .updateProject(mod.modrinthId!, payload)
     .then(() => {
       console.log(chalk.green.bold(`✔ Successfully updated project ${mod.name}`));
     })
     .catch((error) => {
-      console.error(chalk.red.bold(`✖ Failed to update project ${mod.modrinth_id}: ${error}`));
+      console.error(chalk.red.bold(`✖ Failed to update project ${mod.modrinthId}: ${error}`));
     });
 }

@@ -1,16 +1,26 @@
+/**
+ * 🖼 Generates composite icons for each mod.
+ *
+ * The script reads `mods.v2.json` to discover icon layers listed under
+ * `page.icon`. Each layer references a file in `tools/icon-parts/` which is
+ * stitched together using the Sharp library. The resulting `icon.v2.png` is
+ * placed next to each mod's README under `pages/<slug>`.
+ */
+
 import sharp from 'sharp';
 import chalk from 'chalk';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import { readMods, ModEntry } from '../src/readMods.js';
 
 // Get the directory of the current script file
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Paths to important files and directories
-const modsJsonPath = path.join(__dirname, '../mods.json');
-const modsData = JSON.parse(fs.readFileSync(modsJsonPath, 'utf-8'));
+const modsJsonPath = path.join(__dirname, '../mods.v2.json');
+const modsData: ModEntry[] = readMods(modsJsonPath);
 
 const outputDir = path.join(__dirname, '../pages');
 const outputFilePath = (slug) => path.join(outputDir, slug, 'icon.v2.png');
@@ -54,8 +64,10 @@ for (const mod of modsData) {
   }
 }
 
-Promise.all(promises).then(() => {
-  console.log(chalk.green(`✅ Generated ${promises.length} icons successfully.`));
-}).catch((error) => {
-  console.error(chalk.red('❌ Error during icon generation process:', error));
-});
+Promise.all(promises)
+  .then(() => {
+    console.log(chalk.green(`✅ Generated ${promises.length} icons successfully.`));
+  })
+  .catch((error) => {
+    console.error(chalk.red('❌ Error during icon generation process:', error));
+  });

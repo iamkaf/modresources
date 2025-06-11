@@ -1,3 +1,10 @@
+/**
+ * 📝 Converts `scratchpad.md` into a JSON-safe string.
+ *
+ * Replaces Discord-style `:emoji:` tags with their Unicode equivalents,
+ * escapes special characters for JSON, and copies the result to the clipboard.
+ */
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -23,9 +30,9 @@ const sanitizeAndFormatContent = (content) => {
   // Escape for JSON
   return withEmojis
     .replace(/\\/g, '\\\\') // Escape backslashes
-    .replace(/"/g, '\\"')  // Escape double quotes
+    .replace(/"/g, '\\"') // Escape double quotes
     .replace(/\n/g, '\\n') // Escape newlines
-    .replace(/\r/g, '');   // Remove carriage returns
+    .replace(/\r/g, ''); // Remove carriage returns
 };
 
 // Read the scratchpad.md file
