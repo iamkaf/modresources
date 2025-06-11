@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/iamkaf/modresources#readme",
   "devDependencies": {
+    "@types/node": "^24.0.0",
     "prettier": "^3.3.3",
     "tsx": "^4.20.0",
     "typescript": "^5.4.5"

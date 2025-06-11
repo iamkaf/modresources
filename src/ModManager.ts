@@ -29,12 +29,12 @@ export class ModManager {
   }
 
   get(slug: string): ModEntry | undefined {
-    return this.load().find(m => m.slug === slug);
+    return this.load().find((m) => m.slug === slug);
   }
 
   add(entry: ModEntry): void {
     const mods = this.load();
-    if (mods.some(m => m.slug === entry.slug)) {
+    if (mods.some((m) => m.slug === entry.slug)) {
       throw new Error(`Mod ${entry.slug} already exists`);
     }
     mods.push(entry);
@@ -43,7 +43,7 @@ export class ModManager {
 
   update(slug: string, partial: Partial<ModEntry>): void {
     const mods = this.load();
-    const mod = mods.find(m => m.slug === slug);
+    const mod = mods.find((m) => m.slug === slug);
     if (!mod) throw new Error(`Mod ${slug} not found`);
     Object.assign(mod, partial);
     this.save(mods);
@@ -51,7 +51,7 @@ export class ModManager {
 
   delete(slug: string): void {
     const mods = this.load();
-    const idx = mods.findIndex(m => m.slug === slug);
+    const idx = mods.findIndex((m) => m.slug === slug);
     if (idx === -1) throw new Error(`Mod ${slug} not found`);
     mods.splice(idx, 1);
     this.save(mods);

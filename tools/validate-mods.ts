@@ -42,39 +42,39 @@ const schema = {
               banner: { type: 'string' },
               description: { type: 'string' },
               dependencies: { type: ['string', 'null'] },
-              extra: { type: ['string', 'null'] }
-            }
+              extra: { type: ['string', 'null'] },
+            },
           },
           howto: {
             type: 'object',
-            properties: { how_to_use: { type: 'string' } }
+            properties: { how_to_use: { type: 'string' } },
           },
           images: {
             type: 'object',
-            properties: { images: { type: 'string' } }
+            properties: { images: { type: 'string' } },
           },
           config: {
             type: 'object',
-            properties: { config: { type: 'string' } }
+            properties: { config: { type: 'string' } },
           },
           qna: {
             type: 'object',
-            additionalProperties: { type: 'string' }
+            additionalProperties: { type: 'string' },
           },
           compatibility: {
             type: 'object',
-            properties: { message: { type: 'string' } }
+            properties: { message: { type: 'string' } },
           },
           credits: {
             type: 'object',
             properties: {
-              credits: { type: 'array', items: { type: 'string' } }
-            }
-          }
-        }
-      }
-    }
-  }
+              credits: { type: 'array', items: { type: 'string' } },
+            },
+          },
+        },
+      },
+    },
+  },
 };
 
 const validator = new Validator();
