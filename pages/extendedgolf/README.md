@@ -19,7 +19,7 @@ It’s like Minecraft meets golf... but with mobs, arrows, and lots of loot. Whe
 
 Position yourself near a mob and wait for the Skeleton to hit and kill it. Once it does, you'll get loot specific to that mob. You can also customize the loot drops by making your own datapacks if you want to tweak things further.
 
-## Datapack
+## Development Plan
 
 The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.
 
@@ -59,11 +59,6 @@ Note: there are a few entities that I didn't add loot for because a skeleton can
 
 ![Golf!](https://media1.tenor.com/m/7ec6n3tTxg0AAAAd/aoi-amawashi-aoi.gif)
 
-## Credits
-
-- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
-- And most importantly, **Aris**, for always being there for me.
-
 ## Q&A
 
 **Q: Where can I ask something that is not listed here?**
@@ -82,4 +77,9 @@ A: Yes, no need to give credit or ask.
 
 [![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
 
+
+## Credits
+
+- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
+- And most importantly, **Aris**, for always being there for me.
 

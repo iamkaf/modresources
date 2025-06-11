@@ -35,6 +35,11 @@
         "content": "Let me know if you find any issues.\n\nFor versions 2.X and below Amber requires [Architectury API](https://modrinth.com/mod/architectury-api)."
       },
       {
+        "title": "qna",
+        "level": 2,
+        "content": ""
+      },
+      {
         "title": "Credits",
         "level": 2,
         "content": "- The Architectury Team for their amazing API."
@@ -87,6 +92,11 @@
         "content": "![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot1.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot2.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot3.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot4.png)\n![Liteminer outlines on a tree.](https://cdn.modrinth.com/data/cached_images/2b8d30774e17ff51cf5f2b257f6cb1970f826c3d_0.webp)\n![Liteminer outlines on the ground.](https://cdn.modrinth.com/data/cached_images/079e3e003e55954eed51ede44aa3b92e50c2b1ae.png)\n![Liteminer outlines on diamond ore.](https://cdn.modrinth.com/data/cached_images/22ac03f14cca7375d06cba76b54141e411e6ed62.png)\n![Configuration Screen](https://cdn.modrinth.com/data/cached_images/0255cf113d51e9ebec132a6d0ce0f5fa9c595da5_0.webp)"
       },
       {
+        "title": "qna",
+        "level": 2,
+        "content": ""
+      },
+      {
         "title": "Credits",
         "level": 2,
         "content": "- [FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-fabric) for the inspiration for the mod.\n- [Simply Tools](https://modrinth.com/mod/simply-tools) for some client side code.\n- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.\n- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod."
@@ -134,6 +144,11 @@
         "content": "![Several backpacks being displayed.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot1.png)\n![Several backpacks being displayed.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot2.png)\n![A leather backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot3.png)\n![A gold backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot4.png)"
       },
       {
+        "title": "qna",
+        "level": 2,
+        "content": ""
+      },
+      {
         "title": "Credits",
         "level": 2,
         "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.\n- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod."
@@ -179,6 +194,11 @@
         "title": "Images",
         "level": 2,
         "content": "![Cake gif.](https://i.imgur.com/m86rg15.gif)"
+      },
+      {
+        "title": "qna",
+        "level": 2,
+        "content": ""
       },
       {
         "title": "Credits",
@@ -239,6 +259,11 @@
         "content": "### Compat Mods\n\n- [Bonded: Basic Weapons Compat](https://modrinth.com/mod/bonded-basic-weapons-compat)\n- [Bonded: Advanced Netherite Compat](https://modrinth.com/mod/bonded-advanced-netherite-compat)\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu."
       },
       {
+        "title": "qna",
+        "level": 2,
+        "content": ""
+      },
+      {
         "title": "Credits",
         "level": 2,
         "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
@@ -284,6 +309,11 @@
         "title": "Images",
         "level": 2,
         "content": "![Showing the coordinates](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot1.png)\n![Showing the copy feature](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot2.png)\n![Showing modded biome](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot3.png)"
+      },
+      {
+        "title": "qna",
+        "level": 2,
+        "content": ""
       },
       {
         "title": "Credits",
@@ -338,6 +368,11 @@
         "content": "#### Old 1.20.1 Details\n<details>\n<summary>Spoiler</summary>\n\n\n## Cookie Book Included!\n\n![Cookie Book](https://cdn.modrinth.com/data/cached_images/cabbed8a8f6cdc02b484dd7abf9130d070e07801.jpeg)\n\n## Cotton Candy\n\n\nBy breaking tall grass you may find Cotton Candy Seeds which grow into Cotton Candy.\n\nYou can eat the Cotton Candy or use it to make the Special Chocolate Cookie or the Lovey Dovey Infuser.\n\n![cotton candy](https://cdn.modrinth.com/data/cached_images/fc0ef3002b42f05bccf430319710a0d98658f563.jpeg)\n\n## Special Cookies!\n\n\nYou can make **20 different cookies** each one with its own flavor and effects.\n\n![Many Cookies!](https://i.imgur.com/m79PyE4.png)\n\n## Lovey Dovey Infuser\n\n\nYou can use the Lovey Dovey Infuser to infuse all the cookies in the mod. **The infused versions grant more powerful effects**.\n\n![Lovey Dovey Infuser](https://cdn.modrinth.com/data/cached_images/eef273959c7d1b13795047fd453b9cbd07c830bd.png)\n\n![Lovey Dovey Infuser GUI](https://i.imgur.com/bkiBTWQ.png)\n\n## Aristea\n\n\n**Aristea** is a new flower added to Minecraft, you can find it randomly generating in the world.\n\n![Aristea](https://cdn.modrinth.com/data/cached_images/7dc8417358e52e63a712d047b566810cfd58a578.png)\n\n\n</details>\n\n"
       },
       {
+        "title": "qna",
+        "level": 2,
+        "content": ""
+      },
+      {
         "title": "Credits",
         "level": 2,
         "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
@@ -380,7 +415,7 @@
         "content": "Position yourself near a mob and wait for the Skeleton to hit and kill it. Once it does, you'll get loot specific to that mob. You can also customize the loot drops by making your own datapacks if you want to tweak things further."
       },
       {
-        "title": "Datapack",
+        "title": "Development Plan",
         "level": 2,
         "content": "The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.\n\n## Making Your Datapack\n\nYou can use the tags provided by Extended Golf to change or replace the loot.\n\nThe tags follow the format: `extendedgolf:entity_name_here`\n\nSo, for example, to make Pandas drop golden apples:\n\nIn your datapack, make a file at `data/extendedgolf/tags/item/panda.json` with:\n\n```json\n{\n  \"values\": [\n    \"minecraft:golden_apple\"\n  ]\n}\n```\nor if you want to replace the default loot from this mod (pandas drop bamboo and cake 🍰):\n\n```json\n{\n  \"replace\": true,\n  \"values\": [\n    \"minecraft:golden_apple\"\n  ]\n}\n```\n\nNote: there are a few entities that I didn't add loot for because a skeleton can't kill them or it wouldn't make much sense, but if you want to you can (enderman, ender_dragon, player, armor_stand, creeper).\n\n"
       },
@@ -388,6 +423,11 @@
         "title": "Images",
         "level": 2,
         "content": "![Golf!](https://media1.tenor.com/m/7ec6n3tTxg0AAAAd/aoi-amawashi-aoi.gif)"
+      },
+      {
+        "title": "qna",
+        "level": 2,
+        "content": ""
       },
       {
         "title": "Credits",
@@ -442,6 +482,11 @@
         "content": "![Throwing a torch](https://i.imgur.com/iAEBLkX.gif)\n![It works with soul and redstone torches!](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/torchtoss/screenshot4.png)"
       },
       {
+        "title": "qna",
+        "level": 2,
+        "content": ""
+      },
+      {
         "title": "Credits",
         "level": 2,
         "content": "- My awesome community."
@@ -492,6 +537,11 @@
         "title": "Images",
         "level": 2,
         "content": "![Ender Sight showcase](https://i.imgur.com/eThcpXG.gif)\n![An enderman with a purple outline around it](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/endersight/screenshot1.png)\n![A group of endermen with purple outlines around them](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/endersight/screenshot2.png)"
+      },
+      {
+        "title": "qna",
+        "level": 2,
+        "content": ""
       },
       {
         "title": "Credits",
@@ -549,6 +599,11 @@
         "title": "Compatibility",
         "level": 2,
         "content": "SnapShears calls Minecraft’s built-in shear() method, so any sheep variant that responds to normal shears will work too. If you find any problems, let me know."
+      },
+      {
+        "title": "qna",
+        "level": 2,
+        "content": ""
       },
       {
         "title": "Credits",

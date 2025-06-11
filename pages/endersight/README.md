@@ -16,11 +16,6 @@ If the effect is getting in the way you can hit the hotkey (default N) to disabl
 ![An enderman with a purple outline around it](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/endersight/screenshot1.png)
 ![A group of endermen with purple outlines around them](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/endersight/screenshot2.png)
 
-## Credits
-
-- My awesome community.
-- And most importantly, **Aris**, for always being there for me.
-
 ## Q&A
 
 **Q: Where can I ask something that is not listed here?**
@@ -39,4 +34,9 @@ A: Yes, no need to give credit or ask.
 
 [![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
 
+
+## Credits
+
+- My awesome community.
+- And most importantly, **Aris**, for always being there for me.
 

@@ -35,12 +35,6 @@ Just play the game, you should notice the augments in your gear naturally.
 
 ![Cake gif.](https://i.imgur.com/m86rg15.gif)
 
-## Credits
-
-- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
-- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod.
-- And most importantly, **Aris**, for always being there for me.
-
 ## Q&A
 
 **Q: Where can I ask something that is not listed here?**
@@ -59,4 +53,10 @@ A: Yes, no need to give credit or ask.
 
 [![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
 
+
+## Credits
+
+- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
+- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod.
+- And most importantly, **Aris**, for always being there for me.
 

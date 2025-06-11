@@ -52,14 +52,6 @@ The available shapes are: Shapeless (mines connected blocks), 3x3, Small Tunnel,
 ![Liteminer outlines on diamond ore.](https://cdn.modrinth.com/data/cached_images/22ac03f14cca7375d06cba76b54141e411e6ed62.png)
 ![Configuration Screen](https://cdn.modrinth.com/data/cached_images/0255cf113d51e9ebec132a6d0ce0f5fa9c595da5_0.webp)
 
-## Credits
-
-- [FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-fabric) for the inspiration for the mod.
-- [Simply Tools](https://modrinth.com/mod/simply-tools) for some client side code.
-- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
-- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod.
-- And most importantly, **Aris**, for always being there for me.
-
 ## Q&A
 
 **Q: Where can I ask something that is not listed here?**
@@ -78,4 +70,12 @@ A: Yes, no need to give credit or ask.
 
 [![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
 
+
+## Credits
+
+- [FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-fabric) for the inspiration for the mod.
+- [Simply Tools](https://modrinth.com/mod/simply-tools) for some client side code.
+- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
+- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod.
+- And most importantly, **Aris**, for always being there for me.
 

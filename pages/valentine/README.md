@@ -119,11 +119,6 @@ You can use the Lovey Dovey Infuser to infuse all the cookies in the mod. **The
 
 
 
-## Credits
-
-- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
-- And most importantly, **Aris**, for always being there for me.
-
 ## Q&A
 
 **Q: Where can I ask something that is not listed here?**
@@ -142,4 +137,9 @@ A: Yes, no need to give credit or ask.
 
 [![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
 
+
+## Credits
+
+- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
+- And most importantly, **Aris**, for always being there for me.
 

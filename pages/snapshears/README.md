@@ -26,11 +26,6 @@ Add item ids like `minecraft:shears` or prefix a tag with `#` (e.g. `#c:tools/sh
 
 SnapShears calls Minecraft’s built-in shear() method, so any sheep variant that responds to normal shears will work too. If you find any problems, let me know.
 
-## Credits
-
-- My awesome community.
-- And most importantly, **Aris**, for always being there for me.
-
 ## Q&A
 
 **Q: Where can I ask something that is not listed here?**
@@ -49,4 +44,9 @@ A: Yes, no need to give credit or ask.
 
 [![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
 
+
+## Credits
+
+- My awesome community.
+- And most importantly, **Aris**, for always being there for me.
 
