@@ -7,7 +7,11 @@
  *
  * Example:
  *   const manager = new ModManager();
- *   manager.add({ slug: 'my-mod', name: 'My Mod', page: { header: { title: 'My Mod', description: '' } } });
+ *   manager.add({
+ *     slug: 'my-mod',
+ *     name: 'My Mod',
+ *     pages: [{ title: 'header', level: 1, content: 'My description' }]
+ *   });
  */
 import fs from 'fs';
 import path from 'path';

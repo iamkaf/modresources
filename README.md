@@ -15,8 +15,9 @@ All helper utilities are written in TypeScript and executed with [tsx](https://g
 - `npm run pagesv2` 🆕 - Build pages with `mods.v2.json` only.
 - `npm run images` 🖼️ - List URLs of images for each mod.
 - `npm run pad` 📝 - Convert `scratchpad.md` to a JSON string.
-- `npm run upload` ☁️ - Upload generated pages to Modrinth.
+- `npm run upload` ☁️ - Upload a page to Modrinth and open its CurseForge editor.
 - `npm run icon` 🎨 - Generate icon images from parts.
 - `npm run validate` ✅ - Validate `mods.v2.json` contents.
+- `npm run othermods` 🛠️ - Generate a promo snippet listing all mods.
 
 Enjoy the mods! 🚀

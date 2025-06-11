@@ -1,8 +1,8 @@
 /**
  * 🖼 Generates composite icons for each mod.
  *
- * The script reads `mods.v2.json` to discover icon layers listed under
- * `page.icon`. Each layer references a file in `tools/icon-parts/` which is
+ * The script reads `mods.v2.json` to discover icon layers listed under each
+ * mod's `icon` array. Each layer references a file in `tools/icon-parts/` which is
  * stitched together using the Sharp library. The resulting `icon.v2.png` is
  * placed next to each mod's README under `pages/<slug>`.
  */
@@ -59,8 +59,8 @@ console.log(chalk.blue('🔄 Starting icon generation process...'));
 const promises = [];
 
 for (const mod of modsData) {
-  if (mod.page.icon) {
-    promises.push(generateIcon(mod.page.icon, mod.slug));
+  if (mod.icon) {
+    promises.push(generateIcon(mod.icon, mod.slug));
   }
 }
 

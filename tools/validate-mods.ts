@@ -22,54 +22,34 @@ const schema = {
   type: 'array',
   items: {
     type: 'object',
-    required: ['slug', 'name', 'page'],
+    required: ['slug', 'name', 'pages'],
     properties: {
       slug: { type: 'string' },
       name: { type: 'string' },
-      modrinthId: { type: 'string' },
-      curseforgeId: { type: 'number' },
-      modrinthUrl: { type: 'string' },
-      curseforgeUrl: { type: 'string' },
-      page: {
+      icon: { type: 'array', items: { type: 'string' } },
+      ids: {
         type: 'object',
-        required: ['header'],
         properties: {
-          header: {
-            type: 'object',
-            required: ['title', 'description'],
-            properties: {
-              title: { type: 'string' },
-              banner: { type: 'string' },
-              description: { type: 'string' },
-              dependencies: { type: ['string', 'null'] },
-              extra: { type: ['string', 'null'] },
-            },
-          },
-          howto: {
-            type: 'object',
-            properties: { how_to_use: { type: 'string' } },
-          },
-          images: {
-            type: 'object',
-            properties: { images: { type: 'string' } },
-          },
-          config: {
-            type: 'object',
-            properties: { config: { type: 'string' } },
-          },
-          qna: {
-            type: 'object',
-            additionalProperties: { type: 'string' },
-          },
-          compatibility: {
-            type: 'object',
-            properties: { message: { type: 'string' } },
-          },
-          credits: {
-            type: 'object',
-            properties: {
-              credits: { type: 'array', items: { type: 'string' } },
-            },
+          modrinth: { type: 'string' },
+          curseforge: { type: 'number' },
+        },
+      },
+      urls: {
+        type: 'object',
+        properties: {
+          modrinth: { type: 'string' },
+          curseforge: { type: 'string' },
+        },
+      },
+      pages: {
+        type: 'array',
+        items: {
+          type: 'object',
+          required: ['title', 'level', 'content'],
+          properties: {
+            title: { type: 'string' },
+            level: { type: 'number' },
+            content: { type: 'string' },
           },
         },
       },

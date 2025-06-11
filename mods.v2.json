@@ -2,346 +2,416 @@
   {
     "slug": "amber",
     "name": "Amber",
-    "modrinthId": "vjGZJDu5",
-    "page": {
-      "header": {
-        "title": "Amber",
-        "banner": "![Amber Banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot1.png)",
-        "description": "Amber is a library api of common code utilized by iamkaf mods.",
-        "dependencies": "Requires [Fabric API](https://modrinth.com/mod/fabric-api).",
-        "extra": ""
-      },
-      "howto": {
-        "how_to_use": "Just install it and the mods that require it will be good to go!"
-      },
-      "qna": {},
-      "compatibility": {
-        "message": "Let me know if you find any issues.\n\nFor versions 2.X and below Amber requires [Architectury API](https://modrinth.com/mod/architectury-api)."
-      },
-      "credits": {
-        "credits": [
-          "- The Architectury Team for their amazing API."
-        ]
-      },
-      "icon": [
-        "background/black.png",
-        "frame/pink.png",
-        "icon/amber.png"
-      ]
+    "icon": [
+      "background/black.png",
+      "frame/pink.png",
+      "icon/amber.png"
+    ],
+    "ids": {
+      "modrinth": "vjGZJDu5",
+      "curseforge": -1
     },
-    "curseforgeId": -1,
-    "modrinthUrl": "https://modrinth.com/mod/amber",
-    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/amber"
+    "urls": {
+      "modrinth": "https://modrinth.com/mod/amber",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/amber"
+    },
+    "pages": [
+      {
+        "title": "Amber",
+        "level": 1,
+        "content": "![Amber Banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot1.png)\n\nAmber is a library api of common code utilized by iamkaf mods.\n\nRequires [Fabric API](https://modrinth.com/mod/fabric-api)."
+      },
+      {
+        "title": "How To Use",
+        "level": 2,
+        "content": "Just install it and the mods that require it will be good to go!"
+      },
+      {
+        "title": "Compatibility",
+        "level": 2,
+        "content": "Let me know if you find any issues.\n\nFor versions 2.X and below Amber requires [Architectury API](https://modrinth.com/mod/architectury-api)."
+      },
+      {
+        "title": "Credits",
+        "level": 2,
+        "content": "- The Architectury Team for their amazing API."
+      }
+    ]
   },
   {
     "slug": "liteminer",
     "name": "Liteminer",
-    "modrinthId": "VTnHoofC",
-    "page": {
-      "header": {
-        "title": "Liteminer",
-        "description": "Mine an entire vein of ore, chop an entire tree or break any group of blocks by holding a hotkey. A veinmining mod for Fabric, NeoForge, Forge and Quilt.",
-        "dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).",
-        "extra": "\n\n![A gif preview of Liteminer, the playing vein mining some diamonds and iron ore.](https://i.imgur.com/ftSpErY.gif)"
-      },
-      "howto": {
-        "how_to_use": "Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine.\n\n![Keybord Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot5.png)\n\nThere are a few shapes you can mine with and to switch between them hold the Liteminer key and scroll your mouse wheel.\n\nThe available shapes are: Shapeless (mines connected blocks), 3x3, Small Tunnel, Staircase Up and Staircase Down.\n"
-      },
-      "credits": {
-        "credits": [
-          "- [FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-fabric) for the inspiration for the mod.",
-          "- [Simply Tools](https://modrinth.com/mod/simply-tools) for some client side code.",
-          "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.",
-          "- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod."
-        ]
-      },
-      "images": {
-        "images": "![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot1.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot2.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot3.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot4.png)\n![Liteminer outlines on a tree.](https://cdn.modrinth.com/data/cached_images/2b8d30774e17ff51cf5f2b257f6cb1970f826c3d_0.webp)\n![Liteminer outlines on the ground.](https://cdn.modrinth.com/data/cached_images/079e3e003e55954eed51ede44aa3b92e50c2b1ae.png)\n![Liteminer outlines on diamond ore.](https://cdn.modrinth.com/data/cached_images/22ac03f14cca7375d06cba76b54141e411e6ed62.png)\n![Configuration Screen](https://cdn.modrinth.com/data/cached_images/0255cf113d51e9ebec132a6d0ce0f5fa9c595da5_0.webp)"
-      }
+    "ids": {
+      "modrinth": "VTnHoofC",
+      "curseforge": -1
     },
-    "curseforgeId": -1,
-    "modrinthUrl": "https://modrinth.com/mod/liteminer",
-    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/liteminer"
+    "urls": {
+      "modrinth": "https://modrinth.com/mod/liteminer",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/liteminer"
+    },
+    "pages": [
+      {
+        "title": "Liteminer",
+        "level": 1,
+        "content": "Mine an entire vein of ore, chop an entire tree or break any group of blocks by holding a hotkey. A veinmining mod for Fabric, NeoForge, Forge and Quilt.\n\nRequires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).\n\n\n\n![A gif preview of Liteminer, the playing vein mining some diamonds and iron ore.](https://i.imgur.com/ftSpErY.gif)"
+      },
+      {
+        "title": "How To Use",
+        "level": 2,
+        "content": "Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine.\n\n![Keybord Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot5.png)\n\nThere are a few shapes you can mine with and to switch between them hold the Liteminer key and scroll your mouse wheel.\n\nThe available shapes are: Shapeless (mines connected blocks), 3x3, Small Tunnel, Staircase Up and Staircase Down.\n"
+      },
+      {
+        "title": "Images",
+        "level": 2,
+        "content": "![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot1.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot2.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot3.png)\n![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot4.png)\n![Liteminer outlines on a tree.](https://cdn.modrinth.com/data/cached_images/2b8d30774e17ff51cf5f2b257f6cb1970f826c3d_0.webp)\n![Liteminer outlines on the ground.](https://cdn.modrinth.com/data/cached_images/079e3e003e55954eed51ede44aa3b92e50c2b1ae.png)\n![Liteminer outlines on diamond ore.](https://cdn.modrinth.com/data/cached_images/22ac03f14cca7375d06cba76b54141e411e6ed62.png)\n![Configuration Screen](https://cdn.modrinth.com/data/cached_images/0255cf113d51e9ebec132a6d0ce0f5fa9c595da5_0.webp)"
+      },
+      {
+        "title": "Credits",
+        "level": 2,
+        "content": "- [FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-fabric) for the inspiration for the mod.\n- [Simply Tools](https://modrinth.com/mod/simply-tools) for some client side code.\n- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.\n- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod."
+      }
+    ]
   },
   {
     "slug": "mochila",
     "name": "Mochila",
-    "modrinthId": "IWGxWQWM",
-    "page": {
-      "header": {
-        "title": "Mochila: Colorful Backpacks!",
-        "description": "A colorful upgradable backpack mod for Fabric and NeoForge.",
-        "dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api).",
-        "extra": "\n![A gif of all the backpacks.](https://cdn.modrinth.com/data/cached_images/f4723d0598b20a3229b2d53f5c329c16f14947d5.gif)\n"
-      },
-      "howto": {
-        "how_to_use": "Craft the backpack and open it by right clicking it or by using the hotkey (default B).\n\n### Recipes\n\n![Recipe for a leather backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe1.png)\n\n![Upgrade and coloring recipes.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe2.png)\n\n![Recipe for a netherite backpack upgrade.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe3.png)\n\n![Ender backpack recipe.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot5.png)\n\n### Quick Stashing\n\nYou can unload the contents of a backpack into a chest or barrel by sneaking and right-clicking it. It also works if there is an item frame or sign in front of it!\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/i_TbV_Vm6RM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n\nYou can view all the recipes with [EMI](https://modrinth.com/mod/emi).\n"
-      },
-      "credits": {
-        "credits": [
-          "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.",
-          "- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod."
-        ]
-      },
-      "images": {
-        "images": "![Several backpacks being displayed.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot1.png)\n![Several backpacks being displayed.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot2.png)\n![A leather backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot3.png)\n![A gold backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot4.png)"
-      }
+    "ids": {
+      "modrinth": "IWGxWQWM",
+      "curseforge": -1
     },
-    "curseforgeId": -1,
-    "modrinthUrl": "https://modrinth.com/mod/mochila",
-    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/mochila"
+    "urls": {
+      "modrinth": "https://modrinth.com/mod/mochila",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/mochila"
+    },
+    "pages": [
+      {
+        "title": "Mochila: Colorful Backpacks!",
+        "level": 1,
+        "content": "A colorful upgradable backpack mod for Fabric and NeoForge.\n\nRequires [Architectury API](https://modrinth.com/mod/architectury-api).\n\n\n![A gif of all the backpacks.](https://cdn.modrinth.com/data/cached_images/f4723d0598b20a3229b2d53f5c329c16f14947d5.gif)"
+      },
+      {
+        "title": "How To Use",
+        "level": 2,
+        "content": "Craft the backpack and open it by right clicking it or by using the hotkey (default B).\n\n### Recipes\n\n![Recipe for a leather backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe1.png)\n\n![Upgrade and coloring recipes.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe2.png)\n\n![Recipe for a netherite backpack upgrade.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe3.png)\n\n![Ender backpack recipe.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot5.png)\n\n### Quick Stashing\n\nYou can unload the contents of a backpack into a chest or barrel by sneaking and right-clicking it. It also works if there is an item frame or sign in front of it!\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/i_TbV_Vm6RM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n\nYou can view all the recipes with [EMI](https://modrinth.com/mod/emi).\n"
+      },
+      {
+        "title": "Images",
+        "level": 2,
+        "content": "![Several backpacks being displayed.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot1.png)\n![Several backpacks being displayed.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot2.png)\n![A leather backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot3.png)\n![A gold backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot4.png)"
+      },
+      {
+        "title": "Credits",
+        "level": 2,
+        "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.\n- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod."
+      }
+    ]
   },
   {
     "slug": "dynamicedge",
     "name": "Dynamic Edge",
-    "modrinthId": "s2sYoUoB",
-    "page": {
-      "header": {
-        "title": "Dynamic Edge",
-        "banner": "![Dynamic Edge](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/dynamicedge/banner.png)",
-        "description": "A new way to upgrade your gear!",
-        "dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api).",
-        "extra": "\n\n**Dynamic Edge** redefines how you enhance your equipment by introducing **Augments**, unique upgrades earned through gameplay. Each augment reflects how you interact with the world, making your gear feel truly personal.  \n\n### **Augments**  \n- **Cake Destroyer** 🎂: Break cakes to unlock this sweet augment, which occasionally drops sugar.  \n- **Oceanic** 🌊: Spend time underwater to gain this augment, boosting your swimming speed.  \n- **Treehugger** 🌳: Chop down a large number of trees to earn this augment, which occasionally drops extra saplings or apples.  \n- **Blazing Edge** 🔥: Use a sword or axe while on fire to add fire damage to melee attacks.  \n- **Frosty Feet** ❄️: Spend time on snow or ice to prevent slipping and reduce fall damage on snowy surfaces.  \n- **Creeperbane** 💥: Survive multiple creeper explosions with a shield to reduce shield damage from explosions.  \n- **Glowtouched** ✨: Interact with glow squids to make your tools emit a faint glow, illuminating nearby blocks.  \n- **Beekeeper** 🐝: Harvest honey safely to slightly boost crop growth when carrying tools with this augment.  \n- **Windrunner** 💨: Sprint long distances to increase sprinting speed and reduce hunger drain.  \n- **Voidwalker** 🌌: Spend time near the void to reduce fall damage and gain a short slow-falling effect.  \n- And many MANY more.\n\nWith **Dynamic Edge**, your gear evolves alongside your adventures, offering rewards for creativity and exploration."
-      },
-      "howto": {
-        "how_to_use": "Just play the game, you should notice the augments in your gear naturally."
-      },
-      "credits": {
-        "credits": [
-          "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.",
-          "- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod."
-        ]
-      },
-      "images": {
-        "images": "![Cake gif.](https://i.imgur.com/m86rg15.gif)"
-      }
+    "ids": {
+      "modrinth": "s2sYoUoB",
+      "curseforge": -1
     },
-    "curseforgeId": -1,
-    "modrinthUrl": "https://modrinth.com/mod/dynamicedge",
-    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/dynamicedge"
+    "urls": {
+      "modrinth": "https://modrinth.com/mod/dynamicedge",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/dynamicedge"
+    },
+    "pages": [
+      {
+        "title": "Dynamic Edge",
+        "level": 1,
+        "content": "![Dynamic Edge](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/dynamicedge/banner.png)\n\nA new way to upgrade your gear!\n\nRequires [Architectury API](https://modrinth.com/mod/architectury-api).\n\n\n\n**Dynamic Edge** redefines how you enhance your equipment by introducing **Augments**, unique upgrades earned through gameplay. Each augment reflects how you interact with the world, making your gear feel truly personal.  \n\n### **Augments**  \n- **Cake Destroyer** 🎂: Break cakes to unlock this sweet augment, which occasionally drops sugar.  \n- **Oceanic** 🌊: Spend time underwater to gain this augment, boosting your swimming speed.  \n- **Treehugger** 🌳: Chop down a large number of trees to earn this augment, which occasionally drops extra saplings or apples.  \n- **Blazing Edge** 🔥: Use a sword or axe while on fire to add fire damage to melee attacks.  \n- **Frosty Feet** ❄️: Spend time on snow or ice to prevent slipping and reduce fall damage on snowy surfaces.  \n- **Creeperbane** 💥: Survive multiple creeper explosions with a shield to reduce shield damage from explosions.  \n- **Glowtouched** ✨: Interact with glow squids to make your tools emit a faint glow, illuminating nearby blocks.  \n- **Beekeeper** 🐝: Harvest honey safely to slightly boost crop growth when carrying tools with this augment.  \n- **Windrunner** 💨: Sprint long distances to increase sprinting speed and reduce hunger drain.  \n- **Voidwalker** 🌌: Spend time near the void to reduce fall damage and gain a short slow-falling effect.  \n- And many MANY more.\n\nWith **Dynamic Edge**, your gear evolves alongside your adventures, offering rewards for creativity and exploration."
+      },
+      {
+        "title": "How To Use",
+        "level": 2,
+        "content": "Just play the game, you should notice the augments in your gear naturally."
+      },
+      {
+        "title": "Images",
+        "level": 2,
+        "content": "![Cake gif.](https://i.imgur.com/m86rg15.gif)"
+      },
+      {
+        "title": "Credits",
+        "level": 2,
+        "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.\n- [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod."
+      }
+    ]
   },
   {
     "slug": "bonded",
     "name": "Bonded",
-    "modrinthId": "rTXmXcev",
-    "page": {
-      "header": {
-        "title": "Bonded",
-        "banner": "![Bonded](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/banner.png)",
-        "description": "A gear leveling mod for Fabric and NeoForge.",
-        "dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).",
-        "extra": "\n\n**Bonded** is a gear-focused mod that encourages you to build a deeper connection with your tools and armor as you play.  \n\n- ✨ **Level Up Your Gear**: The more you use your tools, weapons, and armor, the stronger they become, gaining bonus stats over time.  \n- 🪵 **New Stations**: Enhance and maintain your equipment using the new **Tool Bench** and **Repair Bench** introduced by the mod.  \n- 🎮 **Progression Through Play**: No complicated systems—just play the game and let your equipment grow alongside you.  \n\nWith **Bonded**, every item you craft becomes a companion on your journey.\n\n![Bonded Benches GIF](https://i.imgur.com/mHjZWtm.gif)\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu.\n\n"
-      },
-      "howto": {
-        "how_to_use": "Use an item on the **Repair Bench** to repair it, consuming 1 of the repair material for that item.\n\nUse an item on the **Tool Bench** to upgrade it to the next tier. The item must be level 10 (configurable) and you must have the upgrade material in your inventory.\n\n\n![Bonded Demo](https://i.imgur.com/bwwnunt.gif)"
-      },
-      "compatibility": {
-        "message": "### Compat Mods\n\n- [Bonded: Basic Weapons Compat](https://modrinth.com/mod/bonded-basic-weapons-compat)\n- [Bonded: Advanced Netherite Compat](https://modrinth.com/mod/bonded-advanced-netherite-compat)\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu."
-      },
-      "credits": {
-        "credits": [
-          "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
-        ]
-      },
-      "images": {
-        "images": "![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot1.png)\n![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot2.png)\n![Repair Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot3.png)\n![Tool Bench Overlay](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot5.png)\n![Repair Bench Overlay](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot6.png)"
-      },
-      "icon": [
-        "background/black.png",
-        "frame/yellow.png",
-        "icon/axe.png",
-        "accent/bonded.png"
-      ]
+    "icon": [
+      "background/black.png",
+      "frame/yellow.png",
+      "icon/axe.png",
+      "accent/bonded.png"
+    ],
+    "ids": {
+      "modrinth": "rTXmXcev",
+      "curseforge": -1
     },
-    "curseforgeId": -1,
-    "modrinthUrl": "https://modrinth.com/mod/bonded",
-    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/bonded"
+    "urls": {
+      "modrinth": "https://modrinth.com/mod/bonded",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/bonded"
+    },
+    "pages": [
+      {
+        "title": "Bonded",
+        "level": 1,
+        "content": "![Bonded](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/banner.png)\n\nA gear leveling mod for Fabric and NeoForge.\n\nRequires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).\n\n\n\n**Bonded** is a gear-focused mod that encourages you to build a deeper connection with your tools and armor as you play.  \n\n- ✨ **Level Up Your Gear**: The more you use your tools, weapons, and armor, the stronger they become, gaining bonus stats over time.  \n- 🪵 **New Stations**: Enhance and maintain your equipment using the new **Tool Bench** and **Repair Bench** introduced by the mod.  \n- 🎮 **Progression Through Play**: No complicated systems—just play the game and let your equipment grow alongside you.  \n\nWith **Bonded**, every item you craft becomes a companion on your journey.\n\n![Bonded Benches GIF](https://i.imgur.com/mHjZWtm.gif)\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu."
+      },
+      {
+        "title": "How To Use",
+        "level": 2,
+        "content": "Use an item on the **Repair Bench** to repair it, consuming 1 of the repair material for that item.\n\nUse an item on the **Tool Bench** to upgrade it to the next tier. The item must be level 10 (configurable) and you must have the upgrade material in your inventory.\n\n\n![Bonded Demo](https://i.imgur.com/bwwnunt.gif)"
+      },
+      {
+        "title": "Images",
+        "level": 2,
+        "content": "![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot1.png)\n![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot2.png)\n![Repair Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot3.png)\n![Tool Bench Overlay](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot5.png)\n![Repair Bench Overlay](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot6.png)"
+      },
+      {
+        "title": "Compatibility",
+        "level": 2,
+        "content": "### Compat Mods\n\n- [Bonded: Basic Weapons Compat](https://modrinth.com/mod/bonded-basic-weapons-compat)\n- [Bonded: Advanced Netherite Compat](https://modrinth.com/mod/bonded-advanced-netherite-compat)\n\nThe leveling and repairing feature will work with any tool and armor mod out of the box. Upgrade paths, however, will require compat mods that I can make at your request, just hmu."
+      },
+      {
+        "title": "Credits",
+        "level": 2,
+        "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
+      }
+    ]
   },
   {
     "slug": "kaf-hud",
     "name": "Kaf HUD",
-    "modrinthId": "fKUQuZsL",
-    "page": {
-      "header": {
-        "title": "Kaf HUD",
-        "banner": "![Kaf HUD](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/banner.png)",
-        "description": "A minimal location HUD for Fabric and NeoForge.",
-        "dependencies": null,
-        "extra": null
-      },
-      "howto": {
-        "how_to_use": "Toggle the HUD with the keybind (default `N`) and copy your coordinates holding shift plus the keybind (default `Shift+N`)."
-      },
-      "credits": {
-        "credits": [
-          "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.",
-          "- [Minimal Coords HUD](https://modrinth.com/mod/minimal-coords-hud) go check that out if you want more features, really good mod."
-        ]
-      },
-      "images": {
-        "images": "![Showing the coordinates](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot1.png)\n![Showing the copy feature](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot2.png)\n![Showing modded biome](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot3.png)"
-      }
+    "ids": {
+      "modrinth": "fKUQuZsL",
+      "curseforge": -1
     },
-    "curseforgeId": -1,
-    "modrinthUrl": "https://modrinth.com/mod/kaf-hud",
-    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/kaf-hud"
+    "urls": {
+      "modrinth": "https://modrinth.com/mod/kaf-hud",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/kaf-hud"
+    },
+    "pages": [
+      {
+        "title": "Kaf HUD",
+        "level": 1,
+        "content": "![Kaf HUD](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/banner.png)\n\nA minimal location HUD for Fabric and NeoForge."
+      },
+      {
+        "title": "How To Use",
+        "level": 2,
+        "content": "Toggle the HUD with the keybind (default `N`) and copy your coordinates holding shift plus the keybind (default `Shift+N`)."
+      },
+      {
+        "title": "Images",
+        "level": 2,
+        "content": "![Showing the coordinates](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot1.png)\n![Showing the copy feature](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot2.png)\n![Showing modded biome](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot3.png)"
+      },
+      {
+        "title": "Credits",
+        "level": 2,
+        "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.\n- [Minimal Coords HUD](https://modrinth.com/mod/minimal-coords-hud) go check that out if you want more features, really good mod."
+      }
+    ]
   },
   {
     "slug": "valentine",
     "name": "Kaf's Valentine Special",
-    "modrinthId": "BAlSr7dy",
-    "page": {
-      "header": {
-        "title": "Kaf's Valentine Special",
-        "banner": "![Kaf's Valentine Special](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/banner.png)",
-        "description": "Kaf's Valentine Special adds a bunch of cookies and other valentine's day themed additions to Minecraft, made originally to celebrate Valentine's day.",
-        "dependencies": "Requires [Architectury API](https://modrinth.com/mod/architectury-api).",
-        "extra": "\n\n🌸 **This mod is dedicated to my valentine, Aris.** 🌸"
-      },
-      "howto": {
-        "how_to_use": "#### Cotton Candy\n\n\nBy breaking tall grass you may find Cotton Candy Seeds which grow into Cotton Candy.\n\nYou can eat the Cotton Candy or use it to make the Special Chocolate Cookie or the Lovey Dovey Infuser.\n\n![cotton candy](https://cdn.modrinth.com/data/cached_images/fc0ef3002b42f05bccf430319710a0d98658f563.jpeg)\n\n#### Special Cookies!\n\n\nYou can make **20 different cookies** each one with its own flavor and effects.\n\n![Many Cookies!](https://i.imgur.com/m79PyE4.png)\n\n#### Lovey Dovey Infuser\n\n\nYou can use the Lovey Dovey Infuser to infuse all the cookies in the mod. **The infused versions grant more powerful effects**.\n\n![Lovey Dovey Infuser](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot4.png)\n\n![Lovey Dovey Infuser](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot5.png)\n\n#### Aristea\n\n\n**Aristea** is a new flower added to Minecraft, you can find it randomly generating in the world.\n\n![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot1.png)\n\n![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot2.png)\n\n![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot3.png)\n\n#### Lovely Potion\n\nIt's a potion, it's lovely, this is how you make it:\n\n![Lovely Potion](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot6.png)\n\nAnd this is what it does:\n\n![Lovely Potion Effect](https://i.imgur.com/UtlKwtT.gif)\n\n#### Headpats\n\nYou can give your friends headpats.\n\n![Headpats](https://i.imgur.com/RKWOyUr.gif)\n"
-      },
-      "credits": {
-        "credits": [
-          "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
-        ]
-      },
-      "images": {
-        "images": ""
-      },
-      "config": {
-        "config": "#### Old 1.20.1 Details\n<details>\n<summary>Spoiler</summary>\n\n\n## Cookie Book Included!\n\n![Cookie Book](https://cdn.modrinth.com/data/cached_images/cabbed8a8f6cdc02b484dd7abf9130d070e07801.jpeg)\n\n## Cotton Candy\n\n\nBy breaking tall grass you may find Cotton Candy Seeds which grow into Cotton Candy.\n\nYou can eat the Cotton Candy or use it to make the Special Chocolate Cookie or the Lovey Dovey Infuser.\n\n![cotton candy](https://cdn.modrinth.com/data/cached_images/fc0ef3002b42f05bccf430319710a0d98658f563.jpeg)\n\n## Special Cookies!\n\n\nYou can make **20 different cookies** each one with its own flavor and effects.\n\n![Many Cookies!](https://i.imgur.com/m79PyE4.png)\n\n## Lovey Dovey Infuser\n\n\nYou can use the Lovey Dovey Infuser to infuse all the cookies in the mod. **The infused versions grant more powerful effects**.\n\n![Lovey Dovey Infuser](https://cdn.modrinth.com/data/cached_images/eef273959c7d1b13795047fd453b9cbd07c830bd.png)\n\n![Lovey Dovey Infuser GUI](https://i.imgur.com/bkiBTWQ.png)\n\n## Aristea\n\n\n**Aristea** is a new flower added to Minecraft, you can find it randomly generating in the world.\n\n![Aristea](https://cdn.modrinth.com/data/cached_images/7dc8417358e52e63a712d047b566810cfd58a578.png)\n\n\n</details>\n\n"
-      }
+    "ids": {
+      "modrinth": "BAlSr7dy",
+      "curseforge": -1
     },
-    "curseforgeId": -1,
-    "modrinthUrl": "https://modrinth.com/mod/valentine",
-    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/valentine"
+    "urls": {
+      "modrinth": "https://modrinth.com/mod/valentine",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/valentine"
+    },
+    "pages": [
+      {
+        "title": "Kaf's Valentine Special",
+        "level": 1,
+        "content": "![Kaf's Valentine Special](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/banner.png)\n\nKaf's Valentine Special adds a bunch of cookies and other valentine's day themed additions to Minecraft, made originally to celebrate Valentine's day.\n\nRequires [Architectury API](https://modrinth.com/mod/architectury-api).\n\n\n\n🌸 **This mod is dedicated to my valentine, Aris.** 🌸"
+      },
+      {
+        "title": "How To Use",
+        "level": 2,
+        "content": "#### Cotton Candy\n\n\nBy breaking tall grass you may find Cotton Candy Seeds which grow into Cotton Candy.\n\nYou can eat the Cotton Candy or use it to make the Special Chocolate Cookie or the Lovey Dovey Infuser.\n\n![cotton candy](https://cdn.modrinth.com/data/cached_images/fc0ef3002b42f05bccf430319710a0d98658f563.jpeg)\n\n#### Special Cookies!\n\n\nYou can make **20 different cookies** each one with its own flavor and effects.\n\n![Many Cookies!](https://i.imgur.com/m79PyE4.png)\n\n#### Lovey Dovey Infuser\n\n\nYou can use the Lovey Dovey Infuser to infuse all the cookies in the mod. **The infused versions grant more powerful effects**.\n\n![Lovey Dovey Infuser](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot4.png)\n\n![Lovey Dovey Infuser](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot5.png)\n\n#### Aristea\n\n\n**Aristea** is a new flower added to Minecraft, you can find it randomly generating in the world.\n\n![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot1.png)\n\n![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot2.png)\n\n![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot3.png)\n\n#### Lovely Potion\n\nIt's a potion, it's lovely, this is how you make it:\n\n![Lovely Potion](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot6.png)\n\nAnd this is what it does:\n\n![Lovely Potion Effect](https://i.imgur.com/UtlKwtT.gif)\n\n#### Headpats\n\nYou can give your friends headpats.\n\n![Headpats](https://i.imgur.com/RKWOyUr.gif)\n"
+      },
+      {
+        "title": "Images",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "title": "Config",
+        "level": 2,
+        "content": "#### Old 1.20.1 Details\n<details>\n<summary>Spoiler</summary>\n\n\n## Cookie Book Included!\n\n![Cookie Book](https://cdn.modrinth.com/data/cached_images/cabbed8a8f6cdc02b484dd7abf9130d070e07801.jpeg)\n\n## Cotton Candy\n\n\nBy breaking tall grass you may find Cotton Candy Seeds which grow into Cotton Candy.\n\nYou can eat the Cotton Candy or use it to make the Special Chocolate Cookie or the Lovey Dovey Infuser.\n\n![cotton candy](https://cdn.modrinth.com/data/cached_images/fc0ef3002b42f05bccf430319710a0d98658f563.jpeg)\n\n## Special Cookies!\n\n\nYou can make **20 different cookies** each one with its own flavor and effects.\n\n![Many Cookies!](https://i.imgur.com/m79PyE4.png)\n\n## Lovey Dovey Infuser\n\n\nYou can use the Lovey Dovey Infuser to infuse all the cookies in the mod. **The infused versions grant more powerful effects**.\n\n![Lovey Dovey Infuser](https://cdn.modrinth.com/data/cached_images/eef273959c7d1b13795047fd453b9cbd07c830bd.png)\n\n![Lovey Dovey Infuser GUI](https://i.imgur.com/bkiBTWQ.png)\n\n## Aristea\n\n\n**Aristea** is a new flower added to Minecraft, you can find it randomly generating in the world.\n\n![Aristea](https://cdn.modrinth.com/data/cached_images/7dc8417358e52e63a712d047b566810cfd58a578.png)\n\n\n</details>\n\n"
+      },
+      {
+        "title": "Credits",
+        "level": 2,
+        "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
+      }
+    ]
   },
   {
     "slug": "extendedgolf",
     "name": "Extended Golf",
-    "modrinthId": "jVtBevly",
-    "page": {
-      "header": {
-        "title": "Extended Golf",
-        "banner": "![Extended Golf](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/extendedgolf/banner.png)",
-        "description": "Welcome to *Extended Golf*, where you’re the caddy and the Skeleton is your golf club, armed with arrows and aiming for mobs! 🏌️‍♂️💣 Position yourself just right and let the Skeleton do the rest. Get ready for more than just music discs, this mod adds a whole new range of loot from Skeleton-assisted kills! 💎🎁\n\nIt’s like Minecraft meets golf... but with mobs, arrows, and lots of loot. Whether you're chasing rare blocks or just vibing with Creepers, *Extended Golf* takes your mob-slaying to the next level! ⛳💥\n\n\n### Features:\n- 🎯 **Every Mob Gets Its Own Loot**: No more generic drops, each mob has its own unique loot pool! From the Warden to Slimes, each kill brings new rewards.  \n- 🛠️ **Customizable Loot**: Want to change the loot? Create your own datapacks to swap out or add new drops. It's all in your hands!  \n- 💥 **Skeleton Assisted Kills**: Get those mobs in perfect range and let your Skeleton friend take a shot, it's all about positioning! ⛳️  \n- 🔄 **More Than Just Music Discs**: This isn’t your average skeleton kill, expect everything from rare materials to fun, quirky items!  \n",
-        "dependencies": null,
-        "extra": null
-      },
-      "howto": {
-        "how_to_use": "Position yourself near a mob and wait for the Skeleton to hit and kill it. Once it does, you'll get loot specific to that mob. You can also customize the loot drops by making your own datapacks if you want to tweak things further."
-      },
-      "credits": {
-        "credits": [
-          "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
-        ]
-      },
-      "images": {
-        "images": "![Golf!](https://media1.tenor.com/m/7ec6n3tTxg0AAAAd/aoi-amawashi-aoi.gif)"
-      }
+    "ids": {
+      "modrinth": "jVtBevly",
+      "curseforge": -1
     },
-    "curseforgeId": -1,
-    "modrinthUrl": "https://modrinth.com/mod/extendedgolf",
-    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/extendedgolf"
+    "urls": {
+      "modrinth": "https://modrinth.com/mod/extendedgolf",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/extendedgolf"
+    },
+    "pages": [
+      {
+        "title": "Extended Golf",
+        "level": 1,
+        "content": "![Extended Golf](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/extendedgolf/banner.png)\n\nWelcome to *Extended Golf*, where you’re the caddy and the Skeleton is your golf club, armed with arrows and aiming for mobs! 🏌️‍♂️💣 Position yourself just right and let the Skeleton do the rest. Get ready for more than just music discs, this mod adds a whole new range of loot from Skeleton-assisted kills! 💎🎁\n\nIt’s like Minecraft meets golf... but with mobs, arrows, and lots of loot. Whether you're chasing rare blocks or just vibing with Creepers, *Extended Golf* takes your mob-slaying to the next level! ⛳💥\n\n\n### Features:\n- 🎯 **Every Mob Gets Its Own Loot**: No more generic drops, each mob has its own unique loot pool! From the Warden to Slimes, each kill brings new rewards.  \n- 🛠️ **Customizable Loot**: Want to change the loot? Create your own datapacks to swap out or add new drops. It's all in your hands!  \n- 💥 **Skeleton Assisted Kills**: Get those mobs in perfect range and let your Skeleton friend take a shot, it's all about positioning! ⛳️  \n- 🔄 **More Than Just Music Discs**: This isn’t your average skeleton kill, expect everything from rare materials to fun, quirky items!"
+      },
+      {
+        "title": "How To Use",
+        "level": 2,
+        "content": "Position yourself near a mob and wait for the Skeleton to hit and kill it. Once it does, you'll get loot specific to that mob. You can also customize the loot drops by making your own datapacks if you want to tweak things further."
+      },
+      {
+        "title": "Images",
+        "level": 2,
+        "content": "![Golf!](https://media1.tenor.com/m/7ec6n3tTxg0AAAAd/aoi-amawashi-aoi.gif)"
+      },
+      {
+        "title": "Credits",
+        "level": 2,
+        "content": "- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon."
+      }
+    ]
   },
   {
     "slug": "torchtoss",
     "name": "Torch Toss",
-    "modrinthId": "AIYW9sHq",
-    "page": {
-      "header": {
-        "title": "Torch Toss",
-        "description": "With Torch Toss, you can throw torches ahead of you, lighting up caves, tunnels, and dark paths with ease!\n\nIt's works with Redstone Torches too! You can activate redstone circuits by throwing torches in front of them.\n\nTorch Toss is a great addition to any Minecraft server!",
-        "dependencies": null,
-        "extra": null
-      },
-      "howto": {
-        "how_to_use": "Combine two torches on the crafting grid to make the throwable torch. Place it in your hand and right-click to throw it.\n\n![Throwable torch recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/torchtoss/screenshot1.png)\n\n![Throwable soul torch recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/torchtoss/screenshot2.png)\n\n![Throwable redstone torch recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/torchtoss/screenshot3.png)\n\n"
-      },
-      "credits": {
-        "credits": [
-          "- My awesome community."
-        ]
-      },
-      "images": {
-        "images": "![Throwing a torch](https://i.imgur.com/iAEBLkX.gif)\n![It works with soul and redstone torches!](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/torchtoss/screenshot4.png)"
-      },
-      "icon": [
-        "background/black.png",
-        "frame/pink.png",
-        "icon/torchtoss.png"
-      ]
+    "icon": [
+      "background/black.png",
+      "frame/pink.png",
+      "icon/torchtoss.png"
+    ],
+    "ids": {
+      "modrinth": "AIYW9sHq",
+      "curseforge": -1
     },
-    "curseforgeId": -1,
-    "modrinthUrl": "https://modrinth.com/mod/torchtoss",
-    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/torchtoss"
+    "urls": {
+      "modrinth": "https://modrinth.com/mod/torchtoss",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/torchtoss"
+    },
+    "pages": [
+      {
+        "title": "Torch Toss",
+        "level": 1,
+        "content": "With Torch Toss, you can throw torches ahead of you, lighting up caves, tunnels, and dark paths with ease!\n\nIt's works with Redstone Torches too! You can activate redstone circuits by throwing torches in front of them.\n\nTorch Toss is a great addition to any Minecraft server!"
+      },
+      {
+        "title": "How To Use",
+        "level": 2,
+        "content": "Combine two torches on the crafting grid to make the throwable torch. Place it in your hand and right-click to throw it.\n\n![Throwable torch recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/torchtoss/screenshot1.png)\n\n![Throwable soul torch recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/torchtoss/screenshot2.png)\n\n![Throwable redstone torch recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/torchtoss/screenshot3.png)\n\n"
+      },
+      {
+        "title": "Images",
+        "level": 2,
+        "content": "![Throwing a torch](https://i.imgur.com/iAEBLkX.gif)\n![It works with soul and redstone torches!](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/torchtoss/screenshot4.png)"
+      },
+      {
+        "title": "Credits",
+        "level": 2,
+        "content": "- My awesome community."
+      }
+    ]
   },
   {
     "slug": "endersight",
     "name": "Ender Sight",
-    "modrinthId": "y5UyihEq",
-    "page": {
-      "header": {
-        "title": "Ender Sight",
-        "description": "Harness the power of the End! When holding an **Ender Pearl** or **Eye of Ender**, you can **see Endermen through walls**, revealing their ghostly outlines in the dark. Perfect for hunting Endermen, navigating the End, or just keeping an eye on these elusive creatures!",
-        "dependencies": null,
-        "extra": null
-      },
-      "howto": {
-        "how_to_use": "Just hold an ender pearl or eye of ender and you'll be able to see endermen through walls.\n\nIf the effect is getting in the way you can hit the hotkey (default N) to disable it."
-      },
-      "credits": {
-        "credits": [
-          "- My awesome community."
-        ]
-      },
-      "images": {
-        "images": "![Ender Sight showcase](https://i.imgur.com/eThcpXG.gif)\n![An enderman with a purple outline around it](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/endersight/screenshot1.png)\n![A group of endermen with purple outlines around them](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/endersight/screenshot2.png)"
-      },
-      "icon": [
-        "background/endersight.png",
-        "frame/purple.png",
-        "icon/enderpearl.png"
-      ]
+    "icon": [
+      "background/endersight.png",
+      "frame/purple.png",
+      "icon/enderpearl.png"
+    ],
+    "ids": {
+      "modrinth": "y5UyihEq",
+      "curseforge": -1
     },
-    "curseforgeId": -1,
-    "modrinthUrl": "https://modrinth.com/mod/endersight",
-    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/endersight"
+    "urls": {
+      "modrinth": "https://modrinth.com/mod/endersight",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/endersight"
+    },
+    "pages": [
+      {
+        "title": "Ender Sight",
+        "level": 1,
+        "content": "Harness the power of the End! When holding an **Ender Pearl** or **Eye of Ender**, you can **see Endermen through walls**, revealing their ghostly outlines in the dark. Perfect for hunting Endermen, navigating the End, or just keeping an eye on these elusive creatures!"
+      },
+      {
+        "title": "How To Use",
+        "level": 2,
+        "content": "Just hold an ender pearl or eye of ender and you'll be able to see endermen through walls.\n\nIf the effect is getting in the way you can hit the hotkey (default N) to disable it."
+      },
+      {
+        "title": "Images",
+        "level": 2,
+        "content": "![Ender Sight showcase](https://i.imgur.com/eThcpXG.gif)\n![An enderman with a purple outline around it](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/endersight/screenshot1.png)\n![A group of endermen with purple outlines around them](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/endersight/screenshot2.png)"
+      },
+      {
+        "title": "Credits",
+        "level": 2,
+        "content": "- My awesome community."
+      }
+    ]
   },
   {
     "slug": "snapshears",
     "name": "SnapShears",
-    "modrinthId": "yiKUfwkf",
-    "page": {
-      "header": {
-        "title": "SnapShears",
-        "banner": "![Amber Banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/snapshears/banner.png)",
-        "description": "Area-of-effect shearing that trims every adult sheep nearby, server side.",
-        "dependencies": "Requires [Fabric API](https://modrinth.com/mod/fabric-api) and [Amber](https://modrinth.com/mod/amber).",
-        "extra": ""
-      },
-      "howto": {
-        "how_to_use": "Jump on the sheep and use the shears. Like if you were criting with a sword."
-      },
-      "images": {
-        "images": "![A gif of the mod in action, some gameplay of the player shearing sheep](https://i.imgur.com/dwBvLFm.gif)"
-      },
-      "config": {
-        "config": "In the config `snapshears.json5` you can configure which mods are considered shears.\n\nAdd item ids like `minecraft:shears` or prefix a tag with `#` (e.g. `#c:tools/shear`)."
-      },
-      "qna": {},
-      "compatibility": {
-        "message": "SnapShears calls Minecraft’s built-in shear() method, so any sheep variant that responds to normal shears will work too. If you find any problems, let me know."
-      },
-      "credits": {
-        "credits": [
-          "- My awesome community."
-        ]
-      }
+    "ids": {
+      "modrinth": "yiKUfwkf",
+      "curseforge": -1
     },
-    "curseforgeId": -1,
-    "modrinthUrl": "https://modrinth.com/mod/snapshears",
-    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/snapshears"
+    "urls": {
+      "modrinth": "https://modrinth.com/mod/snapshears",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/snapshears"
+    },
+    "pages": [
+      {
+        "title": "SnapShears",
+        "level": 1,
+        "content": "![Amber Banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/snapshears/banner.png)\n\nArea-of-effect shearing that trims every adult sheep nearby, server side.\n\nRequires [Fabric API](https://modrinth.com/mod/fabric-api) and [Amber](https://modrinth.com/mod/amber)."
+      },
+      {
+        "title": "How To Use",
+        "level": 2,
+        "content": "Jump on the sheep and use the shears. Like if you were criting with a sword."
+      },
+      {
+        "title": "Images",
+        "level": 2,
+        "content": "![A gif of the mod in action, some gameplay of the player shearing sheep](https://i.imgur.com/dwBvLFm.gif)"
+      },
+      {
+        "title": "Config",
+        "level": 2,
+        "content": "In the config `snapshears.json5` you can configure which mods are considered shears.\n\nAdd item ids like `minecraft:shears` or prefix a tag with `#` (e.g. `#c:tools/shear`)."
+      },
+      {
+        "title": "Compatibility",
+        "level": 2,
+        "content": "SnapShears calls Minecraft’s built-in shear() method, so any sheep variant that responds to normal shears will work too. If you find any problems, let me know."
+      },
+      {
+        "title": "Credits",
+        "level": 2,
+        "content": "- My awesome community."
+      }
+    ]
   }
 ]

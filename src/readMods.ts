@@ -1,57 +1,33 @@
 /**
- * Utility types and helper to load `mods.v2.json`.
+ * Typed helper to load `mods.v2.json`.
  *
- * `readMods` reads the JSON file and returns a strongly typed array of mod
- * entries so other tools can safely access the data.
+ * The v2 schema groups related information together (ids, urls, icon) and each
+ * page is represented as a list of sections with a title, heading level and
+ * content. `readMods` parses the JSON file and returns an array of these typed
+ * entries for use by the various tools.
  */
 import fs from 'fs';
 import path from 'path';
 
-export interface HeaderSection {
+export interface PageSection {
   title: string;
-  banner?: string;
-  description: string;
-  dependencies?: string;
-  extra?: string;
-}
-
-export interface HowToSection {
-  how_to_use: string;
-}
-export interface ImagesSection {
-  images: string;
-}
-export interface ConfigSection {
-  config: string;
-}
-export interface QnaSection {
-  [key: string]: string;
-}
-export interface CompatibilitySection {
-  message: string;
-}
-export interface CreditsSection {
-  credits: string[];
-}
-
-export interface Page {
-  header: HeaderSection;
-  howto?: HowToSection;
-  images?: ImagesSection;
-  config?: ConfigSection;
-  qna?: QnaSection;
-  compatibility?: CompatibilitySection;
-  credits?: CreditsSection;
+  level: number;
+  content: string;
 }
 
 export interface ModEntry {
   slug: string;
   name: string;
-  modrinthId?: string;
-  curseforgeId?: number;
-  modrinthUrl?: string;
-  curseforgeUrl?: string;
-  page: Page;
+  icon?: string[];
+  ids?: {
+    modrinth?: string;
+    curseforge?: number;
+  };
+  urls?: {
+    modrinth?: string;
+    curseforge?: string;
+  };
+  pages: PageSection[];
 }
 
 export type ModsData = ModEntry[];

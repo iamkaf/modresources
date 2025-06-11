@@ -1,9 +1,10 @@
 /**
  * 📑 Generates README pages using the new `mods.v2.json` schema.
  *
- * Each key in a mod's `page` section corresponds to a template file in
- * `pages/common`. The script substitutes placeholders using the values from the
- * JSON and writes the finished Markdown to `pages/<slug>/README.md`.
+ * Each mod lists its page content as an array of sections.  For each section the
+ * builder either inserts a matching file from `pages/common` (if one exists) or
+ * creates a heading with the supplied level and content.  The final Markdown is
+ * written to `pages/<slug>/README.md`.
  */
 
 import fs from 'fs';
@@ -18,44 +19,32 @@ const __dirname = path.dirname(__filename);
 
 // Paths to important files and directories
 const modsJsonPath = path.join(__dirname, '../mods.v2.json');
-const templateDirectory = path.join(__dirname, '../pages/common');
+const commonDir = path.join(__dirname, '../pages/common');
 const outputDir = path.join(__dirname, '../pages');
-const templatePath = (templateName) => path.join(templateDirectory, `${templateName}.md`);
-const outputPath = (mod) => path.join(outputDir, mod.slug, 'README.md');
+const commonPath = (name: string) => path.join(commonDir, `${name}.md`);
+const outputPath = (mod: ModEntry) => path.join(outputDir, mod.slug, 'README.md');
 
 const modsData: ModEntry[] = readMods(modsJsonPath);
 
-const join = (val) => (Array.isArray(val) ? val.join('\n') : val);
-
-function generateContent(mod) {
+function generateContent(mod: ModEntry): string {
   let result = '';
-
-  for (const key in mod.page) {
-    const templateName = key;
-    const templateSubstitutions = (mod.page as any)[key];
-
-    try {
-      const templateContent = fs.readFileSync(templatePath(templateName), 'utf-8');
-
-      const content = templateContent.replace(/{{([^{}]*)}}/g, (match, key) => {
-        return join(templateSubstitutions[key.trim()] ?? '');
-      });
-
-      result += content + '\n\n';
-    } catch (err) {
-      console.error(chalk.red(`✘ Error reading template file ${templatePath(templateName)}: ${err.message}`));
+  for (const section of mod.pages) {
+    const commonFile = commonPath(section.title);
+    if (fs.existsSync(commonFile)) {
+      result += fs.readFileSync(commonFile, 'utf-8') + '\n\n';
+      continue;
     }
+    const heading = '#'.repeat(section.level) + ' ' + section.title + '\n\n';
+    result += heading + section.content + '\n\n';
   }
-
   return result;
 }
 
 for (const mod of modsData) {
-  if (!mod.page) {
+  if (!mod.pages || mod.pages.length === 0) {
     continue;
   }
 
-  // Generate content with substitutions
   const content = generateContent(mod);
 
   // Ensure output directory exists
@@ -69,7 +58,7 @@ for (const mod of modsData) {
 
 console.log(chalk.bold.green('\nAll mod pages generated successfully (v2)!'));
 modsData
-  .filter((mod) => mod.page)
+  .filter((mod) => mod.pages && mod.pages.length)
   .forEach((mod) => {
     console.log(`${chalk.cyan('→')} ${chalk.bold(mod.name)}: ${chalk.magenta(`./pages/${mod.slug}/README.md`)}`);
   });
