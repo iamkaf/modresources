@@ -26,17 +26,42 @@ const outputPath = (mod: ModEntry) => path.join(outputDir, mod.id, 'README.md');
 
 const modsData: ModEntry[] = readMods(modsJsonPath);
 
+const BADGES =
+  '[![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber) ' +
+  '[![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues) ' +
+  '[![Discord](https://img.shields.io/discord/1207469438719492176?style=for-the-badge&logo=discord&label=DISCORD&color=%235865F2)](https://discord.gg/HV5WgTksaB) ' +
+  '[![KoFi](https://img.shields.io/badge/KoFi-iamkaf?style=for-the-badge&logo=kofi&logoColor=%2330d1e3&label=Support%20Me&color=%2330d1e3)](https://ko-fi.com/iamkaffe)';
+
 function generateContent(mod: ModEntry): string {
   let result = '';
-  for (const section of mod.pages) {
+  for (let i = 0; i < mod.pages.length; i++) {
+    const section = mod.pages[i];
     const commonFile = commonPath(section.title);
     if (fs.existsSync(commonFile)) {
       result += fs.readFileSync(commonFile, 'utf-8') + '\n\n';
       continue;
     }
+
     const heading = '#'.repeat(section.level) + ' ' + section.title + '\n\n';
-    result += heading + section.content + '\n\n';
+    let body = section.content;
+    if (i === 0) {
+      body = BADGES + '\n\n' + body;
+    }
+    if (/^credits$/i.test(section.title)) {
+      if (!body.includes('**Aris**')) {
+        body += '\n- And most importantly, **Aris**, for always being there for me.';
+      }
+    }
+    result += heading + body + '\n\n';
   }
+
+  if (!mod.pages.some((s) => s.title.toLowerCase() === 'qna')) {
+    const qnaFile = commonPath('qna');
+    if (fs.existsSync(qnaFile)) {
+      result += fs.readFileSync(qnaFile, 'utf-8') + '\n\n';
+    }
+  }
+
   return result;
 }
 
