@@ -1,3 +1,10 @@
+/**
+ * 🖼️ Lists image URLs for each mod.
+ *
+ * Scans the `pages` directory for PNG files and prints a raw GitHub URL for each
+ * one. Optionally pass a mod id to list only its images.
+ */
+
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
@@ -23,16 +30,16 @@ function generateImageURLs(modFolder) {
   // Check if the item is a directory
   if (fs.statSync(modPath).isDirectory()) {
     // Find .png files in the directory
-    const images = fs.readdirSync(modPath).filter(file => file.endsWith('.png'));
+    const images = fs.readdirSync(modPath).filter((file) => file.endsWith('.png'));
 
     // Skip mods with no images
     if (images.length === 0) return;
 
     console.log(chalk.bold.underline(`\nMod: ${chalk.blue(modFolder)}`));
     console.log(chalk.green('Images:'));
-    
+
     // Print URLs for each image found, indented and colored for readability
-    images.forEach(image => {
+    images.forEach((image) => {
       const imageUrl = `${githubBaseURL}/${modFolder}/${image}`;
       console.log(`  ${chalk.yellow('-')} ${chalk.cyan(imageUrl)}`);
     });
@@ -49,7 +56,7 @@ if (specificMod) {
     generateImageURLs(specificMod);
   }
 } else {
-  fs.readdirSync(pagesDir).forEach(modFolder => {
+  fs.readdirSync(pagesDir).forEach((modFolder) => {
     generateImageURLs(modFolder);
   });
 }

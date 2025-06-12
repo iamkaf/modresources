@@ -1,9 +1,16 @@
+/**
+ * 📝 Converts `scratchpad.md` into a JSON-safe string.
+ *
+ * Replaces Discord-style `:emoji:` tags with their Unicode equivalents,
+ * escapes special characters for JSON, and copies the result to the clipboard.
+ */
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import chalk from 'chalk';
 import clipboardy from 'clipboardy';
-import * as emoji from 'node-emoji'; // Import everything as an object
+// import * as emoji from 'node-emoji'; // Emoji replacement temporarily disabled
 
 // Get the directory of the current script file
 const __filename = fileURLToPath(import.meta.url);
@@ -12,20 +19,17 @@ const __dirname = path.dirname(__filename);
 // Path to the scratchpad.md file
 const scratchpadPath = path.join(__dirname, 'scratchpad.md');
 
-// Function to escape content for JSON and convert Discord-style emojis
+// Function to escape content for JSON. Emoji replacement is currently disabled
+// until the dependency issue is resolved.
 const sanitizeAndFormatContent = (content) => {
-  // Replace Discord-style emoji tags with Unicode emojis
-  const withEmojis = content.replace(/:([a-zA-Z0-9_+-]+):/g, (match, emojiName) => {
-    const unicodeEmoji = emoji.get(emojiName); // Use the 'get' method
-    return unicodeEmoji !== `:${emojiName}:` ? unicodeEmoji : match; // Preserve if not found
-  });
+  const withoutEmojis = content; // placeholder when emoji conversion returns
 
   // Escape for JSON
-  return withEmojis
+  return withoutEmojis
     .replace(/\\/g, '\\\\') // Escape backslashes
-    .replace(/"/g, '\\"')  // Escape double quotes
+    .replace(/"/g, '\\"') // Escape double quotes
     .replace(/\n/g, '\\n') // Escape newlines
-    .replace(/\r/g, '');   // Remove carriage returns
+    .replace(/\r/g, ''); // Remove carriage returns
 };
 
 // Read the scratchpad.md file

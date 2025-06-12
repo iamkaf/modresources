@@ -1,9 +1,18 @@
+/**
+ * 📄 Builds README pages using the legacy `mods.json` schema.
+ *
+ * The script loads template fragments from `pages/common`, injects data from
+ * `mods.json`, and writes a final `README.md` to each mod's folder. It supports
+ * generating a single mod via `--mod` or all mods at once.
+ */
+
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
 import { fileURLToPath } from 'url';
 import yargs from 'yargs';
-import { replacePlaceholders } from './util.mjs';
+const replacePlaceholders = (template: string, data: Record<string, string>) =>
+  template.replace(/{{([^{}]+)}}/g, (_, key) => data[key.trim()] ?? '');
 
 // Get the directory of the current script file
 const __filename = fileURLToPath(import.meta.url);
@@ -65,14 +74,13 @@ const processMod = (mod) => {
 
   const modsData = readModsJson();
   let generatedContent = generateContentForMod(mod);
-  generatedContent += "\n\n## Check out my other mods!\n\n";
+  generatedContent += '\n\n## Check out my other mods!\n\n';
   const promoList = generatePromoInfo(modsData, mod);
 
   for (const promo of promoList) {
     // add icon with link
     generatedContent += `<a href="${promo.url}"><img src="${promo.icon}" alt="${promo.name}" width="100"></a>`;
   }
-
 
   // Write the generated content to the file
   fs.writeFileSync(outputFilePath, generatedContent, 'utf-8');
@@ -89,7 +97,6 @@ const generatePromoInfo = (modsData, currentMod) => {
     // }
 
     const addV2Icon = !!mod.page.icon;
-
 
     result.push({
       name: mod.name,
