@@ -19,5 +19,7 @@ All helper utilities are written in TypeScript and executed with [tsx](https://g
 - `npm run icon` 🎨 - Generate icon images from parts.
 - `npm run validate` ✅ - Validate `mods.v2.json` contents.
 - `npm run othermods` 🛠️ - Generate a promo snippet listing all mods.
+- `npm run ui` 💻 - Start the local React interface and API. The UI is built
+  with React, Tailwind and DaisyUI and lets you edit entries in `mods.v2.json`.
 
 Enjoy the mods! 🚀
