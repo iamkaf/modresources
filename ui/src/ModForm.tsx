@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { ModEntry } from './modTypes';
+import type { ModEntry, Dependency, PageSection } from './modTypes';
 
 interface Props {
   onSubmit: (mod: ModEntry) => void;
@@ -23,75 +23,116 @@ export default function ModForm({ onSubmit, initial }: Props) {
     setMod({ ...mod, [field]: value });
   };
 
+  const updateDep = (idx: number, field: keyof Dependency, value: any) => {
+    const deps = [...mod.dependencies];
+    deps[idx] = { ...deps[idx], [field]: value } as Dependency;
+    update('dependencies', deps);
+  };
+
+  const addDep = () => {
+    update('dependencies', [
+      ...mod.dependencies,
+      { name: '', loader: 'fabric', modrinthUrl: '', curseforgeUrl: '', notes: '' },
+    ]);
+  };
+
+  const removeDep = (idx: number) => {
+    const deps = [...mod.dependencies];
+    deps.splice(idx, 1);
+    update('dependencies', deps);
+  };
+
+  const updatePage = (idx: number, field: keyof PageSection, value: any) => {
+    const pages = [...mod.pages];
+    pages[idx] = { ...pages[idx], [field]: value } as PageSection;
+    update('pages', pages);
+  };
+
+  const addPage = () => {
+    update('pages', [...mod.pages, { title: '', level: 1, content: '' }]);
+  };
+
+  const removePage = (idx: number) => {
+    const pages = [...mod.pages];
+    pages.splice(idx, 1);
+    update('pages', pages);
+  };
+
   return (
     <form
+      className="space-y-4"
       onSubmit={(e) => {
         e.preventDefault();
         onSubmit(mod);
       }}
     >
-      <div>
-        <label>
-          Id
-          <input
-            value={mod.id}
-            onChange={(e) => update('id', e.target.value)}
-          />
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">Id</span>
         </label>
+        <input
+          className="input input-bordered"
+          value={mod.id}
+          onChange={(e) => update('id', e.target.value)}
+        />
       </div>
-      <div>
-        <label>
-          Name
-          <input
-            value={mod.name}
-            onChange={(e) => update('name', e.target.value)}
-          />
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">Name</span>
         </label>
+        <input
+          className="input input-bordered"
+          value={mod.name}
+          onChange={(e) => update('name', e.target.value)}
+        />
       </div>
-      <div>
-        <label>
-          Icon (comma separated)
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">Icon (comma separated)</span>
+        </label>
+        <input
+          className="input input-bordered"
+          value={mod.icon?.join(',')}
+          onChange={(e) =>
+            update(
+              'icon',
+              e.target.value
+                .split(',')
+                .map((s) => s.trim())
+                .filter(Boolean)
+            )
+          }
+        />
+      </div>
+      <fieldset className="border p-2 rounded">
+        <legend className="text-lg">Ids</legend>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Modrinth</span>
+          </label>
           <input
-            value={mod.icon?.join(',')}
+            className="input input-bordered"
+            value={mod.ids?.modrinth ?? ''}
             onChange={(e) =>
-              update(
-                'icon',
-                e.target.value
-                  .split(',')
-                  .map((s) => s.trim())
-                  .filter(Boolean)
-              )
+              update('ids', { ...mod.ids, modrinth: e.target.value })
             }
           />
-        </label>
-      </div>
-      <fieldset>
-        <legend>Ids</legend>
-        <div>
-          <label>
-            Modrinth
-            <input
-              value={mod.ids?.modrinth ?? ''}
-              onChange={(e) =>
-                update('ids', { ...mod.ids, modrinth: e.target.value })
-              }
-            />
-          </label>
         </div>
-        <div>
-          <label>
-            CurseForge
-            <input
-              value={mod.ids?.curseforge ?? ''}
-              onChange={(e) =>
-                update('ids', { ...mod.ids, curseforge: e.target.value })
-              }
-            />
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">CurseForge</span>
           </label>
+          <input
+            className="input input-bordered"
+            value={mod.ids?.curseforge ?? ''}
+            onChange={(e) =>
+              update('ids', { ...mod.ids, curseforge: e.target.value })
+            }
+          />
         </div>
       </fieldset>
-      <fieldset>
-        <legend>Urls</legend>
+      <fieldset className="border p-2 rounded">
+        <legend className="text-lg">Urls</legend>
         {(
           [
             'modrinth',
@@ -102,40 +143,116 @@ export default function ModForm({ onSubmit, initial }: Props) {
             'discord',
           ] as const
         ).map((key) => (
-          <div key={key}>
-            <label>
-              {key}
-              <input
-                value={(mod.urls as any)?.[key] ?? ''}
-                onChange={(e) =>
-                  update('urls', { ...mod.urls, [key]: e.target.value })
-                }
-              />
+          <div key={key} className="form-control">
+            <label className="label">
+              <span className="label-text capitalize">{key}</span>
             </label>
+            <input
+              className="input input-bordered"
+              value={(mod.urls as any)?.[key] ?? ''}
+              onChange={(e) =>
+                update('urls', { ...mod.urls, [key]: e.target.value })
+              }
+            />
           </div>
         ))}
       </fieldset>
-      <div>
-        <label>
-          Dependencies (JSON)
-          <textarea
-            value={JSON.stringify(mod.dependencies, null, 2)}
-            onChange={(e) =>
-              update('dependencies', JSON.parse(e.target.value || '[]'))
-            }
-          />
-        </label>
+      <div className="space-y-2">
+        <div className="flex justify-between items-center">
+          <span className="font-bold">Dependencies</span>
+          <button type="button" className="btn btn-sm" onClick={addDep}>
+            Add
+          </button>
+        </div>
+        {mod.dependencies.map((dep, i) => (
+          <div key={i} className="border p-2 rounded space-y-2">
+            <input
+              className="input input-bordered w-full"
+              placeholder="Name"
+              value={dep.name}
+              onChange={(e) => updateDep(i, 'name', e.target.value)}
+            />
+            <select
+              className="select select-bordered w-full"
+              value={dep.loader}
+              onChange={(e) =>
+                updateDep(i, 'loader', e.target.value as Dependency['loader'])
+              }
+            >
+              <option value="fabric">fabric</option>
+              <option value="forge">forge</option>
+              <option value="neoforge">neoforge</option>
+              <option value="all">all</option>
+            </select>
+            <input
+              className="input input-bordered w-full"
+              placeholder="Modrinth URL"
+              value={dep.modrinthUrl}
+              onChange={(e) => updateDep(i, 'modrinthUrl', e.target.value)}
+            />
+            <input
+              className="input input-bordered w-full"
+              placeholder="CurseForge URL"
+              value={dep.curseforgeUrl}
+              onChange={(e) => updateDep(i, 'curseforgeUrl', e.target.value)}
+            />
+            <input
+              className="input input-bordered w-full"
+              placeholder="Notes"
+              value={dep.notes ?? ''}
+              onChange={(e) => updateDep(i, 'notes', e.target.value)}
+            />
+            <button
+              type="button"
+              className="btn btn-error btn-sm"
+              onClick={() => removeDep(i)}
+            >
+              Remove
+            </button>
+          </div>
+        ))}
       </div>
-      <div>
-        <label>
-          Pages (JSON)
-          <textarea
-            value={JSON.stringify(mod.pages, null, 2)}
-            onChange={(e) => update('pages', JSON.parse(e.target.value || '[]'))}
-          />
-        </label>
+      <div className="space-y-2">
+        <div className="flex justify-between items-center">
+          <span className="font-bold">Pages</span>
+          <button type="button" className="btn btn-sm" onClick={addPage}>
+            Add
+          </button>
+        </div>
+        {mod.pages.map((p, i) => (
+          <div key={i} className="border p-2 rounded space-y-2">
+            <input
+              className="input input-bordered w-full"
+              placeholder="Title"
+              value={p.title}
+              onChange={(e) => updatePage(i, 'title', e.target.value)}
+            />
+            <input
+              className="input input-bordered w-full"
+              type="number"
+              placeholder="Level"
+              value={p.level}
+              onChange={(e) => updatePage(i, 'level', parseInt(e.target.value))}
+            />
+            <textarea
+              className="textarea textarea-bordered w-full"
+              placeholder="Content"
+              value={p.content}
+              onChange={(e) => updatePage(i, 'content', e.target.value)}
+            />
+            <button
+              type="button"
+              className="btn btn-error btn-sm"
+              onClick={() => removePage(i)}
+            >
+              Remove
+            </button>
+          </div>
+        ))}
       </div>
-      <button type="submit">Save</button>
+      <button className="btn btn-primary" type="submit">
+        Save
+      </button>
     </form>
   );
 }
