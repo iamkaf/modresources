@@ -1,14 +1,8 @@
 import { useState } from 'react';
 import type { ModEntry, Dependency, PageSection } from './modTypes';
-import {
-  PlusIcon,
-  TrashIcon,
-  ArrowTopRightOnSquareIcon,
-  CheckIcon,
-} from '@heroicons/react/24/solid';
+import { PlusIcon, TrashIcon, ArrowTopRightOnSquareIcon, CheckIcon } from '@heroicons/react/24/solid';
 import {
   MDXEditor,
-  KitchenSinkToolbar,
   toolbarPlugin,
   headingsPlugin,
   listsPlugin,
@@ -17,6 +11,7 @@ import {
   markdownShortcutPlugin,
 } from '@mdxeditor/editor';
 import '@mdxeditor/editor/style.css';
+import { MinimalToolbar } from './MinimalToolbar';
 
 interface Props {
   onSubmit: (mod: ModEntry) => void;
@@ -145,11 +140,7 @@ export default function ModForm({ onSubmit, initial }: Props) {
               <label className="label justify-between">
                 <span className="label-text capitalize">{key}</span>
                 {val && (
-                  <button
-                    type="button"
-                    className="btn btn-xs btn-secondary"
-                    onClick={() => window.open(val, '_blank')}
-                  >
+                  <button type="button" className="btn btn-xs btn-secondary" onClick={() => window.open(val, '_blank')}>
                     <ArrowTopRightOnSquareIcon className="w-4 h-4" />
                   </button>
                 )}
@@ -243,7 +234,7 @@ export default function ModForm({ onSubmit, initial }: Props) {
                 quotePlugin(),
                 linkPlugin(),
                 markdownShortcutPlugin(),
-                toolbarPlugin({ toolbarContents: () => <KitchenSinkToolbar /> }),
+                toolbarPlugin({ toolbarContents: () => <MinimalToolbar /> }),
               ]}
             />
             <button type="button" className="btn btn-error btn-sm" onClick={() => removePage(i)}>
