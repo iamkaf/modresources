@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { ModEntry, Dependency, PageSection } from './modTypes';
+import type { ModEntry, Dependency, PageSection } from '../../lib/readMods.js';
 import { PlusIcon, TrashIcon, ArrowTopRightOnSquareIcon, CheckIcon } from '@heroicons/react/24/solid';
 import {
   MDXEditor,
