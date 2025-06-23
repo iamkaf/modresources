@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { PencilSquareIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import './App.css';
 import ModForm from './ModForm';
-import type { ModEntry } from './modTypes';
+import type { ModEntry } from '../../lib/readMods.js';
 import { listMods, addMod, updateMod } from './api';
 
 export default function App() {
