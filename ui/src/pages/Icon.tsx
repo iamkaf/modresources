@@ -1,3 +1,5 @@
+import Layout from '../Layout';
+
 export default function Icon() {
-  return <div className="p-4">icon page</div>;
+  return <Layout>icon page</Layout>;
 }

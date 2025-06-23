@@ -108,8 +108,8 @@ export default function ModForm({ onSubmit, initial }: Props) {
           }
         />
       </div>
-      <fieldset className="border border-base-300 p-4 rounded-box">
-        <legend className="font-bold">Ids</legend>
+      <fieldset className="fieldset p-4 rounded-box border border-base-300">
+        <legend className="fieldset-legend">Ids</legend>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Modrinth</span>
@@ -131,8 +131,8 @@ export default function ModForm({ onSubmit, initial }: Props) {
           />
         </div>
       </fieldset>
-      <fieldset className="border border-base-300 p-4 rounded-box">
-        <legend className="font-bold">Urls</legend>
+      <fieldset className="fieldset p-4 rounded-box border border-base-300">
+        <legend className="fieldset-legend">Urls</legend>
         {(['modrinth', 'curseforge', 'source', 'issues', 'support', 'discord'] as const).map((key) => {
           const val = (mod.urls as any)?.[key] ?? '';
           return (
@@ -154,8 +154,8 @@ export default function ModForm({ onSubmit, initial }: Props) {
           );
         })}
       </fieldset>
-      <fieldset className="space-y-2 border border-base-300 p-4 rounded-box">
-        <legend className="font-bold flex justify-between items-center">
+      <fieldset className="fieldset p-4 rounded-box border border-base-300 space-y-2">
+        <legend className="fieldset-legend flex justify-between items-center">
           <span>Dependencies</span>
           <button type="button" className="btn btn-xs" onClick={addDep}>
             <PlusIcon className="w-4 h-4" />
@@ -203,8 +203,8 @@ export default function ModForm({ onSubmit, initial }: Props) {
           </div>
         ))}
       </fieldset>
-      <fieldset className="space-y-2 border border-base-300 p-4 rounded-box">
-        <legend className="font-bold flex justify-between items-center">
+      <fieldset className="fieldset p-4 rounded-box border border-base-300 space-y-2">
+        <legend className="fieldset-legend flex justify-between items-center">
           <span>Pages</span>
           <button type="button" className="btn btn-xs" onClick={addPage}>
             <PlusIcon className="w-4 h-4" />

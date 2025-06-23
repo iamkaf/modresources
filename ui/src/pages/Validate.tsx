@@ -1,3 +1,5 @@
+import Layout from '../Layout';
+
 export default function Validate() {
-  return <div className="p-4">validate page</div>;
+  return <Layout>validate page</Layout>;
 }

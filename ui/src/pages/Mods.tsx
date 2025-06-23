@@ -3,6 +3,7 @@ import { PencilSquareIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import ModForm from '../ModForm';
 import type { ModEntry } from '../../../lib/readMods';
 import { listMods, addMod, updateMod } from '../api';
+import Layout from '../Layout';
 
 export default function Mods() {
   const [mods, setMods] = useState<ModEntry[]>([]);
@@ -15,12 +16,13 @@ export default function Mods() {
 
   return (
     <>
-      <div className="max-w-6xl mx-auto p-4 flex gap-6">
-        <div className="space-y-4 min-w-60">
-          <h1 className="text-3xl font-bold text-primary">Mods</h1>
-          <ul className="space-y-2">
-            {mods.map((m) => (
-              <li key={m.id} className="flex justify-between items-center p-2 rounded-box bg-base-200">
+      <Layout>
+        <div className="flex gap-6">
+          <div className="space-y-4 min-w-60">
+            <h1 className="text-3xl font-bold text-primary">Mods</h1>
+            <ul className="space-y-2">
+              {mods.map((m) => (
+                <li key={m.id} className="flex justify-between items-center p-2 rounded-box bg-base-200">
                 <span>{m.name}</span>
                 <button className="btn btn-accent btn-sm" onClick={() => setEditing(m)}>
                   <PencilSquareIcon className="w-4 h-4" />
@@ -53,6 +55,7 @@ export default function Mods() {
           )}
         </div>
       </div>
+      </Layout>
       {message && (
         <div className="toast toast-top toast-end">
           <div className="alert alert-success">{message}</div>
