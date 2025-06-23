@@ -11,7 +11,7 @@ import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
 import { fileURLToPath } from 'url';
-import { readMods, ModEntry } from '../src/readMods.js';
+import { readMods, ModEntry } from '../lib/readMods.js';
 
 // Get the directory of the current script file
 const __filename = fileURLToPath(import.meta.url);

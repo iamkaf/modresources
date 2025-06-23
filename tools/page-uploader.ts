@@ -15,7 +15,7 @@ import chalk from 'chalk';
 import { fileURLToPath } from 'url';
 import clipboardy from 'clipboardy';
 import open from 'open';
-import { readMods, ModEntry } from '../src/readMods.js';
+import { readMods, ModEntry } from '../lib/readMods.js';
 config();
 
 class ModrinthAPI {
