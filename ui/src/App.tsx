@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { PencilSquareIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import './App.css';
 import ModForm from './ModForm';
 import type { ModEntry } from './modTypes';
@@ -23,7 +24,7 @@ export default function App() {
               <li key={m.id} className="flex justify-between items-center p-2 border rounded-box bg-base-200">
                 <span>{m.name}</span>
                 <button className="btn btn-accent btn-sm" onClick={() => setEditing(m)}>
-                  Edit
+                  <PencilSquareIcon className="w-4 h-4" />
                 </button>
               </li>
             ))}
@@ -48,7 +49,7 @@ export default function App() {
           />
           {editing && (
             <button className="btn btn-outline" type="button" onClick={() => setEditing(null)}>
-              Cancel
+              <XMarkIcon className="w-4 h-4" />
             </button>
           )}
         </div>
