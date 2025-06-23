@@ -12,7 +12,7 @@ import chalk from 'chalk';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import { readMods, ModEntry } from '../src/readMods.js';
+import { ModEntry, readMods } from '../lib/readMods';
 
 // Get the directory of the current script file
 const __filename = fileURLToPath(import.meta.url);

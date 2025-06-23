@@ -1,4 +1,4 @@
-import type { ModEntry } from '../../lib/readMods.js';
+import type { ModEntry } from '../../lib/readMods';
 
 const BASE = '/api';
 

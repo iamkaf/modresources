@@ -10,8 +10,8 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import chalk from 'chalk';
-import { readMods, ModEntry } from '../src/readMods.js';
 import { Validator } from 'jsonschema';
+import { ModEntry, readMods } from '../lib/readMods';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

@@ -15,7 +15,7 @@
  */
 import fs from 'fs';
 import path from 'path';
-import { readMods, ModEntry, ModsData } from './readMods.js';
+import { ModsData, readMods, ModEntry } from '../lib/readMods';
 
 export class ModManager {
   constructor(private filePath = path.join(__dirname, '..', 'mods.v2.json')) {}

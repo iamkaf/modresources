@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { ModManager } from '../src/ModManager.js';
+import { ModManager } from '../src/ModManager';
 
 const app = express();
 app.use(cors());
