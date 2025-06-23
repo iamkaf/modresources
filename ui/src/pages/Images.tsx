@@ -1,3 +1,5 @@
+import Layout from '../Layout';
+
 export default function Images() {
-  return <div className="p-4">images page</div>;
+  return <Layout title="Images">images page</Layout>;
 }

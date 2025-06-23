@@ -1,3 +1,5 @@
+import Layout from '../Layout';
+
 export default function Othermods() {
-  return <div className="p-4">othermods page</div>;
+  return <Layout title="Othermods">othermods page</Layout>;
 }

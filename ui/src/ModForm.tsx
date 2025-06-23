@@ -108,54 +108,48 @@ export default function ModForm({ onSubmit, initial }: Props) {
           }
         />
       </div>
-      <fieldset className="border border-base-300 p-4 rounded-box">
-        <legend className="font-bold">Ids</legend>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Modrinth</span>
-          </label>
+      <fieldset className="fieldset border border-base-300 p-4 rounded-box">
+        <legend className="fieldset-legend font-bold">Ids</legend>
+        <label className="form-control fieldset-label">
+          <span className="label-text">Modrinth</span>
           <input
             className="input input-bordered"
             value={mod.ids?.modrinth ?? ''}
             onChange={(e) => update('ids', { ...mod.ids, modrinth: e.target.value })}
           />
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">CurseForge</span>
-          </label>
+        </label>
+        <label className="form-control fieldset-label">
+          <span className="label-text">CurseForge</span>
           <input
             className="input input-bordered"
             value={mod.ids?.curseforge ?? ''}
             onChange={(e) => update('ids', { ...mod.ids, curseforge: e.target.value })}
           />
-        </div>
+        </label>
       </fieldset>
-      <fieldset className="border border-base-300 p-4 rounded-box">
-        <legend className="font-bold">Urls</legend>
+      <fieldset className="fieldset border border-base-300 p-4 rounded-box">
+        <legend className="fieldset-legend font-bold">Urls</legend>
         {(['modrinth', 'curseforge', 'source', 'issues', 'support', 'discord'] as const).map((key) => {
           const val = (mod.urls as any)?.[key] ?? '';
           return (
-            <div key={key} className="form-control">
-              <label className="label justify-between">
-                <span className="label-text capitalize">{key}</span>
-                {val && (
-                  <button type="button" className="btn btn-xs btn-secondary" onClick={() => window.open(val, '_blank')}>
-                    <ArrowTopRightOnSquareIcon className="w-4 h-4" />
-                  </button>
-                )}
-              </label>
+            <label key={key} className="form-control fieldset-label">
+              <span className="label-text capitalize">{key}</span>
+              {val && (
+                <button type="button" className="btn btn-xs btn-secondary" onClick={() => window.open(val, '_blank')}>
+                  <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                </button>
+              )}
               <input
                 className="input input-bordered"
                 value={val}
                 onChange={(e) => update('urls', { ...mod.urls, [key]: e.target.value })}
               />
-            </div>
+            </label>
           );
         })}
       </fieldset>
-      <fieldset className="space-y-2 border border-base-300 p-4 rounded-box">
-        <legend className="font-bold flex justify-between items-center">
+      <fieldset className="fieldset space-y-2 border border-base-300 p-4 rounded-box">
+        <legend className="fieldset-legend font-bold flex justify-between items-center">
           <span>Dependencies</span>
           <button type="button" className="btn btn-xs" onClick={addDep}>
             <PlusIcon className="w-4 h-4" />
@@ -203,8 +197,8 @@ export default function ModForm({ onSubmit, initial }: Props) {
           </div>
         ))}
       </fieldset>
-      <fieldset className="space-y-2 border border-base-300 p-4 rounded-box">
-        <legend className="font-bold flex justify-between items-center">
+      <fieldset className="fieldset space-y-2 border border-base-300 p-4 rounded-box">
+        <legend className="fieldset-legend font-bold flex justify-between items-center">
           <span>Pages</span>
           <button type="button" className="btn btn-xs" onClick={addPage}>
             <PlusIcon className="w-4 h-4" />

@@ -1,3 +1,5 @@
+import Layout from '../Layout';
+
 export default function Pad() {
-  return <div className="p-4">pad page</div>;
+  return <Layout title="Pad">pad page</Layout>;
 }
