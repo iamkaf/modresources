@@ -22,8 +22,9 @@ app.post('/api/mods', (req, res) => {
   try {
     manager.add(req.body);
     res.sendStatus(201);
-  } catch (err: any) {
-    res.status(400).json({ error: err.message });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err);
+    res.status(400).json({ error: message });
   }
 });
 
@@ -31,8 +32,9 @@ app.put('/api/mods/:id', (req, res) => {
   try {
     manager.update(req.params.id, req.body);
     res.sendStatus(200);
-  } catch (err: any) {
-    res.status(400).json({ error: err.message });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err);
+    res.status(400).json({ error: message });
   }
 });
 
@@ -40,8 +42,9 @@ app.delete('/api/mods/:id', (req, res) => {
   try {
     manager.delete(req.params.id);
     res.sendStatus(204);
-  } catch (err: any) {
-    res.status(400).json({ error: err.message });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err);
+    res.status(400).json({ error: message });
   }
 });
 

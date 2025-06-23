@@ -1,5 +1,20 @@
 import { useState } from 'react';
 import type { ModEntry, Dependency, PageSection } from './modTypes';
+import {
+  PlusIcon,
+  TrashIcon,
+  ArrowTopRightOnSquareIcon,
+  CheckIcon,
+} from '@heroicons/react/24/solid';
+import {
+  MDXEditor,
+  headingsPlugin,
+  listsPlugin,
+  quotePlugin,
+  thematicBreakPlugin,
+  markdownShortcutPlugin,
+} from '@mdxeditor/editor';
+import '@mdxeditor/editor/style.css';
 
 interface Props {
   onSubmit: (mod: ModEntry) => void;
@@ -19,11 +34,15 @@ const empty: ModEntry = {
 export default function ModForm({ onSubmit, initial }: Props) {
   const [mod, setMod] = useState<ModEntry>(initial ?? empty);
 
-  const update = (field: keyof ModEntry, value: any) => {
+  const update = <K extends keyof ModEntry>(field: K, value: ModEntry[K]) => {
     setMod({ ...mod, [field]: value });
   };
 
-  const updateDep = (idx: number, field: keyof Dependency, value: any) => {
+  const updateDep = <K extends keyof Dependency>(
+    idx: number,
+    field: K,
+    value: Dependency[K],
+  ) => {
     const deps = [...mod.dependencies];
     deps[idx] = { ...deps[idx], [field]: value } as Dependency;
     update('dependencies', deps);
@@ -42,7 +61,11 @@ export default function ModForm({ onSubmit, initial }: Props) {
     update('dependencies', deps);
   };
 
-  const updatePage = (idx: number, field: keyof PageSection, value: any) => {
+  const updatePage = <K extends keyof PageSection>(
+    idx: number,
+    field: K,
+    value: PageSection[K],
+  ) => {
     const pages = [...mod.pages];
     pages[idx] = { ...pages[idx], [field]: value } as PageSection;
     update('pages', pages);
@@ -121,14 +144,21 @@ export default function ModForm({ onSubmit, initial }: Props) {
       </fieldset>
       <fieldset className="border border-base-300 p-4 rounded-box">
         <legend className="font-bold">Urls</legend>
-        {(['modrinth', 'curseforge', 'source', 'issues', 'support', 'discord'] as const).map((key) => {
-          const val = (mod.urls as any)?.[key] ?? '';
+        {(
+          ['modrinth', 'curseforge', 'source', 'issues', 'support', 'discord'] as const
+        ).map((key) => {
+          const val = mod.urls?.[key] ?? '';
           return (
             <div key={key} className="form-control">
               <label className="label justify-between">
                 <span className="label-text capitalize">{key}</span>
                 {val && (
-                  <button type="button" className="btn btn-xs btn-secondary" onClick={() => window.open(val, '_blank')}>
+                  <button
+                    type="button"
+                    className="btn btn-xs btn-secondary flex gap-1 items-center"
+                    onClick={() => window.open(val, '_blank')}
+                  >
+                    <ArrowTopRightOnSquareIcon className="h-3 w-3" />
                     Open
                   </button>
                 )}
@@ -145,7 +175,12 @@ export default function ModForm({ onSubmit, initial }: Props) {
       <fieldset className="space-y-2 border border-base-300 p-4 rounded-box">
         <legend className="font-bold flex justify-between items-center">
           <span>Dependencies</span>
-          <button type="button" className="btn btn-xs" onClick={addDep}>
+          <button
+            type="button"
+            className="btn btn-xs flex gap-1 items-center"
+            onClick={addDep}
+          >
+            <PlusIcon className="h-3 w-3" />
             Add
           </button>
         </legend>
@@ -185,7 +220,12 @@ export default function ModForm({ onSubmit, initial }: Props) {
               value={dep.notes ?? ''}
               onChange={(e) => updateDep(i, 'notes', e.target.value)}
             />
-            <button type="button" className="btn btn-error btn-sm" onClick={() => removeDep(i)}>
+            <button
+              type="button"
+              className="btn btn-error btn-sm flex gap-1 items-center"
+              onClick={() => removeDep(i)}
+            >
+              <TrashIcon className="h-4 w-4" />
               Remove
             </button>
           </div>
@@ -194,7 +234,12 @@ export default function ModForm({ onSubmit, initial }: Props) {
       <fieldset className="space-y-2 border border-base-300 p-4 rounded-box">
         <legend className="font-bold flex justify-between items-center">
           <span>Pages</span>
-          <button type="button" className="btn btn-xs" onClick={addPage}>
+          <button
+            type="button"
+            className="btn btn-xs flex gap-1 items-center"
+            onClick={addPage}
+          >
+            <PlusIcon className="h-3 w-3" />
             Add
           </button>
         </legend>
@@ -213,19 +258,31 @@ export default function ModForm({ onSubmit, initial }: Props) {
               value={p.level}
               onChange={(e) => updatePage(i, 'level', parseInt(e.target.value))}
             />
-            <textarea
-              className="textarea textarea-bordered w-full"
-              placeholder="Content"
-              value={p.content}
-              onChange={(e) => updatePage(i, 'content', e.target.value)}
+            <MDXEditor
+              markdown={p.content}
+              onChange={(val) => updatePage(i, 'content', val)}
+              plugins={[
+                headingsPlugin(),
+                listsPlugin(),
+                quotePlugin(),
+                thematicBreakPlugin(),
+                markdownShortcutPlugin(),
+              ]}
+              className="border rounded min-h-[120px] p-2"
             />
-            <button type="button" className="btn btn-error btn-sm" onClick={() => removePage(i)}>
+            <button
+              type="button"
+              className="btn btn-error btn-sm flex gap-1 items-center"
+              onClick={() => removePage(i)}
+            >
+              <TrashIcon className="h-4 w-4" />
               Remove
             </button>
           </div>
         ))}
       </fieldset>
-      <button className="btn btn-primary" type="submit">
+      <button className="btn btn-primary flex gap-1 items-center" type="submit">
+        <CheckIcon className="h-4 w-4" />
         Save
       </button>
     </form>

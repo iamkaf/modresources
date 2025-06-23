@@ -3,6 +3,10 @@ import './App.css';
 import ModForm from './ModForm';
 import type { ModEntry } from './modTypes';
 import { listMods, addMod, updateMod } from './api';
+import {
+  PencilIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/solid';
 
 export default function App() {
   const [mods, setMods] = useState<ModEntry[]>([]);
@@ -22,7 +26,8 @@ export default function App() {
             {mods.map((m) => (
               <li key={m.id} className="flex justify-between items-center p-2 border rounded-box bg-base-200">
                 <span>{m.name}</span>
-                <button className="btn btn-accent btn-sm" onClick={() => setEditing(m)}>
+                <button className="btn btn-accent btn-sm flex gap-1 items-center" onClick={() => setEditing(m)}>
+                  <PencilIcon className="h-4 w-4" />
                   Edit
                 </button>
               </li>
@@ -47,7 +52,12 @@ export default function App() {
             }}
           />
           {editing && (
-            <button className="btn btn-outline" type="button" onClick={() => setEditing(null)}>
+            <button
+              className="btn btn-outline flex gap-1 items-center"
+              type="button"
+              onClick={() => setEditing(null)}
+            >
+              <XMarkIcon className="h-4 w-4" />
               Cancel
             </button>
           )}
