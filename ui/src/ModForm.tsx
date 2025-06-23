@@ -78,77 +78,76 @@ export default function ModForm({ onSubmit, initial }: Props) {
         onSubmit(mod);
       }}
     >
-      <div className="form-control">
-        <label className="label">
-          <span className="label-text">Id</span>
+      <fieldset className="fieldset border border-base-300 p-4 rounded-md">
+        <legend className="fieldset-legend font-bold">Basic Information</legend>
+        <label className="flex flex-col gap-1">
+          <span className="label">Id</span>
+          <input className="input" value={mod.id} onChange={(e) => update('id', e.target.value)} />
         </label>
-        <input className="input input-bordered" value={mod.id} onChange={(e) => update('id', e.target.value)} />
-      </div>
-      <div className="form-control">
-        <label className="label">
-          <span className="label-text">Name</span>
+        <label className="flex flex-col gap-1">
+          <span className="label">Name</span>
+          <input className="input" value={mod.name} onChange={(e) => update('name', e.target.value)} />
         </label>
-        <input className="input input-bordered" value={mod.name} onChange={(e) => update('name', e.target.value)} />
-      </div>
-      <div className="form-control">
-        <label className="label">
-          <span className="label-text">Icon (comma separated)</span>
-        </label>
-        <input
-          className="input input-bordered"
-          value={mod.icon?.join(',')}
-          onChange={(e) =>
-            update(
-              'icon',
-              e.target.value
-                .split(',')
-                .map((s) => s.trim())
-                .filter(Boolean),
-            )
-          }
-        />
-      </div>
-      <fieldset className="fieldset border border-base-300 p-4 rounded-box">
-        <legend className="fieldset-legend font-bold">Ids</legend>
-        <label className="form-control fieldset-label">
-          <span className="label-text">Modrinth</span>
+        <label className="flex flex-col gap-1">
+          <span className="label">Icon (comma separated)</span>
           <input
-            className="input input-bordered"
+            className="input"
+            value={mod.icon?.join(',')}
+            onChange={(e) =>
+              update(
+                'icon',
+                e.target.value
+                  .split(',')
+                  .map((s) => s.trim())
+                  .filter(Boolean),
+              )
+            }
+          />
+        </label>
+      </fieldset>
+      <fieldset className="fieldset border border-base-300 p-4 rounded-md">
+        <legend className="fieldset-legend font-bold">IDs</legend>
+        <label className="flex flex-col gap-1">
+          <span className="label">Modrinth</span>
+          <input
+            className="input"
             value={mod.ids?.modrinth ?? ''}
             onChange={(e) => update('ids', { ...mod.ids, modrinth: e.target.value })}
           />
         </label>
-        <label className="form-control fieldset-label">
-          <span className="label-text">CurseForge</span>
+        <label className="flex flex-col gap-1">
+          <span className="label">CurseForge</span>
           <input
-            className="input input-bordered"
+            className="input"
             value={mod.ids?.curseforge ?? ''}
             onChange={(e) => update('ids', { ...mod.ids, curseforge: e.target.value })}
           />
         </label>
       </fieldset>
-      <fieldset className="fieldset border border-base-300 p-4 rounded-box">
-        <legend className="fieldset-legend font-bold">Urls</legend>
+      <fieldset className="fieldset border border-base-300 p-4 rounded-md">
+        <legend className="fieldset-legend font-bold">URLs</legend>
         {(['modrinth', 'curseforge', 'source', 'issues', 'support', 'discord'] as const).map((key) => {
           const val = (mod.urls as any)?.[key] ?? '';
           return (
-            <label key={key} className="form-control fieldset-label">
-              <span className="label-text capitalize">{key}</span>
-              {val && (
-                <button type="button" className="btn btn-xs btn-secondary" onClick={() => window.open(val, '_blank')}>
-                  <ArrowTopRightOnSquareIcon className="w-4 h-4" />
-                </button>
-              )}
-              <input
-                className="input input-bordered"
-                value={val}
-                onChange={(e) => update('urls', { ...mod.urls, [key]: e.target.value })}
-              />
+            <label key={key} className="flex flex-col gap-1">
+              <span className="label capitalize">{key}</span>
+              <div className="flex flex-row">
+                <input
+                  className="input"
+                  value={val}
+                  onChange={(e) => update('urls', { ...mod.urls, [key]: e.target.value })}
+                />
+                {val && (
+                  <button type="button" className="btn btn-md btn-secondary" onClick={() => window.open(val, '_blank')}>
+                    <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
             </label>
           );
         })}
       </fieldset>
-      <fieldset className="fieldset space-y-2 border border-base-300 p-4 rounded-box">
+      <fieldset className="fieldset space-y-2 border border-base-300 p-4 rounded-md">
         <legend className="fieldset-legend font-bold flex justify-between items-center">
           <span>Dependencies</span>
           <button type="button" className="btn btn-xs" onClick={addDep}>
@@ -158,13 +157,13 @@ export default function ModForm({ onSubmit, initial }: Props) {
         {mod.dependencies.map((dep, i) => (
           <div key={i} className="p-2 rounded space-y-2">
             <input
-              className="input input-bordered w-full"
+              className="input w-full"
               placeholder="Name"
               value={dep.name}
               onChange={(e) => updateDep(i, 'name', e.target.value)}
             />
             <select
-              className="select select-bordered w-full"
+              className="select w-full"
               value={dep.loader}
               onChange={(e) => updateDep(i, 'loader', e.target.value as Dependency['loader'])}
             >
@@ -174,19 +173,19 @@ export default function ModForm({ onSubmit, initial }: Props) {
               <option value="all">all</option>
             </select>
             <input
-              className="input input-bordered w-full"
+              className="input w-full"
               placeholder="Modrinth URL"
               value={dep.modrinthUrl}
               onChange={(e) => updateDep(i, 'modrinthUrl', e.target.value)}
             />
             <input
-              className="input input-bordered w-full"
+              className="input w-full"
               placeholder="CurseForge URL"
               value={dep.curseforgeUrl}
               onChange={(e) => updateDep(i, 'curseforgeUrl', e.target.value)}
             />
             <input
-              className="input input-bordered w-full"
+              className="input w-full"
               placeholder="Notes"
               value={dep.notes ?? ''}
               onChange={(e) => updateDep(i, 'notes', e.target.value)}
@@ -197,7 +196,7 @@ export default function ModForm({ onSubmit, initial }: Props) {
           </div>
         ))}
       </fieldset>
-      <fieldset className="fieldset space-y-2 border border-base-300 p-4 rounded-box">
+      <fieldset className="fieldset space-y-2 border border-base-300 p-4 rounded-md">
         <legend className="fieldset-legend font-bold flex justify-between items-center">
           <span>Pages</span>
           <button type="button" className="btn btn-xs" onClick={addPage}>
@@ -207,13 +206,13 @@ export default function ModForm({ onSubmit, initial }: Props) {
         {mod.pages.map((p, i) => (
           <div key={i} className="p-2 rounded space-y-2">
             <input
-              className="input input-bordered w-full"
+              className="input w-full"
               placeholder="Title"
               value={p.title}
               onChange={(e) => updatePage(i, 'title', e.target.value)}
             />
             <input
-              className="input input-bordered w-full"
+              className="input w-full"
               type="number"
               placeholder="Level"
               value={p.level}
