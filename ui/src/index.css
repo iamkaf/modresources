@@ -1,3 +1,5 @@
+@import "./mdxeditor-dark.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

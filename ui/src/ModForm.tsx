@@ -226,6 +226,7 @@ export default function ModForm({ onSubmit, initial }: Props) {
               onChange={(e) => updatePage(i, 'level', parseInt(e.target.value))}
             />
             <MDXEditor
+              className="dark-editor"
               markdown={p.content}
               onChange={(v) => updatePage(i, 'content', v)}
               plugins={[
