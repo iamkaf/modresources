@@ -78,32 +78,35 @@ export default function ModForm({ onSubmit, initial }: Props) {
         onSubmit(mod);
       }}
     >
-      <label className="flex flex-col gap-1">
-        <span className="label">Id</span>
-        <input className="input" value={mod.id} onChange={(e) => update('id', e.target.value)} />
-      </label>
-      <label className="flex flex-col gap-1">
-        <span className="label">Name</span>
-        <input className="input" value={mod.name} onChange={(e) => update('name', e.target.value)} />
-      </label>
-      <label className="flex flex-col gap-1">
-        <span className="label">Icon (comma separated)</span>
-        <input
-          className="input"
-          value={mod.icon?.join(',')}
-          onChange={(e) =>
-            update(
-              'icon',
-              e.target.value
-                .split(',')
-                .map((s) => s.trim())
-                .filter(Boolean),
-            )
-          }
-        />
-      </label>
       <fieldset className="fieldset border border-base-300 p-4 rounded-md">
-        <legend className="fieldset-legend font-bold">Ids</legend>
+        <legend className="fieldset-legend font-bold">Basic Information</legend>
+        <label className="flex flex-col gap-1">
+          <span className="label">Id</span>
+          <input className="input" value={mod.id} onChange={(e) => update('id', e.target.value)} />
+        </label>
+        <label className="flex flex-col gap-1">
+          <span className="label">Name</span>
+          <input className="input" value={mod.name} onChange={(e) => update('name', e.target.value)} />
+        </label>
+        <label className="flex flex-col gap-1">
+          <span className="label">Icon (comma separated)</span>
+          <input
+            className="input"
+            value={mod.icon?.join(',')}
+            onChange={(e) =>
+              update(
+                'icon',
+                e.target.value
+                  .split(',')
+                  .map((s) => s.trim())
+                  .filter(Boolean),
+              )
+            }
+          />
+        </label>
+      </fieldset>
+      <fieldset className="fieldset border border-base-300 p-4 rounded-md">
+        <legend className="fieldset-legend font-bold">IDs</legend>
         <label className="flex flex-col gap-1">
           <span className="label">Modrinth</span>
           <input
@@ -122,22 +125,24 @@ export default function ModForm({ onSubmit, initial }: Props) {
         </label>
       </fieldset>
       <fieldset className="fieldset border border-base-300 p-4 rounded-md">
-        <legend className="fieldset-legend font-bold">Urls</legend>
+        <legend className="fieldset-legend font-bold">URLs</legend>
         {(['modrinth', 'curseforge', 'source', 'issues', 'support', 'discord'] as const).map((key) => {
           const val = (mod.urls as any)?.[key] ?? '';
           return (
             <label key={key} className="flex flex-col gap-1">
               <span className="label capitalize">{key}</span>
-              {val && (
-                <button type="button" className="btn btn-xs btn-secondary" onClick={() => window.open(val, '_blank')}>
-                  <ArrowTopRightOnSquareIcon className="w-4 h-4" />
-                </button>
-              )}
-              <input
-                className="input"
-                value={val}
-                onChange={(e) => update('urls', { ...mod.urls, [key]: e.target.value })}
-              />
+              <div className="flex flex-row">
+                <input
+                  className="input"
+                  value={val}
+                  onChange={(e) => update('urls', { ...mod.urls, [key]: e.target.value })}
+                />
+                {val && (
+                  <button type="button" className="btn btn-md btn-secondary" onClick={() => window.open(val, '_blank')}>
+                    <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
             </label>
           );
         })}
