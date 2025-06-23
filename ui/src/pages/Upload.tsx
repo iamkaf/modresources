@@ -1,3 +1,5 @@
+import Layout from '../Layout';
+
 export default function Upload() {
-  return <div className="p-4">upload page</div>;
+  return <Layout title="Upload">upload page</Layout>;
 }
