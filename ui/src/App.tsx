@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { PencilSquareIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import './App.css';
 import ModForm from './ModForm';
 import type { ModEntry } from './modTypes';
 import { listMods, addMod, updateMod } from './api';
@@ -16,8 +15,8 @@ export default function App() {
 
   return (
     <>
-      <div className="max-w-6xl mx-auto p-4 grid md:grid-cols-2 gap-6">
-        <div className="space-y-4">
+      <div className="max-w-6xl mx-auto p-4 flex gap-6">
+        <div className="space-y-4 min-w-60">
           <h1 className="text-3xl font-bold text-primary">Mods</h1>
           <ul className="space-y-2">
             {mods.map((m) => (
@@ -30,7 +29,7 @@ export default function App() {
             ))}
           </ul>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 w-full">
           <h2 className="text-2xl font-bold text-secondary">{editing ? 'Edit Mod' : 'Add Mod'}</h2>
           <ModForm
             key={editing?.id ?? 'new'}
@@ -48,7 +47,7 @@ export default function App() {
             }}
           />
           {editing && (
-            <button className="btn btn-outline" type="button" onClick={() => setEditing(null)}>
+            <button className="btn btn-outline btn-error" type="button" onClick={() => setEditing(null)}>
               <XMarkIcon className="w-4 h-4" />
             </button>
           )}

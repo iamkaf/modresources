@@ -162,7 +162,7 @@ export default function ModForm({ onSubmit, initial }: Props) {
           </button>
         </legend>
         {mod.dependencies.map((dep, i) => (
-          <div key={i} className="border p-2 rounded space-y-2">
+          <div key={i} className="p-2 rounded space-y-2">
             <input
               className="input input-bordered w-full"
               placeholder="Name"
@@ -211,7 +211,7 @@ export default function ModForm({ onSubmit, initial }: Props) {
           </button>
         </legend>
         {mod.pages.map((p, i) => (
-          <div key={i} className="border p-2 rounded space-y-2">
+          <div key={i} className="p-2 rounded space-y-2">
             <input
               className="input input-bordered w-full"
               placeholder="Title"
