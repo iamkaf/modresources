@@ -1,5 +1,17 @@
 import { useState } from 'react';
 import type { ModEntry, Dependency, PageSection } from './modTypes';
+import { PlusIcon, TrashIcon, ArrowTopRightOnSquareIcon, CheckIcon } from '@heroicons/react/24/solid';
+import {
+  MDXEditor,
+  toolbarPlugin,
+  headingsPlugin,
+  listsPlugin,
+  quotePlugin,
+  linkPlugin,
+  markdownShortcutPlugin,
+} from '@mdxeditor/editor';
+import '@mdxeditor/editor/style.css';
+import { MinimalToolbar } from './MinimalToolbar';
 
 interface Props {
   onSubmit: (mod: ModEntry) => void;
@@ -129,7 +141,7 @@ export default function ModForm({ onSubmit, initial }: Props) {
                 <span className="label-text capitalize">{key}</span>
                 {val && (
                   <button type="button" className="btn btn-xs btn-secondary" onClick={() => window.open(val, '_blank')}>
-                    Open
+                    <ArrowTopRightOnSquareIcon className="w-4 h-4" />
                   </button>
                 )}
               </label>
@@ -146,7 +158,7 @@ export default function ModForm({ onSubmit, initial }: Props) {
         <legend className="font-bold flex justify-between items-center">
           <span>Dependencies</span>
           <button type="button" className="btn btn-xs" onClick={addDep}>
-            Add
+            <PlusIcon className="w-4 h-4" />
           </button>
         </legend>
         {mod.dependencies.map((dep, i) => (
@@ -186,7 +198,7 @@ export default function ModForm({ onSubmit, initial }: Props) {
               onChange={(e) => updateDep(i, 'notes', e.target.value)}
             />
             <button type="button" className="btn btn-error btn-sm" onClick={() => removeDep(i)}>
-              Remove
+              <TrashIcon className="w-4 h-4" />
             </button>
           </div>
         ))}
@@ -195,7 +207,7 @@ export default function ModForm({ onSubmit, initial }: Props) {
         <legend className="font-bold flex justify-between items-center">
           <span>Pages</span>
           <button type="button" className="btn btn-xs" onClick={addPage}>
-            Add
+            <PlusIcon className="w-4 h-4" />
           </button>
         </legend>
         {mod.pages.map((p, i) => (
@@ -213,20 +225,26 @@ export default function ModForm({ onSubmit, initial }: Props) {
               value={p.level}
               onChange={(e) => updatePage(i, 'level', parseInt(e.target.value))}
             />
-            <textarea
-              className="textarea textarea-bordered w-full"
-              placeholder="Content"
-              value={p.content}
-              onChange={(e) => updatePage(i, 'content', e.target.value)}
+            <MDXEditor
+              markdown={p.content}
+              onChange={(v) => updatePage(i, 'content', v)}
+              plugins={[
+                headingsPlugin(),
+                listsPlugin(),
+                quotePlugin(),
+                linkPlugin(),
+                markdownShortcutPlugin(),
+                toolbarPlugin({ toolbarContents: () => <MinimalToolbar /> }),
+              ]}
             />
             <button type="button" className="btn btn-error btn-sm" onClick={() => removePage(i)}>
-              Remove
+              <TrashIcon className="w-4 h-4" />
             </button>
           </div>
         ))}
       </fieldset>
       <button className="btn btn-primary" type="submit">
-        Save
+        <CheckIcon className="w-4 h-4" />
       </button>
     </form>
   );
