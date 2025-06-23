@@ -1,63 +1,29 @@
-import { useEffect, useState } from 'react';
-import { PencilSquareIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import ModForm from './ModForm';
-import type { ModEntry } from '../../lib/readMods.js';
-import { listMods, addMod, updateMod } from './api';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './Navbar';
+import Mods from './pages/Mods';
+import Pagesv2 from './pages/Pagesv2';
+import Images from './pages/Images';
+import Pad from './pages/Pad';
+import Upload from './pages/Upload';
+import Icon from './pages/Icon';
+import Validate from './pages/Validate';
+import Othermods from './pages/Othermods';
 
 export default function App() {
-  const [mods, setMods] = useState<ModEntry[]>([]);
-  const [editing, setEditing] = useState<ModEntry | null>(null);
-  const [message, setMessage] = useState<string | null>(null);
-
-  useEffect(() => {
-    listMods().then(setMods);
-  }, []);
-
   return (
-    <>
-      <div className="max-w-6xl mx-auto p-4 flex gap-6">
-        <div className="space-y-4 min-w-60">
-          <h1 className="text-3xl font-bold text-primary">Mods</h1>
-          <ul className="space-y-2">
-            {mods.map((m) => (
-              <li key={m.id} className="flex justify-between items-center p-2 rounded-box bg-base-200">
-                <span>{m.name}</span>
-                <button className="btn btn-accent btn-sm" onClick={() => setEditing(m)}>
-                  <PencilSquareIcon className="w-4 h-4" />
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="space-y-4 w-full">
-          <h2 className="text-2xl font-bold text-secondary">{editing ? 'Edit Mod' : 'Add Mod'}</h2>
-          <ModForm
-            key={editing?.id ?? 'new'}
-            initial={editing ?? undefined}
-            onSubmit={async (mod) => {
-              if (editing) {
-                await updateMod(editing.id, mod);
-              } else {
-                await addMod(mod);
-              }
-              setMods(await listMods());
-              setEditing(null);
-              setMessage('Saved! 🎉');
-              setTimeout(() => setMessage(null), 2000);
-            }}
-          />
-          {editing && (
-            <button className="btn btn-outline btn-error" type="button" onClick={() => setEditing(null)}>
-              <XMarkIcon className="w-4 h-4" />
-            </button>
-          )}
-        </div>
-      </div>
-      {message && (
-        <div className="toast toast-top toast-end">
-          <div className="alert alert-success">{message}</div>
-        </div>
-      )}
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Mods />} />
+        <Route path="/mods" element={<Mods />} />
+        <Route path="/pagesv2" element={<Pagesv2 />} />
+        <Route path="/images" element={<Images />} />
+        <Route path="/pad" element={<Pad />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/icon" element={<Icon />} />
+        <Route path="/validate" element={<Validate />} />
+        <Route path="/othermods" element={<Othermods />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

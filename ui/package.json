@@ -14,7 +14,8 @@
     "@mdxeditor/editor": "^3.37.0",
     "@radix-ui/colors": "^3.0.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
@@ -32,6 +33,7 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.10",
     "typescript": "~5.8.3",
+    "@types/node": "^20.11.30",
     "typescript-eslint": "^8.34.1",
     "vite": "^6.3.5"
   }
