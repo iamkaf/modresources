@@ -515,9 +515,9 @@
       "curseforge": "1203233"
     },
     "urls": {
-      "modrinth": "https://modrinth.com/mod/endersight",
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/endersight",
-      "source": "https://github.com/iamkaf/endersight",
+      "modrinth": "https://modrinth.com/mod/ender-sight",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/ender-sight",
+      "source": "https://github.com/iamkaf/ender-sight",
       "issues": "https://github.com/iamkaf/mod-issues",
       "support": "https://ko-fi.com/iamkaffe",
       "discord": "https://discord.gg/HV5WgTksaB"
@@ -546,7 +546,7 @@
       {
         "title": "Credits",
         "level": 2,
-        "content": "- My awesome community."
+        "content": "* My awesome community."
       }
     ],
     "id": "endersight",
