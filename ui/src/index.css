@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+@plugin "daisyui" {
+  themes: all;
+}
+
 .dark-editor {
   --accentBase: var(--indigo-1);
   --accentBgSubtle: var(--indigo-2);
