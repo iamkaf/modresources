@@ -20,7 +20,7 @@ export default function App() {
           <h1 className="text-3xl font-bold text-primary">Mods</h1>
           <ul className="space-y-2">
             {mods.map((m) => (
-              <li key={m.id} className="flex justify-between items-center p-2 border rounded-box bg-base-200">
+              <li key={m.id} className="flex justify-between items-center p-2 rounded-box bg-base-200">
                 <span>{m.name}</span>
                 <button className="btn btn-accent btn-sm" onClick={() => setEditing(m)}>
                   <PencilSquareIcon className="w-4 h-4" />
