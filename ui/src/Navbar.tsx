@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { Navbar as DNavbar, Menu, Button, Dropdown } from 'react-daisyui';
 import {
   WrenchScrewdriverIcon,
   ClipboardDocumentListIcon,
@@ -82,50 +83,48 @@ export default function Navbar() {
   };
 
   return (
-    <div className="navbar bg-base-300 mb-4">
-      <div className="flex-1">
-        <span className="btn btn-ghost normal-case text-xl flex gap-2 items-center">
+    <DNavbar className="bg-base-300 mb-4">
+      <DNavbar.Start>
+        <Button color="ghost" className="normal-case text-xl gap-2" tag="span">
           <Cog6ToothIcon className="w-6 h-6" />
           Mod Tools
-        </span>
-      </div>
-      <div className="flex-none gap-2">
-        <ul className="menu menu-horizontal px-1 gap-1">
+        </Button>
+      </DNavbar.Start>
+      <DNavbar.End className="gap-2">
+        <Menu horizontal className="px-1 gap-1">
           {pages.map((p) => {
             const Icon = p.icon;
             const active = location.pathname === p.path;
             return (
-              <li key={p.path}>
-                <Link
-                  to={p.path}
-                  className={`btn btn-sm flex gap-1 items-center ${active ? 'btn-primary' : 'btn-ghost'}`}
-                >
+              <Menu.Item key={p.path}>
+                <Button tag={Link} to={p.path} size="sm" color={active ? 'primary' : 'ghost'} className="gap-1">
                   <Icon className="w-5 h-5" />
                   <span className="capitalize">{p.label}</span>
-                </Link>
-              </li>
+                </Button>
+              </Menu.Item>
             );
           })}
-        </ul>
-        <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost flex gap-1 items-center">
+        </Menu>
+        <Dropdown end>
+          <Dropdown.Toggle button color="ghost" className="gap-1">
             <SwatchIcon className="w-5 h-5" />
             <ChevronDownIcon className="w-4 h-4" />
-          </label>
-          <ul
-            tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-200 rounded-box w-40 max-h-60 overflow-y-auto"
-          >
+          </Dropdown.Toggle>
+          <Dropdown.Menu className="w-40 max-h-60 overflow-y-auto">
             {themes.map((t) => (
-              <li key={t}>
-                <button className={`capitalize ${theme === t ? 'active' : ''}`} onClick={() => changeTheme(t)}>
+              <Dropdown.Item key={t}>
+                <Button
+                  tag="span"
+                  className={`capitalize ${theme === t ? 'active' : ''}`}
+                  onClick={() => changeTheme(t)}
+                >
                   {t}
-                </button>
-              </li>
+                </Button>
+              </Dropdown.Item>
             ))}
-          </ul>
-        </div>
-      </div>
-    </div>
+          </Dropdown.Menu>
+        </Dropdown>
+      </DNavbar.End>
+    </DNavbar>
   );
 }

@@ -4,6 +4,7 @@ import ModForm from '../ModForm';
 import Layout from '../Layout';
 import type { ModEntry } from '../../../lib/readMods';
 import { listMods, addMod, updateMod } from '../api';
+import { Button, Alert } from 'react-daisyui';
 
 export default function Mods() {
   const [mods, setMods] = useState<ModEntry[]>([]);
@@ -22,9 +23,9 @@ export default function Mods() {
             {mods.map((m) => (
               <li key={m.id} className="flex justify-between items-center p-2 rounded-box bg-base-200">
                 <span>{m.name}</span>
-                <button className="btn btn-accent btn-sm" onClick={() => setEditing(m)}>
+                <Button color="accent" size="sm" onClick={() => setEditing(m)}>
                   <PencilSquareIcon className="w-4 h-4" />
-                </button>
+                </Button>
               </li>
             ))}
           </ul>
@@ -47,15 +48,15 @@ export default function Mods() {
             }}
           />
           {editing && (
-            <button className="btn btn-outline btn-error" type="button" onClick={() => setEditing(null)}>
+            <Button color="error" variant="outline" type="button" onClick={() => setEditing(null)}>
               <XMarkIcon className="w-4 h-4" />
-            </button>
+            </Button>
           )}
         </div>
       </div>
       {message && (
         <div className="toast toast-top toast-end">
-          <div className="alert alert-success">{message}</div>
+          <Alert status="success">{message}</Alert>
         </div>
       )}
     </Layout>

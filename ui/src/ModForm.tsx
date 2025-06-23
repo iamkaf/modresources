@@ -12,6 +12,7 @@ import {
 } from '@mdxeditor/editor';
 import '@mdxeditor/editor/style.css';
 import { MinimalToolbar } from './MinimalToolbar';
+import { Input, Select, Button } from 'react-daisyui';
 
 interface Props {
   onSubmit: (mod: ModEntry) => void;
@@ -82,20 +83,20 @@ export default function ModForm({ onSubmit, initial }: Props) {
         <label className="label">
           <span className="label-text">Id</span>
         </label>
-        <input className="input input-bordered" value={mod.id} onChange={(e) => update('id', e.target.value)} />
+        <Input bordered value={mod.id} onChange={(e) => update('id', e.target.value)} />
       </div>
       <div className="form-control">
         <label className="label">
           <span className="label-text">Name</span>
         </label>
-        <input className="input input-bordered" value={mod.name} onChange={(e) => update('name', e.target.value)} />
+        <Input bordered value={mod.name} onChange={(e) => update('name', e.target.value)} />
       </div>
       <div className="form-control">
         <label className="label">
           <span className="label-text">Icon (comma separated)</span>
         </label>
-        <input
-          className="input input-bordered"
+        <Input
+          bordered
           value={mod.icon?.join(',')}
           onChange={(e) =>
             update(
@@ -112,16 +113,16 @@ export default function ModForm({ onSubmit, initial }: Props) {
         <legend className="fieldset-legend font-bold">Ids</legend>
         <label className="form-control fieldset-label">
           <span className="label-text">Modrinth</span>
-          <input
-            className="input input-bordered"
+          <Input
+            bordered
             value={mod.ids?.modrinth ?? ''}
             onChange={(e) => update('ids', { ...mod.ids, modrinth: e.target.value })}
           />
         </label>
         <label className="form-control fieldset-label">
           <span className="label-text">CurseForge</span>
-          <input
-            className="input input-bordered"
+          <Input
+            bordered
             value={mod.ids?.curseforge ?? ''}
             onChange={(e) => update('ids', { ...mod.ids, curseforge: e.target.value })}
           />
@@ -135,15 +136,11 @@ export default function ModForm({ onSubmit, initial }: Props) {
             <label key={key} className="form-control fieldset-label">
               <span className="label-text capitalize">{key}</span>
               {val && (
-                <button type="button" className="btn btn-xs btn-secondary" onClick={() => window.open(val, '_blank')}>
+                <Button type="button" size="xs" color="secondary" onClick={() => window.open(val, '_blank')}>
                   <ArrowTopRightOnSquareIcon className="w-4 h-4" />
-                </button>
+                </Button>
               )}
-              <input
-                className="input input-bordered"
-                value={val}
-                onChange={(e) => update('urls', { ...mod.urls, [key]: e.target.value })}
-              />
+              <Input bordered value={val} onChange={(e) => update('urls', { ...mod.urls, [key]: e.target.value })} />
             </label>
           );
         })}
@@ -151,20 +148,22 @@ export default function ModForm({ onSubmit, initial }: Props) {
       <fieldset className="fieldset space-y-2 border border-base-300 p-4 rounded-box">
         <legend className="fieldset-legend font-bold flex justify-between items-center">
           <span>Dependencies</span>
-          <button type="button" className="btn btn-xs" onClick={addDep}>
+          <Button type="button" size="xs" onClick={addDep}>
             <PlusIcon className="w-4 h-4" />
-          </button>
+          </Button>
         </legend>
         {mod.dependencies.map((dep, i) => (
           <div key={i} className="p-2 rounded space-y-2">
-            <input
-              className="input input-bordered w-full"
+            <Input
+              bordered
+              className="w-full"
               placeholder="Name"
               value={dep.name}
               onChange={(e) => updateDep(i, 'name', e.target.value)}
             />
-            <select
-              className="select select-bordered w-full"
+            <Select
+              bordered
+              className="w-full"
               value={dep.loader}
               onChange={(e) => updateDep(i, 'loader', e.target.value as Dependency['loader'])}
             >
@@ -172,48 +171,53 @@ export default function ModForm({ onSubmit, initial }: Props) {
               <option value="forge">forge</option>
               <option value="neoforge">neoforge</option>
               <option value="all">all</option>
-            </select>
-            <input
-              className="input input-bordered w-full"
+            </Select>
+            <Input
+              bordered
+              className="w-full"
               placeholder="Modrinth URL"
               value={dep.modrinthUrl}
               onChange={(e) => updateDep(i, 'modrinthUrl', e.target.value)}
             />
-            <input
-              className="input input-bordered w-full"
+            <Input
+              bordered
+              className="w-full"
               placeholder="CurseForge URL"
               value={dep.curseforgeUrl}
               onChange={(e) => updateDep(i, 'curseforgeUrl', e.target.value)}
             />
-            <input
-              className="input input-bordered w-full"
+            <Input
+              bordered
+              className="w-full"
               placeholder="Notes"
               value={dep.notes ?? ''}
               onChange={(e) => updateDep(i, 'notes', e.target.value)}
             />
-            <button type="button" className="btn btn-error btn-sm" onClick={() => removeDep(i)}>
+            <Button type="button" color="error" size="sm" onClick={() => removeDep(i)}>
               <TrashIcon className="w-4 h-4" />
-            </button>
+            </Button>
           </div>
         ))}
       </fieldset>
       <fieldset className="fieldset space-y-2 border border-base-300 p-4 rounded-box">
         <legend className="fieldset-legend font-bold flex justify-between items-center">
           <span>Pages</span>
-          <button type="button" className="btn btn-xs" onClick={addPage}>
+          <Button type="button" size="xs" onClick={addPage}>
             <PlusIcon className="w-4 h-4" />
-          </button>
+          </Button>
         </legend>
         {mod.pages.map((p, i) => (
           <div key={i} className="p-2 rounded space-y-2">
-            <input
-              className="input input-bordered w-full"
+            <Input
+              bordered
+              className="w-full"
               placeholder="Title"
               value={p.title}
               onChange={(e) => updatePage(i, 'title', e.target.value)}
             />
-            <input
-              className="input input-bordered w-full"
+            <Input
+              bordered
+              className="w-full"
               type="number"
               placeholder="Level"
               value={p.level}
@@ -232,15 +236,15 @@ export default function ModForm({ onSubmit, initial }: Props) {
                 toolbarPlugin({ toolbarContents: () => <MinimalToolbar /> }),
               ]}
             />
-            <button type="button" className="btn btn-error btn-sm" onClick={() => removePage(i)}>
+            <Button type="button" color="error" size="sm" onClick={() => removePage(i)}>
               <TrashIcon className="w-4 h-4" />
-            </button>
+            </Button>
           </div>
         ))}
       </fieldset>
-      <button className="btn btn-primary" type="submit">
+      <Button color="primary" type="submit">
         <CheckIcon className="w-4 h-4" />
-      </button>
+      </Button>
     </form>
   );
 }
