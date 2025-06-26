@@ -22,4 +22,21 @@ All helper utilities are written in TypeScript and executed with [tsx](https://g
 - `npm run ui` 💻 - Start the local React interface and API. The UI is built
   with React, Tailwind and DaisyUI and lets you edit entries in `mods.v2.json`.
 
+## Starting the UI
+
+Install dependencies first with `npm install`, then launch the interface:
+
+```bash
+npm run ui
+```
+
+This starts the React dev server (typically at `http://localhost:5173`) and the
+API on `http://localhost:3001`.
+
+## Mod loader docs
+
+- [Fabric development guide](https://docs.fabricmc.net/develop/)
+- [NeoForged getting started](https://docs.neoforged.net/docs/gettingstarted/)
+- [Forge modding for 1.21](https://docs.minecraftforge.net/en/1.21.x/)
+
 Enjoy the mods! 🚀
