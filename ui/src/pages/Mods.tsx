@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { PencilSquareIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import { PencilSquareIcon, XMarkIcon, TrashIcon } from '@heroicons/react/24/solid';
 import ModForm from '../ModForm';
 import Layout from '../Layout';
 import type { ModEntry } from '../../../lib/readMods';
-import { listMods, addMod, updateMod } from '../api';
+import { listMods, addMod, updateMod, deleteMod } from '../api';
 
 export default function Mods() {
   const [mods, setMods] = useState<ModEntry[]>([]);
@@ -22,9 +22,27 @@ export default function Mods() {
             {mods.map((m) => (
               <li key={m.id} className="flex justify-between items-center p-2 rounded-box bg-base-200">
                 <span>{m.name}</span>
-                <button className="btn btn-accent btn-sm" onClick={() => setEditing(m)}>
-                  <PencilSquareIcon className="w-4 h-4" />
-                </button>
+                <div className="flex gap-2">
+                  <button className="btn btn-accent btn-sm" onClick={() => setEditing(m)}>
+                    <PencilSquareIcon className="w-4 h-4" />
+                  </button>
+                  <button
+                    className="btn btn-error btn-sm"
+                    onClick={async () => {
+                      try {
+                        await deleteMod(m.id);
+                        setMods(await listMods());
+                        setMessage('Removed!');
+                        setTimeout(() => setMessage(null), 2000);
+                      } catch (err) {
+                        alert('Failed to delete mod');
+                        console.error(err);
+                      }
+                    }}
+                  >
+                    <TrashIcon className="w-4 h-4" />
+                  </button>
+                </div>
               </li>
             ))}
           </ul>
