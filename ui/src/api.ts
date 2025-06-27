@@ -33,3 +33,37 @@ export async function deleteMod(id: string): Promise<void> {
   await fetch(`${BASE}/mods/${id}`, { method: 'DELETE' });
 }
 
+export async function generatePagesV2(): Promise<void> {
+  await fetch(`${BASE}/pagesv2`, { method: 'POST' });
+}
+
+export async function generateIcons(): Promise<void> {
+  await fetch(`${BASE}/icon`, { method: 'POST' });
+}
+
+export async function uploadPage(id: string): Promise<string> {
+  const res = await fetch(`${BASE}/upload/${id}`, { method: 'POST' });
+  return res.text();
+}
+
+export async function validateMods(): Promise<string> {
+  const res = await fetch(`${BASE}/validate`, { method: 'POST' });
+  return res.text();
+}
+
+export async function generateOtherMods(): Promise<void> {
+  await fetch(`${BASE}/othermods`, { method: 'POST' });
+}
+
+export async function listImagesApi(mod?: string): Promise<Record<string, string[]>> {
+  const url = mod ? `${BASE}/images?mod=${encodeURIComponent(mod)}` : `${BASE}/images`;
+  const res = await fetch(url);
+  return res.json();
+}
+
+export async function readPad(): Promise<string> {
+  const res = await fetch(`${BASE}/pad`);
+  const data = await res.json();
+  return data.text;
+}
+
