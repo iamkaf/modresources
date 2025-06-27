@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import chalk from 'chalk';
 import { ModEntry, readMods } from '../../lib/readMods';
 import sharp from 'sharp';
@@ -9,7 +10,7 @@ import { Validator } from 'jsonschema';
 import { config } from 'dotenv';
 config();
 
-const ROOT = path.join(__dirname, '..', '..');
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 
 /** Build README pages using the legacy mods.json schema. */
 export function generatePagesLegacy(modName?: string): void {

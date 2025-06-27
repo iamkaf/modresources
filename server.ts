@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { ModManager } from '../src/ModManager';
+import { ModManager } from './src/ModManager';
 import {
   generatePagesV2,
   generateIcons,
@@ -9,7 +9,7 @@ import {
   validateMods as validateModsService,
   generateOtherMods,
   processScratchpad,
-} from '../src/services/modTools';
+} from './src/services/modTools';
 
 const app = express();
 app.use(cors({ origin: '*' }));

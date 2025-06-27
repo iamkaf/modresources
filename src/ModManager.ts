@@ -15,10 +15,17 @@
  */
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { ModsData, readMods, ModEntry } from '../lib/readMods';
 
 export class ModManager {
-  constructor(private filePath = path.join(__dirname, '..', 'mods.v2.json')) {}
+  constructor(
+    private filePath = path.join(
+      path.dirname(fileURLToPath(import.meta.url)),
+      '..',
+      'mods.v2.json'
+    )
+  ) {}
 
   private load(): ModsData {
     return readMods(this.filePath);
