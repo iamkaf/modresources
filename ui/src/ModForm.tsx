@@ -31,13 +31,13 @@ const empty: ModEntry = {
 export default function ModForm({ onSubmit, initial }: Props) {
   const [mod, setMod] = useState<ModEntry>(initial ?? empty);
 
-  const update = (field: keyof ModEntry, value: any) => {
+  const update = <K extends keyof ModEntry>(field: K, value: ModEntry[K]) => {
     setMod({ ...mod, [field]: value });
   };
 
-  const updateDep = (idx: number, field: keyof Dependency, value: any) => {
+  const updateDep = <K extends keyof Dependency>(idx: number, field: K, value: Dependency[K]) => {
     const deps = [...mod.dependencies];
-    deps[idx] = { ...deps[idx], [field]: value } as Dependency;
+    deps[idx] = { ...deps[idx], [field]: value };
     update('dependencies', deps);
   };
 
@@ -54,9 +54,9 @@ export default function ModForm({ onSubmit, initial }: Props) {
     update('dependencies', deps);
   };
 
-  const updatePage = (idx: number, field: keyof PageSection, value: any) => {
+  const updatePage = <K extends keyof PageSection>(idx: number, field: K, value: PageSection[K]) => {
     const pages = [...mod.pages];
-    pages[idx] = { ...pages[idx], [field]: value } as PageSection;
+    pages[idx] = { ...pages[idx], [field]: value };
     update('pages', pages);
   };
 
