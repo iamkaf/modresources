@@ -8,7 +8,6 @@ import {
   listImages,
   validateMods as validateModsService,
   generateOtherMods,
-  processScratchpad,
 } from './src/services';
 
 const app = express();
@@ -59,15 +58,6 @@ app.get('/api/images', (req, res) => {
     const mod = req.query.mod as string | undefined;
     const data = listImages(mod);
     res.json(data);
-  } catch (err: any) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-app.get('/api/pad', (_req, res) => {
-  try {
-    const text = processScratchpad();
-    res.json({ text });
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }

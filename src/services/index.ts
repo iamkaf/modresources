@@ -5,4 +5,3 @@ export * from './icons';
 export * from './upload';
 export * from './images';
 export * from './validation';
-export * from './scratchpad';
