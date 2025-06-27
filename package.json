@@ -5,15 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write \"src/**/*.ts\" \"tools/**/*.ts\"",
-    "pages": "tsx tools/page-builder.ts && tsx tools/page-builder.v2.ts",
-    "pagesv2": "tsx tools/page-builder.v2.ts",
-    "images": "tsx tools/print-images.ts",
-    "pad": "tsx tools/scratchpad.ts",
-    "upload": "tsx tools/page-uploader.ts",
-    "icon": "tsx tools/icon-generator.ts",
-    "validate": "tsx tools/validate-mods.ts",
-    "othermods": "tsx tools/other-mods.ts",
+    "format": "prettier --write \"src/**/*.ts\" \"ui/**/*.ts\"",
     "ui": "concurrently \"npm --prefix ui run dev\" \"tsx ui/server.ts\""
   },
   "repository": {
@@ -42,7 +34,6 @@
     "jsonschema": "^1.5.0",
     "node-emoji": "^2.1.3",
     "open": "^10.1.2",
-    "sharp": "^0.33.5",
-    "yargs": "^17.7.2"
+    "sharp": "^0.33.5"
   }
 }

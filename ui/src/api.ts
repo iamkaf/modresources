@@ -41,9 +41,12 @@ export async function generateIcons(): Promise<void> {
   await fetch(`${BASE}/icon`, { method: 'POST' });
 }
 
-export async function uploadPage(id: string): Promise<string> {
-  const res = await fetch(`${BASE}/upload/${id}`, { method: 'POST' });
-  return res.text();
+export async function uploadPage(id: string): Promise<void> {
+  await fetch(`${BASE}/upload`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id }),
+  });
 }
 
 export async function validateMods(): Promise<string> {
