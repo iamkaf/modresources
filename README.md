@@ -8,7 +8,7 @@ All helper utilities are now exposed through a small Express API that powers the
 - `gradle` ⚙️  - Common Gradle build scripts for multi-loader projects.
 - `pages` 📄 - Generated README files and images for each mod.
 - `assets/icon-parts` 🖼️ - Layered images used when generating icons.
-- `docs` 📚 - Extra markdown notes like the scratchpad.
+- `docs` 📚 - Extra markdown notes.
 - `scripts` 📜 - Standalone helper scripts.
 - `src/utils` 🧩 - Reusable TypeScript utilities.
 
@@ -38,7 +38,6 @@ While the UI is running, the Express server exposes a few helper endpoints:
 - `POST /api/upload` – upload a page to Modrinth.
 - `POST /api/validate` – validate `mods.v2.json`.
 - `POST /api/othermods` – regenerate the promo snippet.
-- `GET /api/pad` – return the sanitized scratchpad text.
 
 
 ## Mod loader docs

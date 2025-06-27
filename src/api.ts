@@ -64,9 +64,3 @@ export async function listImagesApi(mod?: string): Promise<Record<string, string
   return res.json();
 }
 
-export async function readPad(): Promise<string> {
-  const res = await fetch(`${BASE}/pad`);
-  const data = await res.json();
-  return data.text;
-}
-
