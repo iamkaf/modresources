@@ -11,7 +11,7 @@ All helper utilities are now exposed through a small Express API that powers the
 
 ## Scripts
 
-- `npm run ui` 💻 - Start the local React interface and API. The UI is built
+ - `npm run ui` 💻 - Start the local React interface and API from the repository root. The UI is built
   with React, Tailwind and DaisyUI and lets you edit entries in `mods.v2.json` and run all helper actions.
 
 ## Starting the UI
