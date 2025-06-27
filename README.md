@@ -5,7 +5,11 @@ All helper utilities are now exposed through a small Express API that powers the
 
 ## Directories
 
-- `gradle` ⚙️  - Common Gradle build scripts for multi-loader projects.
+- `gradle` ⚙️  - Common Gradle build scripts for multi-loader projects. This
+  directory is referenced in deployed projects and should be considered
+  **read only**.
+- `maven` 📦 - Maven artifacts used by deployed projects. The contents are
+  also **read only**.
 - `pages` 📄 - Generated README files and images for each mod.
 - `assets/icon-parts` 🖼️ - Layered images used when generating icons.
 - `docs` 📚 - Extra markdown notes.
