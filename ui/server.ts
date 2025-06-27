@@ -6,7 +6,7 @@ import path from 'path';
 import fs from 'fs';
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 const manager = new ModManager();
@@ -60,23 +60,11 @@ app.delete('/api/mods/:id', (req, res) => {
 
 app.get('/api/images', async (req, res) => {
   try {
-    const mod = (req.query.mod as string) || undefined;
-    const pagesDir = path.join(__dirname, '..', 'pages');
-    const mods = mod ? [mod] : fs.readdirSync(pagesDir);
-    const result: Record<string, string[]> = {};
-    for (const m of mods) {
-      const modPath = path.join(pagesDir, m);
-      if (!fs.existsSync(modPath) || !fs.statSync(modPath).isDirectory()) continue;
-      const images = fs.readdirSync(modPath).filter((f) => f.endsWith('.png'));
-      if (images.length) {
-        result[m] = images.map((img) =>
-          `https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/${m}/${img}`,
-        );
-      }
-    }
-    res.json(result);
+    const mod = req.query.mod as string | undefined;
+    const out = await runScript('print-images.ts', mod ? [mod] : []);
+    res.type('text').send(out);
   } catch (err: any) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: err });
   }
 });
 
@@ -113,8 +101,9 @@ app.post('/api/icon', async (_req, res) => {
   }
 });
 
-app.post('/api/upload/:id', async (req, res) => {
-  const id = req.params.id;
+app.post('/api/upload', async (req, res) => {
+  const id = req.body.id as string;
+  if (!id) return res.status(400).json({ error: 'id is required' });
   try {
     const out = await runScript('page-uploader.ts', [id]);
     res.type('text').send(out);
