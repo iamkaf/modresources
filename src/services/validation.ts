@@ -6,7 +6,8 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { Validator } from 'jsonschema';
-import { ModEntry, readMods } from '../../lib/readMods';
+import { readMods } from '../utils/readMods';
+import type { ModEntry } from '../utils/readMods';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 

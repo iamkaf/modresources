@@ -16,16 +16,19 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { ModsData, readMods, ModEntry } from '../lib/readMods';
+import { readMods } from './utils/readMods';
+import type { ModsData, ModEntry } from './utils/readMods';
 
 export class ModManager {
-  constructor(
-    private filePath = path.join(
-      path.dirname(fileURLToPath(import.meta.url)),
-      '..',
-      'mods.v2.json'
-    )
-  ) {}
+  private filePath: string;
+
+  constructor(filePath = path.join(
+    path.dirname(fileURLToPath(import.meta.url)),
+    '..',
+    'mods.v2.json'
+  )) {
+    this.filePath = filePath;
+  }
 
   private load(): ModsData {
     return readMods(this.filePath);

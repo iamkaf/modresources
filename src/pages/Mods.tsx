@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { PencilSquareIcon, XMarkIcon, TrashIcon } from '@heroicons/react/24/solid';
 import ModForm from '../ModForm';
 import Layout from '../Layout';
-import type { ModEntry } from '../../../lib/readMods';
+import type { ModEntry } from '../utils/readMods';
 import { listMods, addMod, updateMod, deleteMod } from '../api';
 
 export default function Mods() {

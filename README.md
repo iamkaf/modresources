@@ -7,7 +7,10 @@ All helper utilities are now exposed through a small Express API that powers the
 
 - `gradle` ⚙️  - Common Gradle build scripts for multi-loader projects.
 - `pages` 📄 - Generated README files and images for each mod.
-- `tools` 🛠️ - Misc helper files and image parts.
+- `assets/icon-parts` 🖼️ - Layered images used when generating icons.
+- `docs` 📚 - Extra markdown notes like the scratchpad.
+- `scripts` 📜 - Standalone helper scripts.
+- `src/utils` 🧩 - Reusable TypeScript utilities.
 
 ## Scripts
 
