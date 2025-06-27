@@ -7,7 +7,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import chalk from 'chalk';
 import sharp from 'sharp';
-import { ModEntry, readMods } from '../../lib/readMods';
+import { readMods } from '../utils/readMods';
+import type { ModEntry } from '../utils/readMods';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 
@@ -18,7 +19,7 @@ export async function generateIcons(): Promise<void> {
   const outputFilePath = (id: string) => path.join(outputDir, id, 'icon.v2.png');
 
   const generateIcon = async (filePaths: string[], id: string) => {
-    const images = filePaths.map((p) => sharp(path.join('tools/icon-parts', p)));
+    const images = filePaths.map((p) => sharp(path.join('assets/icon-parts', p)));
     const { width, height } = await images[0].metadata();
     const base = sharp({
       create: { width: width!, height: height!, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },

@@ -10,7 +10,8 @@ import chalk from 'chalk';
 import clipboardy from 'clipboardy';
 import open from 'open';
 import { config } from 'dotenv';
-import { ModEntry, readMods } from '../../lib/readMods';
+import { readMods } from '../utils/readMods';
+import type { ModEntry } from '../utils/readMods';
 
 config();
 

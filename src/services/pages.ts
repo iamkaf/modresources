@@ -8,7 +8,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import chalk from 'chalk';
-import { ModEntry, readMods } from '../../lib/readMods';
+import { readMods } from '../utils/readMods';
+import type { ModEntry } from '../utils/readMods';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 
@@ -21,7 +22,7 @@ export function generatePagesLegacy(modName?: string): void {
   const replacePlaceholders = (template: string, data: Record<string, string>) =>
     template.replace(/{{([^{}]+)}}/g, (_, key) => data[key.trim()] ?? '');
 
-  const generatePromoInfo = (modsData: any[], currentMod: any) => {
+  const generatePromoInfo = (modsData: any[]) => {
     const result: { name: string; icon: string; url: string }[] = [];
     for (const mod of modsData) {
       const addV2Icon = !!mod.page.icon;
@@ -67,7 +68,7 @@ export function generatePagesLegacy(modName?: string): void {
 
     let content = replacePlaceholders(template, placeholders);
     content += '\n\n## Check out my other mods!\n\n';
-    const promoList = generatePromoInfo(modsData, mod);
+    const promoList = generatePromoInfo(modsData);
     for (const promo of promoList) {
       content += `<a href="${promo.url}"><img src="${promo.icon}" alt="${promo.name}" width="100"></a>`;
     }
