@@ -33,6 +33,17 @@ npm run ui
 This starts the React dev server (typically at `http://localhost:5173`) and the
 API on `http://localhost:3001`.
 
+## API endpoints
+
+While the UI is running, the Express server exposes a few helper endpoints:
+
+- `POST /api/pagesv2` – runs `tools/page-builder.v2.ts` to regenerate pages.
+- `GET /api/images?mod=<id>` – executes `tools/print-images.ts` and returns its
+  output.  Pass a `mod` query to limit the listing.
+- `POST /api/upload` – runs `tools/page-uploader.ts` for the provided `{ id }`
+  body.
+
+
 ## Mod loader docs
 
 - [Fabric development guide](https://docs.fabricmc.net/develop/)
