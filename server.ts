@@ -9,7 +9,7 @@ import {
   validateMods as validateModsService,
   generateOtherMods,
   processScratchpad,
-} from './src/services/modTools';
+} from './src/services';
 
 const app = express();
 app.use(cors({ origin: '*' }));
@@ -122,4 +122,3 @@ app.post('/api/othermods', (_req, res) => {
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`API server running on ${port}`));
-
