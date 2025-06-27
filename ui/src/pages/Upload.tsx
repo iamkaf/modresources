@@ -4,11 +4,15 @@ import { uploadPage } from '../api';
 
 export default function Upload() {
   const [id, setId] = useState('');
-  const [output, setOutput] = useState('');
+  const [output, setOutput] = useState<string | null>(null);
 
   const run = async () => {
-    const text = await uploadPage(id);
-    setOutput(text);
+    try {
+      await uploadPage(id);
+      setOutput('Uploaded!');
+    } catch {
+      setOutput('Failed to upload');
+    }
   };
 
   return (
@@ -18,7 +22,7 @@ export default function Upload() {
         <button className="btn btn-primary" onClick={run} disabled={!id}>
           Upload Page
         </button>
-        {output && <pre className="whitespace-pre-wrap bg-base-200 p-2 rounded">{output}</pre>}
+        {output && <p>{output}</p>}
       </div>
     </Layout>
   );
