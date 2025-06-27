@@ -1,18 +1,17 @@
+// Page generation utilities for mod README files and related snippets.
+//
+// This module exposes helpers for creating Markdown pages using either the
+// legacy mods.json schema or the current mods.v2.json format. It also provides
+// a function to generate the "other mods" snippet shown on each page.
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import chalk from 'chalk';
 import { ModEntry, readMods } from '../../lib/readMods';
-import sharp from 'sharp';
-import clipboardy from 'clipboardy';
-import open from 'open';
-import { Validator } from 'jsonschema';
-import { config } from 'dotenv';
-config();
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 
-/** Build README pages using the legacy mods.json schema. */
 export function generatePagesLegacy(modName?: string): void {
   const modsJsonPath = path.join(ROOT, 'mods.json');
   const templatePath = path.join(ROOT, 'pages', 'common', 'template.md');
@@ -93,7 +92,6 @@ export function generatePagesLegacy(modName?: string): void {
   }
 }
 
-/** Generate README pages using mods.v2.json */
 export function generatePagesV2(): void {
   const modsJsonPath = path.join(ROOT, 'mods.v2.json');
   const commonDir = path.join(ROOT, 'pages', 'common');
@@ -145,154 +143,6 @@ export function generatePagesV2(): void {
   console.log(chalk.bold.green('\nAll mod pages generated successfully (v2)!'));
 }
 
-/** Generate icon images from layers listed in mods.v2.json */
-export async function generateIcons(): Promise<void> {
-  const modsJsonPath = path.join(ROOT, 'mods.v2.json');
-  const modsData: ModEntry[] = readMods(modsJsonPath);
-  const outputDir = path.join(ROOT, 'pages');
-  const outputFilePath = (id: string) => path.join(outputDir, id, 'icon.v2.png');
-
-  const generateIcon = async (filePaths: string[], id: string) => {
-    const images = filePaths.map((p) => sharp(path.join('tools/icon-parts', p)));
-    const { width, height } = await images[0].metadata();
-    const base = sharp({
-      create: { width: width!, height: height!, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
-    });
-    const composite = [] as { input: Buffer }[];
-    for (const img of images) composite.push({ input: await img.toBuffer() });
-    await base.composite(composite).png().toFile(outputFilePath(id));
-    console.log(chalk.green(`✅ Icon for ${id} generated successfully`));
-  };
-
-  const promises: Promise<void>[] = [];
-  for (const mod of modsData) {
-    if (mod.icon) promises.push(generateIcon(mod.icon, mod.id));
-  }
-  await Promise.all(promises);
-  console.log(chalk.green(`✅ Generated ${promises.length} icons successfully.`));
-}
-
-/** Upload a README page to Modrinth and open CurseForge */
-export async function uploadPage(id: string): Promise<void> {
-  const modsPath = path.join(ROOT, 'mods.v2.json');
-  const mods: ModEntry[] = readMods(modsPath);
-  const mod = mods.find((m) => m.id === id);
-  if (!mod) throw new Error(`Mod ${id} not found`);
-  if (!mod.ids?.modrinth) throw new Error(`Mod ${id} does not have a Modrinth ID`);
-
-  const modPageMd = fs.readFileSync(path.join(ROOT, 'pages', mod.id, 'README.md'), 'utf-8');
-  const payload = { body: modPageMd + `\n\n---\n\n📃 ${new Date().toISOString()}` };
-
-  const apiKey = process.env.MODRINTH_API_KEY;
-  if (!apiKey) throw new Error('MODRINTH_API_KEY missing in env');
-
-  const response = await fetch(`https://api.modrinth.com/v2/project/${mod.ids.modrinth}`, {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${apiKey}`,
-      'User-Agent': "iamkaf's Modrinth Page Uploader (https://github.com/iamkaf/modresources)",
-    },
-    body: JSON.stringify(payload),
-  });
-  if (!response.ok) throw new Error(`Failed to update project: ${response.statusText}`);
-
-  clipboardy.writeSync(modPageMd);
-  if (mod.ids?.curseforge) {
-    const url = `https://authors.curseforge.com/#/projects/${mod.ids.curseforge}/description`;
-    open(url);
-  }
-  console.log(chalk.green.bold(`✔ Successfully updated project ${mod.name}`));
-}
-
-/** List raw GitHub URLs for images in the pages folder. */
-export function listImages(mod?: string): Record<string, string[]> {
-  const githubBaseURL = 'https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages';
-  const pagesDir = path.join(ROOT, 'pages');
-  const result: Record<string, string[]> = {};
-  const mods = mod ? [mod] : fs.readdirSync(pagesDir);
-  for (const m of mods) {
-    const dir = path.join(pagesDir, m);
-    if (!fs.existsSync(dir) || !fs.statSync(dir).isDirectory()) continue;
-    const images = fs.readdirSync(dir).filter((f) => f.endsWith('.png'));
-    if (images.length) {
-      result[m] = images.map((img) => `${githubBaseURL}/${m}/${img}`);
-    }
-  }
-  return result;
-}
-
-/** Validate mods.v2.json using a JSON schema. */
-export function validateMods(): string {
-  const modsPath = path.join(ROOT, 'mods.v2.json');
-  const mods: ModEntry[] = readMods(modsPath);
-  const schema = {
-    type: 'array',
-    items: {
-      type: 'object',
-      required: ['id', 'name', 'pages', 'dependencies'],
-      properties: {
-        id: { type: 'string' },
-        name: { type: 'string' },
-        icon: { type: 'array', items: { type: 'string' } },
-        ids: {
-          type: 'object',
-          properties: {
-            modrinth: { type: 'string' },
-            curseforge: { type: 'string' },
-          },
-        },
-        urls: {
-          type: 'object',
-          properties: {
-            modrinth: { type: 'string' },
-            curseforge: { type: 'string' },
-            source: { type: 'string' },
-            issues: { type: 'string' },
-            support: { type: 'string' },
-            discord: { type: 'string' },
-          },
-        },
-        dependencies: {
-          type: 'array',
-          items: {
-            type: 'object',
-            required: ['name', 'loader', 'modrinthUrl', 'curseforgeUrl'],
-            properties: {
-              name: { type: 'string' },
-              loader: { enum: ['fabric', 'forge', 'neoforge', 'all'] },
-              modrinthUrl: { type: 'string' },
-              curseforgeUrl: { type: 'string' },
-              notes: { type: 'string' },
-            },
-          },
-        },
-        pages: {
-          type: 'array',
-          items: {
-            type: 'object',
-            required: ['title', 'level', 'content'],
-            properties: {
-              title: { type: 'string' },
-              level: { type: 'number' },
-              content: { type: 'string' },
-            },
-          },
-        },
-      },
-    },
-  };
-
-  const validator = new Validator();
-  const result = validator.validate(mods, schema);
-  if (result.valid) {
-    return `✔ mods.v2.json looks good (${mods.length} mods checked)`;
-  }
-  const lines = result.errors.map((e) => `✖ ${e.stack}`).join('\n');
-  return lines;
-}
-
-/** Generate a Markdown snippet listing all mods. */
 export function generateOtherMods(): void {
   const modsPath = path.join(ROOT, 'mods.v2.json');
   const mods: ModEntry[] = readMods(modsPath);
@@ -304,17 +154,4 @@ export function generateOtherMods(): void {
   const outPath = path.join(ROOT, 'pages', 'common', 'othermods.md');
   fs.writeFileSync(outPath, lines.join('\n'), 'utf-8');
   console.log(chalk.green(`✔ Generated ${outPath}`));
-}
-
-/** Convert scratchpad.md to a sanitized JSON-ready string. */
-export function processScratchpad(): string {
-  const file = path.join(ROOT, 'tools', 'scratchpad.md');
-  const content = fs.readFileSync(file, 'utf-8');
-  const sanitized = content
-    .replace(/\\/g, '\\\\')
-    .replace(/"/g, '\\"')
-    .replace(/\n/g, '\\n')
-    .replace(/\r/g, '');
-  clipboardy.writeSync(`"${sanitized}"`);
-  return sanitized;
 }
