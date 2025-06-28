@@ -10,6 +10,7 @@ All helper utilities are now exposed through a small Express API that powers the
   **read only**.
 - `maven` 📦 - Maven artifacts used by deployed projects. The contents are
   also **read only**.
+- `moddy` 🤖 - Version registry and source code for Moddy, my code template assistant.
 - `pages` 📄 - Generated README files and images for each mod.
 - `assets/icon-parts` 🖼️ - Layered images used when generating icons.
 - `docs` 📚 - Extra markdown notes.
@@ -24,6 +25,7 @@ All helper utilities are now exposed through a small Express API that powers the
 - `npm run lint` 🔍 - Run ESLint across the project.
 - `npm run typecheck` 📝 - Type-check the React code using `tsconfig.react.json`.
 - `npm run generate:modrinth` 🛠️ - Build a fully-typed Modrinth API client under `src/modrinth`.
+- `npm run generate:moddy` 🛠️ - Creates a new Moddy artifact and adds it to the registry.
 
 ## Starting the UI
 
