@@ -5,7 +5,7 @@ All helper utilities are now exposed through a small Express API that powers the
 
 ## Directories
 
-- `gradle` ⚙️  - Common Gradle build scripts for multi-loader projects. This
+- `gradle` ⚙️ - Common Gradle build scripts for multi-loader projects. This
   directory is referenced in deployed projects and should be considered
   **read only**.
 - `maven` 📦 - Maven artifacts used by deployed projects. The contents are
@@ -18,9 +18,9 @@ All helper utilities are now exposed through a small Express API that powers the
 
 ## Scripts
 
- - `npm run ui` 💻 - Start the local React interface and API from the repository root. The UI is built
+- `npm run dev` 💻 - Start the local React interface and API from the repository root. The UI is built
   with React, Tailwind and DaisyUI and lets you edit entries in `mods.v2.json` and run all helper actions.
- - `npm run test` ✅ - Execute unit tests with Vitest.
+- `npm run test` ✅ - Execute unit tests with Vitest.
 - `npm run lint` 🔍 - Run ESLint across the project.
 - `npm run typecheck` 📝 - Type-check the React code using `tsconfig.react.json`.
 - `npm run generate:modrinth` 🛠️ - Build a fully-typed Modrinth API client under `src/modrinth`.
@@ -46,7 +46,6 @@ While the UI is running, the Express server exposes a few helper endpoints:
 - `POST /api/upload` – upload a page to Modrinth.
 - `POST /api/validate` – validate `mods.v2.json`.
 - `POST /api/othermods` – regenerate the promo snippet.
-
 
 ## Mod loader docs
 
