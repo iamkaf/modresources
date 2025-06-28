@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.3.0",
+    "source": "/moddy/registry/0.3.0/moddy.py",
+    "notes": [
+      "Improve update command message; improve help message."
+    ],
+    "hash": "2b6cc7d9e42b12b0f35a51d2b825678158208d145ceb7cc2fcd927bc7f6d5658"
+  },
+  {
     "version": "0.2.0",
     "source": "/moddy/registry/0.2.0/moddy.py",
     "notes": [
