@@ -194,14 +194,39 @@ def _get_neoforge_version(mc: str):
     return versions[-1]
 
 
-def _get_parchment_version(mc: str):
+def _fetch_parchment_version(mc: str):
+    """Return the latest stable parchment version for a specific Minecraft version."""
     url = f"https://maven.parchmentmc.org/org/parchmentmc/data/parchment-{mc}/maven-metadata.xml"
     try:
         xml_text = _fetch_url_text(url)
         root = ET.fromstring(xml_text)
-        return root.findtext("versioning/latest")
+        versions = [v.text for v in root.findall("./versioning/versions/version")]
+        versions = [
+            v
+            for v in versions
+            if not re.search(r"bleeding|nightly|snapshot", v, re.IGNORECASE)
+        ]
+        return versions[-1] if versions else None
     except Exception:
         return None
+
+
+def _get_parchment_version(mc: str):
+    """Return the latest stable parchment version, searching previous patch versions if necessary."""
+    current = mc
+    while current:
+        version = _fetch_parchment_version(current)
+        if version:
+            return version
+        parts = current.split(".")
+        if len(parts) < 3 or not parts[2].isdigit():
+            break
+        patch = int(parts[2]) - 1
+        if patch < 0:
+            break
+        parts[2] = str(patch)
+        current = ".".join(parts)
+    return None
 
 
 def _get_fabric_loader_version(mc: str):
