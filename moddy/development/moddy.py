@@ -621,7 +621,7 @@ COMMANDS = {
 def main(argv=None) -> None:
     parser = build_parser()
     # Parse global options (-y) and the command name first
-    ns, rest = parser.parse_known_args(argv or sys.argv[1:])
+    ns, _ = parser.parse_known_args(argv or sys.argv[1:])
     global AUTO_YES
     AUTO_YES = ns.yes
     command = ns.command or "help"
@@ -640,7 +640,7 @@ def main(argv=None) -> None:
     elif func is cmd_set_minecraft_version:
         subparser.add_argument("version", help="Minecraft version, e.g. 1.21.5")
 
-    args = subparser.parse_args(rest)
+    args = subparser.parse_args(ns.args)
     func(args)
 
 
