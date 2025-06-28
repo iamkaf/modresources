@@ -13,7 +13,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit -p tsconfig.react.json",
     "preview": "vite preview",
-    "generate:modrinth": "ts-node generateModrinthClient.ts"
+    "generate:modrinth": "ts-node ./scripts/generateModrinthClient.ts"
   },
   "repository": {
     "type": "git",
