@@ -75,7 +75,7 @@ async function generate() {
 
   // 4) Patch the generated core client to automatically inject PAT + UA
   const patchPath = path.join(OUT_DIR, "core", "OpenAPI.ts");
-  const patch = String.raw`
+  const patch = `
 /** Auto-injected helper: merges default Modrinth headers (User-Agent & PAT) */
 export function applyModrinthAuth(cfg: ApiConfig, opts: { token?: string; userAgent?: string }) {
   cfg.HEADERS = cfg.HEADERS ?? {};
