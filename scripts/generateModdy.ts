@@ -5,14 +5,22 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import crypto from 'node:crypto';
 
 function usage() {
-  console.log('Usage: generateModdy.ts <patch|minor|major> [note]');
+  console.log(
+    'Usage: generateModdy.ts <patch|minor|major> [notes] (newline separated)'
+  );
   process.exit(1);
 }
 
 async function main() {
   const [bump, ...noteParts] = process.argv.slice(2);
   if (!bump || !['patch', 'minor', 'major'].includes(bump)) usage();
-  const note = noteParts.join(' ');
+  const rawNotes = noteParts.join(' ');
+  const notes = rawNotes
+    ? rawNotes
+        .split(/\r?\n/) // allow newline separated notes
+        .map((n) => n.trim())
+        .filter(Boolean)
+    : [];
 
   const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
   const devPath = path.join(root, 'moddy', 'development', 'moddy.py');
@@ -47,7 +55,7 @@ async function main() {
   const entry = {
     version: newVersion,
     source: `/moddy/registry/${newVersion}/moddy.py`,
-    notes: note ? [note] : [],
+    notes,
     hash,
   };
   versions.unshift(entry);
