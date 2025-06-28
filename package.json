@@ -12,7 +12,8 @@
     "lint": "eslint .",
     "test": "vitest",
     "typecheck": "tsc --noEmit -p tsconfig.react.json",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:modrinth": "ts-node generateModrinthClient.ts"
   },
   "repository": {
     "type": "git",
@@ -43,9 +44,12 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.2.0",
     "jsdom": "^26.1.0",
+    "openapi-typescript": "^7.8.0",
+    "openapi-typescript-codegen": "^0.29.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "tailwindcss": "^4.1.11",
+    "ts-node": "^10.9.2",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.35.0",
