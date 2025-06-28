@@ -1,1 +1,9 @@
-{"homepage":"https://modrinth.com/mod/AIYW9sHq","promos":{}}
+{
+  "homepage": "https://modrinth.com/mod/torchtoss",
+  "promos": {
+    "1.21.5-latest": "2.0.0+1.21.5"
+  },
+  "1.21.5": {
+    "2.0.0+1.21.5": "## 2.0.0\r\n\r\n- feat: updated to Minecraft 1.21.5\r\n\r"
+  }
+}

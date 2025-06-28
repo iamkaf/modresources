@@ -1,1 +1,9 @@
-{"homepage":"https://modrinth.com/mod/BAlSr7dy","promos":{}}
+{
+  "homepage": "https://modrinth.com/mod/valentine",
+  "promos": {
+    "1.21.5-latest": "4.0.0+1.21.5"
+  },
+  "1.21.5": {
+    "4.0.0+1.21.5": "## 4.0.0\r\n\r\n- Ported to 1.21.5\r\n\r"
+  }
+}

@@ -1,1 +1,9 @@
-{"homepage":"https://modrinth.com/mod/IWGxWQWM","promos":{}}
+{
+  "homepage": "https://modrinth.com/mod/mochila",
+  "promos": {
+    "1.21.6-latest": "2.2.0+1.21.6"
+  },
+  "1.21.6": {
+    "2.2.0+1.21.6": "## 2.2.0\r\n\r\n- feat: ported to 1.21.6\r\n\r"
+  }
+}
