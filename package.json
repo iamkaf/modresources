@@ -14,7 +14,8 @@
     "typecheck": "tsc --noEmit -p tsconfig.react.json",
     "preview": "vite preview",
     "generate:modrinth": "tsx ./scripts/generateModrinthClient.ts",
-    "generate:updates": "tsx ./scripts/generateForgeUpdates.ts"
+    "generate:updates": "tsx ./scripts/generateForgeUpdates.ts",
+    "generate:moddy": "tsx ./scripts/generateModdy.ts"
   },
   "repository": {
     "type": "git",
