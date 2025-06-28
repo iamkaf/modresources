@@ -24,3 +24,5 @@ dist
 .gradle
 .vscode
 logs
+
+.mypy_cache
