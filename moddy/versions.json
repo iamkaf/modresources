@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.4.0",
+    "source": "/moddy/registry/0.4.0/moddy.py",
+    "notes": [
+      "Fixed argument parsing in some commands."
+    ],
+    "hash": "83c1078da9b0a5e68476aa6fda4b52e047ac72b0ecf65a479a321764862524d5"
+  },
+  {
     "version": "0.3.0",
     "source": "/moddy/registry/0.3.0/moddy.py",
     "notes": [
