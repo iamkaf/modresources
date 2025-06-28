@@ -4,14 +4,35 @@ import ModForm from '../ModForm';
 import Layout from '../Layout';
 import type { ModEntry } from '../utils/readMods';
 import { listMods, addMod, updateMod, deleteMod } from '../api';
+import { ModrinthClient } from '../modrinth';
+import { applyModrinthAuth } from '../modrinth/core/OpenAPI';
 
 export default function Mods() {
   const [mods, setMods] = useState<ModEntry[]>([]);
   const [editing, setEditing] = useState<ModEntry | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [downloads, setDownloads] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    listMods().then(setMods);
+    const client = new ModrinthClient();
+    applyModrinthAuth(client.request.config, {
+      userAgent: 'modresources-ui',
+    });
+    listMods().then(async (modsData) => {
+      setMods(modsData);
+      const counts: Record<string, number> = {};
+      for (const mod of modsData) {
+        const slug = mod.ids?.modrinth;
+        if (!slug) continue;
+        try {
+          const project = await client.projects.getProject(slug);
+          counts[mod.id] = project.downloads;
+        } catch {
+          // ignore failures
+        }
+      }
+      setDownloads(counts);
+    });
   }, []);
 
   return (
@@ -22,6 +43,7 @@ export default function Mods() {
             {mods.map((m) => (
               <li key={m.id} className="flex justify-between items-center p-2 rounded-box bg-base-200">
                 <span>{m.name}</span>
+                <span className="text-sm text-neutral">{downloads[m.id]?.toLocaleString() ?? '-'}</span>
                 <div className="flex gap-2">
                   <button className="btn btn-accent btn-sm" onClick={() => setEditing(m)}>
                     <PencilSquareIcon className="w-4 h-4" />

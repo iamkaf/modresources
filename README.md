@@ -21,8 +21,9 @@ All helper utilities are now exposed through a small Express API that powers the
  - `npm run ui` 💻 - Start the local React interface and API from the repository root. The UI is built
   with React, Tailwind and DaisyUI and lets you edit entries in `mods.v2.json` and run all helper actions.
  - `npm run test` ✅ - Execute unit tests with Vitest.
- - `npm run lint` 🔍 - Run ESLint across the project.
- - `npm run typecheck` 📝 - Type-check the React code using `tsconfig.react.json`.
+- `npm run lint` 🔍 - Run ESLint across the project.
+- `npm run typecheck` 📝 - Type-check the React code using `tsconfig.react.json`.
+- `npm run generate:modrinth` 🛠️ - Build a fully-typed Modrinth API client under `src/modrinth`.
 
 ## Starting the UI
 
