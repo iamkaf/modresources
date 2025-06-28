@@ -37,7 +37,7 @@ from pathlib import Path
 AUTO_YES = False
 
 # Current Moddy version. Bump this when publishing updates.
-MODDY_VERSION = "DEVELOPMENT"
+MODDY_VERSION = "0.2.0"
 # URLs used by the ``update`` command.
 VERSION_REGISTRY_URL = (
     "https://raw.githubusercontent.com/iamkaf/modresources/main/moddy/versions.json"

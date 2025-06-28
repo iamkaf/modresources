@@ -1,8 +1,18 @@
 [
   {
+    "version": "0.2.0",
+    "source": "/moddy/registry/0.2.0/moddy.py",
+    "notes": [
+      "Implemented a new registry system."
+    ],
+    "hash": "13438d4f72a7b0a5f877a45f2fc5d862380b49de60b28b462248a56e81c5ecc9"
+  },
+  {
     "version": "0.1.0",
     "source": "/moddy/registry/0.1.0/moddy.py",
-    "notes": ["The first version of Moddy!"],
+    "notes": [
+      "The first version of Moddy!"
+    ],
     "hash": "b6e5ececfd3e1a2c773527e0cb05eae0dc7e4b79a7760de323d79798f7a5baad"
   }
 ]
