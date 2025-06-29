@@ -320,7 +320,13 @@ def _apply_versions(props_path: Path, mc: str, versions: dict) -> None:
     for key, value in replacements.items():
         if not value:
             continue
-        text = re.sub(rf"(?m)^{re.escape(key)}=.*$", f"{key}={value}", text)
+        pattern = rf"(?m)^{re.escape(key)}=.*$"
+        if re.search(pattern, text):
+            text = re.sub(pattern, f"{key}={value}", text)
+        else:
+            if not text.endswith("\n"):
+                text += "\n"
+            text += f"{key}={value}\n"
     props_path.write_text(text, encoding="utf-8")
 
 
