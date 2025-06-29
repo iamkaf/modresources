@@ -61,6 +61,26 @@ async function main() {
   versions.unshift(entry);
   writeFileSync(versionsPath, JSON.stringify(versions, null, 2) + '\n');
 
+  const readmePath = path.join(root, 'moddy', 'README.md');
+  try {
+    const readme = readFileSync(readmePath, 'utf8');
+    const marker = '## Changelog';
+    const idx = readme.indexOf(marker);
+    if (idx !== -1) {
+      const head = readme.slice(0, idx + marker.length);
+      const body = versions
+        .map((v) => {
+          const notesList = v.notes?.map((n: string) => `- ${n}`).join('\n') || '';
+          return `\n\n### ${v.version}\n${notesList}`.trimEnd();
+        })
+        .join('\n');
+      writeFileSync(readmePath, `${head}\n${body}\n`);
+      console.log('Updated README changelog');
+    }
+  } catch (err) {
+    console.warn('Failed to update README:', err);
+  }
+
   console.log(`Created ${path.relative(root, outPath)}`);
   console.log(`Updated versions.json with ${newVersion}`);
 }
