@@ -435,6 +435,17 @@ def _create_icon(char: str, filename: str) -> None:
     Path(filename).write_bytes(data)
 
 
+def _replace_template_in_comments(text: str, mod_name: str) -> str:
+    """Replace the word 'template' with *mod_name* inside comments."""
+    comment_regex = re.compile(r"(#.*?$|//.*?$|/\*.*?\*/)", re.MULTILINE | re.DOTALL)
+
+    def repl(match: re.Match) -> str:
+        comment = match.group(0)
+        return re.sub(r"\btemplate\b", mod_name, comment, flags=re.IGNORECASE)
+
+    return comment_regex.sub(repl, text)
+
+
 def cmd_setup(args: argparse.Namespace) -> None:
     """Initialise the template by replacing placeholder values."""
     base_package = input(f"Base package [{OLD_PACKAGE}]: ") or OLD_PACKAGE
@@ -478,6 +489,10 @@ def cmd_setup(args: argparse.Namespace) -> None:
                 if old in text:
                     text = text.replace(old, new)
                     replaced = True
+            new_text = _replace_template_in_comments(text, mod_name)
+            if new_text != text:
+                text = new_text
+                replaced = True
             if replaced:
                 path.write_text(text, encoding="utf-8")
                 print(f"{GREEN}Modified{RESET} {path}")
