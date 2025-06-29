@@ -1,9 +1,30 @@
 export async function fetchChangelog(loader: 'fabric' | 'neoforge' | 'forge'): Promise<string> {
   const repos: Record<string, { owner: string; repo: string }> = {
     fabric: { owner: 'FabricMC', repo: 'fabric-loader' },
-    neoforge: { owner: 'NeoForged', repo: 'NeoForge' },
-    forge: { owner: 'MinecraftForge', repo: 'MinecraftForge' },
   };
+
+  if (loader === 'neoforge' || loader === 'forge') {
+    const base =
+      loader === 'neoforge'
+        ? 'https://maven.neoforged.net/releases/net/neoforged/neoforge'
+        : 'https://maven.minecraftforge.net/net/minecraftforge/forge';
+
+    const metaRes = await fetch(`${base}/maven-metadata.xml`);
+    if (!metaRes.ok) {
+      return `No changelog found for ${loader}`;
+    }
+    const xml = await metaRes.text();
+    const match = xml.match(/<latest>([^<]+)<\/latest>/);
+    const version = match?.[1];
+    if (!version) return `No changelog found for ${loader}`;
+
+    const prefix = loader === 'neoforge' ? 'neoforge' : 'forge';
+    const logRes = await fetch(`${base}/${version}/${prefix}-${version}-changelog.txt`);
+    if (!logRes.ok) {
+      return `No changelog found for ${loader}`;
+    }
+    return await logRes.text();
+  }
 
   const target = repos[loader];
   if (!target) throw new Error(`Unsupported loader: ${loader}`);
