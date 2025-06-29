@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.6.0",
+    "source": "/moddy/registry/0.6.0/moddy.py",
+    "notes": [
+      "Added a Moddy update checker."
+    ],
+    "hash": "1d9a34e91bb667f89a0eec9982be81492c80db71af5b52d4fece848460f594ff"
+  },
+  {
     "version": "0.5.0",
     "source": "/moddy/registry/0.5.0/moddy.py",
     "notes": [

@@ -13,6 +13,10 @@ Setting up a new mod normally requires renaming packages and updating identifier
 ## Changelog
 
 
+### 0.6.0
+- Added a Moddy update checker.
+
+
 ### 0.5.0
 - Improve version fetching for Parchment
 - Clean up empty package folders in setup
