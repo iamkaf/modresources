@@ -3,6 +3,7 @@
     "version": "0.5.0",
     "source": "/moddy/registry/0.5.0/moddy.py",
     "notes": [
+      "Improve version fetching for Parchment",
       "Clean up empty package folders in setup",
       "Show changelog after update"
     ],

@@ -14,6 +14,7 @@ Setting up a new mod normally requires renaming packages and updating identifier
 
 
 ### 0.5.0
+- Improve version fetching for Parchment
 - Clean up empty package folders in setup
 - Show changelog after update
 
