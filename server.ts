@@ -8,6 +8,7 @@ import {
   listImages,
   validateMods as validateModsService,
   generateOtherMods,
+  fetchChangelog,
 } from './src/services';
 
 const app = express();
@@ -105,6 +106,16 @@ app.post('/api/othermods', (_req, res) => {
   try {
     generateOtherMods();
     res.json({ ok: true });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/api/changelog/:loader', async (req, res) => {
+  const loader = req.params.loader as 'fabric' | 'neoforge' | 'forge';
+  try {
+    const text = await fetchChangelog(loader);
+    res.type('text').send(text);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }

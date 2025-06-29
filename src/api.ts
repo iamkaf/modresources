@@ -64,3 +64,8 @@ export async function listImagesApi(mod?: string): Promise<Record<string, string
   return res.json();
 }
 
+export async function fetchChangelogApi(loader: 'fabric' | 'neoforge' | 'forge'): Promise<string> {
+  const res = await fetch(`${BASE}/changelog/${loader}`);
+  return res.text();
+}
+
