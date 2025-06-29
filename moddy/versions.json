@@ -1,5 +1,14 @@
 [
   {
+    "version": "0.5.0",
+    "source": "/moddy/registry/0.5.0/moddy.py",
+    "notes": [
+      "Clean up empty package folders in setup",
+      "Show changelog after update"
+    ],
+    "hash": "c7ccfe4a60a3b06ed218cc4cebf3800aafe5fee00d56694ecefcd3aaad786d85"
+  },
+  {
     "version": "0.4.0",
     "source": "/moddy/registry/0.4.0/moddy.py",
     "notes": [
