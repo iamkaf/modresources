@@ -1,5 +1,15 @@
 [
   {
+    "version": "0.7.0",
+    "source": "/moddy/registry/0.7.0/moddy.py",
+    "notes": [
+      "Setup command replaces 'template' in comments",
+      "Add-service prefixes interface names with I and updates Services",
+      "set-minecraft-version adds missing keys and handles game_versions"
+    ],
+    "hash": "181bf820cc4da1d5011adf5a2c9473e95ff03686ed1d70b5e091935389f050bf"
+  },
+  {
     "version": "0.6.0",
     "source": "/moddy/registry/0.6.0/moddy.py",
     "notes": [

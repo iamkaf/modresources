@@ -13,6 +13,12 @@ Setting up a new mod normally requires renaming packages and updating identifier
 ## Changelog
 
 
+### 0.7.0
+- Setup command replaces 'template' in comments
+- Add-service prefixes interface names with I and updates Services
+- set-minecraft-version adds missing keys and handles game_versions
+
+
 ### 0.6.0
 - Added a Moddy update checker.
 
