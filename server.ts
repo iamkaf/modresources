@@ -8,6 +8,7 @@ import {
   listImages,
   validateMods as validateModsService,
   generateOtherMods,
+  fetchChangelog,
 } from './src/services';
 
 const app = express();
@@ -58,6 +59,19 @@ app.get('/api/images', (req, res) => {
     const mod = req.query.mod as string | undefined;
     const data = listImages(mod);
     res.json(data);
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/api/changelog/:loader/:id', async (req, res) => {
+  const { loader, id } = req.params as { loader: string; id: string };
+  if (!['fabric', 'forge', 'neoforge'].includes(loader)) {
+    return res.status(400).json({ error: 'invalid loader' });
+  }
+  try {
+    const text = await fetchChangelog(id, loader as any);
+    res.type('text').send(text);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }

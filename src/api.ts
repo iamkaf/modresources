@@ -64,3 +64,9 @@ export async function listImagesApi(mod?: string): Promise<Record<string, string
   return res.json();
 }
 
+export async function fetchChangelogApi(id: string, loader: string): Promise<string> {
+  const res = await fetch(`${BASE}/changelog/${loader}/${id}`);
+  if (!res.ok) throw new Error(res.statusText);
+  return res.text();
+}
+

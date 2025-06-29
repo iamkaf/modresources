@@ -8,6 +8,7 @@ import {
   SparklesIcon,
   CheckCircleIcon,
   PuzzlePieceIcon,
+  DocumentMagnifyingGlassIcon,
   SwatchIcon,
   ChevronDownIcon,
   Cog6ToothIcon,
@@ -21,6 +22,7 @@ const pages = [
   { path: '/icon', label: 'icon', icon: SparklesIcon },
   { path: '/validate', label: 'validate', icon: CheckCircleIcon },
   { path: '/othermods', label: 'othermods', icon: PuzzlePieceIcon },
+  { path: '/changelog', label: 'changelog', icon: DocumentMagnifyingGlassIcon },
 ];
 
 const themes = [

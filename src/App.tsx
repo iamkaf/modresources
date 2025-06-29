@@ -7,6 +7,7 @@ import Upload from './pages/Upload';
 import Icon from './pages/Icon';
 import Validate from './pages/Validate';
 import Othermods from './pages/Othermods';
+import Changelog from './pages/Changelog';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/icon" element={<Icon />} />
         <Route path="/validate" element={<Validate />} />
         <Route path="/othermods" element={<Othermods />} />
+        <Route path="/changelog" element={<Changelog />} />
       </Routes>
     </BrowserRouter>
   );
