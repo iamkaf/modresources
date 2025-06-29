@@ -360,6 +360,7 @@ def cmd_set_minecraft_version(args: argparse.Namespace) -> None:
 RESET = "\033[0m"
 GREEN = "\033[32m"
 CYAN = "\033[36m"
+YELLOW = "\033[33m"
 
 OLD_PACKAGE = "com.example.modtemplate"
 OLD_MOD_ID = "examplemod"
@@ -620,6 +621,18 @@ def cmd_version(args: argparse.Namespace) -> None:
     print(MODDY_VERSION)
 
 
+def _check_for_update() -> None:
+    """Show a notice if a newer Moddy version exists."""
+    try:
+        registry = json.loads(_fetch_url_text(VERSION_REGISTRY_URL))
+        latest_version = registry[0].get("version")
+    except Exception:
+        return
+    if latest_version and latest_version != MODDY_VERSION:
+        print(f"{YELLOW}A new Moddy version ({latest_version}) is available.{RESET}")
+        print("Run 'moddy update' to update.")
+
+
 # ---------------------------------------------------------------------------
 # command line interface
 # ---------------------------------------------------------------------------
@@ -676,6 +689,8 @@ def main(argv=None) -> None:
 
     args = subparser.parse_args(ns.args)
     func(args)
+    if command != "update":
+        _check_for_update()
 
 
 if __name__ == "__main__":
