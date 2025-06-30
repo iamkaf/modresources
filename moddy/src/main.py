@@ -20,6 +20,7 @@ from .commands import (
     cmd_set_minecraft_version,
     cmd_setup,
     cmd_update,
+    cmd_ping,
     cmd_help,
     cmd_version,
     check_for_update,
@@ -34,6 +35,7 @@ COMMANDS = {
     "set-minecraft-version": cmd_set_minecraft_version,
     "setup": cmd_setup,
     "update": cmd_update,
+    "ping": cmd_ping,
     "help": cmd_help,
     "version": cmd_version,
 }
