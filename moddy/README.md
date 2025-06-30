@@ -14,6 +14,10 @@ The `changelog` command can be used to view notes for recent Moddy releases.
 ## Changelog
 
 
+### 0.14.0
+- Fixed setup script missing package renames
+
+
 ### 0.13.0
 - Fixed script path location
 

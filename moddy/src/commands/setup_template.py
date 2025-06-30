@@ -142,31 +142,41 @@ def cmd_setup(args: argparse.Namespace) -> None:
         return
 
     print(f"{CYAN}Updating files...{RESET}")
-    src = Path("common/src/main/java")
-    for root, dirs, files in os.walk(src, topdown=False):
-        for name in files:
-            path = Path(root) / name
-            if path.suffix != ".java":
-                continue
-            text = path.read_text(encoding="utf-8")
-            for old, new in replacements.items():
-                text = text.replace(old, new)
-            text = _replace_template_in_comments(text, mod_name)
-            path.write_text(text, encoding="utf-8")
-    for root, dirs, files in os.walk(src, topdown=False):
-        for name in dirs:
-            old_dir = Path(root) / name
-            old_parts = old_dir.relative_to(src).parts
-            new_parts = [replacements.get(p, p) for p in old_parts]
-            if old_parts != tuple(new_parts):
-                new_dir = src.joinpath(*new_parts)
-                new_dir.parent.mkdir(parents=True, exist_ok=True)
-                shutil.move(str(old_dir), str(new_dir))
-                print(f"{GREEN}Moved{RESET} {old_dir} -> {new_dir}")
-                parent = old_dir.parent
-                while parent != src and parent.is_dir() and not any(parent.iterdir()):
-                    parent.rmdir()
-                    parent = parent.parent
+    pkg_roots = [
+        Path("common/src/main/java"),
+        Path("fabric/src/main/java"),
+        Path("forge/src/main/java"),
+        Path("neoforge/src/main/java"),
+    ]
+
+    old_pkg_path = OLD_PACKAGE.replace(".", "/")
+    new_pkg_path = base_package.replace(".", "/")
+
+    for src in pkg_roots:
+        if not src.exists():
+            continue
+
+        for root, dirs, files in os.walk(src):
+            for name in files:
+                path = Path(root) / name
+                if path.suffix != ".java":
+                    continue
+                text = path.read_text(encoding="utf-8")
+                for old, new in replacements.items():
+                    text = text.replace(old, new)
+                text = _replace_template_in_comments(text, mod_name)
+                path.write_text(text, encoding="utf-8")
+
+        old_pkg_dir = src / old_pkg_path
+        if old_pkg_dir.exists():
+            new_pkg_dir = src / new_pkg_path
+            new_pkg_dir.parent.mkdir(parents=True, exist_ok=True)
+            shutil.move(str(old_pkg_dir), str(new_pkg_dir))
+            print(f"{GREEN}Moved{RESET} {old_pkg_dir} -> {new_pkg_dir}")
+            parent = old_pkg_dir.parent
+            while parent != src and parent.is_dir() and not any(parent.iterdir()):
+                parent.rmdir()
+                parent = parent.parent
 
     print(f"{CYAN}Renaming files...{RESET}")
     for path in Path('.').rglob('*'):
@@ -189,12 +199,33 @@ def cmd_setup(args: argparse.Namespace) -> None:
                 new_path = path.with_name(new_name)
                 path.rename(new_path)
                 print(f"{GREEN}Renamed{RESET} {path} -> {new_path}")
+                path = new_path
+
+            # update contents for json, toml and service descriptor files
+            if (
+                path.suffix in {".json", ".toml", ".mcmeta", ".properties"}
+                or "META-INF/services" in path.as_posix()
+            ):
+                try:
+                    text = path.read_text(encoding="utf-8")
+                except Exception:
+                    text = None
+                if text is not None:
+                    orig = text
+                    for old, new in replacements.items():
+                        text = text.replace(old, new)
+                    text = _replace_template_in_comments(text, mod_name)
+                    if text != orig:
+                        path.write_text(text, encoding="utf-8")
+                        print(f"{GREEN}Updated{RESET} {path}")
 
     props_path = Path("gradle.properties")
     text = props_path.read_text(encoding="utf-8")
     text = re.sub(r"(?m)^version=.*$", f"version={version}", text)
+    text = re.sub(r"(?m)^group=.*$", f"group={base_package}", text)
+    text = re.sub(r"(?m)^archives_base_name=.*$", f"archives_base_name={mod_id}", text)
     props_path.write_text(text, encoding="utf-8")
-    print(f"{GREEN}Set version to {version}{RESET}")
+    print(f"{GREEN}Updated gradle.properties{RESET}")
 
     chg_path = Path("changelog.md")
     chg_lines = chg_path.read_text(encoding="utf-8").splitlines()
