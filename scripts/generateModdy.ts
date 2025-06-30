@@ -15,7 +15,7 @@ import crypto from 'node:crypto';
 
 function usage() {
   console.log(
-    'Usage: generateModdy.ts [--dry-run] <patch|minor|major> [notes] (newline separated)'
+    'Usage: generateModdy.ts [--dry-run] <patch|minor|major> [notes] (semicolon separated)'
   );
   process.exit(1);
 }
@@ -31,7 +31,7 @@ async function main() {
   const rawNotes = noteParts.join(' ');
   const notes = rawNotes
     ? rawNotes
-        .split(/\r?\n/) // allow newline separated notes
+        .split(/\r?;/) // allow newline separated notes
         .map((n) => n.trim())
         .filter(Boolean)
     : [];
