@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.13.0",
+    "source": "/moddy/registry/0.13.0/moddy.py",
+    "notes": [
+      "Fixed script path location"
+    ],
+    "hash": "bfeba173f697aa5a573a9ac22667138463c02dbc4f26fcfd02a35a9e7eaad720"
+  },
+  {
     "version": "0.12.0",
     "source": "/moddy/registry/0.12.0/moddy.py",
     "notes": [

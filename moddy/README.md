@@ -14,6 +14,10 @@ The `changelog` command can be used to view notes for recent Moddy releases.
 ## Changelog
 
 
+### 0.13.0
+- Fixed script path location
+
+
 ### 0.12.0
 - Improve update command binary verification
 
