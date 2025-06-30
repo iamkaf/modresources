@@ -156,10 +156,13 @@ def cmd_setup(args: argparse.Namespace) -> None:
     for root, dirs, files in os.walk(src, topdown=False):
         for name in dirs:
             old_dir = Path(root) / name
-            old_parts = old_dir.relative_to(src).parts
-            new_parts = [replacements.get(p, p) for p in old_parts]
-            if old_parts != tuple(new_parts):
-                new_dir = src.joinpath(*new_parts)
+            rel_parts = old_dir.relative_to(src).parts
+            rel_pkg = ".".join(rel_parts)
+            new_pkg = rel_pkg
+            for old, new in replacements.items():
+                new_pkg = new_pkg.replace(old, new)
+            if new_pkg != rel_pkg:
+                new_dir = src.joinpath(*new_pkg.split("."))
                 new_dir.parent.mkdir(parents=True, exist_ok=True)
                 shutil.move(str(old_dir), str(new_dir))
                 print(f"{GREEN}Moved{RESET} {old_dir} -> {new_dir}")
@@ -191,10 +194,13 @@ def cmd_setup(args: argparse.Namespace) -> None:
                 print(f"{GREEN}Renamed{RESET} {path} -> {new_path}")
 
     props_path = Path("gradle.properties")
-    text = props_path.read_text(encoding="utf-8")
-    text = re.sub(r"(?m)^version=.*$", f"version={version}", text)
-    props_path.write_text(text, encoding="utf-8")
-    print(f"{GREEN}Set version to {version}{RESET}")
+    if props_path.is_file():
+        text = props_path.read_text(encoding="utf-8")
+        text = re.sub(r"(?m)^version\s*=.*$", f"version={version}", text)
+        props_path.write_text(text, encoding="utf-8")
+        print(f"{GREEN}Set version to {version}{RESET}")
+    else:
+        print(f"{YELLOW}gradle.properties not found{RESET}")
 
     chg_path = Path("changelog.md")
     chg_lines = chg_path.read_text(encoding="utf-8").splitlines()
