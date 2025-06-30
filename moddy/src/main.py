@@ -21,6 +21,7 @@ from .commands import (
     cmd_setup,
     cmd_update,
     cmd_ping,
+    cmd_changelog,
     cmd_help,
     cmd_version,
     check_for_update,
@@ -36,6 +37,7 @@ COMMANDS = {
     "setup": cmd_setup,
     "update": cmd_update,
     "ping": cmd_ping,
+    "changelog": cmd_changelog,
     "help": cmd_help,
     "version": cmd_version,
 }
