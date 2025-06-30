@@ -10,7 +10,7 @@
     "dev": "concurrently \"vite\" \"tsx server.ts\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "test": "vitest",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit -p tsconfig.react.json",
     "preview": "vite preview",
     "generate:modrinth": "tsx ./scripts/generateModrinthClient.ts",
