@@ -14,6 +14,16 @@ The `changelog` command can be used to view notes for recent Moddy releases.
 ## Changelog
 
 
+### 0.8.0
+- Added open and docs commands
+- Added ping command with update verification
+- Added changelog command
+- Support Amber in set-minecraft-version
+- Setup ignores non-project directories
+- Fixed Parchment Minecraft version
+- Improved the update notice message
+
+
 ### 0.7.0
 - Setup command replaces 'template' in comments
 - Add-service prefixes interface names with I and updates Services
