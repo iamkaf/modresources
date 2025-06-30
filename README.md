@@ -25,7 +25,7 @@ All helper utilities are now exposed through a small Express API that powers the
 - `npm run lint` 🔍 - Run ESLint across the project.
 - `npm run typecheck` 📝 - Type-check the React code using `tsconfig.react.json`.
 - `npm run generate:modrinth` 🛠️ - Build a fully-typed Modrinth API client under `src/modrinth`.
-- `npm run generate:moddy` 🛠️ - Creates a new Moddy artifact and adds it to the registry.
+- `npm run generate:moddy` 🛠️ - Creates a new Moddy artifact and adds it to the registry. Pass `--dry-run` to test without writing files.
 
 ## Starting the UI
 
