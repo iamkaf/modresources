@@ -9,7 +9,10 @@ import sys
 import tempfile
 from pathlib import Path
 
-from ..utils import fetch_url_text
+import io
+import zipfile
+
+from ..utils import fetch_url_text, fetch_url_bytes
 from .. import AUTO_YES, MODDY_VERSION, VERSION_REGISTRY_URL, RAW_BASE_URL
 
 
@@ -31,14 +34,14 @@ def cmd_update(args: argparse.Namespace) -> None:
         return
 
     try:
-        new_code = fetch_url_text(update_url)
+        new_data = fetch_url_bytes(update_url)
     except Exception as e:
         print(f"Failed to download update: {e}")
         return
 
     # Verify the downloaded code by running the ping command
-    with tempfile.NamedTemporaryFile("w", delete=False, suffix=".py") as tmp:
-        tmp.write(new_code)
+    with tempfile.NamedTemporaryFile("wb", delete=False, suffix=".py") as tmp:
+        tmp.write(new_data)
         tmp_path = Path(tmp.name)
     try:
         result = subprocess.run(
@@ -68,7 +71,16 @@ def cmd_update(args: argparse.Namespace) -> None:
     except OSError:
         pass
 
-    m = re.search(r"MODDY_VERSION\s*=\s*['\"]([^'\"]+)['\"]", new_code)
+    if new_data.startswith(b"PK"):
+        try:
+            with zipfile.ZipFile(io.BytesIO(new_data)) as zf:
+                init_text = zf.read("moddy/__init__.py").decode("utf-8")
+        except Exception:
+            init_text = ""
+    else:
+        init_text = new_data.decode("utf-8", errors="ignore")
+
+    m = re.search(r"MODDY_VERSION\s*=\s*['\"]([^'\"]+)['\"]", init_text)
     new_version = m.group(1) if m else "unknown"
     if new_version == MODDY_VERSION:
         print("Moddy is already up to date.")
@@ -78,7 +90,7 @@ def cmd_update(args: argparse.Namespace) -> None:
     backup = script_path.with_suffix(".bak")
     try:
         shutil.copy2(script_path, backup)
-        script_path.write_text(new_code, encoding="utf-8")
+        script_path.write_bytes(new_data)
     except Exception as e:
         print(f"Update failed: {e}")
         return

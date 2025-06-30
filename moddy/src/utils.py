@@ -37,7 +37,13 @@ def open_url(url: str) -> None:
         subprocess.run(["xdg-open", url], check=False)
 
 
-def fetch_url_text(url: str, headers=None) -> str:
+def fetch_url_bytes(url: str, headers=None) -> bytes:
+    """Return the raw bytes from *url*."""
     req = urllib.request.Request(url, headers=headers or {})
     with urllib.request.urlopen(req) as resp:
-        return resp.read().decode("utf-8")
+        return resp.read()
+
+
+def fetch_url_text(url: str, headers=None) -> str:
+    """Return the decoded text from *url* assuming UTF-8."""
+    return fetch_url_bytes(url, headers).decode("utf-8")
