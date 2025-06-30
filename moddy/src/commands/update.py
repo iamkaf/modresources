@@ -17,7 +17,7 @@ from .. import AUTO_YES, MODDY_VERSION, VERSION_REGISTRY_URL, RAW_BASE_URL
 
 
 def cmd_update(args: argparse.Namespace) -> None:
-    """Download the latest version of Moddy and replace this file."""
+    """Download a specific Moddy version and replace this file."""
     print(
         "! ! ! WARNING ! ! !: Executing this command will fetch Python "
         "code from the internet and run it on your computer."
@@ -32,11 +32,24 @@ def cmd_update(args: argparse.Namespace) -> None:
     )
     try:
         registry = json.loads(fetch_url_text(VERSION_REGISTRY_URL))
-        latest = registry[0]
-        update_url = RAW_BASE_URL + latest.get("source", "")
     except Exception as e:
         print(f"Failed to check for updates: {e}")
         return
+
+    target_version = getattr(args, "version", None)
+    entry = None
+    if target_version:
+        for item in registry:
+            if item.get("version") == target_version:
+                entry = item
+                break
+        if not entry:
+            print(f"Version {target_version} not found in registry")
+            return
+    else:
+        entry = registry[0]
+
+    update_url = RAW_BASE_URL + entry.get("source", "")
 
     print(f"Registry: {VERSION_REGISTRY_URL}")
     print(f"Source: {update_url}")
@@ -107,7 +120,7 @@ def cmd_update(args: argparse.Namespace) -> None:
         return
     print(f"Updated Moddy from {MODDY_VERSION} to {new_version}")
     print(f"A backup of the previous version was saved to {backup}")
-    notes = latest.get("notes", []) if isinstance(latest, dict) else []
+    notes = entry.get("notes", []) if isinstance(entry, dict) else []
     if notes:
         print(f"Changelog for {new_version}:")
         for n in notes:
