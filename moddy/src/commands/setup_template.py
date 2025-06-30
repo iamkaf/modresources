@@ -142,35 +142,41 @@ def cmd_setup(args: argparse.Namespace) -> None:
         return
 
     print(f"{CYAN}Updating files...{RESET}")
-    src = Path("common/src/main/java")
-    for root, dirs, files in os.walk(src, topdown=False):
-        for name in files:
-            path = Path(root) / name
-            if path.suffix != ".java":
-                continue
-            text = path.read_text(encoding="utf-8")
-            for old, new in replacements.items():
-                text = text.replace(old, new)
-            text = _replace_template_in_comments(text, mod_name)
-            path.write_text(text, encoding="utf-8")
+    pkg_roots = [
+        Path("common/src/main/java"),
+        Path("fabric/src/main/java"),
+        Path("forge/src/main/java"),
+        Path("neoforge/src/main/java"),
+    ]
+
     old_pkg_path = OLD_PACKAGE.replace(".", "/")
     new_pkg_path = base_package.replace(".", "/")
 
-    for root, dirs, files in os.walk(src, topdown=False):
-        for name in dirs:
-            old_dir = Path(root) / name
-            rel = old_dir.relative_to(src)
-            rel_str = "/".join(rel.parts)
-            new_rel_str = rel_str.replace(old_pkg_path, new_pkg_path)
-            if rel_str != new_rel_str:
-                new_dir = src / Path(new_rel_str)
-                new_dir.parent.mkdir(parents=True, exist_ok=True)
-                shutil.move(str(old_dir), str(new_dir))
-                print(f"{GREEN}Moved{RESET} {old_dir} -> {new_dir}")
-                parent = old_dir.parent
-                while parent != src and parent.is_dir() and not any(parent.iterdir()):
-                    parent.rmdir()
-                    parent = parent.parent
+    for src in pkg_roots:
+        if not src.exists():
+            continue
+
+        for root, dirs, files in os.walk(src):
+            for name in files:
+                path = Path(root) / name
+                if path.suffix != ".java":
+                    continue
+                text = path.read_text(encoding="utf-8")
+                for old, new in replacements.items():
+                    text = text.replace(old, new)
+                text = _replace_template_in_comments(text, mod_name)
+                path.write_text(text, encoding="utf-8")
+
+        old_pkg_dir = src / old_pkg_path
+        if old_pkg_dir.exists():
+            new_pkg_dir = src / new_pkg_path
+            new_pkg_dir.parent.mkdir(parents=True, exist_ok=True)
+            shutil.move(str(old_pkg_dir), str(new_pkg_dir))
+            print(f"{GREEN}Moved{RESET} {old_pkg_dir} -> {new_pkg_dir}")
+            parent = old_pkg_dir.parent
+            while parent != src and parent.is_dir() and not any(parent.iterdir()):
+                parent.rmdir()
+                parent = parent.parent
 
     print(f"{CYAN}Renaming files...{RESET}")
     for path in Path('.').rglob('*'):
