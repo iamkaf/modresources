@@ -6,6 +6,7 @@ from .set_minecraft_version import cmd_set_minecraft_version
 from .setup_template import cmd_setup
 from .update import cmd_update
 from .ping import cmd_ping
+from .changelog import cmd_changelog
 from .meta import cmd_help, cmd_version, check_for_update
 
 __all__ = [
@@ -17,6 +18,7 @@ __all__ = [
     "cmd_setup",
     "cmd_update",
     "cmd_ping",
+    "cmd_changelog",
     "cmd_help",
     "cmd_version",
     "check_for_update",
