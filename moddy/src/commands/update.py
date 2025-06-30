@@ -18,7 +18,18 @@ from .. import AUTO_YES, MODDY_VERSION, VERSION_REGISTRY_URL, RAW_BASE_URL
 
 def cmd_update(args: argparse.Namespace) -> None:
     """Download the latest version of Moddy and replace this file."""
-    print("WARNING: this will download and execute code from the internet.")
+    print(
+        "\N{WARNING SIGN} DANGER: Executing this command will fetch Python "
+        "code from the internet and run it on your computer."
+    )
+    print(
+        "Only continue if you trust the source. The update is pulled from the "
+        "official Moddy repository: https://github.com/iamkaf/modresources"
+    )
+    print(
+        "You can inspect the downloaded file to learn how the update works "
+        "before proceeding."
+    )
     try:
         registry = json.loads(fetch_url_text(VERSION_REGISTRY_URL))
         latest = registry[0]
