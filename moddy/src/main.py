@@ -35,6 +35,8 @@ import xml.etree.ElementTree as ET
 import zlib
 from pathlib import Path
 
+from .utils import parse_group, open_dir, fetch_url_text
+
 # If set to True, Moddy will skip confirmation prompts.
 AUTO_YES = False
 
@@ -51,13 +53,6 @@ RAW_BASE_URL = "https://raw.githubusercontent.com/iamkaf/modresources/main"
 # add-service implementation
 # ---------------------------------------------------------------------------
 
-def _parse_group(props_path: Path) -> str:
-    """Return the 'group' property from a gradle.properties file."""
-    text = props_path.read_text(encoding="utf-8")
-    m = re.search(r"^group=(.+)$", text, re.MULTILINE)
-    if not m:
-        raise RuntimeError("Could not determine group property")
-    return m.group(1).strip()
 
 
 def cmd_add_service(args: argparse.Namespace) -> None:
@@ -69,7 +64,7 @@ def cmd_add_service(args: argparse.Namespace) -> None:
 
     interface_name = f"I{name}"
 
-    group = _parse_group(Path("gradle.properties"))
+    group = parse_group(Path("gradle.properties"))
     pkg_path = group.replace(".", "/")
     service_fqn = f"{group}.platform.services.{interface_name}"
 
@@ -145,15 +140,6 @@ def cmd_add_service(args: argparse.Namespace) -> None:
 # open-libs implementation
 # ---------------------------------------------------------------------------
 
-def _open_dir(path: Path) -> None:
-    """Open *path* using the default file manager."""
-    system = platform.system()
-    if system == "Windows":
-        os.startfile(path)  # type: ignore[attr-defined]
-    elif system == "Darwin":
-        subprocess.run(["open", str(path)], check=False)
-    else:
-        subprocess.run(["xdg-open", str(path)], check=False)
 
 
 def cmd_open_libs(args: argparse.Namespace) -> None:
@@ -164,22 +150,18 @@ def cmd_open_libs(args: argparse.Namespace) -> None:
     if not libs.is_dir():
         print(f"No libs folder found at {libs}. Run a build first.")
         return
-    _open_dir(libs)
+    open_dir(libs)
 
 
 # ---------------------------------------------------------------------------
 # set-minecraft-version implementation
 # ---------------------------------------------------------------------------
 
-def _fetch_url_text(url: str, headers=None) -> str:
-    req = urllib.request.Request(url, headers=headers or {})
-    with urllib.request.urlopen(req) as resp:
-        return resp.read().decode("utf-8")
 
 
 def _get_artifact_latest(meta_url: str, mc_version: str):
     try:
-        xml_text = _fetch_url_text(meta_url)
+        xml_text = fetch_url_text(meta_url)
     except Exception:
         return None
     versions = re.findall(r"<version>([^<]+)</version>", xml_text)
@@ -205,7 +187,7 @@ def _get_neoforge_version(mc: str):
         "https://maven.neoforged.net/releases/net/neoforged/neoforge/maven-metadata.xml"
     )
     try:
-        xml_text = _fetch_url_text(meta_url)
+        xml_text = fetch_url_text(meta_url)
     except Exception:
         return None
     root = ET.fromstring(xml_text)
@@ -224,7 +206,7 @@ def _fetch_parchment_version(mc: str):
     """Return the latest stable parchment version for a specific Minecraft version."""
     url = f"https://maven.parchmentmc.org/org/parchmentmc/data/parchment-{mc}/maven-metadata.xml"
     try:
-        xml_text = _fetch_url_text(url)
+        xml_text = fetch_url_text(url)
         root = ET.fromstring(xml_text)
         versions = [v.text for v in root.findall("./versioning/versions/version")]
         versions = [
@@ -258,7 +240,7 @@ def _get_parchment_version(mc: str):
 def _get_fabric_loader_version(mc: str):
     url = f"https://meta.fabricmc.net/v2/versions/loader/{mc}"
     try:
-        data = json.loads(_fetch_url_text(url))
+        data = json.loads(fetch_url_text(url))
         stable = [e["loader"]["version"] for e in data if e["loader"].get("stable")]
         if stable:
             def ver_key(v):
@@ -273,7 +255,7 @@ def _get_fabric_api_version(mc: str):
     query = urllib.parse.quote(f'["{mc}"]', safe="")
     url = f"https://api.modrinth.com/v2/project/fabric-api/version?game_versions={query}"
     try:
-        versions = json.loads(_fetch_url_text(url))
+        versions = json.loads(fetch_url_text(url))
         latest = max(versions, key=lambda v: v["date_published"])
         return latest["version_number"]
     except Exception:
@@ -284,7 +266,7 @@ def _get_mod_menu_version(mc: str):
     query = urllib.parse.quote(f'["{mc}"]', safe="")
     url = f"https://api.modrinth.com/v2/project/modmenu/version?game_versions={query}"
     try:
-        versions = json.loads(_fetch_url_text(url))
+        versions = json.loads(fetch_url_text(url))
         latest = max(versions, key=lambda v: v["date_published"])
         return latest["version_number"]
     except Exception:
@@ -294,7 +276,7 @@ def _get_mod_menu_version(mc: str):
 def _get_forge_version(mc: str):
     url = f"https://files.minecraftforge.net/net/minecraftforge/forge/index_{mc}.html"
     try:
-        html = _fetch_url_text(url, headers={"User-Agent": "Mozilla/5.0"})
+        html = fetch_url_text(url, headers={"User-Agent": "Mozilla/5.0"})
     except Exception:
         return None
     for label in ("Recommended", "Latest"):
@@ -605,7 +587,7 @@ def cmd_update(args: argparse.Namespace) -> None:
     # Users should be aware that running the downloaded code could be risky.
     print("WARNING: this will download and execute code from the internet.")
     try:
-        registry = json.loads(_fetch_url_text(VERSION_REGISTRY_URL))
+        registry = json.loads(fetch_url_text(VERSION_REGISTRY_URL))
         latest = registry[0]
         update_url = RAW_BASE_URL + latest.get("source", "")
     except Exception as e:
@@ -619,7 +601,7 @@ def cmd_update(args: argparse.Namespace) -> None:
         return
 
     try:
-        new_code = _fetch_url_text(update_url)
+        new_code = fetch_url_text(update_url)
     except Exception as e:
         print(f"Failed to download update: {e}")
         return
@@ -671,7 +653,7 @@ def cmd_version(args: argparse.Namespace) -> None:
 def _check_for_update() -> None:
     """Show a notice if a newer Moddy version exists."""
     try:
-        registry = json.loads(_fetch_url_text(VERSION_REGISTRY_URL))
+        registry = json.loads(fetch_url_text(VERSION_REGISTRY_URL))
         latest_version = registry[0].get("version")
     except Exception:
         return
