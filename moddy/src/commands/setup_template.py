@@ -15,6 +15,21 @@ GREEN = "\033[32m"
 CYAN = "\033[36m"
 YELLOW = "\033[33m"
 
+ROOT_IGNORE = {
+    ".github",
+    ".gradle",
+    ".idea",
+    "build",
+    "buildSrc",
+    "gradle",
+}
+
+SUBPROJECT_IGNORE = {
+    ".gradle",
+    "build",
+    "runs",
+}
+
 OLD_PACKAGE = "com.example.modtemplate"
 OLD_MOD_ID = "examplemod"
 OLD_MOD_NAME = "Example Mod"
@@ -155,7 +170,12 @@ def cmd_setup(args: argparse.Namespace) -> None:
 
     print(f"{CYAN}Renaming files...{RESET}")
     for path in Path('.').rglob('*'):
-        if '.git' in path.parts:
+        parts = path.parts
+        if '.git' in parts:
+            continue
+        if parts and parts[0] in ROOT_IGNORE:
+            continue
+        if len(parts) > 1 and parts[1] in SUBPROJECT_IGNORE:
             continue
         if path.is_file():
             new_name = path.name
