@@ -9,6 +9,7 @@ Instead of a collection of individual scripts, Moddy distributes a single self u
 ## Problem it solves
 
 Setting up a new mod normally requires renaming packages and updating identifiers in several modules. Moddy automates these tasks through the `setup` command and offers other helpers such as self-update.
+The `changelog` command can be used to view notes for recent Moddy releases.
 
 ## Changelog
 
