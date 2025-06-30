@@ -121,6 +121,17 @@ def _get_mod_menu_version(mc: str):
         return None
 
 
+def _get_amber_version(mc: str):
+    query = urllib.parse.quote(f'["{mc}"]', safe="")
+    url = f"https://api.modrinth.com/v2/project/amber/version?game_versions={query}"
+    try:
+        versions = json.loads(fetch_url_text(url))
+        latest = max(versions, key=lambda v: v["date_published"])
+        return latest["version_number"]
+    except Exception:
+        return None
+
+
 def _get_forge_version(mc: str):
     url = f"https://files.minecraftforge.net/net/minecraftforge/forge/index_{mc}.html"
     try:
@@ -134,8 +145,8 @@ def _get_forge_version(mc: str):
     return None
 
 
-def _collect_versions(mc: str):
-    return {
+def _collect_versions(mc: str, include_amber: bool = False) -> dict:
+    versions = {
         "neoform_version": _get_neoform_version(mc),
         "neoforge_version": _get_neoforge_version(mc),
         "parchment_minecraft": mc,
@@ -145,6 +156,9 @@ def _collect_versions(mc: str):
         "mod_menu_version": _get_mod_menu_version(mc),
         "forge_version": _get_forge_version(mc),
     }
+    if include_amber:
+        versions["amber_version"] = _get_amber_version(mc)
+    return versions
 
 
 def _apply_versions(props_path: Path, mc: str, versions: dict) -> None:
@@ -170,6 +184,7 @@ def _apply_versions(props_path: Path, mc: str, versions: dict) -> None:
         "mod_menu_version": versions.get("mod_menu_version"),
         "forge_version": versions.get("forge_version"),
         "neoforge_version": versions.get("neoforge_version"),
+        "amber_version": versions.get("amber_version"),
         "game_versions": mc,
     }
     for key, value in replacements.items():
@@ -192,7 +207,8 @@ def cmd_set_minecraft_version(args: argparse.Namespace) -> None:
         print("Aborted")
         return
 
-    versions = _collect_versions(mc)
+    props_text = Path("gradle.properties").read_text(encoding="utf-8")
+    versions = _collect_versions(mc, include_amber="amber_version" in props_text)
     print("Fetched versions:")
     for k, v in versions.items():
         print(f"  {k}: {v}")
