@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.12.0",
+    "source": "/moddy/registry/0.12.0/moddy.py",
+    "notes": [
+      "Improve update command binary verification"
+    ],
+    "hash": "4551375cb0e53fdeb612ba733df12c4c3f2ba05fcc48c6e624dd37405d030d9f"
+  },
+  {
     "version": "0.11.0",
     "source": "/moddy/registry/0.11.0/moddy.py",
     "notes": [
