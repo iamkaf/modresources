@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.10.0",
+    "source": "/moddy/registry/0.10.0/moddy.py",
+    "notes": [
+      "Improved the update command warning message"
+    ],
+    "hash": "f460d74fe94a541f5eaee908ee5ad8d13f2d76b4714bdd1bc9f3649a1108c40f"
+  },
+  {
     "version": "0.9.0",
     "source": "/moddy/registry/0.9.0/moddy.py",
     "notes": [

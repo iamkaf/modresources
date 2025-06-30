@@ -14,6 +14,10 @@ The `changelog` command can be used to view notes for recent Moddy releases.
 ## Changelog
 
 
+### 0.10.0
+- Improved the update command warning message
+
+
 ### 0.9.0
 - Fixed update command binary download
 
