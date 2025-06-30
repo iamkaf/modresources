@@ -32,5 +32,5 @@ def check_for_update() -> None:
     if latest_version and latest_version != MODDY_VERSION:
         YELLOW = "\033[33m"
         RESET = "\033[0m"
-        print(f"{YELLOW}A new Moddy version ({latest_version}) is available.{RESET}")
+        print(f"{YELLOW}A new Moddy version ({MODDY_VERSION} -> {latest_version}) is available.{RESET}")
         print("Run 'moddy update' to update.")
