@@ -1,7 +1,16 @@
 #!/usr/bin/env ts-node
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import {
+  readFileSync,
+  writeFileSync,
+  mkdirSync,
+  cpSync,
+  mkdtempSync,
+  rmSync,
+} from 'node:fs';
+import os from 'node:os';
+import { execSync } from 'node:child_process';
 import crypto from 'node:crypto';
 
 function usage() {
@@ -23,7 +32,7 @@ async function main() {
     : [];
 
   const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-  const devPath = path.join(root, 'moddy', 'development', 'moddy.py');
+  const srcDir = path.join(root, 'moddy', 'src');
   const versionsPath = path.join(root, 'moddy', 'versions.json');
   const registryDir = path.join(root, 'moddy', 'registry');
 
@@ -42,15 +51,21 @@ async function main() {
   const outDir = path.join(registryDir, newVersion);
   mkdirSync(outDir, { recursive: true });
 
-  const devCode = readFileSync(devPath, 'utf8');
+  const tempDir = mkdtempSync(path.join(os.tmpdir(), 'moddy-src-'));
+  cpSync(srcDir, tempDir, { recursive: true });
+  const tempMain = path.join(tempDir, 'main.py');
+  const devCode = readFileSync(tempMain, 'utf8');
   const updatedCode = devCode.replace(
     /MODDY_VERSION\s*=\s*"DEVELOPMENT"/,
     `MODDY_VERSION = "${newVersion}"`
   );
+  writeFileSync(tempMain, updatedCode);
   const outPath = path.join(outDir, 'moddy.py');
-  writeFileSync(outPath, updatedCode);
+  execSync(`python -m zipapp ${tempDir} -o ${outPath} -m main:main`);
+  rmSync(tempDir, { recursive: true, force: true });
 
-  const hash = crypto.createHash('sha256').update(updatedCode).digest('hex');
+  const fileData = readFileSync(outPath);
+  const hash = crypto.createHash('sha256').update(fileData).digest('hex');
 
   const entry = {
     version: newVersion,
