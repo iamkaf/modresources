@@ -146,11 +146,18 @@ def _get_forge_version(mc: str):
 
 
 def _collect_versions(mc: str, include_amber: bool = False) -> dict:
+    parchment_version = _get_parchment_version(mc)
+    parchment_mc = mc
+    if parchment_version:
+        m = re.match(r"([0-9]+(?:\.[0-9]+){1,2})-", parchment_version)
+        if m:
+            parchment_mc = m.group(1)
+
     versions = {
         "neoform_version": _get_neoform_version(mc),
         "neoforge_version": _get_neoforge_version(mc),
-        "parchment_minecraft": mc,
-        "parchment_version": _get_parchment_version(mc),
+        "parchment_minecraft": parchment_mc,
+        "parchment_version": parchment_version,
         "fabric_loader_version": _get_fabric_loader_version(mc),
         "fabric_version": _get_fabric_api_version(mc),
         "mod_menu_version": _get_mod_menu_version(mc),
@@ -177,7 +184,7 @@ def _apply_versions(props_path: Path, mc: str, versions: dict) -> None:
         "minecraft_version": mc,
         "minecraft_version_range": f"[{mc}, {next_minor})",
         "neo_form_version": versions.get("neoform_version"),
-        "parchment_minecraft": mc,
+        "parchment_minecraft": versions.get("parchment_minecraft") or mc,
         "parchment_version": versions.get("parchment_version"),
         "fabric_loader_version": versions.get("fabric_loader_version"),
         "fabric_version": versions.get("fabric_version"),
