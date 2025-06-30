@@ -52,8 +52,9 @@ async function main() {
   mkdirSync(outDir, { recursive: true });
 
   const tempDir = mkdtempSync(path.join(os.tmpdir(), 'moddy-src-'));
-  cpSync(srcDir, tempDir, { recursive: true });
-  const tempMain = path.join(tempDir, 'main.py');
+  const pkgDir = path.join(tempDir, 'moddy');
+  cpSync(srcDir, pkgDir, { recursive: true });
+  const tempMain = path.join(pkgDir, 'main.py');
   const devCode = readFileSync(tempMain, 'utf8');
   const updatedCode = devCode.replace(
     /MODDY_VERSION\s*=\s*"DEVELOPMENT"/,
@@ -61,7 +62,7 @@ async function main() {
   );
   writeFileSync(tempMain, updatedCode);
   const outPath = path.join(outDir, 'moddy.py');
-  execSync(`python -m zipapp ${tempDir} -o ${outPath} -m main:main`);
+  execSync(`python -m zipapp ${tempDir} -o ${outPath} -m moddy.main:main`);
   rmSync(tempDir, { recursive: true, force: true });
 
   const fileData = readFileSync(outPath);
