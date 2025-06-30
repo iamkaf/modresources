@@ -107,7 +107,7 @@ def main(argv=None) -> None:
         func(args, parser, COMMANDS)
     else:
         func(args)
-    if command != "update":
+    if command not in ["update", "ping"]:
         check_for_update()
 
 
