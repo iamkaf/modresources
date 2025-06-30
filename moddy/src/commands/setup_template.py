@@ -193,6 +193,25 @@ def cmd_setup(args: argparse.Namespace) -> None:
                 new_path = path.with_name(new_name)
                 path.rename(new_path)
                 print(f"{GREEN}Renamed{RESET} {path} -> {new_path}")
+                path = new_path
+
+            # update contents for json, toml and service descriptor files
+            if (
+                path.suffix in {".json", ".toml", ".mcmeta", ".properties"}
+                or "META-INF/services" in path.as_posix()
+            ):
+                try:
+                    text = path.read_text(encoding="utf-8")
+                except Exception:
+                    text = None
+                if text is not None:
+                    orig = text
+                    for old, new in replacements.items():
+                        text = text.replace(old, new)
+                    text = _replace_template_in_comments(text, mod_name)
+                    if text != orig:
+                        path.write_text(text, encoding="utf-8")
+                        print(f"{GREEN}Updated{RESET} {path}")
 
     props_path = Path("gradle.properties")
     text = props_path.read_text(encoding="utf-8")
