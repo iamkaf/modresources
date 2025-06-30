@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.14.0",
+    "source": "/moddy/registry/0.14.0/moddy.py",
+    "notes": [
+      "Fixed setup script missing package renames"
+    ],
+    "hash": "24a0436d02a6dfdc8c2a0c91d1adca3504b88144bea641b13010ebe230edf471"
+  },
+  {
     "version": "0.13.0",
     "source": "/moddy/registry/0.13.0/moddy.py",
     "notes": [
