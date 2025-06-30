@@ -95,6 +95,12 @@ def main(argv=None) -> None:
         )
     elif func is cmd_set_minecraft_version:
         subparser.add_argument("version", help="Minecraft version, e.g. 1.21.5")
+    elif func is cmd_update:
+        subparser.add_argument(
+            "version",
+            nargs="?",
+            help="Moddy version to install (defaults to latest)",
+        )
 
     args = subparser.parse_args(ns.args)
     if func is cmd_help:
