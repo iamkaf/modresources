@@ -14,6 +14,10 @@ The `changelog` command can be used to view notes for recent Moddy releases.
 ## Changelog
 
 
+### 0.9.0
+- Fixed update command binary download
+
+
 ### 0.8.0
 - Added open and docs commands
 - Added ping command with update verification

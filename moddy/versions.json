@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.9.0",
+    "source": "/moddy/registry/0.9.0/moddy.py",
+    "notes": [
+      "Fixed update command binary download"
+    ],
+    "hash": "55b6389e93d80a3408d93faaf436f36bb2958df73f714d0f1559be5b899f7e8e"
+  },
+  {
     "version": "0.8.0",
     "source": "/moddy/registry/0.8.0/moddy.py",
     "notes": [
