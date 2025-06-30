@@ -110,7 +110,17 @@ def cmd_update(args: argparse.Namespace) -> None:
         print("Moddy is already up to date.")
         return
 
-    script_path = Path(__file__).resolve()
+    # Determine the path of the script that launched Moddy. When running from
+    # the distributed "moddy.py" zipapp, ``__file__`` points to a location
+    # inside the archive like ``moddy.py/moddy/commands/update.py`` which does
+    # not exist on disk. ``sys.argv[0]`` however contains the actual path to the
+    # executable zip file. When running from sources ``sys.argv[0]`` is the main
+    # module path which is also valid to overwrite. Fallback to ``__file__`` in
+    # the unlikely event ``sys.argv[0]`` isn't a file.
+
+    script_path = Path(sys.argv[0]).resolve()
+    if not script_path.exists():
+        script_path = Path(__file__).resolve()
     backup = script_path.with_suffix(".bak")
     try:
         shutil.copy2(script_path, backup)
