@@ -19,7 +19,7 @@ from .. import AUTO_YES, MODDY_VERSION, VERSION_REGISTRY_URL, RAW_BASE_URL
 def cmd_update(args: argparse.Namespace) -> None:
     """Download the latest version of Moddy and replace this file."""
     print(
-        "\N{WARNING SIGN} DANGER: Executing this command will fetch Python "
+        "! ! ! WARNING ! ! !: Executing this command will fetch Python "
         "code from the internet and run it on your computer."
     )
     print(
