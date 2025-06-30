@@ -15,6 +15,8 @@ from pathlib import Path
 from .commands import (
     cmd_add_service,
     cmd_open_libs,
+    cmd_open,
+    cmd_docs,
     cmd_set_minecraft_version,
     cmd_setup,
     cmd_update,
@@ -27,6 +29,8 @@ from .commands import (
 COMMANDS = {
     "add-service": cmd_add_service,
     "open-libs": cmd_open_libs,
+    "open": cmd_open,
+    "docs": cmd_docs,
     "set-minecraft-version": cmd_set_minecraft_version,
     "setup": cmd_setup,
     "update": cmd_update,
@@ -72,6 +76,18 @@ def main(argv=None) -> None:
     elif func is cmd_open_libs:
         subparser.add_argument(
             "loader", choices=["fabric", "forge", "neoforge"], help="Loader to open the output for"
+        )
+    elif func is cmd_open:
+        subparser.add_argument(
+            "site",
+            choices=["curseforge", "modrinth", "github"],
+            help="Site to open",
+        )
+    elif func is cmd_docs:
+        subparser.add_argument(
+            "target",
+            choices=["fabric", "neoforge", "forge", "parchment", "linkie"],
+            help="Documentation site to open",
         )
     elif func is cmd_set_minecraft_version:
         subparser.add_argument("version", help="Minecraft version, e.g. 1.21.5")

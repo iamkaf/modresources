@@ -26,6 +26,17 @@ def open_dir(path: Path) -> None:
         subprocess.run(["xdg-open", str(path)], check=False)
 
 
+def open_url(url: str) -> None:
+    """Open *url* in the default browser."""
+    system = platform.system()
+    if system == "Windows":
+        os.startfile(url)  # type: ignore[attr-defined]
+    elif system == "Darwin":
+        subprocess.run(["open", url], check=False)
+    else:
+        subprocess.run(["xdg-open", url], check=False)
+
+
 def fetch_url_text(url: str, headers=None) -> str:
     req = urllib.request.Request(url, headers=headers or {})
     with urllib.request.urlopen(req) as resp:
