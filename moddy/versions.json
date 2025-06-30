@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.11.0",
+    "source": "/moddy/registry/0.11.0/moddy.py",
+    "notes": [
+      "Add an option to the update command to pick a specific version"
+    ],
+    "hash": "53e2336510404a144f523627a3629a0247fce123730fdbbbbbcbbce9683fcc8c"
+  },
+  {
     "version": "0.10.0",
     "source": "/moddy/registry/0.10.0/moddy.py",
     "notes": [
