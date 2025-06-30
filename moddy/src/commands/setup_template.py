@@ -153,13 +153,17 @@ def cmd_setup(args: argparse.Namespace) -> None:
                 text = text.replace(old, new)
             text = _replace_template_in_comments(text, mod_name)
             path.write_text(text, encoding="utf-8")
+    old_pkg_path = OLD_PACKAGE.replace(".", "/")
+    new_pkg_path = base_package.replace(".", "/")
+
     for root, dirs, files in os.walk(src, topdown=False):
         for name in dirs:
             old_dir = Path(root) / name
-            old_parts = old_dir.relative_to(src).parts
-            new_parts = [replacements.get(p, p) for p in old_parts]
-            if old_parts != tuple(new_parts):
-                new_dir = src.joinpath(*new_parts)
+            rel = old_dir.relative_to(src)
+            rel_str = "/".join(rel.parts)
+            new_rel_str = rel_str.replace(old_pkg_path, new_pkg_path)
+            if rel_str != new_rel_str:
+                new_dir = src / Path(new_rel_str)
                 new_dir.parent.mkdir(parents=True, exist_ok=True)
                 shutil.move(str(old_dir), str(new_dir))
                 print(f"{GREEN}Moved{RESET} {old_dir} -> {new_dir}")
@@ -193,8 +197,10 @@ def cmd_setup(args: argparse.Namespace) -> None:
     props_path = Path("gradle.properties")
     text = props_path.read_text(encoding="utf-8")
     text = re.sub(r"(?m)^version=.*$", f"version={version}", text)
+    text = re.sub(r"(?m)^group=.*$", f"group={base_package}", text)
+    text = re.sub(r"(?m)^archives_base_name=.*$", f"archives_base_name={mod_id}", text)
     props_path.write_text(text, encoding="utf-8")
-    print(f"{GREEN}Set version to {version}{RESET}")
+    print(f"{GREEN}Updated gradle.properties{RESET}")
 
     chg_path = Path("changelog.md")
     chg_lines = chg_path.read_text(encoding="utf-8").splitlines()
