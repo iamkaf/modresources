@@ -4,6 +4,9 @@ import argparse
 import json
 import re
 import shutil
+import subprocess
+import sys
+import tempfile
 from pathlib import Path
 
 from ..utils import fetch_url_text
@@ -32,6 +35,38 @@ def cmd_update(args: argparse.Namespace) -> None:
     except Exception as e:
         print(f"Failed to download update: {e}")
         return
+
+    # Verify the downloaded code by running the ping command
+    with tempfile.NamedTemporaryFile("w", delete=False, suffix=".py") as tmp:
+        tmp.write(new_code)
+        tmp_path = Path(tmp.name)
+    try:
+        result = subprocess.run(
+            [sys.executable, str(tmp_path), "ping"],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+    except subprocess.CalledProcessError:
+        print("Update verification failed. The downloaded file did not run correctly.")
+        print("If this issue persists, please report it at https://github.com/iamkaf/modresources/issues")
+        try:
+            tmp_path.unlink()
+        except OSError:
+            pass
+        return
+    if result.stdout.strip() != "pong":
+        print("Update verification failed. Unexpected ping output.")
+        print("If this issue persists, please report it at https://github.com/iamkaf/modresources/issues")
+        try:
+            tmp_path.unlink()
+        except OSError:
+            pass
+        return
+    try:
+        tmp_path.unlink()
+    except OSError:
+        pass
 
     m = re.search(r"MODDY_VERSION\s*=\s*['\"]([^'\"]+)['\"]", new_code)
     new_version = m.group(1) if m else "unknown"
