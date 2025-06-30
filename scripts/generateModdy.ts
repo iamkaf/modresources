@@ -54,13 +54,13 @@ async function main() {
   const tempDir = mkdtempSync(path.join(os.tmpdir(), 'moddy-src-'));
   const pkgDir = path.join(tempDir, 'moddy');
   cpSync(srcDir, pkgDir, { recursive: true });
-  const tempMain = path.join(pkgDir, 'main.py');
-  const devCode = readFileSync(tempMain, 'utf8');
+  const tempInit = path.join(pkgDir, '__init__.py');
+  const devCode = readFileSync(tempInit, 'utf8');
   const updatedCode = devCode.replace(
     /MODDY_VERSION\s*=\s*"DEVELOPMENT"/,
     `MODDY_VERSION = "${newVersion}"`
   );
-  writeFileSync(tempMain, updatedCode);
+  writeFileSync(tempInit, updatedCode);
   const outPath = path.join(outDir, 'moddy.py');
   execSync(`python -m zipapp ${tempDir} -o ${outPath} -m moddy.main:main`);
   rmSync(tempDir, { recursive: true, force: true });
