@@ -82,7 +82,7 @@ def cmd_update(args: argparse.Namespace) -> None:
         except OSError:
             pass
         return
-    if result.stdout.strip() != "pong":
+    if not result.stdout.startswith("pong"):
         print("Update verification failed. Unexpected ping output.")
         print("If this issue persists, please report it at https://github.com/iamkaf/modresources/issues")
         try:
