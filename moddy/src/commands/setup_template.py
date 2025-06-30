@@ -153,20 +153,23 @@ def cmd_setup(args: argparse.Namespace) -> None:
                 text = text.replace(old, new)
             text = _replace_template_in_comments(text, mod_name)
             path.write_text(text, encoding="utf-8")
+    old_package_parts = OLD_PACKAGE.split(".")
+    new_package_parts = base_package.split(".")
     for root, dirs, files in os.walk(src, topdown=False):
         for name in dirs:
             old_dir = Path(root) / name
-            old_parts = old_dir.relative_to(src).parts
-            new_parts = [replacements.get(p, p) for p in old_parts]
-            if old_parts != tuple(new_parts):
-                new_dir = src.joinpath(*new_parts)
-                new_dir.parent.mkdir(parents=True, exist_ok=True)
-                shutil.move(str(old_dir), str(new_dir))
-                print(f"{GREEN}Moved{RESET} {old_dir} -> {new_dir}")
-                parent = old_dir.parent
-                while parent != src and parent.is_dir() and not any(parent.iterdir()):
-                    parent.rmdir()
-                    parent = parent.parent
+            rel_parts = old_dir.relative_to(src).parts
+            if rel_parts[: len(old_package_parts)] != tuple(old_package_parts):
+                continue
+            new_parts = new_package_parts + list(rel_parts[len(old_package_parts) :])
+            new_dir = src.joinpath(*new_parts)
+            new_dir.parent.mkdir(parents=True, exist_ok=True)
+            shutil.move(str(old_dir), str(new_dir))
+            print(f"{GREEN}Moved{RESET} {old_dir} -> {new_dir}")
+            parent = old_dir.parent
+            while parent != src and parent.is_dir() and not any(parent.iterdir()):
+                parent.rmdir()
+                parent = parent.parent
 
     print(f"{CYAN}Renaming files...{RESET}")
     for path in Path('.').rglob('*'):
@@ -192,8 +195,12 @@ def cmd_setup(args: argparse.Namespace) -> None:
 
     props_path = Path("gradle.properties")
     text = props_path.read_text(encoding="utf-8")
-    text = re.sub(r"(?m)^version=.*$", f"version={version}", text)
-    props_path.write_text(text, encoding="utf-8")
+    new_text, count = re.subn(r"(?m)^\s*version\s*=.*$", f"version={version}", text)
+    if count == 0:
+        if not text.endswith("\n"):
+            new_text += "\n"
+        new_text += f"version={version}\n"
+    props_path.write_text(new_text, encoding="utf-8")
     print(f"{GREEN}Set version to {version}{RESET}")
 
     chg_path = Path("changelog.md")
