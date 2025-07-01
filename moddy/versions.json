@@ -1,5 +1,14 @@
 [
   {
+    "version": "0.15.0",
+    "source": "/moddy/registry/0.15.0/moddy.py",
+    "notes": [
+      "Setup command cleans example comments and removes datagen cache",
+      "Update command verifies download hashes"
+    ],
+    "hash": "a7b5e5ea97c285342dc4585e11416612cc623569896f14be3c88059f3d4b5637"
+  },
+  {
     "version": "0.14.0",
     "source": "/moddy/registry/0.14.0/moddy.py",
     "notes": [

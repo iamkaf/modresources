@@ -13,8 +13,8 @@ The `changelog` command can be used to view notes for recent Moddy releases.
 
 ## Changelog
 
-### Unreleased
-- Roadmap and brainstorming docs for Moddy
+
+### 0.15.0
 - Setup command cleans example comments and removes datagen cache
 - Update command verifies download hashes
 
