@@ -108,7 +108,7 @@ def _replace_template_in_comments(text: str, mod_name: str) -> str:
 
     def repl(match: re.Match) -> str:
         comment = match.group(0)
-        return re.sub(r"\btemplate\b", mod_name, comment, flags=re.IGNORECASE)
+        return re.sub(r"\b(template|example)\b", mod_name, comment, flags=re.IGNORECASE)
 
     return comment_regex.sub(repl, text)
 
@@ -132,6 +132,7 @@ def cmd_setup(args: argparse.Namespace) -> None:
         "TemplateFabric": f"{class_prefix}Fabric",
         "TemplateForge": f"{class_prefix}Forge",
         "TemplateNeoForge": f"{class_prefix}NeoForge",
+        "TemplateDatagen": f"{class_prefix}Datagen",
     }
 
     print(
@@ -218,6 +219,11 @@ def cmd_setup(args: argparse.Namespace) -> None:
                     if text != orig:
                         path.write_text(text, encoding="utf-8")
                         print(f"{GREEN}Updated{RESET} {path}")
+
+    generated_cache = Path("fabric/src/main/generated")
+    if generated_cache.exists():
+        shutil.rmtree(generated_cache)
+        print(f"{GREEN}Removed{RESET} {generated_cache}")
 
     props_path = Path("gradle.properties")
     text = props_path.read_text(encoding="utf-8")
