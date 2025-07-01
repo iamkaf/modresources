@@ -11,6 +11,7 @@ from pathlib import Path
 
 import io
 import zipfile
+import hashlib
 
 from ..utils import fetch_url_text, fetch_url_bytes
 from .. import AUTO_YES, MODDY_VERSION, VERSION_REGISTRY_URL, RAW_BASE_URL
@@ -62,6 +63,16 @@ def cmd_update(args: argparse.Namespace) -> None:
     except Exception as e:
         print(f"Failed to download update: {e}")
         return
+
+    expected_hash = entry.get("hash") if isinstance(entry, dict) else None
+    if expected_hash:
+        actual_hash = hashlib.sha256(new_data).hexdigest()
+        if actual_hash != expected_hash:
+            print(
+                "Update verification failed: hash mismatch."\
+                f" Expected {expected_hash}, got {actual_hash}"
+            )
+            return
 
     # Verify the downloaded code by running the ping command
     with tempfile.NamedTemporaryFile("wb", delete=False, suffix=".py") as tmp:
