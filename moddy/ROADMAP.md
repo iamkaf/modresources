@@ -4,22 +4,22 @@
 *Goal: zero‑crash baseline and rock‑solid releases.*
 
 ### Fixes
-- Improve `set_minecraft_version` API failure handling
-- Safer `setup_template` on existing projects (automatic backup + diff preview)
-- Robust `setup_template` icon character handling
-- Graceful network‑timeout handling across commands
-- Validate JSON / TOML before writing
-- Clear errors for missing dependencies
+- [ ] Improve `set_minecraft_version` API failure handling
+- [ ] Safer `setup_template` on existing projects (automatic backup + diff preview)
+- [ ] Robust `setup_template` icon character handling
+- [ ] Graceful network‑timeout handling across commands
+- [ ] Validate JSON / TOML before writing
+- [ ] Clear errors for missing dependencies
 
 ### Fundamental Improvements
-- Introduce unit + integration test harness (pytest)
-- Set up CI (GitHub Actions) with lint, type‑check (ruff + mypy), coverage gate ≥ 80 %
-- Standard logging across commands
-- Global `--dry-run`, `--verbose`, `--quiet` flags
-- Caching for version lookups to cut API traffic
-- Environment variables may supply defaults
-- Hash verification for all downloads, respect system proxy
-- Define and document Semantic Versioning policy
+- [ ] Introduce unit + integration test harness (pytest)
+- [ ] Set up CI (GitHub Actions) with lint, type‑check (ruff + mypy), coverage gate ≥ 80 %
+- [ ] Standard logging across commands
+- [ ] Global `--dry-run`, `--verbose`, `--quiet` flags
+- [ ] Caching for version lookups to cut API traffic
+- [ ] Environment variables may supply defaults
+- [ ] Hash verification for all downloads, respect system proxy
+- [ ] Define and document Semantic Versioning policy
 
 ### Success Criteria ✅
 - All commands run without traceback on Windows, Linux, macOS
