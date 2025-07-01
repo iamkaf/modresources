@@ -18,7 +18,7 @@
 - [ ] Global `--dry-run`, `--verbose`, `--quiet` flags
 - [ ] Caching for version lookups to cut API traffic
 - [ ] Environment variables may supply defaults
-- [ ] Hash verification for all downloads, respect system proxy
+- [x] Hash verification for all downloads, respect system proxy
 - [ ] Define and document Semantic Versioning policy
 
 ### Success Criteria ✅
