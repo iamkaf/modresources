@@ -8,6 +8,7 @@ import Icon from './pages/Icon';
 import Validate from './pages/Validate';
 import Othermods from './pages/Othermods';
 import Changelog from './pages/Changelog';
+import Convert from './pages/Convert';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/validate" element={<Validate />} />
         <Route path="/othermods" element={<Othermods />} />
         <Route path="/changelog" element={<Changelog />} />
+        <Route path="/convert" element={<Convert />} />
       </Routes>
     </BrowserRouter>
   );
