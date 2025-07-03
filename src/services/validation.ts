@@ -18,7 +18,7 @@ export function validateMods(): string {
     type: 'array',
     items: {
       type: 'object',
-      required: ['id', 'name', 'pages', 'dependencies'],
+      required: ['id', 'name', 'dependencies'],
       properties: {
         id: { type: 'string' },
         name: { type: 'string' },
@@ -55,6 +55,7 @@ export function validateMods(): string {
             },
           },
         },
+        readme: { type: 'string' },
         pages: {
           type: 'array',
           items: {

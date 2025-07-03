@@ -38,8 +38,11 @@ export interface ModEntry {
     support?: string;
     discord?: string;
   };
+  /** Markdown README content with {{placeholders}} */
+  readme?: string;
+  /** Legacy support for mods still using page sections */
+  pages?: PageSection[];
   dependencies: Dependency[];
-  pages: PageSection[];
 }
 
 export type ModsData = ModEntry[];

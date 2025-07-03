@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import type { ModEntry, Dependency, PageSection } from './utils/readMods';
+import { useState, useRef, useEffect } from 'react';
+import type { ModEntry, Dependency } from './utils/readMods';
 import { PlusIcon, TrashIcon, ArrowTopRightOnSquareIcon, CheckIcon } from '@heroicons/react/24/solid';
 import {
   MDXEditor,
@@ -12,6 +12,8 @@ import {
 } from '@mdxeditor/editor';
 import '@mdxeditor/editor/style.css';
 import { MinimalToolbar } from './MinimalToolbar';
+import { listTemplatesApi, fetchTemplateApi } from './api';
+import type { MDXEditorMethods } from '@mdxeditor/editor';
 
 interface Props {
   onSubmit: (mod: ModEntry) => void;
@@ -25,11 +27,17 @@ const empty: ModEntry = {
   ids: {},
   urls: {},
   dependencies: [],
-  pages: [],
+  readme: '',
 };
 
 export default function ModForm({ onSubmit, initial }: Props) {
   const [mod, setMod] = useState<ModEntry>(initial ?? empty);
+  const [templates, setTemplates] = useState<string[]>([]);
+  const editorRef = useRef<MDXEditorMethods>(null);
+
+  useEffect(() => {
+    listTemplatesApi().then(setTemplates).catch(() => {});
+  }, []);
 
   const update = <K extends keyof ModEntry>(field: K, value: ModEntry[K]) => {
     setMod({ ...mod, [field]: value });
@@ -54,21 +62,6 @@ export default function ModForm({ onSubmit, initial }: Props) {
     update('dependencies', deps);
   };
 
-  const updatePage = <K extends keyof PageSection>(idx: number, field: K, value: PageSection[K]) => {
-    const pages = [...mod.pages];
-    pages[idx] = { ...pages[idx], [field]: value };
-    update('pages', pages);
-  };
-
-  const addPage = () => {
-    update('pages', [...mod.pages, { title: '', level: 1, content: '' }]);
-  };
-
-  const removePage = (idx: number) => {
-    const pages = [...mod.pages];
-    pages.splice(idx, 1);
-    update('pages', pages);
-  };
 
   return (
     <form
@@ -197,45 +190,44 @@ export default function ModForm({ onSubmit, initial }: Props) {
         ))}
       </fieldset>
       <fieldset className="fieldset space-y-2 border border-base-300 p-4 rounded-md">
-        <legend className="fieldset-legend font-bold flex justify-between items-center">
-          <span>Pages</span>
-          <button type="button" className="btn btn-xs" onClick={addPage}>
-            <PlusIcon className="w-4 h-4" />
-          </button>
-        </legend>
-        {mod.pages.map((p, i) => (
-          <div key={i} className="p-2 rounded space-y-2">
-            <input
-              className="input w-full"
-              placeholder="Title"
-              value={p.title}
-              onChange={(e) => updatePage(i, 'title', e.target.value)}
-            />
-            <input
-              className="input w-full"
-              type="number"
-              placeholder="Level"
-              value={p.level}
-              onChange={(e) => updatePage(i, 'level', parseInt(e.target.value))}
-            />
-            <MDXEditor
-              className="dark-editor"
-              markdown={p.content}
-              onChange={(v) => updatePage(i, 'content', v)}
-              plugins={[
-                headingsPlugin(),
-                listsPlugin(),
-                quotePlugin(),
-                linkPlugin(),
-                markdownShortcutPlugin(),
-                toolbarPlugin({ toolbarContents: () => <MinimalToolbar /> }),
-              ]}
-            />
-            <button type="button" className="btn btn-error btn-sm" onClick={() => removePage(i)}>
-              <TrashIcon className="w-4 h-4" />
-            </button>
-          </div>
-        ))}
+        <legend className="fieldset-legend font-bold">README</legend>
+        <p className="text-sm text-neutral">
+          Use <code>{'{{name}}'}</code>, <code>{'{{id}}'}</code> or any other field from the mod
+          entry. Templates can be inserted below.
+        </p>
+        {templates.length > 0 && (
+          <select
+            className="select w-full"
+            onChange={async (e) => {
+              const name = e.target.value;
+              if (!name) return;
+              const text = await fetchTemplateApi(name);
+              editorRef.current?.insertMarkdown(text + '\n');
+              e.target.selectedIndex = 0;
+            }}
+          >
+            <option value="">Insert template...</option>
+            {templates.map((t) => (
+              <option key={t} value={t}>
+                {t}
+              </option>
+            ))}
+          </select>
+        )}
+        <MDXEditor
+          ref={editorRef}
+          className="dark-editor"
+          markdown={mod.readme ?? ''}
+          onChange={(v) => update('readme', v)}
+          plugins={[
+            headingsPlugin(),
+            listsPlugin(),
+            quotePlugin(),
+            linkPlugin(),
+            markdownShortcutPlugin(),
+            toolbarPlugin({ toolbarContents: () => <MinimalToolbar /> }),
+          ]}
+        />
       </fieldset>
       <button className="btn btn-primary" type="submit">
         <CheckIcon className="w-4 h-4" />

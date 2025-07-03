@@ -13,6 +13,8 @@ vi.mock('../api', () => ({
   validateMods: vi.fn(),
   generateOtherMods: vi.fn(),
   listImagesApi: () => Promise.resolve({}),
+  listTemplatesApi: () => Promise.resolve([]),
+  fetchTemplateApi: () => Promise.resolve(''),
 }));
 
 test('renders navbar', () => {
