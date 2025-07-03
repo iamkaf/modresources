@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { PencilSquareIcon, XMarkIcon, TrashIcon } from '@heroicons/react/24/solid';
+import { PencilSquareIcon, XMarkIcon, TrashIcon, CubeIcon, FireIcon, CommandLineIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 import ModForm from '../ModForm';
 import Layout from '../Layout';
 import type { ModEntry } from '../utils/readMods';
@@ -45,6 +45,39 @@ export default function Mods() {
                 <span>{m.name}</span>
                 <span className="text-sm text-neutral">{downloads[m.id]?.toLocaleString() ?? '-'}</span>
                 <div className="flex gap-2">
+                  {m.urls?.modrinth && (
+                    <a
+                      href={m.urls.modrinth}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-info btn-sm"
+                      aria-label="Modrinth"
+                    >
+                      <CubeIcon className="w-4 h-4" />
+                    </a>
+                  )}
+                  {m.urls?.curseforge && (
+                    <a
+                      href={m.urls.curseforge}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-warning btn-sm"
+                      aria-label="CurseForge"
+                    >
+                      <FireIcon className="w-4 h-4" />
+                    </a>
+                  )}
+                  {m.urls?.source && (
+                    <a
+                      href={m.urls.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-neutral btn-sm"
+                      aria-label="GitHub"
+                    >
+                      <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                    </a>
+                  )}
                   <button className="btn btn-accent btn-sm" onClick={() => setEditing(m)}>
                     <PencilSquareIcon className="w-4 h-4" />
                   </button>
