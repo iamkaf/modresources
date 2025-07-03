@@ -8,6 +8,7 @@ import struct
 import zlib
 from pathlib import Path
 
+from ..utils import logger
 from .. import AUTO_YES
 
 RESET = "\033[0m"
@@ -135,14 +136,14 @@ def cmd_setup(args: argparse.Namespace) -> None:
         "TemplateDatagen": f"{class_prefix}Datagen",
     }
 
-    print(
+    logger.info(
         "This will update package names, identifiers and the changelog in this project."
     )
     if not AUTO_YES and input("Proceed? [y/N] ").lower() != "y":
-        print("Aborted")
+        logger.info("Aborted")
         return
 
-    print(f"{CYAN}Updating files...{RESET}")
+    logger.info(f"{CYAN}Updating files...{RESET}")
     pkg_roots = [
         Path("common/src/main/java"),
         Path("fabric/src/main/java"),
@@ -173,13 +174,13 @@ def cmd_setup(args: argparse.Namespace) -> None:
             new_pkg_dir = src / new_pkg_path
             new_pkg_dir.parent.mkdir(parents=True, exist_ok=True)
             shutil.move(str(old_pkg_dir), str(new_pkg_dir))
-            print(f"{GREEN}Moved{RESET} {old_pkg_dir} -> {new_pkg_dir}")
+            logger.info(f"{GREEN}Moved{RESET} {old_pkg_dir} -> {new_pkg_dir}")
             parent = old_pkg_dir.parent
             while parent != src and parent.is_dir() and not any(parent.iterdir()):
                 parent.rmdir()
                 parent = parent.parent
 
-    print(f"{CYAN}Renaming files...{RESET}")
+    logger.info(f"{CYAN}Renaming files...{RESET}")
     for path in Path('.').rglob('*'):
         parts = path.parts
         if '.git' in parts:
@@ -199,7 +200,7 @@ def cmd_setup(args: argparse.Namespace) -> None:
             if new_name != path.name:
                 new_path = path.with_name(new_name)
                 path.rename(new_path)
-                print(f"{GREEN}Renamed{RESET} {path} -> {new_path}")
+                logger.info(f"{GREEN}Renamed{RESET} {path} -> {new_path}")
                 path = new_path
 
             # update contents for json, toml and service descriptor files
@@ -218,12 +219,12 @@ def cmd_setup(args: argparse.Namespace) -> None:
                     text = _replace_template_in_comments(text, mod_name)
                     if text != orig:
                         path.write_text(text, encoding="utf-8")
-                        print(f"{GREEN}Updated{RESET} {path}")
+                        logger.info(f"{GREEN}Updated{RESET} {path}")
 
     generated_cache = Path("fabric/src/main/generated")
     if generated_cache.exists():
         shutil.rmtree(generated_cache)
-        print(f"{GREEN}Removed{RESET} {generated_cache}")
+        logger.info(f"{GREEN}Removed{RESET} {generated_cache}")
 
     props_path = Path("gradle.properties")
     text = props_path.read_text(encoding="utf-8")
@@ -231,7 +232,7 @@ def cmd_setup(args: argparse.Namespace) -> None:
     text = re.sub(r"(?m)^group=.*$", f"group={base_package}", text)
     text = re.sub(r"(?m)^archives_base_name=.*$", f"archives_base_name={mod_id}", text)
     props_path.write_text(text, encoding="utf-8")
-    print(f"{GREEN}Updated gradle.properties{RESET}")
+    logger.info(f"{GREEN}Updated gradle.properties{RESET}")
 
     chg_path = Path("changelog.md")
     chg_lines = chg_path.read_text(encoding="utf-8").splitlines()
@@ -250,12 +251,12 @@ def cmd_setup(args: argparse.Namespace) -> None:
         idx = len(chg_lines)
     chg_lines[idx:idx] = entry
     chg_path.write_text("\n".join(chg_lines) + "\n", encoding="utf-8")
-    print(f"{GREEN}Updated changelog{RESET}")
+    logger.info(f"{GREEN}Updated changelog{RESET}")
 
     if not icon_path.exists():
         _create_icon(mod_name[0], icon_path)
-        print(f"{GREEN}Created {icon_path}{RESET}")
+        logger.info(f"{GREEN}Created {icon_path}{RESET}")
     else:
-        print(f"{CYAN}Skipped icon generation{RESET}")
+        logger.info(f"{CYAN}Skipped icon generation{RESET}")
 
-    print(f"{GREEN}Template initialized.{RESET}")
+    logger.info(f"{GREEN}Template initialized.{RESET}")

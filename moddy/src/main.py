@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+import logging
 from pathlib import Path
 
 from .commands import (
@@ -60,6 +61,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv=None) -> None:
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
     parser = build_parser()
     ns, _ = parser.parse_known_args(argv or sys.argv[1:])
 

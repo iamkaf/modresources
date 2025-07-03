@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 
-from ..utils import open_url
+from ..utils import open_url, logger
 
 
 DOC_URLS = {
@@ -17,4 +17,5 @@ DOC_URLS = {
 def cmd_docs(args: argparse.Namespace) -> None:
     """Open the selected documentation page."""
     url = DOC_URLS[args.target]
+    logger.info(f"Opening {url}")
     open_url(url)
