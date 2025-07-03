@@ -9,6 +9,7 @@ import {
   CheckCircleIcon,
   PuzzlePieceIcon,
   DocumentTextIcon,
+  FilmIcon,
   SwatchIcon,
   ChevronDownIcon,
   Cog6ToothIcon,
@@ -23,6 +24,7 @@ const pages = [
   { path: '/validate', label: 'validate', icon: CheckCircleIcon },
   { path: '/othermods', label: 'othermods', icon: PuzzlePieceIcon },
   { path: '/changelog', label: 'changelog', icon: DocumentTextIcon },
+  { path: '/convert', label: 'convert', icon: FilmIcon },
 ];
 
 const themes = [

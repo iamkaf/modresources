@@ -6,3 +6,4 @@ export * from './upload';
 export * from './images';
 export * from './validation';
 export * from './changelog';
+export * from './convert';

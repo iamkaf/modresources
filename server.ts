@@ -10,10 +10,15 @@ import {
   generateOtherMods,
   fetchChangelog,
 } from './src/services';
+import multer from 'multer';
+import os from 'os';
+import fs from 'fs';
+import { convertMovToGif } from './src/services/convert';
 
 const app = express();
 app.use(cors({ origin: '*' }));
 app.use(express.json());
+const upload = multer({ dest: os.tmpdir() });
 
 const manager = new ModManager();
 
@@ -118,6 +123,23 @@ app.get('/api/changelog/:loader', async (req, res) => {
     res.type('text').send(text);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/convert', upload.single('file'), async (req, res) => {
+  const file = req.file;
+  if (!file) return res.status(400).json({ error: 'file is required' });
+  const fps = parseInt(req.body.fps) || 30;
+  const width = parseInt(req.body.width) || 640;
+  try {
+    const data = await convertMovToGif(file.path, { fps, width });
+    res.setHeader('Content-Type', 'image/gif');
+    res.setHeader('Content-Disposition', 'attachment; filename="output.gif"');
+    res.end(data);
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  } finally {
+    fs.unlink(file.path, () => {});
   }
 });
 
