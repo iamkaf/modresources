@@ -7,7 +7,7 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from ..utils import fetch_url_text
+from ..utils import fetch_url_text, logger
 from .. import AUTO_YES
 
 
@@ -209,28 +209,30 @@ def _apply_versions(props_path: Path, mc: str, versions: dict) -> None:
 
 def cmd_set_minecraft_version(args: argparse.Namespace) -> None:
     mc = args.version
-    print(f"Fetching dependency versions for Minecraft {mc}.")
+    logger.info(f"Fetching dependency versions for Minecraft {mc}.")
     if not AUTO_YES and input("Proceed? [y/N] ").lower() != "y":
-        print("Aborted")
+        logger.info("Aborted")
         return
 
     props_text = Path("gradle.properties").read_text(encoding="utf-8")
     versions = _collect_versions(mc, include_amber="amber_version" in props_text)
-    print("Fetched versions:")
+    logger.info("Fetched versions:")
     for k, v in versions.items():
-        print(f"  {k}: {v}")
+        logger.info(f"  {k}: {v}")
     missing = [k for k, v in versions.items() if v is None]
     if missing:
-        print("\nFailed to determine:", ", ".join(missing))
-        print("You can look them up manually at:")
-        print("  https://projects.neoforged.net/neoforged/neoform")
-        print("  https://projects.neoforged.net/neoforged/neoforge")
-        print("  https://fabricmc.net/develop/")
-        print("  https://files.minecraftforge.net/net/minecraftforge/forge/")
-        print("  https://parchmentmc.org/docs/getting-started#choose-a-version")
+        logger.warning("Failed to determine: %s", ", ".join(missing))
+        logger.info("You can look them up manually at:")
+        logger.info("  https://projects.neoforged.net/neoforged/neoform")
+        logger.info("  https://projects.neoforged.net/neoforged/neoforge")
+        logger.info("  https://fabricmc.net/develop/")
+        logger.info("  https://files.minecraftforge.net/net/minecraftforge/forge/")
+        logger.info(
+            "  https://parchmentmc.org/docs/getting-started#choose-a-version"
+        )
     answer = "y" if AUTO_YES else input("\nApply these versions to gradle.properties? [y/N] ")
     if answer.lower().startswith("y"):
         _apply_versions(Path("gradle.properties"), mc, versions)
-        print("Updated gradle.properties")
+        logger.info("Updated gradle.properties")
     else:
-        print("No changes made")
+        logger.info("No changes made")

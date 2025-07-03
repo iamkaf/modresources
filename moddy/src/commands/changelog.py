@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 
-from ..utils import fetch_url_text
+from ..utils import fetch_url_text, logger
 from .. import VERSION_REGISTRY_URL
 
 
@@ -12,13 +12,13 @@ def cmd_changelog(args: argparse.Namespace) -> None:
     try:
         registry = json.loads(fetch_url_text(VERSION_REGISTRY_URL))
     except Exception as e:
-        print(f"Failed to fetch changelog: {e}")
+        logger.error(f"Failed to fetch changelog: {e}")
         return
 
     for entry in registry[:3]:
         version = entry.get("version", "unknown")
-        print(f"Version {version}:")
+        logger.info(f"Version {version}:")
         notes = entry.get("notes", [])
         for note in notes:
-            print(f" - {note}")
-        print()
+            logger.info(f" - {note}")
+        logger.info("")

@@ -4,7 +4,7 @@ import argparse
 import re
 from pathlib import Path
 
-from ..utils import parse_group
+from ..utils import parse_group, logger
 from .. import AUTO_YES
 
 
@@ -38,28 +38,28 @@ def cmd_add_service(args: argparse.Namespace) -> None:
         neo_meta: f"{group}.platform.NeoForge{name}\n",
     }
 
-    print(f"This will create a new service called '{interface_name}'.")
-    print("The following files will be created:\n")
+    logger.info(f"This will create a new service called '{interface_name}'.")
+    logger.info("The following files will be created:\n")
     for path, content in files.items():
-        print(f"--- {path}")
-        print(content.rstrip())
-        print()
+        logger.info(f"--- {path}")
+        logger.info(content.rstrip())
+        logger.info("")
 
     existing = [str(p) for p in files if p.exists()]
     if existing:
-        print("The following files already exist and will not be overwritten:")
+        logger.warning("The following files already exist and will not be overwritten:")
         for p in existing:
-            print(f"  {p}")
+            logger.warning(f"  {p}")
         return
 
     if not AUTO_YES and input("Proceed? [y/N] ").lower() != "y":
-        print("Aborted")
+        logger.info("Aborted")
         return
 
     for path, content in files.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8")
-        print(f"Created {path}")
+        logger.info(f"Created {path}")
 
     services_path = Path("common/src/main/java") / pkg_path / "platform" / "Services.java"
     if services_path.exists():
@@ -81,6 +81,6 @@ def cmd_add_service(args: argparse.Namespace) -> None:
             else:
                 text += "\n" + field_line + "\n"
         services_path.write_text(text, encoding="utf-8")
-        print(f"Updated {services_path}")
+        logger.info(f"Updated {services_path}")
     else:
-        print(f"Services class not found at {services_path}; skipping update.")
+        logger.info(f"Services class not found at {services_path}; skipping update.")

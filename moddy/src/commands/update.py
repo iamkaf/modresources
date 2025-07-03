@@ -13,28 +13,28 @@ import io
 import zipfile
 import hashlib
 
-from ..utils import fetch_url_text, fetch_url_bytes
+from ..utils import fetch_url_text, fetch_url_bytes, logger
 from .. import AUTO_YES, MODDY_VERSION, VERSION_REGISTRY_URL, RAW_BASE_URL
 
 
 def cmd_update(args: argparse.Namespace) -> None:
     """Download a specific Moddy version and replace this file."""
-    print(
+    logger.warning(
         "! ! ! WARNING ! ! !: Executing this command will fetch Python "
         "code from the internet and run it on your computer."
     )
-    print(
+    logger.warning(
         "Only continue if you trust the source. The update is pulled from the "
         "official Moddy repository: https://github.com/iamkaf/modresources"
     )
-    print(
+    logger.info(
         "You can inspect the downloaded file to learn how the update works "
         "before proceeding."
     )
     try:
         registry = json.loads(fetch_url_text(VERSION_REGISTRY_URL))
     except Exception as e:
-        print(f"Failed to check for updates: {e}")
+        logger.error(f"Failed to check for updates: {e}")
         return
 
     target_version = getattr(args, "version", None)
@@ -45,30 +45,30 @@ def cmd_update(args: argparse.Namespace) -> None:
                 entry = item
                 break
         if not entry:
-            print(f"Version {target_version} not found in registry")
+            logger.error(f"Version {target_version} not found in registry")
             return
     else:
         entry = registry[0]
 
     update_url = RAW_BASE_URL + entry.get("source", "")
 
-    print(f"Registry: {VERSION_REGISTRY_URL}")
-    print(f"Source: {update_url}")
+    logger.info(f"Registry: {VERSION_REGISTRY_URL}")
+    logger.info(f"Source: {update_url}")
     if not AUTO_YES and input("Are you sure you want to continue? [y/N] ").lower() != "y":
-        print("Aborted")
+        logger.info("Aborted")
         return
 
     try:
         new_data = fetch_url_bytes(update_url)
     except Exception as e:
-        print(f"Failed to download update: {e}")
+        logger.error(f"Failed to download update: {e}")
         return
 
     expected_hash = entry.get("hash") if isinstance(entry, dict) else None
     if expected_hash:
         actual_hash = hashlib.sha256(new_data).hexdigest()
         if actual_hash != expected_hash:
-            print(
+            logger.error(
                 "Update verification failed: hash mismatch."\
                 f" Expected {expected_hash}, got {actual_hash}"
             )
@@ -86,16 +86,16 @@ def cmd_update(args: argparse.Namespace) -> None:
             check=True,
         )
     except subprocess.CalledProcessError:
-        print("Update verification failed. The downloaded file did not run correctly.")
-        print("If this issue persists, please report it at https://github.com/iamkaf/modresources/issues")
+        logger.error("Update verification failed. The downloaded file did not run correctly.")
+        logger.error("If this issue persists, please report it at https://github.com/iamkaf/modresources/issues")
         try:
             tmp_path.unlink()
         except OSError:
             pass
         return
     if not result.stdout.startswith("pong"):
-        print("Update verification failed. Unexpected ping output.")
-        print("If this issue persists, please report it at https://github.com/iamkaf/modresources/issues")
+        logger.error("Update verification failed. Unexpected ping output.")
+        logger.error("If this issue persists, please report it at https://github.com/iamkaf/modresources/issues")
         try:
             tmp_path.unlink()
         except OSError:
@@ -118,7 +118,7 @@ def cmd_update(args: argparse.Namespace) -> None:
     m = re.search(r"MODDY_VERSION\s*=\s*['\"]([^'\"]+)['\"]", init_text)
     new_version = m.group(1) if m else "unknown"
     if new_version == MODDY_VERSION:
-        print("Moddy is already up to date.")
+        logger.info("Moddy is already up to date.")
         return
 
     # Determine the path of the script that launched Moddy. When running from
@@ -137,12 +137,12 @@ def cmd_update(args: argparse.Namespace) -> None:
         shutil.copy2(script_path, backup)
         script_path.write_bytes(new_data)
     except Exception as e:
-        print(f"Update failed: {e}")
+        logger.error(f"Update failed: {e}")
         return
-    print(f"Updated Moddy from {MODDY_VERSION} to {new_version}")
-    print(f"A backup of the previous version was saved to {backup}")
+    logger.info(f"Updated Moddy from {MODDY_VERSION} to {new_version}")
+    logger.info(f"A backup of the previous version was saved to {backup}")
     notes = entry.get("notes", []) if isinstance(entry, dict) else []
     if notes:
-        print(f"Changelog for {new_version}:")
+        logger.info(f"Changelog for {new_version}:")
         for n in notes:
-            print(f" - {n}")
+            logger.info(f" - {n}")

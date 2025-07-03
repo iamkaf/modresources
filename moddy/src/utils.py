@@ -4,6 +4,9 @@ import subprocess
 import os
 import re
 import urllib.request
+import logging
+
+logger = logging.getLogger("moddy")
 
 
 def parse_group(props_path: Path) -> str:
@@ -47,3 +50,13 @@ def fetch_url_bytes(url: str, headers=None) -> bytes:
 def fetch_url_text(url: str, headers=None) -> str:
     """Return the decoded text from *url* assuming UTF-8."""
     return fetch_url_bytes(url, headers).decode("utf-8")
+
+
+__all__ = [
+    "logger",
+    "parse_group",
+    "open_dir",
+    "open_url",
+    "fetch_url_bytes",
+    "fetch_url_text",
+]
