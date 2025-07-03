@@ -14,7 +14,7 @@
 ### Fundamental Improvements
 - [ ] Introduce unit + integration test harness (pytest)
 - [ ] Set up CI (GitHub Actions) with lint, type‑check (ruff + mypy), coverage gate ≥ 80 %
-- [ ] Standard logging across commands
+- [x] Standard logging across commands
 - [ ] Global `--dry-run`, `--verbose`, `--quiet` flags
 - [ ] Caching for version lookups to cut API traffic
 - [ ] Environment variables may supply defaults
