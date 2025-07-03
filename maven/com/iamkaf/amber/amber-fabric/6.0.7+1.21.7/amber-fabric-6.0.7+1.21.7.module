@@ -1,0 +1,211 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.amber",
+    "module": "amber-fabric",
+    "version": "6.0.7+1.21.7",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "amber-fabric-6.0.7+1.21.7.jar",
+          "url": "amber-fabric-6.0.7+1.21.7.jar",
+          "size": 157041,
+          "sha512": "c4a1cb1daed575c1f6212dc8aeda304e08a7171eeac78cef195dd1cfd9ba7eb237781c61fa09f60ddca7f58e23d0a8c1a5209485846f9c6f241a57314677fef1",
+          "sha256": "4a460235a652a943a3156de138cb69d95b388e85837249fbf7c2ae403d7b8957",
+          "sha1": "2197e2f913502991b898bbd5421fae487d1a727b",
+          "md5": "0999215f18dac67f4f34460d11ebb262"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-fabric",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "fabric",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-fabric-1.21.7",
+          "version": "6.0.7+1.21.7"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.14"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.128.2+1.21.7"
+          }
+        },
+        {
+          "group": "com.terraformersmc",
+          "module": "modmenu",
+          "version": {
+            "requires": "15.0.0-beta.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "amber-fabric-6.0.7+1.21.7.jar",
+          "url": "amber-fabric-6.0.7+1.21.7.jar",
+          "size": 157041,
+          "sha512": "c4a1cb1daed575c1f6212dc8aeda304e08a7171eeac78cef195dd1cfd9ba7eb237781c61fa09f60ddca7f58e23d0a8c1a5209485846f9c6f241a57314677fef1",
+          "sha256": "4a460235a652a943a3156de138cb69d95b388e85837249fbf7c2ae403d7b8957",
+          "sha1": "2197e2f913502991b898bbd5421fae487d1a727b",
+          "md5": "0999215f18dac67f4f34460d11ebb262"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-fabric",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "fabric",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-fabric-1.21.7",
+          "version": "6.0.7+1.21.7"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-fabric-6.0.7+1.21.7-sources.jar",
+          "url": "amber-fabric-6.0.7+1.21.7-sources.jar",
+          "size": 118635,
+          "sha512": "3d9e8cec44996a96938881b339501ba36665f70275004b7e8a2c17c46adf53a6be0be6aa3070f8720e63c1aa37eefef90d6f02a2cb3aa052a7b340e8ff0299a1",
+          "sha256": "fe315b7151b72fff2bb368a99f958e3f13981da7ec5a13495c5d770024625810",
+          "sha1": "285305ddbc40fc72c4f55f26b8b9a197fe365eea",
+          "md5": "753fdca047cf08399f451762143c724c"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-fabric",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "fabric",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-fabric-1.21.7",
+          "version": "6.0.7+1.21.7"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-fabric-6.0.7+1.21.7-javadoc.jar",
+          "url": "amber-fabric-6.0.7+1.21.7-javadoc.jar",
+          "size": 393298,
+          "sha512": "853dc09c4ea659c70c62a502023840adf5361555e618575ab011109e3ed0eba932ba2865eecaba6be5d0111b3da6cba9645964fcffa6a01a7c563d1607b8ae6d",
+          "sha256": "c3f063061ff29ad39fd5404cc4616c2b03c5b222a3bc2e16de154991b5d6fdb6",
+          "sha1": "33a9e5ea38b00e85e2ae14d2e17b90635d9da387",
+          "md5": "0376aa96c6a5d34c09b3afdcaae275b5"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-fabric",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "fabric",
+          "version": "6.0.7+1.21.7"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-fabric-1.21.7",
+          "version": "6.0.7+1.21.7"
+        }
+      ]
+    }
+  ]
+}
