@@ -54,5 +54,6 @@ While the UI is running, the Express server exposes a few helper endpoints:
 - [Fabric development guide](https://docs.fabricmc.net/develop/)
 - [NeoForged getting started](https://docs.neoforged.net/docs/gettingstarted/)
 - [Forge modding for 1.21](https://docs.minecraftforge.net/en/1.21.x/)
+- [Porting Primers](https://github.com/neoforged/.github/tree/main/primers)
 
 Enjoy the mods! 🚀
