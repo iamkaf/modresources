@@ -4,7 +4,7 @@ import argparse
 import re
 from pathlib import Path
 
-from ..utils import open_url
+from ..utils import open_url, logger
 
 
 def cmd_open(args: argparse.Namespace) -> None:
@@ -28,4 +28,5 @@ def cmd_open(args: argparse.Namespace) -> None:
         url = f"https://modrinth.com/mod/{mod_id}"
     else:  # github
         url = f"https://github.com/{author}/{mod_id}"
+    logger.info(f"Opening {url}")
     open_url(url)

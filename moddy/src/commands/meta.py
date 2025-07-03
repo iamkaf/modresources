@@ -3,24 +3,24 @@ from __future__ import annotations
 import argparse
 import json
 
-from ..utils import fetch_url_text
+from ..utils import fetch_url_text, logger
 from .. import MODDY_VERSION, VERSION_REGISTRY_URL
 
 
 def cmd_help(args: argparse.Namespace, parser, commands) -> None:
     """Show available commands."""
     parser.print_help()
-    print("\nCommands:")
+    logger.info("\nCommands:")
     for name, func in commands.items():
         if func is cmd_help:
             continue
         doc = (func.__doc__ or "").strip().splitlines()[0]
-        print(f"  {name:<22} {doc}")
+        logger.info(f"  {name:<22} {doc}")
 
 
 def cmd_version(args: argparse.Namespace) -> None:
     """Print Moddy's version."""
-    print(MODDY_VERSION)
+    logger.info(MODDY_VERSION)
 
 
 def check_for_update() -> None:
@@ -32,5 +32,7 @@ def check_for_update() -> None:
     if latest_version and latest_version != MODDY_VERSION:
         YELLOW = "\033[33m"
         RESET = "\033[0m"
-        print(f"{YELLOW}A new Moddy version ({MODDY_VERSION} -> {latest_version}) is available.{RESET}")
-        print("Run 'moddy update' to update.")
+        logger.warning(
+            f"{YELLOW}A new Moddy version ({MODDY_VERSION} -> {latest_version}) is available.{RESET}"
+        )
+        logger.warning("Run 'moddy update' to update.")
