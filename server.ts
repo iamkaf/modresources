@@ -9,6 +9,8 @@ import {
   validateMods as validateModsService,
   generateOtherMods,
   fetchChangelog,
+  listTemplates,
+  readTemplate,
 } from './src/services';
 import multer from 'multer';
 import os from 'os';
@@ -66,6 +68,19 @@ app.get('/api/images', (req, res) => {
     res.json(data);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/api/templates', (_req, res) => {
+  res.json(listTemplates());
+});
+
+app.get('/api/templates/:name', (req, res) => {
+  try {
+    const text = readTemplate(req.params.name);
+    res.type('text').send(text);
+  } catch (err: any) {
+    res.status(404).json({ error: err.message });
   }
 });
 

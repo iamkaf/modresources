@@ -8,6 +8,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import chalk from 'chalk';
+import Handlebars from 'handlebars';
 import { readMods } from '../utils/readMods';
 import type { ModEntry } from '../utils/readMods';
 
@@ -108,7 +109,13 @@ export function generatePagesV2(): void {
     '[![Discord](https://img.shields.io/discord/1207469438719492176?style=for-the-badge&logo=discord&label=DISCORD&color=%235865F2)](https://discord.gg/HV5WgTksaB) ' +
     '[![KoFi](https://img.shields.io/badge/KoFi-iamkaf?style=for-the-badge&logo=kofi&logoColor=%2330d1e3&label=Support%20Me&color=%2330d1e3)](https://ko-fi.com/iamkaffe)';
 
-  const generateContent = (mod: ModEntry): string => {
+  const applyReplacements = (template: string, mod: ModEntry): string => {
+    const compiled = Handlebars.compile(template, { noEscape: true });
+    return compiled(mod);
+  };
+
+  const generateFromPages = (mod: ModEntry): string => {
+    if (!mod.pages) return '';
     let result = '';
     for (let i = 0; i < mod.pages.length; i++) {
       const section = mod.pages[i];
@@ -136,9 +143,16 @@ export function generatePagesV2(): void {
   };
 
   for (const mod of modsData) {
-    if (!mod.pages || mod.pages.length === 0) continue;
-    const content = generateContent(mod);
-    fs.mkdirSync(path.dirname(outputPath(mod)), { recursive: true });
+    const outputDirPath = path.dirname(outputPath(mod));
+    fs.mkdirSync(outputDirPath, { recursive: true });
+    let content = '';
+    if (mod.readme) {
+      content = BADGES + '\n\n' + applyReplacements(mod.readme, mod);
+    } else if (mod.pages && mod.pages.length > 0) {
+      content = generateFromPages(mod);
+    } else {
+      continue;
+    }
     fs.writeFileSync(outputPath(mod), content, 'utf-8');
   }
   console.log(chalk.bold.green('\nAll mod pages generated successfully (v2)!'));
@@ -155,4 +169,18 @@ export function generateOtherMods(): void {
   const outPath = path.join(ROOT, 'pages', 'common', 'othermods.md');
   fs.writeFileSync(outPath, lines.join('\n'), 'utf-8');
   console.log(chalk.green(`✔ Generated ${outPath}`));
+}
+
+export function listTemplates(): string[] {
+  const commonDir = path.join(ROOT, 'pages', 'common');
+  return fs
+    .readdirSync(commonDir)
+    .filter((f) => f.endsWith('.md'))
+    .map((f) => f.replace(/\.md$/, ''));
+}
+
+export function readTemplate(name: string): string {
+  const file = path.join(ROOT, 'pages', 'common', `${name}.md`);
+  if (!fs.existsSync(file)) throw new Error(`Template ${name} not found`);
+  return fs.readFileSync(file, 'utf-8');
 }
