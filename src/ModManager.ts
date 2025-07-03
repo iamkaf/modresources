@@ -10,7 +10,7 @@
  *   manager.add({
  *     id: 'my-mod',
  *     name: 'My Mod',
- *     pages: [{ title: 'header', level: 1, content: 'My description' }]
+ *     readme: '# My Mod\nThis is my mod.'
  *   });
  */
 import fs from 'fs';

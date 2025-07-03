@@ -16,6 +16,11 @@ All helper utilities are now exposed through a small Express API that powers the
 - `docs` 📚 - Extra markdown notes.
 - `scripts` 📜 - Standalone helper scripts.
 - `src/utils` 🧩 - Reusable TypeScript utilities.
+- Each mod entry now stores a full `readme` string compiled with
+  [Handlebars](https://handlebarsjs.com). Use any field from the mod entry in
+  `{{doubleCurlyBraces}}`.
+- Common templates live under `pages/common` and can be inserted in the UI
+  editor.
 
 ## Scripts
 
