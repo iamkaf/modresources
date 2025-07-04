@@ -14,7 +14,8 @@ def cmd_help(args: argparse.Namespace, parser, commands) -> None:
     for name, func in commands.items():
         if func is cmd_help:
             continue
-        doc = (func.__doc__ or "").strip().splitlines()[0]
+        lines = (func.__doc__ or "").strip().splitlines()
+        doc = lines[0] if lines else ""
         logger.info(f"  {name:<22} {doc}")
 
 
