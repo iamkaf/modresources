@@ -72,8 +72,10 @@ def cmd_add_service(args: argparse.Namespace) -> None:
                 text = text[:insert_pos] + import_line + "\n" + text[insert_pos:]
             else:
                 text = import_line + "\n" + text
-        field_name = name[:1].lower() + name[1:]
-        field_line = f"    public static {interface_name} {field_name} = load({interface_name}.class);"
+        const_name = re.sub(r"(?<!^)(?=[A-Z])", "_", name).upper()
+        field_line = (
+            f"    public static final {interface_name} {const_name} = load({interface_name}.class);"
+        )
         if field_line not in text:
             idx = text.rfind("}")
             if idx != -1:

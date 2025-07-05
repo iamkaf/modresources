@@ -73,7 +73,7 @@ def _get_parchment_version(mc: str):
     while current:
         version = _fetch_parchment_version(current)
         if version:
-            return version
+            return current, version
         parts = current.split(".")
         if len(parts) < 3 or not parts[2].isdigit():
             break
@@ -82,7 +82,7 @@ def _get_parchment_version(mc: str):
             break
         parts[2] = str(patch)
         current = ".".join(parts)
-    return None
+    return None, None
 
 
 def _get_fabric_loader_version(mc: str):
@@ -146,12 +146,9 @@ def _get_forge_version(mc: str):
 
 
 def _collect_versions(mc: str, include_amber: bool = False) -> dict:
-    parchment_version = _get_parchment_version(mc)
-    parchment_mc = mc
-    if parchment_version:
-        m = re.match(r"([0-9]+(?:\.[0-9]+){1,2})-", parchment_version)
-        if m:
-            parchment_mc = m.group(1)
+    parchment_mc, parchment_version = _get_parchment_version(mc)
+    if not parchment_mc:
+        parchment_mc = mc
 
     versions = {
         "neoform_version": _get_neoform_version(mc),
@@ -197,7 +194,7 @@ def _apply_versions(props_path: Path, mc: str, versions: dict) -> None:
     for key, value in replacements.items():
         if not value:
             continue
-        pattern = rf"(?m)^{re.escape(key)}=.*$"
+        pattern = rf"(?m)^{re.escape(key)}\s*=.*$"
         if re.search(pattern, text):
             text = re.sub(pattern, f"{key}={value}", text)
         else:
