@@ -31,6 +31,7 @@ All helper utilities are now exposed through a small Express API that powers the
 - `npm run typecheck` 📝 - Type-check the React code using `tsconfig.react.json`.
 - `npm run generate:modrinth` 🛠️ - Build a fully-typed Modrinth API client under `src/modrinth`.
 - `npm run generate:moddy` 🛠️ - Creates a new Moddy artifact and adds it to the registry. Pass `--dry-run` to test without writing files.
+- `npm run generate:fabric-event-report` 📚 - Generate AI-powered documentation for Fabric API events. Supports `-- --limit <number>` to process a specific number of events. Automatically detects WSL environments and unloads models to free VRAM when complete. Outputs timestamped markdown files to the `docs/` directory.
 
 ## Starting the UI
 
