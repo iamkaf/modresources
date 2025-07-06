@@ -1,6 +1,7 @@
 # Fabric API – Event Handbook
 
-Generated 2025-07-05T04:18:55.756Z using qwen3.
+Generated 2025-07-06T05:33:04.618Z using qwen3.
+Processed 166 out of 166 total events.
 
 ## Table of Contents
 - [Client](#client)
@@ -2448,7 +2449,7 @@ LootTableEvents.REPLACE.register((RegistryKey<LootTable> key, LootTable original
 
 ### ServerMessageDecoratorEvent.EVENT *(Common)*
 
-**When**: The ServerMessageDecoratorEvent.EVENT event fires when a message is being decorated, allowing mods to modify the text content or styling of messages sent in the game.
+**When**: The ServerMessageDecoratorEvent.EVENT event fires when a message is being decorated, allowing mods to modify the text content or styling of messages sent to players.
 
 **Parameters**: Identifier phase, BiFunction<ServerPlayerEntity, Text, Text> decorator
 

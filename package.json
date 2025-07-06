@@ -16,7 +16,10 @@
     "generate:modrinth": "tsx ./scripts/generateModrinthClient.ts",
     "generate:updates": "tsx ./scripts/generateForgeUpdates.ts",
     "generate:moddy": "tsx ./scripts/generateModdy.ts",
-    "generate:fabric-event-report": "tsx ./scripts/fabric-event-report.ts"
+    "generate:fabric-event-report": "tsx ./scripts/fabric-event-report.ts",
+    "generate:neoforge-event-report": "tsx ./scripts/neoforge-event-report.ts",
+    "generate:forge-event-report": "tsx ./scripts/forge-event-report.ts",
+    "generate:full-event-report": "npm run generate:fabric-event-report && npm run generate:neoforge-event-report && npm run generate:forge-event-report"
   },
   "repository": {
     "type": "git",
