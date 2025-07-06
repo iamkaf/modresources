@@ -6,6 +6,7 @@ import fg from 'fast-glob';
 import simpleGit from 'simple-git';
 import fs from 'fs-extra';
 import chalk from 'chalk';
+const PARTIAL_DIR = 'tmp-event-summaries';
 import { Ollama } from 'ollama';
 import { performance } from 'perf_hooks';
 import { z } from 'zod'; // Import Zod for schema definition
@@ -87,9 +88,12 @@ const sideOf = (p: string): EventBlock['side'] => p.includes('/client/') ? 'Clie
 const catOf = (p: string): string => (p.split('/net/neoforged/neoforge/')[1] ?? p).split('/')[0].replace(/v\d+$/, '') || 'misc';
 
 function generateUniqueFilename(): string {
-  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-  const limitSuffix = LIMIT ? `-limit${LIMIT}` : '';
-  return `docs/neoforge-events-summary-${timestamp}${limitSuffix}.md`;
+  if (LIMIT) {
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const filename = `neoforge-events-summary-${timestamp}-limit${LIMIT}.md`;
+    return `${PARTIAL_DIR}/${filename}`;
+  }
+  return 'docs/neoforge-events-summary.md';
 }
 
 async function clone(): Promise<string> {
@@ -339,6 +343,7 @@ async function unloadModel(): Promise<void> {
   }
 
   const outputFilename = generateUniqueFilename();
+  await fs.ensureDir(path.dirname(outputFilename));
   await writeFile(outputFilename, [...toc, ...body].join('\n'));
   console.log(chalk.green.bold(`\n✔ Report written → ${outputFilename}`));
   

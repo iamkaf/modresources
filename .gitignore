@@ -26,3 +26,5 @@ dist
 logs
 
 .mypy_cache
+# Event report test outputs
+/tmp-event-summaries/

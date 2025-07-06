@@ -31,7 +31,12 @@ All helper utilities are now exposed through a small Express API that powers the
 - `npm run typecheck` 📝 - Type-check the React code using `tsconfig.react.json`.
 - `npm run generate:modrinth` 🛠️ - Build a fully-typed Modrinth API client under `src/modrinth`.
 - `npm run generate:moddy` 🛠️ - Creates a new Moddy artifact and adds it to the registry. Pass `--dry-run` to test without writing files.
-- `npm run generate:fabric-event-report` 📚 - Generate AI-powered documentation for Fabric API events. Supports `-- --limit <number>` to process a specific number of events. Automatically detects WSL environments and unloads models to free VRAM when complete. Outputs timestamped markdown files to the `docs/` directory.
+ - `npm run generate:fabric-event-report` 📚 - Generate AI-powered documentation for Fabric API events. When run with `-- --limit <n>`, processes only the first <n> events and writes timestamped partial reports to `tmp-event-summaries/`. Without `--limit`, overwrites `docs/fabric-events-summary.md`.
+ - `npm run generate:neoforge-event-report` 📚 - Generate AI-powered documentation for NeoForge events. Same behavior: use `-- --limit <n>` for partial reports in `tmp-event-summaries/`, no limit overwrites `docs/neoforge-events-summary.md`.
+ - `npm run generate:forge-event-report` 📚 - Generate AI-powered documentation for MinecraftForge events. Same behavior: use `-- --limit <n>` for partial reports in `tmp-event-summaries/`, no limit overwrites `docs/forge-events-summary.md`.
+ - `npm run generate:full-event-report` 📚 - Run Fabric, NeoForge, and Forge event-report scripts in sequence. Pass `-- --limit <n>` to apply a per-script limit.
+  
+  All event-report scripts detect WSL environments and unload AI models to free VRAM when complete.
 
 ## Starting the UI
 
