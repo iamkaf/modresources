@@ -17,13 +17,13 @@ This repository contains the source for **Moddy**, a single-file Python assistan
 
 ## Verifying the `setup` command
 
-1. Clone the multiloader template in a temporary location:
+1. Clone the multiloader template into `moddy/testing-template`:
    ```bash
-   git clone https://github.com/iamkaf/multiloader-template template-test
+   npm run setup:moddy-testing-template
    ```
-2. Copy the generated `moddy.py` into the cloned repo:
+2. Copy the generated `moddy.py` into the cloned repo directory:
    ```bash
-   cp moddy/registry/*/moddy.py template-test/scripts/moddy.py
+   cp moddy/registry/*/moddy.py moddy/testing-template/scripts/moddy.py
    ```
 3. From within `template-test`, run the setup command and provide the desired identifiers (e.g. `com.iamkaf.snapshears` and `SnapShears`):
    ```bash
@@ -34,10 +34,9 @@ This repository contains the source for **Moddy**, a single-file Python assistan
    - all Java sources were moved from the `modtemplate` package to the new package,
    - `gradle.properties` contains the new `group` and `archives_base_name` values,
    - identifiers in JSON/TOML and service descriptor files were replaced.
-5. Delete the temporary clone and the generated build once verified:
+5. Delete the testing template and the generated build once verified:
    ```bash
-   cd ..
-   rm -rf template-test
+   npm run cleanup:moddy-testing-template
    git clean -fd moddy/registry
    git checkout -- moddy/versions.json
    ```

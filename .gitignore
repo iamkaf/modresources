@@ -26,5 +26,8 @@ dist
 logs
 
 .mypy_cache
+__pycache__
 # Event report test outputs
 /tmp-event-summaries/
+# Multiloader template for Moddy testing
+moddy/testing-template/
