@@ -7,7 +7,7 @@
 - [ ] Improve `set_minecraft_version` API failure handling
 - [ ] Safer `setup_template` on existing projects (automatic backup + diff preview)
 - [ ] Robust `setup_template` icon character handling
-- [ ] Graceful network‑timeout handling across commands
+- [x] Graceful network‑timeout handling across commands
 - [ ] Validate JSON / TOML before writing
 - [ ] Clear errors for missing dependencies
 

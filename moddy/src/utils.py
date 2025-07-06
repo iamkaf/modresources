@@ -40,16 +40,16 @@ def open_url(url: str) -> None:
         subprocess.run(["xdg-open", url], check=False)
 
 
-def fetch_url_bytes(url: str, headers=None) -> bytes:
-    """Return the raw bytes from *url*."""
+def fetch_url_bytes(url: str, headers=None, timeout: int = 10) -> bytes:
+    """Return the raw bytes from *url*, with a default timeout in seconds."""
     req = urllib.request.Request(url, headers=headers or {})
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
 
-def fetch_url_text(url: str, headers=None) -> str:
-    """Return the decoded text from *url* assuming UTF-8."""
-    return fetch_url_bytes(url, headers).decode("utf-8")
+def fetch_url_text(url: str, headers=None, timeout: int = 10) -> str:
+    """Return the decoded text from *url* assuming UTF-8, with a default timeout."""
+    return fetch_url_bytes(url, headers, timeout=timeout).decode("utf-8")
 
 
 __all__ = [
