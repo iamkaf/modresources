@@ -10,6 +10,10 @@ const DEST = path.join(__dirname, '..', 'moddy', 'testing-template');
 console.log(`▶ Cloning multiloader-template into ${DEST}...`);
 // Remove any existing directory to ensure a clean clone
 fs.removeSync(DEST);
-// Perform a shallow clone
-execSync(`git clone --depth 1 ${TEMPLATE_URL} ${DEST}`, { stdio: 'inherit' });
-console.log('✔ Clone complete.');
+// Perform a shallow clone, catch network/permission errors
+try {
+  execSync(`git clone --depth 1 ${TEMPLATE_URL} ${DEST}`, { stdio: 'inherit' });
+  console.log('✔ Clone complete.');
+} catch (err: any) {
+  console.error(`⚠️  Warning: git clone failed: ${err.message}`);
+}

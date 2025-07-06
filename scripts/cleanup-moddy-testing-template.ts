@@ -6,5 +6,9 @@ import fs from 'fs-extra';
 const DEST = path.join(__dirname, '..', 'moddy', 'testing-template');
 
 console.log(`▶ Removing testing template at ${DEST}...`);
-fs.removeSync(DEST);
-console.log('✔ Cleanup complete.');
+try {
+  fs.removeSync(DEST);
+  console.log('✔ Cleanup complete.');
+} catch (err: any) {
+  console.error(`⚠️  Warning: cleanup failed: ${err.message}`);
+}
