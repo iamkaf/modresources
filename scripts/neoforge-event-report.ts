@@ -285,7 +285,7 @@ async function unloadModel(): Promise<void> {
     console.log(chalk.yellow(`Limiting processing to ${LIMIT} events (${eventsToProcess.length} will be processed).`));
   }
 
-  for (const ev of eventsToProcess) {
+  for (const [i, ev] of eventsToProcess.entries()) {
     const t0 = performance.now();
     try {
       ev.summary = await summarise(ev);
@@ -300,7 +300,7 @@ async function unloadModel(): Promise<void> {
       };
     }
     const dt = ((performance.now() - t0) / 1000).toFixed(1);
-    console.log(`${chalk.yellow('•')} ${chalk.cyan(ev.name)} ${chalk.gray(dt + 's')}`);
+    console.log(`${chalk.gray(`[${i+1}/${eventsToProcess.length}]`)} ${chalk.yellow('•')} ${chalk.cyan(ev.name)} ${chalk.gray(dt + 's')}`);
   }
 
   // Build Markdown Report
