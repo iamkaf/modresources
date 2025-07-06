@@ -1,4 +1,4 @@
-#!/usr/bin/env ts-node
+#!/usr/bin/env tsx
 import path from 'path';
 import { execSync } from 'child_process';
 import fs from 'fs-extra';

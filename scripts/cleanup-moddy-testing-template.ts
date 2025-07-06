@@ -1,4 +1,4 @@
-#!/usr/bin/env ts-node
+#!/usr/bin/env tsx
 import path from 'path';
 import fs from 'fs-extra';
 
