@@ -13,7 +13,7 @@
   "include": [
     "packages/frontend/src",
     "packages/scripts",
-    "server.ts"
+    "packages/frontend/server.ts"
   ],
   "references": [
     { "path": "./packages/frontend" }

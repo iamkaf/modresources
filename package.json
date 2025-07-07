@@ -4,8 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm --filter @modresources/frontend dev",
-    "server": "tsx server.ts",
-    "dev:concurrent": "concurrently \"pnpm dev\" \"pnpm server\"",
+    "dev:concurrent": "concurrently \"pnpm --filter @modresources/frontend dev\" \"pnpm --filter @modresources/frontend server\"",
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
     "test": "pnpm -r test",
