@@ -1,6 +1,6 @@
 # Mod Resources 💾
 
-Shared assets and tools used across [@iamkaf](https://modrinth.com/user/iamkaf) mods. This project is now structured as a pnpm monorepo.
+Shared assets and tools used across [@iamkaf](https://modrinth.com/user/iamkaf) mods.
 
 ## Project Structure
 
