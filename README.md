@@ -43,7 +43,7 @@ All helper utilities are now exposed through a small Express API that powers the
 Install dependencies first with `npm install`, then launch the interface:
 
 ```bash
-npm run ui
+npm run dev
 ```
 
 This starts the React dev server (typically at `http://localhost:5173`) and the
