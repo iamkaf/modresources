@@ -1,1 +1,60 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+.report/
+
+# Node.js
+node_modules/
+dist/
+build/
+.next/
+.vercel/
+.turbo/
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript
+*.tsbuildinfo
+
+# Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.DS_Store
+Thumbs.db
+
+# OS generated files
+.localized
+.project
+.settings
+.classpath
+
+# Python
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+.env
+.venv/
+venv/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+
+# Specific to this project
+tmp-event-summaries/
 .gemini_commit_message.txt
