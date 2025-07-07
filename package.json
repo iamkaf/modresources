@@ -20,8 +20,8 @@
     "generate:neoforge-event-report": "tsx ./scripts/neoforge-event-report.ts",
     "generate:forge-event-report": "tsx ./scripts/forge-event-report.ts",
     "generate:full-event-report": "tsx ./scripts/full-event-report.ts",
-    "setup:moddy-testing-template": "ts-node scripts/setup-moddy-testing-template.ts",
-    "cleanup:moddy-testing-template": "ts-node scripts/cleanup-moddy-testing-template.ts"
+    "setup:moddy-testing-template": "tsx ./scripts/setup-moddy-testing-template.ts",
+    "cleanup:moddy-testing-template": "tsx ./scripts/cleanup-moddy-testing-template.ts"
   },
   "repository": {
     "type": "git",
