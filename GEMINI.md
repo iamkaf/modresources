@@ -1,5 +1,15 @@
 # GEMINI.md - Project-Specific Guidelines for Agent
 
+## ⚠️ STRICTLY OFF-LIMITS ⚠️
+
+The following files and directories are **strictly off-limits** and must **NEVER** be modified, deleted, or interacted with in any way, shape, or form, without explicit, direct, and unambiguous instruction from the user:
+
+-   `.gitignore` file
+-   `maven/` directory
+-   `gradle/` directory
+
+These are critical project configurations and artifacts that, if altered incorrectly, can lead to severe project corruption or build failures. No exceptions.
+
 This document provides essential information and best practices for the Gemini CLI agent to effectively understand, navigate, and contribute to the `modresources` project.
 
 ## 1. Project Overview
