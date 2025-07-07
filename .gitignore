@@ -31,3 +31,5 @@ __pycache__
 /tmp-event-summaries/
 # Multiloader template for Moddy testing
 moddy/testing-template/
+
+.gemini_commit_message.txt
