@@ -56,15 +56,10 @@ To run scripts defined within a specific package's `package.json`, use `pnpm --f
 *   **Event Report Limits**: When generating event reports, prefer using the `-- --limit <n>` argument (e.g., `pnpm --filter @modresources/scripts generate:fabric-event-report -- --limit 5`) to limit processing for faster iteration during development/testing.
 *   **`server.ts` Location**: `server.ts` is now located in `packages/frontend/` as it's tightly coupled with the UI.
 
-## 6. Multi-line Commit Messages
+## 6. Commit Messages
 
-When creating multi-line commit messages, directly embedding newlines in the `run_shell_command`'s `command` parameter can lead to parsing issues. To ensure robust multi-line commit messages that do not expose temporary files in the remote repository, follow this process:
-
-1.  **Write the multi-line commit message content to a temporary file** within the project directory (e.g., `.gemini_commit_message.txt`). This file should be created using the `write_file` tool.
-2.  **Add the temporary commit message file's name to `.gitignore`**. This prevents it from being tracked by Git and appearing in commits.
-3.  **Stage the `.gitignore` file** if it was modified in the previous step.
-4.  **Execute the `git commit -F <path_to_temp_file>` command**. This tells Git to read the commit message from the specified temporary file.
-5.  **Delete the temporary file** using `rm` after the commit is successful.
+-   **Multi-line Commit Messages:** Multi-line commit messages are **COMPLETELY, ABSOLUTELY, AND IRREVOCABLY FORBIDDEN**. All commit messages must be single-line.
+-   **`git commit` Command:** The `git commit` command **MUST ONLY** be used upon explicit user request.
 
 # Documentation Analysis and Correction Task: Order 66
 
