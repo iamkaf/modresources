@@ -6,7 +6,7 @@ import fg from 'fast-glob';
 import simpleGit from 'simple-git';
 import fs from 'fs-extra';
 import chalk from 'chalk';
-const PARTIAL_DIR = 'tmp-event-summaries';
+const PARTIAL_DIR = '../../tmp-event-summaries';
 import { Ollama } from 'ollama';
 import { performance } from 'perf_hooks';
 import { z } from 'zod'; // Import Zod for schema definition

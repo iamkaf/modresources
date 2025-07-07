@@ -17,8 +17,8 @@ import { readMods } from '../src/utils/readMods';
 
 async function generate() {
   const root = path.dirname(fileURLToPath(import.meta.url));
-  const modsPath = path.join(root, '..', 'mods.v2.json');
-  const outDir = path.join(root, '..', 'update');
+  const modsPath = path.join(root, '..', '..', 'mods.v2.json');
+  const outDir = path.join(root, '..', '..', 'update');
 
   await mkdir(outDir, { recursive: true });
 

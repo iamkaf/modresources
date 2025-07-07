@@ -6,7 +6,7 @@ import fg from 'fast-glob';
 import simpleGit from 'simple-git';
 import fs from 'fs-extra';
 import chalk from 'chalk';
-const PARTIAL_DIR = 'tmp-event-summaries';
+const PARTIAL_DIR = '../../tmp-event-summaries';
 import { Ollama } from 'ollama';
 import { performance } from 'perf_hooks';
 import { z } from 'zod'; // Import Zod for schema definition
@@ -18,11 +18,11 @@ const args = process.argv.slice(2);
 const limitIndex = args.indexOf('--limit');
 const LIMIT = limitIndex !== -1 && limitIndex + 1 < args.length ? parseInt(args[limitIndex + 1], 10) : null;
 
-const FORGE_REPO = 'https://github.com/MinecraftForge/MinecraftForge.git';
-const SRC_GLOB = '**/net/minecraftforge/**/*.java';
-const EXCLUDE_PATTERNS = [/\/internal\//, /\/impl\//, /\/test\//];
+const FABRIC_REPO = 'https://github.com/FabricMC/fabric.git';
+const SRC_GLOB = '**/net/fabricmc/fabric/api/**/*.java';
+const EXCLUDE_PATTERNS = [/\/registry\//, /\/internal\//];
 const MODEL = process.env.OLLAMA_MODEL ?? 'qwen3';
-const CONTEXT_SIZE = 3072;
+const CONTEXT_SIZE = 4096;
 
 // WSL detection and ollama configuration
 function isWSL(): boolean {
@@ -58,18 +58,8 @@ const ollama = new Ollama({ host: ollamaHost });
 // This schema strictly defines the structure of the JSON output we expect from Ollama.
 const EventSummarySchema = z.object({
   when: z.string().describe('A concise sentence of when the event fires.'),
-  cancellable: z.string().describe('Whether the event is cancellable - "Yes" if it extends ICancellableEvent or has @Cancelable annotation, "No" if not, or "Unknown" if unclear.'),
-  fields: z.array(z.object({
-    name: z.string().describe('The field name'),
-    type: z.string().describe('The field type'),
-    description: z.string().describe('What the field represents or is used for')
-  })).describe('Array of important public fields available on the event object. Empty array if none found.'),
-  methods: z.array(z.object({
-    name: z.string().describe('The method name'),
-    signature: z.string().describe('The method signature including parameters and return type'),
-    description: z.string().describe('What the method does')
-  })).describe('Array of important public methods available on the event object. Empty array if none found.'),
-  example: z.string().describe('A concise Java code snippet (under 15 lines) showing basic event handling with @SubscribeEvent annotation, demonstrating 1-2 key fields/methods from the event object. Use standard MinecraftForge patterns.')
+  parameters: z.string().describe('A parameter list copied verbatim from the interface in the source, including the parameter type, or "undetected" if not found.'),
+  example: z.string().describe('A Java code snippet showing how to register and handle the event, including an example from source code comments if available.')
 });
 
 // Infer the TypeScript type from the Zod schema for type safety.
@@ -85,22 +75,22 @@ interface EventBlock {
 }
 
 const sideOf = (p: string): EventBlock['side'] => p.includes('/client/') ? 'Client' : p.includes('/server/') ? 'Server' : 'Common';
-const catOf = (p: string): string => (p.split('/net/minecraftforge/')[1] ?? p).split('/')[0].replace(/v\d+$/, '') || 'misc';
+const catOf = (p: string): string => (p.split('/net/fabricmc/fabric/api/')[1] ?? p).split('/')[0].replace(/v\d+$/, '') || 'misc';
 
 function generateUniqueFilename(): string {
   if (LIMIT) {
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const filename = `forge-events-summary-${timestamp}-limit${LIMIT}.md`;
+    const filename = `fabric-events-summary-${timestamp}-limit${LIMIT}.md`;
     return `${PARTIAL_DIR}/${filename}`;
   }
-  return 'docs/forge-events-summary.md';
+  return 'docs/fabric-events-summary.md';
 }
 
 async function clone(): Promise<string> {
-  const dir = mkdtempSync(path.join(tmpdir(), 'forge-src-'));
-  console.log(chalk.gray(`Cloning Forge repo into temporary directory: ${dir}`));
-  await simpleGit().clone(FORGE_REPO, dir, ['--depth', '1']);
-  console.log(chalk.green('Forge repo cloned successfully.'));
+  const dir = mkdtempSync(path.join(tmpdir(), 'fabric-src-'));
+  console.log(chalk.gray(`Cloning Fabric repo into temporary directory: ${dir}`));
+  await simpleGit().clone(FABRIC_REPO, dir, ['--depth', '1']);
+  console.log(chalk.green('Fabric repo cloned successfully.'));
   return dir;
 }
 
@@ -115,35 +105,18 @@ async function javaFiles(root: string): Promise<string[]> {
 
 function detectEvents(src: string, outer: string): string[] {
   const ids = new Set<string>();
-  
-  // Event Bus 7: classes that extend MutableEvent or Event
-  const eventClass = /public\s+(?:static\s+)?(?:final\s+)?class\s+(\w+)\s+extends\s+(?:MutableEvent|Event)/g;
+  // Regex to find public interfaces ending with Callback or Events?
+  const iface = /public\s+interface\s+(\w+(?:Callback|Events?))/g;
   let m: RegExpExecArray | null;
-  while ((m = eventClass.exec(src))) {
-    ids.add(m[1]);
+  while ((m = iface.exec(src))) {
+    ids.add(`${m[1]}.EVENT`);
   }
-  
-  // Event Bus 7: Look for static BUS fields (individual event buses)
-  const busField = /static\s+(?:final\s+)?(?:public\s+)?(?:Cancellable)?EventBus\s*<[^>]*>\s+(\w+)/g;
-  while ((m = busField.exec(src))) {
+  // Regex to find static final Event fields
+  const cst = /static\s+final\s+Event<[^>]+>\s+(\w+)/g;
+  while ((m = cst.exec(src))) {
     ids.add(`${outer}.${m[1]}`);
   }
-  
-  // Legacy: Event fields and constants
-  const eventField = /static\s+(?:final\s+)?(?:public\s+)?(?:Event|EventBus)\s*<[^>]*>\s+(\w+)/g;
-  while ((m = eventField.exec(src))) {
-    ids.add(`${outer}.${m[1]}`);
-  }
-  
-  // Look for @SubscribeEvent annotations to find event types
-  const subscribeEvent = /@SubscribeEvent[^{]*public\s+\w+\s+\w+\(([^)]+)\)/g;
-  while ((m = subscribeEvent.exec(src))) {
-    const paramType = m[1].trim().split(/\s+/).pop();
-    if (paramType && paramType.includes('Event')) {
-      ids.add(paramType);
-    }
-  }
-  
+  // console.log(chalk.gray(`Detected ${ids.size} events in file ${outer}.java.`));
   return [...ids];
 }
 
@@ -154,47 +127,29 @@ function detectEvents(src: string, outer: string): string[] {
  * @returns A string representing the prompt.
  */
 function buildPrompt(ev: EventBlock): string {
+  // The prompt explicitly instructs the model to return a JSON object
+  // conforming to the defined schema. This helps guide the model even
+  // when the schema is passed via the 'format' parameter.
   return `
-### MinecraftForge Event Analysis Task
+### Fabric Event Summary Task
 
-You are an expert Minecraft modder analyzing MinecraftForge events. Your task is to thoroughly document the event \`${ev.name}\` by analyzing its structure and capabilities.
-
-Provide a comprehensive analysis in JSON format:
+You are an expert Minecraft modder. Your task is to document **only** the event \`${ev.name}\`.
+Provide a concise summary of this event in JSON format.
+The JSON object must strictly adhere to the following structure:
 \`\`\`json
 ${JSON.stringify(zodToJsonSchema(EventSummarySchema), null, 2)}
 \`\`\`
 
-**Analysis Instructions:**
+Here are the specific instructions for each field:
 
-1. **\`when\`**: Describe when this event fires based on the class documentation and context.
+1.  **\`when\`**: Describe in one concise sentence when the \`${ev.name}\` event fires.
+2.  **\`parameters\`**: List the parameters copied verbatim from the event's interface in the source code, including their types. If no parameters are explicitly found or detectable, state "undetected".
+3.  **\`example\`**: Provide a Java code snippet demonstrating how to register and handle the \`${ev.name}\` event.
+    * The example should start with \`${ev.name}.register((<callback params>) -> {\`.
+    * Inside the lambda function, include a comment \`// Handle ${ev.name} here...\`.
+    * **Crucially**, if the provided source code comments for this event include an actual usage example, integrate that example into the body of the lambda function in your generated code snippet. Otherwise, keep the placeholder comment.
 
-2. **\`cancellable\`**: Determine if the event can be cancelled:
-   - Check if it implements Cancellable interface (Event Bus 7 pattern)
-   - Look for legacy isCanceled() or setCanceled() methods
-   - Check if it extends ICancellableEvent or has @Cancelable annotation
-   - Answer "Yes", "No", or "Unknown"
-
-3. **\`fields\`**: Analyze the event class for important public fields:
-   - Return an array of objects with name, type, and description
-   - Focus on fields that modders would actually use
-   - Exclude internal/private fields
-   - Return empty array if no important fields found
-
-4. **\`methods\`**: Analyze the event class for important public methods:
-   - Return an array of objects with name, signature, and description
-   - Include getters, setters, and utility methods
-   - Exclude basic Object methods (toString, equals, etc.)
-   - Return empty array if no important methods found
-
-5. **\`example\`**: Create a CONCISE practical usage example (maximum 15 lines):
-   - Use simple, modern MinecraftForge patterns
-   - Show basic event handler registration and usage
-   - Demonstrate 1-2 key fields/methods from the event
-   - Keep it practical and focused
-   - If event is cancellable, show cancellation
-   - Use proper imports and @Mod annotation
-
-### SOURCE CODE TO ANALYZE:
+### FULL SOURCE CODE FOR REFERENCE:
 
 \`\`\`java
 ${ev.source}
@@ -209,41 +164,34 @@ ${ev.source}
  * @returns A Promise that resolves to the parsed EventSummary object.
  */
 async function summarise(ev: EventBlock): Promise<EventSummary> {
+  // console.log(chalk.magenta(`Attempting to summarize event: ${ev.name}`));
+  const res = await ollama.chat({
+    model: MODEL,
+    // think: true, // think true separates the thinking from the output
+    options: { num_ctx: CONTEXT_SIZE, temperature: 0.0 }, // Set temperature to 0 for more deterministic output
+    messages: [{ role: 'user', content: buildPrompt(ev) }],
+    // Pass the JSON schema directly to Ollama's format parameter for structured output enforcement.
+    format: zodToJsonSchema(EventSummarySchema),
+    // Although 'format: json' is the primary mechanism, some models might benefit from explicit schema
+    // instructions in the prompt. The 'response_model' is typically used with 'instructor' library,
+    // but for direct Ollama API, 'format: json' combined with prompt instructions is the way.
+    // We are not using 'instructor' here, so we rely on 'format: json'.
+  });
+
+  // The content from Ollama should now be a JSON string. Parse it and validate.
   try {
-    // Add timeout handling
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 120000); // 2 minute timeout
-    
-    const res = await ollama.chat({
-      model: MODEL,
-      options: { num_ctx: CONTEXT_SIZE, temperature: 0.0, num_predict: 800 }, // Limit output length
-      messages: [{ role: 'user', content: buildPrompt(ev) }],
-      format: zodToJsonSchema(EventSummarySchema),
-    });
-    
-    clearTimeout(timeoutId);
-
-    try {
-      const parsedSummary = EventSummarySchema.parse(JSON.parse(res.message.content.trim()));
-      return parsedSummary;
-    } catch (parseError) {
-      console.error(chalk.red(`Parsing error for ${ev.name}:`), parseError);
-      return createFallbackSummary(ev.name, 'parsing error');
-    }
+    const parsedSummary = EventSummarySchema.parse(JSON.parse(res.message.content.trim()));
+    // console.log(chalk.green(`Successfully summarized event: ${ev.name}`));
+    return parsedSummary;
   } catch (error) {
-    console.error(chalk.red(`Network/timeout error for ${ev.name}:`), error);
-    return createFallbackSummary(ev.name, 'network/timeout error');
+    console.error(chalk.red(`Error parsing or validating summary for ${ev.name}:`), error);
+    // Return a default error summary if parsing or validation fails
+    return {
+      when: '(summary failed: parsing error)',
+      parameters: '(summary failed: parsing error)',
+      example: `// Example generation failed for ${ev.name} due to parsing error.`
+    };
   }
-}
-
-function createFallbackSummary(eventName: string, errorType: string): EventSummary {
-  return {
-    when: `(summary failed: ${errorType})`,
-    cancellable: 'Unknown',
-    fields: [],
-    methods: [],
-    example: `// Example generation failed for ${eventName} due to ${errorType}.`
-  };
 }
 
 /**
@@ -265,11 +213,10 @@ async function unloadModel(): Promise<void> {
 }
 
 (async () => {
-  const limitInfo = LIMIT ? ` (limit: ${LIMIT} events)` : '';
-  console.log(chalk.blue.bold(`\n▶ MinecraftForge Event Report v1 (with Structured Outputs)${limitInfo}`));
+  console.log(chalk.blue.bold('\n▶ Fabric Event Report v10 (with Structured Outputs)'));
   const tStart = performance.now();
 
-  console.log(chalk.blue('Cloning Forge repo…'));
+  console.log(chalk.blue('Cloning Fabric repo…'));
   const root = await clone();
 
   const files = await javaFiles(root);
@@ -299,7 +246,11 @@ async function unloadModel(): Promise<void> {
       ev.summary = await summarise(ev);
     } catch (e) {
       console.error(chalk.red(`Unhandled error during summarization of ${ev.name}:`), e);
-      ev.summary = createFallbackSummary(ev.name, 'unhandled error');
+      ev.summary = {
+        when: '(summary failed: unhandled error)',
+        parameters: '(summary failed: unhandled error)',
+        example: `// Example generation failed for ${ev.name} due to unhandled error.`
+      };
     }
     const dt = ((performance.now() - t0) / 1000).toFixed(1);
     console.log(`${chalk.gray(`[${i+1}/${eventsToProcess.length}]`)} ${chalk.yellow('•')} ${chalk.cyan(ev.name)} ${chalk.gray(dt + 's')}`);
@@ -307,8 +258,8 @@ async function unloadModel(): Promise<void> {
 
   // Build Markdown Report
   const processedCount = eventsToProcess.filter(ev => ev.summary).length;
-  const limitInfo2 = LIMIT ? ` (limited to ${LIMIT} events)` : '';
-  const toc = ['# MinecraftForge – Event Handbook', '', `Generated ${new Date().toISOString()} using ${MODEL}${limitInfo2}.`, `Processed ${processedCount} out of ${events.length} total events.`, '', '## Table of Contents'];
+  const limitInfo = LIMIT ? ` (limited to ${LIMIT} events)` : '';
+  const toc = ['# Fabric API – Event Handbook', '', `Generated ${new Date().toISOString()} using ${MODEL}${limitInfo}.`, `Processed ${processedCount} out of ${events.length} total events.`, '', '## Table of Contents'];
   const body = [] as string[];
   const group: Record<string, EventBlock[]> = {};
   for (const ev of eventsToProcess) (group[ev.category] ||= []).push(ev);
@@ -322,18 +273,7 @@ async function unloadModel(): Promise<void> {
       body.push(`### ${ev.name} *(${ev.side})*\n`);
       // Access structured summary properties
       body.push(`**When**: ${ev.summary?.when ?? '*(no summary)*'}\n`);
-      body.push(`**Cancellable**: ${ev.summary?.cancellable ?? '*(unknown)*'}\n`);
-      // Format fields as YAML list
-      const fieldsYaml = ev.summary?.fields?.length 
-        ? ev.summary.fields.map(f => `- name: ${f.name}\n  type: ${f.type}\n  description: ${f.description}`).join('\n')
-        : '# none detected';
-      body.push(`**Fields**:\n\`\`\`yaml\n${fieldsYaml}\n\`\`\`\n`);
-      
-      // Format methods as YAML list
-      const methodsYaml = ev.summary?.methods?.length 
-        ? ev.summary.methods.map(m => `- name: ${m.name}\n  signature: ${m.signature}\n  description: ${m.description}`).join('\n')
-        : '# none detected';
-      body.push(`**Methods**:\n\`\`\`yaml\n${methodsYaml}\n\`\`\`\n`);
+      body.push(`**Parameters**: ${ev.summary?.parameters ?? '*(no summary)*'}\n`);
       body.push(`**Example**:\n\`\`\`java\n${ev.summary?.example ?? '// No example available.'}\n\`\`\`\n`);
       body.push(`*Source*: \`${ev.file}\``);
       body.push('');

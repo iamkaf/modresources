@@ -36,7 +36,7 @@ async function main() {
         .filter(Boolean)
     : [];
 
-  const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+  const root = path.dirname(path.dirname(path.dirname(fileURLToPath(import.meta.url))));
   const srcDir = path.join(root, 'moddy', 'src');
   const versionsPath = path.join(root, 'moddy', 'versions.json');
   const registryDir = path.join(root, 'moddy', 'registry');

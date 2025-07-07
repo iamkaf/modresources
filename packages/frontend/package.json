@@ -1,0 +1,52 @@
+{
+  "name": "@modresources/frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.react.json",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@mdxeditor/editor": "^3.37.0",
+    "@radix-ui/colors": "^3.0.0",
+    "clipboardy": "^4.0.0",
+    "cors": "^2.8.5",
+    "daisyui": "^5.0.43",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "handlebars": "^4.7.8",
+    "jsonschema": "^1.5.0",
+    "multer": "^2.0.1",
+    "node-emoji": "^2.2.0",
+    "open": "^10.1.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.3",
+    "sharp": "^0.34.2",
+    "zod": "^3.25.74",
+    "zod-to-json-schema": "^3.24.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindcss/vite": "^4.1.11",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "autoprefixer": "^10.4.21",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "jsdom": "^26.1.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "typescript-eslint": "^8.35.0"
+  }
+}
