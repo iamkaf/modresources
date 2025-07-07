@@ -56,7 +56,15 @@ To run scripts defined within a specific package's `package.json`, use `pnpm --f
 *   **Event Report Limits**: When generating event reports, prefer using the `-- --limit <n>` argument (e.g., `pnpm --filter @modresources/scripts generate:fabric-event-report -- --limit 5`) to limit processing for faster iteration during development/testing.
 *   **`server.ts` Location**: `server.ts` is now located in `packages/frontend/` as it's tightly coupled with the UI.
 
-This `GEMINI.md` aims to provide you with the necessary context to operate efficiently within this project.
+## 6. Multi-line Commit Messages
+
+When creating multi-line commit messages, directly embedding newlines in the `run_shell_command`'s `command` parameter can lead to parsing issues. To ensure robust multi-line commit messages that do not expose temporary files in the remote repository, follow this process:
+
+1.  **Write the multi-line commit message content to a temporary file** within the project directory (e.g., `.gemini_commit_message.txt`). This file should be created using the `write_file` tool.
+2.  **Add the temporary commit message file's name to `.gitignore`**. This prevents it from being tracked by Git and appearing in commits.
+3.  **Stage the `.gitignore` file** if it was modified in the previous step.
+4.  **Execute the `git commit -F <path_to_temp_file>` command**. This tells Git to read the commit message from the specified temporary file.
+5.  **Delete the temporary file** using `rm` after the commit is successful.
 
 # Documentation Analysis and Correction Task: Order 66
 
@@ -145,16 +153,6 @@ For each issue found:
 - Make all necessary corrections directly in the codebase.
 - Ensure all examples compile and run correctly and reflect the current state of the `modresources` project.
 - Update any outdated information or add missing documentation for new features.
-
-## Multi-line Commit Messages
-
-When creating multi-line commit messages, directly embedding newlines in the `run_shell_command`'s `command` parameter can lead to parsing issues. To ensure robust multi-line commit messages that do not expose temporary files in the remote repository, follow this process:
-
-1.  **Write the multi-line commit message content to a temporary file** within the project directory (e.g., `.gemini_commit_message.txt`). This file should be created using the `write_file` tool.
-2.  **Add the temporary commit message file's name to `.gitignore`**. This prevents it from being tracked by Git and appearing in commits.
-3.  **Stage the `.gitignore` file** if it was modified in the previous step.
-4.  **Execute the `git commit -F <path_to_temp_file>` command**. This tells Git to read the commit message from the specified temporary file.
-5.  **Delete the temporary file** using `rm` after the commit is successful.
 
 ## ⚠️ **Important Guidelines**
 
