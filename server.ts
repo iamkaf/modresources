@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { ModManager } from './src/ModManager';
+import { ModManager } from './packages/frontend/src/ModManager';
 import {
   generatePagesV2,
   generateIcons,
@@ -11,11 +11,11 @@ import {
   fetchChangelog,
   listTemplates,
   readTemplate,
-} from './src/services';
+} from './packages/frontend/src/services';
 import multer from 'multer';
 import os from 'os';
 import fs from 'fs';
-import { convertMovToGif } from './src/services/convert';
+import { convertMovToGif } from './packages/frontend/src/services/convert';
 
 const app = express();
 app.use(cors({ origin: '*' }));

@@ -42,12 +42,13 @@ import { exec as _exec } from "node:child_process";
 import { promisify } from "node:util";
 import { mkdir } from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from 'node:url';
 
 const exec = promisify(_exec);
 
 const OPENAPI_URL =
   "https://raw.githubusercontent.com/modrinth/code/main/apps/docs/public/openapi.yaml";
-const OUT_DIR = path.resolve("packages", "frontend", "src", "modrinth");
+const OUT_DIR = path.join(path.resolve(fileURLToPath(import.meta.url), '..', '..', '..'), 'packages', 'frontend', 'src', 'modrinth');
 const SPEC_PATH = path.join(OUT_DIR, "openapi.yaml");
 
 async function generate() {

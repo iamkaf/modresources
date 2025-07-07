@@ -10,9 +10,12 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["node"]
   },
-  "include": ["src/**/*", "tools/**/*.ts"],
+  "include": [
+    "packages/frontend/src",
+    "packages/scripts",
+    "server.ts"
+  ],
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+    { "path": "./packages/frontend" }
   ]
 }
