@@ -8,7 +8,7 @@
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
     "test": "pnpm -r test",
-    "format": "prettier --write \"packages/**/*.{ts,tsx}\" server.ts",
+        "format": "prettier --write \"packages/**/*.{ts,tsx}\" packages/frontend/server.ts",
     "moddy:install": "pip install -e moddy",
     "moddy": "python -m moddy.main"
   },

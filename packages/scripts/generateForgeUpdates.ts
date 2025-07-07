@@ -31,16 +31,13 @@ async function generate() {
     console.log(`› Fetching latest version for ${mod.name}…`);
 
     try {
-      const res = await fetch(
-        `https://api.modrinth.com/v2/project/${modrinthId}/version`
-      );
+      const res = await fetch(`https://api.modrinth.com/v2/project/${modrinthId}/version`);
       if (!res.ok) {
         throw new Error(`Failed to fetch versions: ${res.status} ${res.statusText}`);
       }
       const versions = (await res.json()) as any[];
-      const neoVersion = versions.find((v) =>
-        Array.isArray(v.loaders) &&
-        (v.loaders.includes('neoforge') || v.loaders.includes('forge'))
+      const neoVersion = versions.find(
+        (v) => Array.isArray(v.loaders) && (v.loaders.includes('neoforge') || v.loaders.includes('forge')),
       );
 
       if (!neoVersion) {

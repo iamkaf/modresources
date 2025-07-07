@@ -1,8 +1,9 @@
 #!/usr/bin/env ts-node
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { execSync } from 'node:child_process';
+
 import fs from 'fs-extra';
+import simpleGit from 'simple-git';
 
 // Clone the multiloader-template repository for Moddy setup verification
 const TEMPLATE_URL = 'https://github.com/iamkaf/multiloader-template.git';
@@ -13,7 +14,8 @@ console.log(`▶ Cloning multiloader-template into ${DEST}...`);
 fs.removeSync(DEST);
 // Perform a shallow clone, catch network/permission errors
 try {
-  execSync(`git clone --depth 1 ${TEMPLATE_URL} ${DEST}`, { stdio: 'inherit' });
+  const git = simpleGit();
+  await git.clone(TEMPLATE_URL, DEST, ['--depth', '1']);
   console.log('✔ Clone complete.');
 } catch (err: any) {
   console.error(`⚠️  Warning: git clone failed: ${err.message}`);

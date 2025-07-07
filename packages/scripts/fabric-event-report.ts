@@ -58,8 +58,16 @@ const ollama = new Ollama({ host: ollamaHost });
 // This schema strictly defines the structure of the JSON output we expect from Ollama.
 const EventSummarySchema = z.object({
   when: z.string().describe('A concise sentence of when the event fires.'),
-  parameters: z.string().describe('A parameter list copied verbatim from the interface in the source, including the parameter type, or "undetected" if not found.'),
-  example: z.string().describe('A Java code snippet showing how to register and handle the event, including an example from source code comments if available.')
+  parameters: z
+    .string()
+    .describe(
+      'A parameter list copied verbatim from the interface in the source, including the parameter type, or "undetected" if not found.',
+    ),
+  example: z
+    .string()
+    .describe(
+      'A Java code snippet showing how to register and handle the event, including an example from source code comments if available.',
+    ),
 });
 
 // Infer the TypeScript type from the Zod schema for type safety.
@@ -67,15 +75,17 @@ type EventSummary = z.infer<typeof EventSummarySchema>;
 
 interface EventBlock {
   name: string;
-  source: string;  // full java file
+  source: string; // full java file
   file: string;
   side: 'Client' | 'Server' | 'Common';
   category: string;
   summary?: EventSummary; // Updated to use the structured summary type
 }
 
-const sideOf = (p: string): EventBlock['side'] => p.includes('/client/') ? 'Client' : p.includes('/server/') ? 'Server' : 'Common';
-const catOf = (p: string): string => (p.split('/net/fabricmc/fabric/api/')[1] ?? p).split('/')[0].replace(/v\d+$/, '') || 'misc';
+const sideOf = (p: string): EventBlock['side'] =>
+  p.includes('/client/') ? 'Client' : p.includes('/server/') ? 'Server' : 'Common';
+const catOf = (p: string): string =>
+  (p.split('/net/fabricmc/fabric/api/')[1] ?? p).split('/')[0].replace(/v\d+$/, '') || 'misc';
 
 function generateUniqueFilename(): string {
   if (LIMIT) {
@@ -98,7 +108,7 @@ async function javaFiles(root: string): Promise<string[]> {
   const pattern = path.join(root, SRC_GLOB).replace(/\\/g, '/');
   console.log(chalk.gray(`Searching for Java files matching pattern: ${pattern}`));
   const files = await fg(pattern);
-  const filteredFiles = files.filter(f => !EXCLUDE_PATTERNS.some(rx => rx.test(f)));
+  const filteredFiles = files.filter((f) => !EXCLUDE_PATTERNS.some((rx) => rx.test(f)));
   console.log(chalk.gray(`Found ${filteredFiles.length} relevant Java files after filtering.`));
   return filteredFiles;
 }
@@ -189,7 +199,7 @@ async function summarise(ev: EventBlock): Promise<EventSummary> {
     return {
       when: '(summary failed: parsing error)',
       parameters: '(summary failed: parsing error)',
-      example: `// Example generation failed for ${ev.name} due to parsing error.`
+      example: `// Example generation failed for ${ev.name} due to parsing error.`,
     };
   }
 }
@@ -204,7 +214,7 @@ async function unloadModel(): Promise<void> {
     await ollama.generate({
       model: MODEL,
       prompt: '',
-      keep_alive: 0
+      keep_alive: 0,
     });
     console.log(chalk.green('Model unloaded successfully.'));
   } catch (error) {
@@ -249,17 +259,26 @@ async function unloadModel(): Promise<void> {
       ev.summary = {
         when: '(summary failed: unhandled error)',
         parameters: '(summary failed: unhandled error)',
-        example: `// Example generation failed for ${ev.name} due to unhandled error.`
+        example: `// Example generation failed for ${ev.name} due to unhandled error.`,
       };
     }
     const dt = ((performance.now() - t0) / 1000).toFixed(1);
-    console.log(`${chalk.gray(`[${i+1}/${eventsToProcess.length}]`)} ${chalk.yellow('•')} ${chalk.cyan(ev.name)} ${chalk.gray(dt + 's')}`);
+    console.log(
+      `${chalk.gray(`[${i + 1}/${eventsToProcess.length}]`)} ${chalk.yellow('•')} ${chalk.cyan(ev.name)} ${chalk.gray(dt + 's')}`,
+    );
   }
 
   // Build Markdown Report
-  const processedCount = eventsToProcess.filter(ev => ev.summary).length;
+  const processedCount = eventsToProcess.filter((ev) => ev.summary).length;
   const limitInfo = LIMIT ? ` (limited to ${LIMIT} events)` : '';
-  const toc = ['# Fabric API – Event Handbook', '', `Generated ${new Date().toISOString()} using ${MODEL}${limitInfo}.`, `Processed ${processedCount} out of ${events.length} total events.`, '', '## Table of Contents'];
+  const toc = [
+    '# Fabric API – Event Handbook',
+    '',
+    `Generated ${new Date().toISOString()} using ${MODEL}${limitInfo}.`,
+    `Processed ${processedCount} out of ${events.length} total events.`,
+    '',
+    '## Table of Contents',
+  ];
   const body = [] as string[];
   const group: Record<string, EventBlock[]> = {};
   for (const ev of eventsToProcess) (group[ev.category] ||= []).push(ev);
@@ -284,10 +303,10 @@ async function unloadModel(): Promise<void> {
   await fs.ensureDir(path.dirname(outputFilename));
   await writeFile(outputFilename, [...toc, ...body].join('\n'));
   console.log(chalk.green.bold(`\n✔ Report written → ${outputFilename}`));
-  
+
   // Unload the model to free VRAM
   await unloadModel();
-  
+
   console.log(chalk.blue.bold(`Total time: ${((performance.now() - tStart) / 1000).toFixed(1)}s`));
 
   // Clean up temporary directory

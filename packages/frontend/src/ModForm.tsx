@@ -36,7 +36,9 @@ export default function ModForm({ onSubmit, initial }: Props) {
   const editorRef = useRef<MDXEditorMethods>(null);
 
   useEffect(() => {
-    listTemplatesApi().then(setTemplates).catch(() => {});
+    listTemplatesApi()
+      .then(setTemplates)
+      .catch(() => {});
   }, []);
 
   const update = <K extends keyof ModEntry>(field: K, value: ModEntry[K]) => {
@@ -61,7 +63,6 @@ export default function ModForm({ onSubmit, initial }: Props) {
     deps.splice(idx, 1);
     update('dependencies', deps);
   };
-
 
   return (
     <form
@@ -192,8 +193,8 @@ export default function ModForm({ onSubmit, initial }: Props) {
       <fieldset className="fieldset space-y-2 border border-base-300 p-4 rounded-md">
         <legend className="fieldset-legend font-bold">README</legend>
         <p className="text-sm text-neutral">
-          Use <code>{'{{name}}'}</code>, <code>{'{{id}}'}</code> or any other field from the mod
-          entry. Templates can be inserted below.
+          Use <code>{'{{name}}'}</code>, <code>{'{{id}}'}</code> or any other field from the mod entry. Templates can be
+          inserted below.
         </p>
         {templates.length > 0 && (
           <select

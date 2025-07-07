@@ -4,6 +4,5 @@
 /* eslint-disable */
 import type { CreatableVersion } from './CreatableVersion';
 export type CreateVersionBody = {
-    data: CreatableVersion;
+  data: CreatableVersion;
 };
-

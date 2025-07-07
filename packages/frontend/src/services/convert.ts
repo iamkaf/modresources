@@ -19,23 +19,14 @@ async function ensureFfmpeg() {
   }
 }
 
-export async function convertMovToGif(
-  inputPath: string,
-  opts: ConvertOptions,
-): Promise<Buffer> {
+export async function convertMovToGif(inputPath: string, opts: ConvertOptions): Promise<Buffer> {
   await ensureFfmpeg();
   const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'mov2gif-'));
   const palette = path.join(tmpDir, 'palette.png');
   const output = path.join(tmpDir, 'out.gif');
   const { fps, width } = opts;
   try {
-    await exec('ffmpeg', [
-      '-i',
-      inputPath,
-      '-vf',
-      `fps=${fps},scale=${width}:-1:flags=lanczos,palettegen`,
-      palette,
-    ]);
+    await exec('ffmpeg', ['-i', inputPath, '-vf', `fps=${fps},scale=${width}:-1:flags=lanczos,palettegen`, palette]);
     await exec('ffmpeg', [
       '-i',
       inputPath,

@@ -3,7 +3,6 @@
 /* tslint:disable */
 /* eslint-disable */
 export type GetLatestVersionFromHashBody = {
-    loaders: Array<string>;
-    game_versions: Array<string>;
+  loaders: Array<string>;
+  game_versions: Array<string>;
 };
-

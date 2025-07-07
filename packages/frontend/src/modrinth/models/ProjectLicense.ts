@@ -6,17 +6,16 @@
  * The license of the project
  */
 export type ProjectLicense = {
-    /**
-     * The SPDX license ID of a project
-     */
-    id?: string;
-    /**
-     * The long name of a license
-     */
-    name?: string;
-    /**
-     * The URL to this license
-     */
-    url?: string | null;
+  /**
+   * The SPDX license ID of a project
+   */
+  id?: string;
+  /**
+   * The long name of a license
+   */
+  name?: string;
+  /**
+   * The URL to this license
+   */
+  url?: string | null;
 };
-

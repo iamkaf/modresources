@@ -2,11 +2,7 @@
 import { spawnSync } from 'child_process';
 
 const args = process.argv.slice(2);
-const steps = [
-  'scripts/fabric-event-report.ts',
-  'scripts/neoforge-event-report.ts',
-  'scripts/forge-event-report.ts',
-];
+const steps = ['scripts/fabric-event-report.ts', 'scripts/neoforge-event-report.ts', 'scripts/forge-event-report.ts'];
 
 console.log('▶ Generating full event report (Fabric, NeoForge, Forge)...');
 for (const script of steps) {

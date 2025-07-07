@@ -1,22 +1,13 @@
 #!/usr/bin/env ts-node
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import {
-  readFileSync,
-  writeFileSync,
-  mkdirSync,
-  cpSync,
-  mkdtempSync,
-  rmSync,
-} from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, cpSync, mkdtempSync, rmSync } from 'node:fs';
 import os from 'node:os';
 import { execSync } from 'node:child_process';
 import crypto from 'node:crypto';
 
 function usage() {
-  console.log(
-    'Usage: generateModdy.ts [--dry-run] <patch|minor|major> [notes] (semicolon separated)'
-  );
+  console.log('Usage: generateModdy.ts [--dry-run] <patch|minor|major> [notes] (semicolon separated)');
   process.exit(1);
 }
 
@@ -45,9 +36,12 @@ async function main() {
   const latest = versions[0]?.version || '0.0.0';
   let [maj, min, pat] = latest.split('.').map((v: string) => parseInt(v, 10));
   if (bump === 'major') {
-    maj++; min = 0; pat = 0;
+    maj++;
+    min = 0;
+    pat = 0;
   } else if (bump === 'minor') {
-    min++; pat = 0;
+    min++;
+    pat = 0;
   } else {
     pat++;
   }
@@ -63,10 +57,7 @@ async function main() {
   cpSync(srcDir, pkgDir, { recursive: true });
   const tempInit = path.join(pkgDir, '__init__.py');
   const devCode = readFileSync(tempInit, 'utf8');
-  const updatedCode = devCode.replace(
-    /MODDY_VERSION\s*=\s*"DEVELOPMENT"/,
-    `MODDY_VERSION = "${newVersion}"`
-  );
+  const updatedCode = devCode.replace(/MODDY_VERSION\s*=\s*"DEVELOPMENT"/, `MODDY_VERSION = "${newVersion}"`);
   writeFileSync(tempInit, updatedCode);
   const outPath = path.join(outDir, 'moddy.py');
   execSync(`python3 -m zipapp ${tempDir} -o ${outPath} -m moddy.main:main`);

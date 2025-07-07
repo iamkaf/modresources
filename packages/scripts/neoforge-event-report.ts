@@ -58,18 +58,34 @@ const ollama = new Ollama({ host: ollamaHost });
 // This schema strictly defines the structure of the JSON output we expect from Ollama.
 const EventSummarySchema = z.object({
   when: z.string().describe('A concise sentence of when the event fires.'),
-  cancellable: z.string().describe('Whether the event is cancellable - "Yes" if it extends ICancellableEvent or has @Cancelable annotation, "No" if not, or "Unknown" if unclear.'),
-  fields: z.array(z.object({
-    name: z.string().describe('The field name'),
-    type: z.string().describe('The field type'),
-    description: z.string().describe('What the field represents or is used for')
-  })).describe('Array of important public fields available on the event object. Empty array if none found.'),
-  methods: z.array(z.object({
-    name: z.string().describe('The method name'),
-    signature: z.string().describe('The method signature including parameters and return type'),
-    description: z.string().describe('What the method does')
-  })).describe('Array of important public methods available on the event object. Empty array if none found.'),
-  example: z.string().describe('A Java code snippet showing how to register and handle the event, demonstrating usage of key fields/methods from the event object.')
+  cancellable: z
+    .string()
+    .describe(
+      'Whether the event is cancellable - "Yes" if it extends ICancellableEvent or has @Cancelable annotation, "No" if not, or "Unknown" if unclear.',
+    ),
+  fields: z
+    .array(
+      z.object({
+        name: z.string().describe('The field name'),
+        type: z.string().describe('The field type'),
+        description: z.string().describe('What the field represents or is used for'),
+      }),
+    )
+    .describe('Array of important public fields available on the event object. Empty array if none found.'),
+  methods: z
+    .array(
+      z.object({
+        name: z.string().describe('The method name'),
+        signature: z.string().describe('The method signature including parameters and return type'),
+        description: z.string().describe('What the method does'),
+      }),
+    )
+    .describe('Array of important public methods available on the event object. Empty array if none found.'),
+  example: z
+    .string()
+    .describe(
+      'A Java code snippet showing how to register and handle the event, demonstrating usage of key fields/methods from the event object.',
+    ),
 });
 
 // Infer the TypeScript type from the Zod schema for type safety.
@@ -77,15 +93,17 @@ type EventSummary = z.infer<typeof EventSummarySchema>;
 
 interface EventBlock {
   name: string;
-  source: string;  // full java file
+  source: string; // full java file
   file: string;
   side: 'Client' | 'Server' | 'Common';
   category: string;
   summary?: EventSummary; // Updated to use the structured summary type
 }
 
-const sideOf = (p: string): EventBlock['side'] => p.includes('/client/') ? 'Client' : p.includes('/server/') ? 'Server' : 'Common';
-const catOf = (p: string): string => (p.split('/net/neoforged/neoforge/')[1] ?? p).split('/')[0].replace(/v\d+$/, '') || 'misc';
+const sideOf = (p: string): EventBlock['side'] =>
+  p.includes('/client/') ? 'Client' : p.includes('/server/') ? 'Server' : 'Common';
+const catOf = (p: string): string =>
+  (p.split('/net/neoforged/neoforge/')[1] ?? p).split('/')[0].replace(/v\d+$/, '') || 'misc';
 
 function generateUniqueFilename(): string {
   if (LIMIT) {
@@ -108,33 +126,33 @@ async function javaFiles(root: string): Promise<string[]> {
   const pattern = path.join(root, SRC_GLOB).replace(/\\/g, '/');
   console.log(chalk.gray(`Searching for Java files matching pattern: ${pattern}`));
   const files = await fg(pattern);
-  const filteredFiles = files.filter(f => !EXCLUDE_PATTERNS.some(rx => rx.test(f)));
+  const filteredFiles = files.filter((f) => !EXCLUDE_PATTERNS.some((rx) => rx.test(f)));
   console.log(chalk.gray(`Found ${filteredFiles.length} relevant Java files after filtering.`));
   return filteredFiles;
 }
 
 function detectEvents(src: string, outer: string): string[] {
   const ids = new Set<string>();
-  
+
   // NeoForge: classes that extend Event or MutableEvent
   const eventClass = /public\s+(?:static\s+)?(?:final\s+)?class\s+(\w+)\s+extends\s+(?:Event|MutableEvent)/g;
   let m: RegExpExecArray | null;
   while ((m = eventClass.exec(src))) {
     ids.add(m[1]);
   }
-  
+
   // NeoForge: Look for static BUS fields (individual event buses)
   const busField = /static\s+(?:final\s+)?(?:public\s+)?(?:Cancellable)?EventBus\s*<[^>]*>\s+(\w+)/g;
   while ((m = busField.exec(src))) {
     ids.add(`${outer}.${m[1]}`);
   }
-  
+
   // Legacy: Event fields and constants
   const eventField = /static\s+(?:final\s+)?(?:public\s+)?(?:Event|EventBus)\s*<[^>]*>\s+(\w+)/g;
   while ((m = eventField.exec(src))) {
     ids.add(`${outer}.${m[1]}`);
   }
-  
+
   // Look for @SubscribeEvent annotations to find event types
   const subscribeEvent = /@SubscribeEvent[^{]*public\s+\w+\s+\w+\(([^)]+)\)/g;
   while ((m = subscribeEvent.exec(src))) {
@@ -143,19 +161,19 @@ function detectEvents(src: string, outer: string): string[] {
       ids.add(paramType);
     }
   }
-  
+
   // Look for classes that implement ICancellableEvent
   const cancellableEvent = /public\s+(?:static\s+)?(?:final\s+)?class\s+(\w+).*implements.*ICancellableEvent/g;
   while ((m = cancellableEvent.exec(src))) {
     ids.add(m[1]);
   }
-  
+
   // Look for classes with @Cancelable annotation
   const cancelableEvent = /@Cancelable[^{]*public\s+(?:static\s+)?(?:final\s+)?class\s+(\w+)/g;
   while ((m = cancelableEvent.exec(src))) {
     ids.add(m[1]);
   }
-  
+
   return [...ids];
 }
 
@@ -237,7 +255,7 @@ async function summarise(ev: EventBlock): Promise<EventSummary> {
       cancellable: '(summary failed: parsing error)',
       fields: [],
       methods: [],
-      example: `// Example generation failed for ${ev.name} due to parsing error.`
+      example: `// Example generation failed for ${ev.name} due to parsing error.`,
     };
   }
 }
@@ -252,7 +270,7 @@ async function unloadModel(): Promise<void> {
     await ollama.generate({
       model: MODEL,
       prompt: '',
-      keep_alive: 0
+      keep_alive: 0,
     });
     console.log(chalk.green('Model unloaded successfully.'));
   } catch (error) {
@@ -300,17 +318,26 @@ async function unloadModel(): Promise<void> {
         cancellable: '(summary failed: unhandled error)',
         fields: [],
         methods: [],
-        example: `// Example generation failed for ${ev.name} due to unhandled error.`
+        example: `// Example generation failed for ${ev.name} due to unhandled error.`,
       };
     }
     const dt = ((performance.now() - t0) / 1000).toFixed(1);
-    console.log(`${chalk.gray(`[${i+1}/${eventsToProcess.length}]`)} ${chalk.yellow('•')} ${chalk.cyan(ev.name)} ${chalk.gray(dt + 's')}`);
+    console.log(
+      `${chalk.gray(`[${i + 1}/${eventsToProcess.length}]`)} ${chalk.yellow('•')} ${chalk.cyan(ev.name)} ${chalk.gray(dt + 's')}`,
+    );
   }
 
   // Build Markdown Report
-  const processedCount = eventsToProcess.filter(ev => ev.summary).length;
+  const processedCount = eventsToProcess.filter((ev) => ev.summary).length;
   const limitInfo2 = LIMIT ? ` (limited to ${LIMIT} events)` : '';
-  const toc = ['# NeoForge – Event Handbook', '', `Generated ${new Date().toISOString()} using ${MODEL}${limitInfo2}.`, `Processed ${processedCount} out of ${events.length} total events.`, '', '## Table of Contents'];
+  const toc = [
+    '# NeoForge – Event Handbook',
+    '',
+    `Generated ${new Date().toISOString()} using ${MODEL}${limitInfo2}.`,
+    `Processed ${processedCount} out of ${events.length} total events.`,
+    '',
+    '## Table of Contents',
+  ];
   const body = [] as string[];
   const group: Record<string, EventBlock[]> = {};
   for (const ev of eventsToProcess) (group[ev.category] ||= []).push(ev);
@@ -326,14 +353,18 @@ async function unloadModel(): Promise<void> {
       body.push(`**When**: ${ev.summary?.when ?? '*(no summary)*'}\n`);
       body.push(`**Cancellable**: ${ev.summary?.cancellable ?? '*(unknown)*'}\n`);
       // Format fields as YAML list
-      const fieldsYaml = ev.summary?.fields?.length 
-        ? ev.summary.fields.map(f => `- name: ${f.name}\n  type: ${f.type}\n  description: ${f.description}`).join('\n')
+      const fieldsYaml = ev.summary?.fields?.length
+        ? ev.summary.fields
+            .map((f) => `- name: ${f.name}\n  type: ${f.type}\n  description: ${f.description}`)
+            .join('\n')
         : '# none detected';
       body.push(`**Fields**:\n\`\`\`yaml\n${fieldsYaml}\n\`\`\`\n`);
-      
+
       // Format methods as YAML list
-      const methodsYaml = ev.summary?.methods?.length 
-        ? ev.summary.methods.map(m => `- name: ${m.name}\n  signature: ${m.signature}\n  description: ${m.description}`).join('\n')
+      const methodsYaml = ev.summary?.methods?.length
+        ? ev.summary.methods
+            .map((m) => `- name: ${m.name}\n  signature: ${m.signature}\n  description: ${m.description}`)
+            .join('\n')
         : '# none detected';
       body.push(`**Methods**:\n\`\`\`yaml\n${methodsYaml}\n\`\`\`\n`);
       body.push(`**Example**:\n\`\`\`java\n${ev.summary?.example ?? '// No example available.'}\n\`\`\`\n`);
@@ -346,10 +377,10 @@ async function unloadModel(): Promise<void> {
   await fs.ensureDir(path.dirname(outputFilename));
   await writeFile(outputFilename, [...toc, ...body].join('\n'));
   console.log(chalk.green.bold(`\n✔ Report written → ${outputFilename}`));
-  
+
   // Unload the model to free VRAM
   await unloadModel();
-  
+
   console.log(chalk.blue.bold(`Total time: ${((performance.now() - tStart) / 1000).toFixed(1)}s`));
 
   // Clean up temporary directory

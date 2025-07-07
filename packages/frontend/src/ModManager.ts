@@ -22,11 +22,7 @@ import type { ModsData, ModEntry } from './utils/readMods';
 export class ModManager {
   private filePath: string;
 
-  constructor(filePath = path.join(
-    path.dirname(fileURLToPath(import.meta.url)),
-    '..',
-    'mods.v2.json'
-  )) {
+  constructor(filePath = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'mods.v2.json')) {
     this.filePath = filePath;
   }
 

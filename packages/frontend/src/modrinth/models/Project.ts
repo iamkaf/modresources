@@ -7,7 +7,8 @@ import type { ModeratorMessage } from './ModeratorMessage';
 import type { NonSearchProject } from './NonSearchProject';
 import type { ProjectLicense } from './ProjectLicense';
 import type { ServerRenderedProject } from './ServerRenderedProject';
-export type Project = (NonSearchProject & ServerRenderedProject & {
+export type Project = NonSearchProject &
+  ServerRenderedProject & {
     /**
      * The ID of the project, encoded as a base62 string
      */
@@ -59,5 +60,4 @@ export type Project = (NonSearchProject & ServerRenderedProject & {
      * A list of images that have been uploaded to the project's gallery
      */
     gallery?: Array<GalleryImage>;
-});
-
+  };

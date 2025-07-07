@@ -7,13 +7,12 @@
  * @deprecated
  */
 export type ModeratorMessage = {
-    /**
-     * The message that a moderator has left for the project
-     */
-    message?: string;
-    /**
-     * The longer body of the message that a moderator has left for the project
-     */
-    body?: string | null;
+  /**
+   * The message that a moderator has left for the project
+   */
+  message?: string;
+  /**
+   * The longer body of the message that a moderator has left for the project
+   */
+  body?: string | null;
 };
-

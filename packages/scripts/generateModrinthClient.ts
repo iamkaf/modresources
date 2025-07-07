@@ -38,44 +38,44 @@
  *   console.log(newest[0].files[0].url);
  */
 
-import { exec as _exec } from "node:child_process";
-import { promisify } from "node:util";
-import { mkdir } from "node:fs/promises";
-import path from "node:path";
+import { exec as _exec } from 'node:child_process';
+import { promisify } from 'node:util';
+import { mkdir } from 'node:fs/promises';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const exec = promisify(_exec);
 
-const OPENAPI_URL =
-  "https://raw.githubusercontent.com/modrinth/code/main/apps/docs/public/openapi.yaml";
-const OUT_DIR = path.join(path.resolve(fileURLToPath(import.meta.url), '..', '..', '..'), 'packages', 'frontend', 'src', 'modrinth');
-const SPEC_PATH = path.join(OUT_DIR, "openapi.yaml");
+const OPENAPI_URL = 'https://raw.githubusercontent.com/modrinth/code/main/apps/docs/public/openapi.yaml';
+const OUT_DIR = path.join(
+  path.resolve(fileURLToPath(import.meta.url), '..', '..', '..'),
+  'packages',
+  'frontend',
+  'src',
+  'modrinth',
+);
+const SPEC_PATH = path.join(OUT_DIR, 'openapi.yaml');
 
 async function generate() {
   // 1) Ensure output directory exists
   await mkdir(OUT_DIR, { recursive: true });
 
   // 2) Download spec via curl (works behind proxies)
-  console.log("› Fetching OpenAPI spec …");
+  console.log('› Fetching OpenAPI spec …');
   await exec(`curl -sSL ${OPENAPI_URL} -o ${SPEC_PATH}`);
 
   // 3) Generate raw TypeScript typings (components + operation maps)
-  console.log("› Generating TypeScript schemas …");
-  await exec(
-    `npx --yes openapi-typescript ${SPEC_PATH} -o ${path.join(
-      OUT_DIR,
-      "modrinth.schemas.ts"
-    )}`
-  );
+  console.log('› Generating TypeScript schemas …');
+  await exec(`npx --yes openapi-typescript ${SPEC_PATH} -o ${path.join(OUT_DIR, 'modrinth.schemas.ts')}`);
 
   // 4) Generate fully-featured fetch client
-  console.log("› Generating fetch client …");
+  console.log('› Generating fetch client …');
   await exec(
-    `npx --yes openapi-typescript-codegen --input ${SPEC_PATH} --output ${OUT_DIR} --useUnionTypes --client fetch --name ModrinthClient`
+    `npx --yes openapi-typescript-codegen --input ${SPEC_PATH} --output ${OUT_DIR} --useUnionTypes --client fetch --name ModrinthClient`,
   );
 
   // 4) Patch the generated core client to automatically inject PAT + UA
-  const patchPath = path.join(OUT_DIR, "core", "OpenAPI.ts");
+  const patchPath = path.join(OUT_DIR, 'core', 'OpenAPI.ts');
   const patch = `
 /** Auto-injected helper: merges default Modrinth headers (User-Agent & PAT) */
 export function applyModrinthAuth(cfg: ApiConfig, opts: { token?: string; userAgent?: string }) {
@@ -84,11 +84,11 @@ export function applyModrinthAuth(cfg: ApiConfig, opts: { token?: string; userAg
   if (opts.userAgent) cfg.HEADERS["User-Agent"] = opts.userAgent;
 }
 `;
-  const fs = await import("node:fs/promises");
-  const original = await fs.readFile(patchPath, "utf8");
-  await fs.writeFile(patchPath, original + patch, "utf8");
+  const fs = await import('node:fs/promises');
+  const original = await fs.readFile(patchPath, 'utf8');
+  await fs.writeFile(patchPath, original + patch, 'utf8');
 
-  console.log("✔ All done – the client lives in", OUT_DIR);
+  console.log('✔ All done – the client lives in', OUT_DIR);
 }
 
 import { fileURLToPath } from 'node:url';

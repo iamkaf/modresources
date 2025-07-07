@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 // https://vite.dev/config/
 export default defineConfig({
   root: path.resolve(path.dirname(fileURLToPath(import.meta.url))),
-  publicDir: "public",
+  publicDir: 'public',
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {
@@ -19,4 +19,4 @@ export default defineConfig({
       '/api': 'http://localhost:3001',
     },
   },
-})
+});

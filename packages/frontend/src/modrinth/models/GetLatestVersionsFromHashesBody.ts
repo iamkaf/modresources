@@ -3,8 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { HashList } from './HashList';
-export type GetLatestVersionsFromHashesBody = (HashList & {
-    loaders: Array<string>;
-    game_versions: Array<string>;
-});
-
+export type GetLatestVersionsFromHashesBody = HashList & {
+  loaders: Array<string>;
+  game_versions: Array<string>;
+};

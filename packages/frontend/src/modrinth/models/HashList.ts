@@ -6,7 +6,6 @@
  * A list of hashes and the algorithm used to create them
  */
 export type HashList = {
-    hashes: Array<string>;
-    algorithm: 'sha1' | 'sha512';
+  hashes: Array<string>;
+  algorithm: 'sha1' | 'sha512';
 };
-

@@ -79,11 +79,7 @@ export async function fetchChangelogApi(loader: 'fabric' | 'neoforge' | 'forge')
   return res.text();
 }
 
-export async function convertMovToGif(
-  file: File,
-  fps: number,
-  width: number,
-): Promise<Blob> {
+export async function convertMovToGif(file: File, fps: number, width: number): Promise<Blob> {
   const formData = new FormData();
   formData.append('file', file);
   formData.append('fps', String(fps));
@@ -92,4 +88,3 @@ export async function convertMovToGif(
   if (!res.ok) throw new Error(await res.text());
   return res.blob();
 }
-

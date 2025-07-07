@@ -6,7 +6,6 @@
  * A full license
  */
 export type License = {
-    title?: string;
-    body?: string;
+  title?: string;
+  body?: string;
 };
-
