@@ -153,6 +153,7 @@ For each issue found:
 -   **Maintain Abstraction**: Document public APIs and intended usage patterns, not internal implementation details. 
 -   **Preserve Intent**: Fix errors while maintaining the original meaning and purpose of the documentation.
 -   **Be Comprehensive**: Do not skip files; verify all relevant documentation.
+-   **Moddy Changes**: All changes to Moddy must be documented in `moddy/UNRELEASED.md`.
 
 ## 🎯 **Success Criteria**
 

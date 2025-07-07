@@ -17,7 +17,7 @@ Other top-level directories:
 - `pages` 📄 - Generated README files and images for each mod.
 - `assets/icon-parts` 🖼️ - Layered images used when generating icons.
 - `docs` 📚 - Extra markdown notes.
-- `server.ts` 🌐 - The Express API server that powers the React UI and exposes helper endpoints.
+- `packages/frontend/server.ts` 🌐 - The Express API server that powers the React UI and exposes helper endpoints.
 
 ## Scripts
 
@@ -35,7 +35,7 @@ All scripts are run using `pnpm`. You can run scripts for specific packages usin
 These scripts are located in the `packages/scripts` directory and can be run using `pnpm --filter @modresources/scripts <script-name>`:
 
 - `generate:modrinth` 🛠️ - Build a fully-typed Modrinth API client under `packages/frontend/src/modrinth`.
-- `generate:moddy <patch|minor|major> [notes]` 🛠️ - Creates a new Moddy artifact and adds it to the registry. Pass `--dry-run` to test without writing files.
+- `generate:moddy <patch|minor|major> [notes...]` 🛠️ - Creates a new Moddy artifact and adds it to the registry. Pass `--dry-run` to test without writing files.
 - `generate:fabric-event-report [-- --limit <n>]` 📚 - Generate AI-powered documentation for Fabric API events. When run with `-- --limit <n>`, processes only the first <n> events and writes timestamped partial reports to `tmp-event-summaries/`. Without `--limit`, overwrites `docs/fabric-events-summary.md`.
 - `generate:neoforge-event-report [-- --limit <n>]` 📚 - Generate AI-powered documentation for NeoForge events. Same behavior: use `-- --limit <n>` for partial reports in `tmp-event-summaries/`, no limit overwrites `docs/neoforge-events-summary.md`.
 - `generate:forge-event-report [-- --limit <n>]` 📚 - Generate AI-powered documentation for MinecraftForge events. Same behavior: use `-- --limit <n>` for partial reports in `tmp-event-summaries/`, no limit overwrites `docs/forge-events-summary.md`.

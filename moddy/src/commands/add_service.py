@@ -72,7 +72,7 @@ def cmd_add_service(args: argparse.Namespace) -> None:
                 text = text[:insert_pos] + import_line + "\n" + text[insert_pos:]
             else:
                 text = import_line + "\n" + text
-        const_name = re.sub(r"(?<!^)(?=[A-Z])", "_", name).upper()
+        const_name = re.sub(r"([A-Z])", r"_\1", name).upper()
         field_line = (
             f"    public static final {interface_name} {const_name} = load({interface_name}.class);"
         )
