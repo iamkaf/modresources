@@ -1,11 +1,12 @@
 #!/usr/bin/env ts-node
-import path from 'path';
-import { execSync } from 'child_process';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
 import fs from 'fs-extra';
 
 // Clone the multiloader-template repository for Moddy setup verification
 const TEMPLATE_URL = 'https://github.com/iamkaf/multiloader-template.git';
-const DEST = path.join(__dirname, '..', '..', 'moddy', 'testing-template');
+const DEST = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..', 'moddy', 'testing-template');
 
 console.log(`▶ Cloning multiloader-template into ${DEST}...`);
 // Remove any existing directory to ensure a clean clone

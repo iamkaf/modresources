@@ -69,7 +69,7 @@ async function main() {
   );
   writeFileSync(tempInit, updatedCode);
   const outPath = path.join(outDir, 'moddy.py');
-  execSync(`python -m zipapp ${tempDir} -o ${outPath} -m moddy.main:main`);
+  execSync(`python3 -m zipapp ${tempDir} -o ${outPath} -m moddy.main:main`);
   rmSync(tempDir, { recursive: true, force: true });
 
   const fileData = readFileSync(outPath);

@@ -1,9 +1,10 @@
 #!/usr/bin/env ts-node
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import fs from 'fs-extra';
 
 // Remove the cloned multiloader-template directory
-const DEST = path.join(__dirname, '..', '..', 'moddy', 'testing-template');
+const DEST = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..', 'moddy', 'testing-template');
 
 console.log(`▶ Removing testing template at ${DEST}...`);
 try {

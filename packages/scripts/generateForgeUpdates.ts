@@ -13,7 +13,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { readMods } from '../src/utils/readMods';
+import { readMods } from '../frontend/src/utils/readMods';
 
 async function generate() {
   const root = path.dirname(fileURLToPath(import.meta.url));
