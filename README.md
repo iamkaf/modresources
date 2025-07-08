@@ -8,7 +8,7 @@ This project is organized as a pnpm monorepo, with different components residing
 
 - `packages/frontend` 💻 - The React UI application for managing mod resources. This includes the main application source code, public assets, and frontend-specific configurations.
 - `packages/scripts` 📜 - A collection of Node.js/TypeScript helper scripts for automation tasks, such as generating API clients, event reports, and managing Moddy artifacts.
-- `packages/linkie-mcp` 🔗 - A server that adapts the Linkie API to expose Minecraft mapping functionality as Model Context Protocol (MCP) tools and resources.
+- `packages/linkie-mcp` 🔗 - A server that adapts the Linkie API to expose Minecraft mapping functionality as Model Context Protocol (MCP) tools and resources. **Location: `/packages/linkie-mcp/`**
 
 Other top-level directories:
 
@@ -31,7 +31,9 @@ All scripts are run using `pnpm`. You can run scripts for specific packages usin
 - `pnpm test` 🧪 - Execute unit tests for all packages with Vitest.
 - `pnpm format` 💅 - Format code across the entire project using Prettier.
 
-### Package-Specific Scripts (`packages/scripts`)
+### Package-Specific Scripts
+
+#### Scripts Package (`packages/scripts`)
 
 These scripts are located in the `packages/scripts` directory and can be run using `pnpm --filter @modresources/scripts <script-name>`:
 
@@ -45,6 +47,53 @@ These scripts are located in the `packages/scripts` directory and can be run usi
 - `cleanup:moddy-testing-template` 🧹 - Removes the `moddy/testing-template` directory.
 
 All event-report scripts detect WSL environments and unload AI models to free VRAM when complete.
+
+#### Linkie MCP Package (`packages/linkie-mcp`)
+
+**Location: `/packages/linkie-mcp/`**
+
+The Linkie MCP server adapts the Linkie API to expose Minecraft mapping functionality as Model Context Protocol (MCP) tools and resources. Run with `pnpm --filter @modresources/linkie-mcp <script-name>`:
+
+- `start` 🚀 - Run development server with tsx
+- `build` 🔨 - Compile TypeScript to JavaScript (outputs to `dist/`)
+- `bundle` 📦 - Create standalone executable bundle (`dist/bundle.cjs`)
+- `start:prod` 🏃 - Run production server from compiled JS
+- `start:bundle` 🏃 - Run standalone bundled version
+- `lint` 🔍 - Run ESLint
+- `typecheck` 🧪 - Type check without emitting files
+
+**Usage Examples:**
+```bash
+# Development
+pnpm --filter @modresources/linkie-mcp start
+
+# Build standalone bundle
+pnpm --filter @modresources/linkie-mcp bundle
+
+# Run bundle from anywhere
+node packages/linkie-mcp/dist/bundle.cjs
+
+# Run with custom Linkie URL
+./packages/linkie-mcp/dist/bundle.cjs --linkie-url http://localhost:8080
+```
+
+**MCP Configuration:**
+If using this project:
+```json
+{
+  "type": "stdio",
+  "command": "pnpm",
+  "args": ["--filter", "@modresources/linkie-mcp", "start"]
+}
+```
+If using the built bundle:
+```json
+{
+  "type": "stdio",
+  "command": "node",
+  "args": ["/path/to/packages/linkie-mcp/dist/bundle.cjs"]
+}
+```
 
 ## Starting the UI
 
