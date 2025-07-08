@@ -48,6 +48,9 @@ __pycache__/
 .venv/
 venv/
 
+# Java
+.gradle
+
 # Temporary files
 tmp/
 temp/
