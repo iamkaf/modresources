@@ -8,6 +8,7 @@ This project is organized as a pnpm monorepo, with different components residing
 
 - `packages/frontend` 💻 - The React UI application for managing mod resources. This includes the main application source code, public assets, and frontend-specific configurations.
 - `packages/scripts` 📜 - A collection of Node.js/TypeScript helper scripts for automation tasks, such as generating API clients, event reports, and managing Moddy artifacts.
+- `packages/linkie-mcp` 🔗 - A server that adapts the Linkie API to expose Minecraft mapping functionality as Model Context Protocol (MCP) tools and resources.
 
 Other top-level directories:
 
