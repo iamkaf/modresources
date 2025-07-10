@@ -1,9 +1,9 @@
 {
   "homepage": "https://modrinth.com/mod/torchtoss",
   "promos": {
-    "1.21.5-latest": "2.0.0+1.21.5"
+    "1.21.6-latest": "2.1.1+1.21.6"
   },
-  "1.21.5": {
-    "2.0.0+1.21.5": "## 2.0.0\r\n\r\n- feat: updated to Minecraft 1.21.5\r\n\r"
+  "1.21.6": {
+    "2.1.1+1.21.6": "## 2.1.1\r\n\r\n- fix: gave recipes an id to prevent conflicts\r\n\r"
   }
 }

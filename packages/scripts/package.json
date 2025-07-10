@@ -1,0 +1,30 @@
+{
+  "name": "@modresources/scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "generate:modrinth": "tsx ./generateModrinthClient.ts",
+    "generate:updates": "tsx ./generateForgeUpdates.ts",
+    "generate:moddy": "tsx ./generateModdy.ts",
+    "generate:fabric-event-report": "tsx ./fabric-event-report.ts",
+    "generate:neoforge-event-report": "tsx ./neoforge-event-report.ts",
+    "generate:forge-event-report": "tsx ./forge-event-report.ts",
+    "generate:full-event-report": "tsx ./full-event-report.ts",
+    "setup:moddy-testing-template": "tsx ./setup-moddy-testing-template.ts",
+    "cleanup:moddy-testing-template": "tsx ./cleanup-moddy-testing-template.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "fast-glob": "^3.3.3",
+    "fs-extra": "^11.3.0",
+    "ollama": "^0.5.16",
+    "openapi-typescript": "^7.8.0",
+    "openapi-typescript-codegen": "^0.29.0",
+    "simple-git": "^3.28.0",
+    "tmp-promise": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3"
+  }
+}

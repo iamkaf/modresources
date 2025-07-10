@@ -11,7 +11,7 @@ This repository contains the source for **Moddy**, a single-file Python assistan
    Run `py_compile` for other Python files that were modified.
 2. Create a local Moddy artifact. Bump the patch version so the build ends up in `moddy/registry/<version>/moddy.py`:
    ```bash
-   npm run generate:moddy -- patch
+   pnpm --filter @modresources/scripts generate:moddy -- patch
    ```
    This updates `moddy/versions.json` and writes the new script under `moddy/registry`. The version bump is temporary and should not be committed.
 
@@ -23,11 +23,11 @@ This repository contains the source for **Moddy**, a single-file Python assistan
    ```
 2. Copy the generated `moddy.py` into the cloned repo directory:
    ```bash
-   cp moddy/registry/*/moddy.py moddy/testing-template/scripts/moddy.py
+   cp moddy/registry/0.15.1/moddy.py moddy/testing-template/scripts/moddy.py
    ```
 3. From within `template-test`, run the setup command and provide the desired identifiers (e.g. `com.iamkaf.snapshears` and `SnapShears`):
    ```bash
-   cd template-test
+   cd moddy/testing-template
    python scripts/moddy.py setup
    ```
 4. Confirm that
@@ -43,4 +43,5 @@ This repository contains the source for **Moddy**, a single-file Python assistan
 
 ## Notes
 - Do **not** commit the generated `moddy.py` or the edited `versions.json`.
+- All changes to Moddy must be documented in `moddy/UNRELEASED.md`.
 - Additional JavaScript or TypeScript changes should be linted with `npm run lint` and tested with `npm run test`.
