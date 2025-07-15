@@ -1,9 +1,25 @@
 {
   "homepage": "https://modrinth.com/mod/kaf-hud",
   "promos": {
-    "1.21.5-latest": "1.3.0+1.21.5"
+    "1.21.7-latest": "2.0.0+1.21.7",
+    "1.21.5-latest": "1.3.0+1.21.5",
+    "1.21.4-latest": "1.2.0+1.21.4",
+    "1.21-latest": "kafhud-neoforge-1.21.1-1.1.0",
+    "1.21.1-latest": "kafhud-neoforge-1.21.1-1.1.0"
+  },
+  "1.21.7": {
+    "2.0.0+1.21.7": "# Changelog\r\n\r\nAll notable changes to this project will be documented in this file.\r\n\r\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),\r\nand this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\r\n\r\nSee the full changelog at https://github.com/iamkaf/kaf-hud\r\n\r\n## 2.0.0\r\n\r\n### Added\r\n\r\n- Added Forge support.\r\n\r\n### Changed\r\n\r\n- Completely rewritten the mod using Amber 6.\r\n- Updated the mod to be compatible with Minecraft 1.21.7.\r\n\r\n## Types of changes\r\n- `Added` for new features.\r\n- `Changed` for changes in existing functionality.\r\n- `Deprecated` for soon-to-be removed features.\r\n- `Removed` for now removed features.\r\n- `Fixed` for any bug fixes.\r\n- `Security` in case of vulnerabilities.\r\n"
   },
   "1.21.5": {
     "1.3.0+1.21.5": "## 1.3.0\r\n\r\n- feat: port to 1.21.5\r\n- feat: remove the unobtrusive tool harvestability indicator \r\n\r\n## 1.2.0\r\n\r\n- feat: port to 1.21.4\r\n\r\n## 1.1.0\r\n\r\n- feat: add an unobtrusive tool harvestability indicator\r\n\r\n## 1.0.1\r\n\r\n- fix: hide hud on f1\r\n\r"
+  },
+  "1.21.4": {
+    "1.2.0+1.21.4": "## 1.2.0\r\n\r\n- feat: port to 1.21.4\r\n\r\n## 1.1.0\r\n\r\n- feat: add an unobtrusive tool harvestability indicator\r\n\r\n## 1.0.1\r\n\r\n- fix: hide hud on f1\r\n\r"
+  },
+  "1.21": {
+    "kafhud-neoforge-1.21.1-1.1.0": "## 1.1.0\r\n\r\n- feat: add an unobtrusive tool harvestability indicator\r\n\r\n## 1.0.1\r\n\r\n- fix: hide hud on f1\r\n\r"
+  },
+  "1.21.1": {
+    "kafhud-neoforge-1.21.1-1.1.0": "## 1.1.0\r\n\r\n- feat: add an unobtrusive tool harvestability indicator\r\n\r\n## 1.0.1\r\n\r\n- fix: hide hud on f1\r\n\r"
   }
 }

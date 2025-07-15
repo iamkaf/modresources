@@ -1,9 +1,33 @@
 {
   "homepage": "https://modrinth.com/mod/liteminer",
   "promos": {
-    "1.21.6-latest": "1.2.0+1.21.6"
+    "1.21.7-latest": "1.2.1+1.21.7",
+    "1.21.6-latest": "1.2.0+1.21.6",
+    "1.21.5-latest": "1.1.0+1.21.5",
+    "1.21.4-latest": "1.0.0+1.21.4",
+    "1.21-latest": "1.0.0+1.21.1",
+    "1.21.1-latest": "1.0.0+1.21.1",
+    "1.20.1-latest": "1.0.0+1.20.1"
+  },
+  "1.21.7": {
+    "1.2.1+1.21.7": "## 1.2.1\n\n- chore: ported to Minecraft 1.21.7\n"
   },
   "1.21.6": {
     "1.2.0+1.21.6": "## 1.2.0\r\n\r\n- feat: ported to 1.21.6\r\n\r"
+  },
+  "1.21.5": {
+    "1.1.0+1.21.5": "## 1.1.0\r\n\r\n- feat: ported to 1.21.5\r\n\r"
+  },
+  "1.21.4": {
+    "1.0.0+1.21.4": "## 1.0.0\r\n\r\nThe first stable release of Liteminer!\r\n\r\nI've completed all the features I wanted to add to the mod when I started the project, and I'm happy with how it turned out. The next steps are fixing bugs that might come up and adding new features that I think of or that are requested by the community starting with the Forge port.\r\n\r\n- feat: added tags for blacklisting blocks and tools\r\n  - Item Tags:\r\n    - `liteminer:excluded_tools` - items in this tag can't be used for litemining\r\n    - `liteminer:included_tools` - if `require_correct_tool_enabled` is true in common config, by default only \"tool\" items can be used (tiered items with durability); this can be used to allow extra items\r\n  - Block Tags\r\n    - `liteminer:excluded_blocks` - blocks in this tag may never be litemined\r\n    - `liteminer:block_whitelist` - if this tag is non-empty, then _only_ blocks in this tag may be litemined\r\n  - Note: these tags are compatible with the FTB Ultimine tags, so you can use the same tags for both mods if you already have a setup you like.\r\n\r"
+  },
+  "1.21": {
+    "1.0.0+1.21.1": "## 1.0.0\r\n\r\nThe first stable release of Liteminer!\r\n\r\nI've completed all the features I wanted to add to the mod when I started the project, and I'm happy with how it turned out. The next steps are fixing bugs that might come up and adding new features that I think of or that are requested by the community starting with the Forge port.\r\n\r\n- feat: added tags for blacklisting blocks and tools\r\n    - Item Tags:\r\n        - `liteminer:excluded_tools` - items in this tag can't be used for litemining\r\n        - `liteminer:included_tools` - if `require_correct_tool_enabled` is true in common config, by default only \"tool\" items can be used (tiered items with durability); this can be used to allow extra items\r\n    - Block Tags\r\n        - `liteminer:excluded_blocks` - blocks in this tag may never be litemined\r\n        - `liteminer:block_whitelist` - if this tag is non-empty, then _only_ blocks in this tag may be litemined\r\n    - Note: these tags are compatible with the FTB Ultimine tags, so you can use the same tags for both mods if you already have a setup you like.\r\n\r"
+  },
+  "1.21.1": {
+    "1.0.0+1.21.1": "## 1.0.0\r\n\r\nThe first stable release of Liteminer!\r\n\r\nI've completed all the features I wanted to add to the mod when I started the project, and I'm happy with how it turned out. The next steps are fixing bugs that might come up and adding new features that I think of or that are requested by the community starting with the Forge port.\r\n\r\n- feat: added tags for blacklisting blocks and tools\r\n    - Item Tags:\r\n        - `liteminer:excluded_tools` - items in this tag can't be used for litemining\r\n        - `liteminer:included_tools` - if `require_correct_tool_enabled` is true in common config, by default only \"tool\" items can be used (tiered items with durability); this can be used to allow extra items\r\n    - Block Tags\r\n        - `liteminer:excluded_blocks` - blocks in this tag may never be litemined\r\n        - `liteminer:block_whitelist` - if this tag is non-empty, then _only_ blocks in this tag may be litemined\r\n    - Note: these tags are compatible with the FTB Ultimine tags, so you can use the same tags for both mods if you already have a setup you like.\r\n\r"
+  },
+  "1.20.1": {
+    "1.0.0+1.20.1": "## 1.0.0\r\n\r\nThe first stable release of Liteminer!\r\n\r\nI've completed all the features I wanted to add to the mod when I started the project, and I'm happy with how it turned out. The next steps are fixing bugs that might come up and adding new features that I think of or that are requested by the community starting with the Forge port.\r\n\r\n- feat: added tags for blacklisting blocks and tools\r\n    - Item Tags:\r\n        - `liteminer:excluded_tools` - items in this tag can't be used for litemining\r\n        - `liteminer:included_tools` - if `require_correct_tool_enabled` is true in common config, by default only \"tool\" items can be used (tiered items with durability); this can be used to allow extra items\r\n    - Block Tags\r\n        - `liteminer:excluded_blocks` - blocks in this tag may never be litemined\r\n        - `liteminer:block_whitelist` - if this tag is non-empty, then _only_ blocks in this tag may be litemined\r\n    - Note: these tags are compatible with the FTB Ultimine tags, so you can use the same tags for both mods if you already have a setup you like.\r\n\r"
   }
 }

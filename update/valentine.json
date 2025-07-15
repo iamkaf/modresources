@@ -1,9 +1,25 @@
 {
   "homepage": "https://modrinth.com/mod/valentine",
   "promos": {
-    "1.21.5-latest": "4.0.0+1.21.5"
+    "1.21.7-latest": "4.1.0+1.21.7",
+    "1.21.5-latest": "4.0.0+1.21.5",
+    "1.21.4-latest": "3.0.0+1.21.4",
+    "1.21-latest": "2.1.0",
+    "1.21.1-latest": "2.1.0"
+  },
+  "1.21.7": {
+    "4.1.0+1.21.7": "## 4.1.0\r\n\r\n- Updated for Minecraft 1.21.7\r\n\r"
   },
   "1.21.5": {
     "4.0.0+1.21.5": "## 4.0.0\r\n\r\n- Ported to 1.21.5\r\n\r"
+  },
+  "1.21.4": {
+    "3.0.0+1.21.4": "## 3.0.0\r\n\r\n- Ported to 1.21.4\r\n- Removed the colored cotton candy in favor of the new candied cotton candy candy\r\n\r"
+  },
+  "1.21": {
+    "2.1.0": "## 2.1.0\r\n\r\n- Ported to NeoForge\r\n- The colorful cotton candy now drops neatly on top of the honeycomb block\r\n- Added a few translations to the en_us.json file that were previously hardcoded\r\n\r"
+  },
+  "1.21.1": {
+    "2.1.0": "## 2.1.0\r\n\r\n- Ported to NeoForge\r\n- The colorful cotton candy now drops neatly on top of the honeycomb block\r\n- Added a few translations to the en_us.json file that were previously hardcoded\r\n\r"
   }
 }

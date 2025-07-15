@@ -1,9 +1,29 @@
 {
   "homepage": "https://modrinth.com/mod/mochila",
   "promos": {
-    "1.21.6-latest": "2.2.0+1.21.6"
+    "1.21.7-latest": "2.3.0+1.21.7",
+    "1.21.6-latest": "2.2.0+1.21.6",
+    "1.21-latest": "1.5.0+1.21.1",
+    "1.21.1-latest": "1.5.0+1.21.1",
+    "1.21.4-latest": "1.5.0+1.21.4",
+    "1.21.5-latest": "2.1.0+1.21.5"
+  },
+  "1.21.7": {
+    "2.3.0+1.21.7": "## 2.3.0\r\n\r\n- feat: ported to 1.21.7\r\n\r"
   },
   "1.21.6": {
     "2.2.0+1.21.6": "## 2.2.0\r\n\r\n- feat: ported to 1.21.6\r\n\r"
+  },
+  "1.21": {
+    "1.5.0+1.21.1": "## 1.5.0\n\n- feat: added zh_cn.json translations\n\n"
+  },
+  "1.21.1": {
+    "1.5.0+1.21.1": "## 1.5.0\n\n- feat: added zh_cn.json translations\n\n"
+  },
+  "1.21.4": {
+    "1.5.0+1.21.4": "## 1.5.0\n\n- feat: added zh_cn.json translations\n\n"
+  },
+  "1.21.5": {
+    "2.1.0+1.21.5": "## 2.1.0\r\n\r\n- feat: added zh_cn.json translations\r\n\r"
   }
 }

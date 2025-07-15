@@ -1,9 +1,17 @@
 {
   "homepage": "https://modrinth.com/mod/extendedgolf",
   "promos": {
-    "1.21.5-latest": "1.2.0+1.21.5"
+    "1.21.5-latest": "1.2.0+1.21.5",
+    "1.21.4-latest": "1.1.0+1.21.4",
+    "1.21.1-latest": "1.0.0+1.21.1"
   },
   "1.21.5": {
     "1.2.0+1.21.5": "## 1.2.0\r\n\r\n- feat: port to 1.21.5\r\n\r"
+  },
+  "1.21.4": {
+    "1.1.0+1.21.4": "## 1.1.0\r\n\r\n- feat: port to 1.21.4\r\n\r"
+  },
+  "1.21.1": {
+    "1.0.0+1.21.1": "## 1.0.0\r\n\r\nInitial Release\r\n\r"
   }
 }
