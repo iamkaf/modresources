@@ -1,0 +1,121 @@
+println("Java: " + System.getProperty("java.version") + " JVM: " + System.getProperty("java.vm.version") + "(" + System.getProperty("java.vendor") + ") Arch: " + System.getProperty("os.arch"))
+
+
+architectury {
+    minecraft = project.minecraft_version
+}
+
+allprojects {
+    group = rootProject.mod_group
+    version = rootProject.mod_version
+
+    repositories {
+        maven {
+            name = "TerraformersMC"
+            url = "https://maven.terraformersmc.com/"
+        }
+        maven {
+            name = 'ParchmentMC'
+            url = 'https://maven.parchmentmc.org'
+        }
+        maven {
+            name = "Kaf Mod Resources"
+            url = "https://raw.githubusercontent.com/iamkaf/modresources/main/maven/"
+        }
+    }
+}
+
+subprojects {
+    apply plugin: 'dev.architectury.loom'
+    apply plugin: 'architectury-plugin'
+    apply plugin: 'maven-publish'
+
+    base {
+        archivesName = "$mod_id-$project.name-$project.minecraft_version"
+
+    }
+
+    repositories {
+        // Add repositories to retrieve artifacts from in here.
+        // You should only use this when depending on other mods because
+        // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+        // See https://docs.gradle.org/current/userguide/declaring_repositories.html
+        // for more information about repositories.
+
+    }
+
+    dependencies {
+        minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
+        mappings loom.layered {
+            officialMojangMappings()
+            parchment("org.parchmentmc.data:parchment-${parchment_version}@zip")
+        }
+    }
+
+    java {
+        // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+        // if it is present.
+        // If you remove this line, sources will not be generated.
+        withSourcesJar()
+
+        toolchain.languageVersion = JavaLanguageVersion.of(21)
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        it.options.release = 21
+    }
+
+    processResources {
+        var resourceProperties = [
+                "mod_id": mod_id,
+                "mod_name": mod_name,
+                "mod_version": mod_version,
+                "mod_description": mod_description,
+                "mod_group": project.group,
+                "mod_page_url": mod_source_url,
+                "mod_issue_url": mod_issue_url,
+                // "modUpdateUrl": mod_update_url,
+                "mod_author": mod_author,
+                "mod_license": mod_license,
+                "fabric_loader_version": fabric_loader_version,
+                "fabric_api_version": fabric_api_version,
+                "min_neoforge_fml_version": "1",
+                "min_neoforge_version": min_neoforge_version,
+                "minecraft_version": minecraft_version,
+                "main_entrypoint": "${project.group}.fabric.${mod_name.replaceAll("[^a-zA-Z]", "")}Fabric",
+                "client_entrypoint": "${project.group}.fabric.client.${mod_name.replaceAll("[^a-zA-Z]", "")}FabricClient",
+                "fabric_datagen_entrypoint": "${project.group}.fabric.${mod_name.replaceAll("[^a-zA-Z]", "")}Datagen",
+                "main_entrypoint_quilt": "${project.group}.quilt.${mod_name.replaceAll("[^a-zA-Z]", "")}Quilt",
+                "client_entrypoint_quilt": "${project.group}.quilt.client.${mod_name.replaceAll("[^a-zA-Z]", "")}QuiltClient",
+                "mod_fabric_environment": mod_fabric_environment,
+                "mod_forge_display_test": mod_forge_display_test,
+                "amber_version": amber_version
+        ]
+
+        inputs.properties resourceProperties
+
+        var matchingFiles = [
+                "pack.mcmeta",
+                "fabric.mod.json",
+                "META-INF/neoforge.mods.toml",
+                "META-INF/mods.toml",
+                mod_id + ".common.mixins.json",
+                mod_id + ".fabric.mixins.json",
+                mod_id + ".neoforge.mixins.json",
+                mod_id + ".forge.mixins.json",
+                mod_id + ".mixins.json",
+                "common.mixins.json",
+                "fabric.mixins.json",
+                "neoforge.mixins.json",
+                "forge.mixins.json",
+                "quilt.mod.json",
+                "quilt.mixins.json"
+        ]
+
+        filesMatching(matchingFiles) {
+            expand resourceProperties + [project: project]
+        }
+    }
+}
