@@ -27,11 +27,11 @@
         {
           "name": "amber-fabric-8.3.0+1.21.10.jar",
           "url": "amber-fabric-8.3.0+1.21.10.jar",
-          "size": 249852,
-          "sha512": "36a75fb744400684d38a8193185bce4f13172c11510a1ec64a777e0ef8acc53fb975385a67f485406c2a337a4731dd13bc310c12e3e7b36216db333e3493535b",
-          "sha256": "075b6072300d24f4247a5c94865421982e18011d23412e50ed16c08bc57c4617",
-          "sha1": "f583eb565548cf6b0cd10aa5bb6be1313d1a9873",
-          "md5": "b755b79db43b5ef0b18d22dbed3e3914"
+          "size": 281210,
+          "sha512": "42628f970f2d08e99bcf4ff1b7ab1273203d4366bb7e0281fa095693e973c887eca35478f20f32d9c9d469c4ae5b7f4d2c8b2528618f70b55f16d9758b3ddefb",
+          "sha256": "f64e04f0f72c572542798311138ce216279d4e3f04f19c402b110819b313625a",
+          "sha1": "0368f380370ab4732182e617bd9eb43bf00e20d9",
+          "md5": "f5bbd09be6cbeb63a91a0d08312b3cd2"
         }
       ],
       "capabilities": [
@@ -71,14 +71,14 @@
           "group": "net.fabricmc",
           "module": "fabric-loader",
           "version": {
-            "requires": "0.17.2"
+            "requires": "0.18.1"
           }
         },
         {
           "group": "net.fabricmc.fabric-api",
           "module": "fabric-api",
           "version": {
-            "requires": "0.135.0+1.21.10"
+            "requires": "0.138.3+1.21.10"
           }
         }
       ],
@@ -86,11 +86,11 @@
         {
           "name": "amber-fabric-8.3.0+1.21.10.jar",
           "url": "amber-fabric-8.3.0+1.21.10.jar",
-          "size": 249852,
-          "sha512": "36a75fb744400684d38a8193185bce4f13172c11510a1ec64a777e0ef8acc53fb975385a67f485406c2a337a4731dd13bc310c12e3e7b36216db333e3493535b",
-          "sha256": "075b6072300d24f4247a5c94865421982e18011d23412e50ed16c08bc57c4617",
-          "sha1": "f583eb565548cf6b0cd10aa5bb6be1313d1a9873",
-          "md5": "b755b79db43b5ef0b18d22dbed3e3914"
+          "size": 281210,
+          "sha512": "42628f970f2d08e99bcf4ff1b7ab1273203d4366bb7e0281fa095693e973c887eca35478f20f32d9c9d469c4ae5b7f4d2c8b2528618f70b55f16d9758b3ddefb",
+          "sha256": "f64e04f0f72c572542798311138ce216279d4e3f04f19c402b110819b313625a",
+          "sha1": "0368f380370ab4732182e617bd9eb43bf00e20d9",
+          "md5": "f5bbd09be6cbeb63a91a0d08312b3cd2"
         }
       ],
       "capabilities": [
@@ -128,11 +128,11 @@
         {
           "name": "amber-fabric-8.3.0+1.21.10-sources.jar",
           "url": "amber-fabric-8.3.0+1.21.10-sources.jar",
-          "size": 163432,
-          "sha512": "de474d91932cb46cc5b40dc6fc1974f44ed56931c2daf3b2d7c604ebcf77d0fe82b661489b9ee9cfdce1fed4001648e4bcd411404d961c80ab66a56561b46f82",
-          "sha256": "595b912b749712ef51f45e570d8f808dfc2fd432cbd12f59e0c2300f419925f2",
-          "sha1": "7c050ef41f2f077c22b1453df6e91f2f45fb08ff",
-          "md5": "bc4c75b099e7bab706ce781c31d9457c"
+          "size": 183252,
+          "sha512": "1256493f52e708ed8bb76c2a4ac81b8bb4d8b78215edc5944594229e8ff1907e34dc1f5d6358254c2d5212ae2526ac3236bbac8631507845cdbdde476a0ac733",
+          "sha256": "9fdbb7a106089b97fa7e9aebf477910879d7cd205f52989053eddad0872403fc",
+          "sha1": "a8ea1c1c573a215fc5d62d17e4d6dc6a592dff4a",
+          "md5": "d05c3872e77d51aab8eb24155fd7489e"
         }
       ],
       "capabilities": [
@@ -170,11 +170,11 @@
         {
           "name": "amber-fabric-8.3.0+1.21.10-javadoc.jar",
           "url": "amber-fabric-8.3.0+1.21.10-javadoc.jar",
-          "size": 628225,
-          "sha512": "57903224699ae188636d2953b8f135462e7875ab84bac5f60fc80bff90f9dbbaf12cd45e68cbf00f1a026f96b4ebe2e2cd6af9db2fad7eb16c05761fc751bbef",
-          "sha256": "dcbaf22688a76798701472f8e58df59de147d4db795f2a47f4cbbcdc96674974",
-          "sha1": "947118331a2098e442bd60220c2ebf7f0ed628cd",
-          "md5": "a6e99ec600fa6480f3b4c927db1ac6a2"
+          "size": 693244,
+          "sha512": "49b097e2abf92430423a76c48b95ed5c9b97638df5edf8ff9835e9e549c0359af0ad271724b84db75abdd980510db686b41a95686a55d035c1f0c4cb64c48bc7",
+          "sha256": "1f623c1606cdefa160d538e9f32747a8462324767a7eec892c16c9d1496c5745",
+          "sha1": "32f5c6f102ff978e0778d001006b3491c8b15d47",
+          "md5": "053c66d141a553378af4a28bc462da91"
         }
       ],
       "capabilities": [

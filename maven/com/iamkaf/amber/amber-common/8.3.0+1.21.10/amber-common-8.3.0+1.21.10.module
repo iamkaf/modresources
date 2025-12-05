@@ -27,11 +27,11 @@
         {
           "name": "amber-common-8.3.0+1.21.10.jar",
           "url": "amber-common-8.3.0+1.21.10.jar",
-          "size": 200847,
-          "sha512": "1a0e88a851f0eb78bafa7713a658dbac4c9485da339f5d607da8397cdda53ccc2e4c83dfc3ec0efad931da2b340173d11a7214b108911fcf18e50ec53adeac95",
-          "sha256": "5ebdb1fb4fb44837e7f77ff3f0c4f08f06b35381a5c64820920a542ff8f6b6e4",
-          "sha1": "5540692a932dc0a4ab6a6bd01561b25e1aeee773",
-          "md5": "e821ea7f20db0c02eb37f81a42701efd"
+          "size": 232085,
+          "sha512": "89554bfeec29309bd6586b850345f97ea70350b709aabf460cbf62a15185a2f15a2a1c48f30a18dec6e4b3523e8ba1cf13f0ba62b358099e2ab006aeba20ce5a",
+          "sha256": "bc46d638ffbf467f49e41d437f427485c0a896779473f8fff0ee4ac10ded38f5",
+          "sha1": "932e452d98569dc0e14605f2666e286e3b3d54d8",
+          "md5": "6e3a7c3f7832a598bc24d3e1e017e208"
         }
       ],
       "capabilities": [
@@ -79,11 +79,11 @@
         {
           "name": "amber-common-8.3.0+1.21.10.jar",
           "url": "amber-common-8.3.0+1.21.10.jar",
-          "size": 200847,
-          "sha512": "1a0e88a851f0eb78bafa7713a658dbac4c9485da339f5d607da8397cdda53ccc2e4c83dfc3ec0efad931da2b340173d11a7214b108911fcf18e50ec53adeac95",
-          "sha256": "5ebdb1fb4fb44837e7f77ff3f0c4f08f06b35381a5c64820920a542ff8f6b6e4",
-          "sha1": "5540692a932dc0a4ab6a6bd01561b25e1aeee773",
-          "md5": "e821ea7f20db0c02eb37f81a42701efd"
+          "size": 232085,
+          "sha512": "89554bfeec29309bd6586b850345f97ea70350b709aabf460cbf62a15185a2f15a2a1c48f30a18dec6e4b3523e8ba1cf13f0ba62b358099e2ab006aeba20ce5a",
+          "sha256": "bc46d638ffbf467f49e41d437f427485c0a896779473f8fff0ee4ac10ded38f5",
+          "sha1": "932e452d98569dc0e14605f2666e286e3b3d54d8",
+          "md5": "6e3a7c3f7832a598bc24d3e1e017e208"
         }
       ],
       "capabilities": [
@@ -121,11 +121,11 @@
         {
           "name": "amber-common-8.3.0+1.21.10-sources.jar",
           "url": "amber-common-8.3.0+1.21.10-sources.jar",
-          "size": 136626,
-          "sha512": "409457a55271ec2800225ebfb39b598535dac6338c591623bcde55be81b1f41d8c100fbae820ffb4080606eb2788457d951b9320eccaa3d1780016ecf9c06c86",
-          "sha256": "5d7a96748a0ce8f3f66c61cf4063953524c18d95b08ca3de731b08918e795ff6",
-          "sha1": "d523ad27acfad829d2b5293023f09c97b47eeb24",
-          "md5": "5205969884a92d39b9fa5b578bf65f84"
+          "size": 156380,
+          "sha512": "131ebb8d595816d9ca89968e0048be3bddb355082e0802d1af2e542cd2bdf52fb9a1de934cd613c630a69ff0982c41fd69f0d4fcc2178258fe7d45a850572cf2",
+          "sha256": "66dccac3b07de55c68f3c16cb2b8e9918a21150bfc9e108f159f12bed1d44640",
+          "sha1": "ae5404ccc0006a0bd9b53fa05b720be238f0fbe6",
+          "md5": "8197dbd11da1848d98f6f55cdd398ee8"
         }
       ],
       "capabilities": [
@@ -163,11 +163,11 @@
         {
           "name": "amber-common-8.3.0+1.21.10-javadoc.jar",
           "url": "amber-common-8.3.0+1.21.10-javadoc.jar",
-          "size": 560089,
-          "sha512": "29ec02425ed823134176cfd5e53b733db4b07185a01adab9ea9da6e8b909f163957ad98a8f24bc04906003db1e661f09e0cbf23036a6a677b9dbf6e4c7164750",
-          "sha256": "e1af874e3ffdba9e9d3688600336df5e125921652f987debb2799aa15cdb4aa9",
-          "sha1": "24d55aa7ee03d0c22731e2f59ffbf8e2798d21ae",
-          "md5": "9e06e437a4bd3a1b6394efd55c330bf2"
+          "size": 625010,
+          "sha512": "351b7e583bff2ac698fec90d16bb47edb3d9be40adc4a0127e991ef38b11af3c8afb916b68ad8e0e36e54c4d1fc1714415c4a622a33f5a2b6a1b0f3e6e46cd85",
+          "sha256": "f9c0c38f7bdda72cc5cd8ba185349b90b82df0059ddc5fc271e685b91b387dfb",
+          "sha1": "461f884a7b64a9c1f1f82cece7d9785fdf97d220",
+          "md5": "ada80505d9c72f5cc724af6ee053c45d"
         }
       ],
       "capabilities": [
