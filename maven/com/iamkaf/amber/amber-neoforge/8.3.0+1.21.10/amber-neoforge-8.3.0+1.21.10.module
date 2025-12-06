@@ -27,11 +27,11 @@
         {
           "name": "amber-neoforge-8.3.0+1.21.10.jar",
           "url": "amber-neoforge-8.3.0+1.21.10.jar",
-          "size": 275538,
-          "sha512": "85abcfbcf160cf3eee673bfab8adece90133a0f944a932c57d41fe6bc2bcb92bace6876660639b9730e0f2201b6cfd6b720c785691f474929bc209dd6ee9be7c",
-          "sha256": "682ff5fe437139dc73a7a9afc1aac7d7f62ee9ed02d9a200a2db84e6e8a0c3e3",
-          "sha1": "232faadb8a8513864f6ae9a43fddab4766851ac3",
-          "md5": "9c582b8aa40e8486f9ad8e2cbc5b9f65"
+          "size": 276878,
+          "sha512": "359133b88b02fd44f86c46f3710ba03c9b4018962b273dc1c938f6be85f9484f818a1e5ff4a142ba495a442a4df475fd55a74f799b1777fce655e5d937db0993",
+          "sha256": "ab139632e3e421a49d978d71ad5ff0e9df03eb4641a5432855a3b7b88ff1a68f",
+          "sha1": "82395515c84907127de4975e3ca8f71592625aaf",
+          "md5": "3dcff11b5e533916218db86f3d2ce20b"
         }
       ],
       "capabilities": [
@@ -70,11 +70,11 @@
         {
           "name": "amber-neoforge-8.3.0+1.21.10.jar",
           "url": "amber-neoforge-8.3.0+1.21.10.jar",
-          "size": 275538,
-          "sha512": "85abcfbcf160cf3eee673bfab8adece90133a0f944a932c57d41fe6bc2bcb92bace6876660639b9730e0f2201b6cfd6b720c785691f474929bc209dd6ee9be7c",
-          "sha256": "682ff5fe437139dc73a7a9afc1aac7d7f62ee9ed02d9a200a2db84e6e8a0c3e3",
-          "sha1": "232faadb8a8513864f6ae9a43fddab4766851ac3",
-          "md5": "9c582b8aa40e8486f9ad8e2cbc5b9f65"
+          "size": 276878,
+          "sha512": "359133b88b02fd44f86c46f3710ba03c9b4018962b273dc1c938f6be85f9484f818a1e5ff4a142ba495a442a4df475fd55a74f799b1777fce655e5d937db0993",
+          "sha256": "ab139632e3e421a49d978d71ad5ff0e9df03eb4641a5432855a3b7b88ff1a68f",
+          "sha1": "82395515c84907127de4975e3ca8f71592625aaf",
+          "md5": "3dcff11b5e533916218db86f3d2ce20b"
         }
       ],
       "capabilities": [
@@ -112,11 +112,11 @@
         {
           "name": "amber-neoforge-8.3.0+1.21.10-sources.jar",
           "url": "amber-neoforge-8.3.0+1.21.10-sources.jar",
-          "size": 174791,
-          "sha512": "c39b1207928761a6cb6eff8765424fa6599f713e2d6784738b090242d20d72e490654ee321a4d055124fbc08d2caa5240df59ba316faa70a23a0c10cf85e5edc",
-          "sha256": "d44a8ccd8e9e55332abf012644d6e0d48a709e57ff917608e3f382e9f5fcebe1",
-          "sha1": "b771bb35b54034c0a77bfbc43954f74260330ea1",
-          "md5": "834e2b6b5d9fbc043063c7b7c135c9d3"
+          "size": 175991,
+          "sha512": "90edd9138e982c13fd0ac5137d448f160c5b288b3750ed123297b605bc7a44c8c7f3be007df89fea13352822507ca3ddc93ddf1037770839941c35e55f91c99b",
+          "sha256": "a5f62db37f62e11ecb6f1c69b1748a9a586334af242cc4259a9171c8e5ecaf1d",
+          "sha1": "3a85d87868d75871292bfd29c21991115fb91c2d",
+          "md5": "7f7746992254a2978cd34eabeb647adc"
         }
       ],
       "capabilities": [
@@ -154,11 +154,11 @@
         {
           "name": "amber-neoforge-8.3.0+1.21.10-javadoc.jar",
           "url": "amber-neoforge-8.3.0+1.21.10-javadoc.jar",
-          "size": 693126,
-          "sha512": "7ce46487d5047387e9dc66fd5430ff65956b6fca26b41f7cd2578ecf4f2dba47f52b575f3b6b0ec7a5ea1c88a2b1140d87a4445482cdcbd00af0b6daef1e3e23",
-          "sha256": "8871f5ca4488254601b90d8a5f79943ec5b864b2ff23b921d55610acef68ddce",
-          "sha1": "eb443afd9e874dcdda7e7d408b3aeccc1ee97009",
-          "md5": "390a86e15c58771e0856d08982a69d30"
+          "size": 695242,
+          "sha512": "0d017c041eb61387d749bd1f456b900978ab81859d82894dbe4886a28ce0e21dba83cd29f1be54b93f15e27b3460471f1c7a0b3ead784e4b1633fdfcffb36dbd",
+          "sha256": "3daaa1c1641677dcc814678e5136c0c666e97a14b740abeb7e86ac6a3e01a283",
+          "sha1": "d3909f35446c60b131b962db08ac6afb3c055b51",
+          "md5": "2581944f8d7477ef711eeadf5d507b18"
         }
       ],
       "capabilities": [
