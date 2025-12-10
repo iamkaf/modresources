@@ -1,0 +1,188 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.amber",
+    "module": "amber-neoforge",
+    "version": "9.0.0+1.21.11",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.2.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "amber-neoforge-9.0.0+1.21.11.jar",
+          "url": "amber-neoforge-9.0.0+1.21.11.jar",
+          "size": 276860,
+          "sha512": "6a1c78f8643ec2c8749d784c360c3c379d66b29a41a480edf6d1250cbe874d0b7a3d71aacd670681723d258c3542bb5040062f642a07479a875055fdde0a8c0c",
+          "sha256": "b8f8caa7e9e0fcc0ede08f609c6f7f5c3200cb55b78ae0d137de66f978013c7e",
+          "sha1": "e1fe24c98ff938be096049c6f636a035a835c082",
+          "md5": "929ea1d5251d8379557538cc640d4dbd"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-neoforge-1.21.11",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-neoforge",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "neoforge",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "9.0.0+1.21.11"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-neoforge-9.0.0+1.21.11.jar",
+          "url": "amber-neoforge-9.0.0+1.21.11.jar",
+          "size": 276860,
+          "sha512": "6a1c78f8643ec2c8749d784c360c3c379d66b29a41a480edf6d1250cbe874d0b7a3d71aacd670681723d258c3542bb5040062f642a07479a875055fdde0a8c0c",
+          "sha256": "b8f8caa7e9e0fcc0ede08f609c6f7f5c3200cb55b78ae0d137de66f978013c7e",
+          "sha1": "e1fe24c98ff938be096049c6f636a035a835c082",
+          "md5": "929ea1d5251d8379557538cc640d4dbd"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-neoforge-1.21.11",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-neoforge",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "neoforge",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "9.0.0+1.21.11"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-neoforge-9.0.0+1.21.11-sources.jar",
+          "url": "amber-neoforge-9.0.0+1.21.11-sources.jar",
+          "size": 176170,
+          "sha512": "8eb7cb01c18d1d563f1fff7d9d06f4e38f8a5dc79975b68b150486ea8f9ec32d178c090a749bbc82b258d1d20caf03d7defa153763a4a87e8fcfbf3fa97aed53",
+          "sha256": "606e3be167a593f28ade0bef264af9a706a4510b22b2a9fb7e8d7d6eb56c606e",
+          "sha1": "b95d0697a6e5dfa8f1e239f357c06ad634b66030",
+          "md5": "2b15a25cf4705944652c85995e3f4263"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-neoforge-1.21.11",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-neoforge",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "neoforge",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "9.0.0+1.21.11"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-neoforge-9.0.0+1.21.11-javadoc.jar",
+          "url": "amber-neoforge-9.0.0+1.21.11-javadoc.jar",
+          "size": 695383,
+          "sha512": "420e72c6f19449ba723493c19fb224f484867d65afa96c180a3ee353cefb477e893c4d981a4fe0c917a4f320ac97925e62b0557224a99c37ce35cb04fa8efb86",
+          "sha256": "3497cf6d7306765098e1b5f3ac44967b2388be0798203897da50b039c88b3ef1",
+          "sha1": "5e3bec3ddcf1c6bbb7ca223cddd4507bd5f084e4",
+          "md5": "93690dbcd172b5e8086977440e3199cf"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-neoforge-1.21.11",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-neoforge",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "neoforge",
+          "version": "9.0.0+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "9.0.0+1.21.11"
+        }
+      ]
+    }
+  ]
+}
