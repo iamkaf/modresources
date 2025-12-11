@@ -27,11 +27,11 @@
         {
           "name": "amber-fabric-9.0.0+1.21.11.jar",
           "url": "amber-fabric-9.0.0+1.21.11.jar",
-          "size": 281239,
-          "sha512": "cc33c648417edb442f3dd54adc245124fab90bfd4bbe358e3176db3947b3b3b61120ca784a3bc7282ebc8c2c1f4ddceca554bd78398c15ccf74d9fd9ec147c19",
-          "sha256": "09e4f69767d50926cf1a5191d38c0b40e88836192b701b4f18bb116c395819b6",
-          "sha1": "9d8a168431e596e7eb72a813910b1cb6b1f62e0c",
-          "md5": "5ff2c6cb185ad50ba849d329d9560db8"
+          "size": 281968,
+          "sha512": "305e3f7add2e59b8a22f60fc22db109c560d1e27e59f455dafb19deb454248e7d4bab393e8b3e52fe13db9357412621e6b167be8d4f7bc702ca5f1508baff576",
+          "sha256": "77be32f0c3c76e51ac958ce50125179465ace78986f395c0ed92825cefef6b5a",
+          "sha1": "0822889e568340cf93174e0cbf5562c74524f856",
+          "md5": "2811a127646681828414ab6cade3f84d"
         }
       ],
       "capabilities": [
@@ -86,11 +86,11 @@
         {
           "name": "amber-fabric-9.0.0+1.21.11.jar",
           "url": "amber-fabric-9.0.0+1.21.11.jar",
-          "size": 281239,
-          "sha512": "cc33c648417edb442f3dd54adc245124fab90bfd4bbe358e3176db3947b3b3b61120ca784a3bc7282ebc8c2c1f4ddceca554bd78398c15ccf74d9fd9ec147c19",
-          "sha256": "09e4f69767d50926cf1a5191d38c0b40e88836192b701b4f18bb116c395819b6",
-          "sha1": "9d8a168431e596e7eb72a813910b1cb6b1f62e0c",
-          "md5": "5ff2c6cb185ad50ba849d329d9560db8"
+          "size": 281968,
+          "sha512": "305e3f7add2e59b8a22f60fc22db109c560d1e27e59f455dafb19deb454248e7d4bab393e8b3e52fe13db9357412621e6b167be8d4f7bc702ca5f1508baff576",
+          "sha256": "77be32f0c3c76e51ac958ce50125179465ace78986f395c0ed92825cefef6b5a",
+          "sha1": "0822889e568340cf93174e0cbf5562c74524f856",
+          "md5": "2811a127646681828414ab6cade3f84d"
         }
       ],
       "capabilities": [
@@ -128,11 +128,11 @@
         {
           "name": "amber-fabric-9.0.0+1.21.11-sources.jar",
           "url": "amber-fabric-9.0.0+1.21.11-sources.jar",
-          "size": 181193,
-          "sha512": "6a3345d40d1dcdad725d5068861f80d71fd178943b4241717032e8de43007d662cccd48ecd0b1f191965829e23e0318546ce4fca4719dda8ef57338798fa5829",
-          "sha256": "fd4d32829d36cd02e3ffc5e485c9e172adddb48f7107a02b5b7bb45270d5fad0",
-          "sha1": "caa7fd962804b266ffb40871e60bdd37a2a59143",
-          "md5": "65825d77ede487aeebe6d4378d9443f9"
+          "size": 181915,
+          "sha512": "794cdce322b3a5988be48f2acf6b54bd44f6052a6e0980d053698fa84db1149ff75ea02e623e7ec511a787556d379d4f3d36ca15d3b064c6ba8822f9d789f5e1",
+          "sha256": "31a8d9c7ee2033a5027c1568c14c8980e2fbd1b217588c8a431042e32c8d1c9b",
+          "sha1": "ecb306762d4ca65b6206c755d02f1b3523be9482",
+          "md5": "6507ccd17a14de81c53ec0eedfc7b993"
         }
       ],
       "capabilities": [
