@@ -3,8 +3,8 @@
   <groupId>com.iamkaf.amber</groupId>
   <artifactId>amber-forge</artifactId>
   <versioning>
-    <latest>8.3.2+1.21.10</latest>
-    <release>8.3.2+1.21.10</release>
+    <latest>9.0.2+1.21.11</latest>
+    <release>9.0.2+1.21.11</release>
     <versions>
       <version>1.3.0-beta.2+1.20.1</version>
       <version>3.0.0+1.20.1</version>
@@ -37,7 +37,8 @@
       <version>9.0.0+1.21.11</version>
       <version>9.0.1+1.21.11</version>
       <version>8.3.2+1.21.10</version>
+      <version>9.0.2+1.21.11</version>
     </versions>
-    <lastUpdated>20251223064620</lastUpdated>
+    <lastUpdated>20251223223947</lastUpdated>
   </versioning>
 </metadata>

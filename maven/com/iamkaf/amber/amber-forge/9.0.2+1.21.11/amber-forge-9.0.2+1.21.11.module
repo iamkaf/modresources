@@ -1,0 +1,197 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iamkaf.amber",
+    "module": "amber-forge",
+    "version": "9.0.2+1.21.11",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.2.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "amber-forge-9.0.2+1.21.11.jar",
+          "url": "amber-forge-9.0.2+1.21.11.jar",
+          "size": 276515,
+          "sha512": "8460ca8c14ec694076ad3c635869f8c4a9a5b5e826b2ca43a20777732769e9f97f5a9cb7e57ac8f735c55c713fee9de1866447916503ad1c2c6d082af06ffde9",
+          "sha256": "69697645779d9652bf9b2f25181858d33f226e527b70d8d00cca03232d418a43",
+          "sha1": "85af33d028cd84d1e37fd6b097d991e31efc0bdb",
+          "md5": "dc7f7f46b2e888057360dec807b40fd0"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-forge",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-forge-1.21.11",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "forge",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "9.0.2+1.21.11"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.minecraftforge",
+          "module": "forge",
+          "version": {
+            "requires": "1.21.11-61.0.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "amber-forge-9.0.2+1.21.11.jar",
+          "url": "amber-forge-9.0.2+1.21.11.jar",
+          "size": 276515,
+          "sha512": "8460ca8c14ec694076ad3c635869f8c4a9a5b5e826b2ca43a20777732769e9f97f5a9cb7e57ac8f735c55c713fee9de1866447916503ad1c2c6d082af06ffde9",
+          "sha256": "69697645779d9652bf9b2f25181858d33f226e527b70d8d00cca03232d418a43",
+          "sha1": "85af33d028cd84d1e37fd6b097d991e31efc0bdb",
+          "md5": "dc7f7f46b2e888057360dec807b40fd0"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-forge",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-forge-1.21.11",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "forge",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "9.0.2+1.21.11"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-forge-9.0.2+1.21.11-sources.jar",
+          "url": "amber-forge-9.0.2+1.21.11-sources.jar",
+          "size": 177839,
+          "sha512": "3ee6b5001b24cf71293a2e6ae92c01b310bd7f3ca11004fdf6fa04933fe9e589eeec184183405416903f1ba6b5808839b63f13c158e369bc37604415ace4d149",
+          "sha256": "3044ced14b4b1acd4c410a7e126647ba5d471727575b9ab351a7c980600cef84",
+          "sha1": "c77999c440df54173a1a1c1a69e1bc0b18779538",
+          "md5": "ccf45dd3013c34ff466ad277a3814960"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-forge",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-forge-1.21.11",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "forge",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "9.0.2+1.21.11"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "amber-forge-9.0.2+1.21.11-javadoc.jar",
+          "url": "amber-forge-9.0.2+1.21.11-javadoc.jar",
+          "size": 694432,
+          "sha512": "ac436dd9af325bf997ff16641b988c6a3cf55b78b2ad894c7652421733d4ae4b3ad6ab0b84dbac9baf9b1fb0f1eefbd426293fa457afe0070981c76bbedb6191",
+          "sha256": "c62f052742bfc25f16b7c7b4808aae66b876ee56dfd6ade9bce54bc9cc8574c1",
+          "sha1": "43d3ab37e4eb495271454e4e34516b938c64a1ac",
+          "md5": "b3b146467a5bfd06d1a71bc05f3f9512"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-forge",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber-forge-1.21.11",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "forge",
+          "version": "9.0.2+1.21.11"
+        },
+        {
+          "group": "com.iamkaf.amber",
+          "name": "amber",
+          "version": "9.0.2+1.21.11"
+        }
+      ]
+    }
+  ]
+}
