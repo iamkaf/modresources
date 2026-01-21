@@ -50,6 +50,7 @@ venv/
 
 # Java
 .gradle
+bin
 
 # Temporary files
 tmp/

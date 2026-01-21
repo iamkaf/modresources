@@ -1,0 +1,44 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+    id 'groovy'
+}
+
+group = 'com.iamkaf'
+version = project.hasProperty('platform_version') ? project.property('platform_version') : '1.0.0'
+
+gradlePlugin {
+    plugins {
+        platform {
+            id = 'com.iamkaf.platform'
+            implementationClass = 'com.iamkaf.platform.PlatformVersionCatalogPlugin'
+            displayName = 'Platform Version Catalog'
+            description = 'Centralized version catalog for Minecraft mod dependencies'
+        }
+    }
+}
+
+publishing {
+    publications {
+        // Configure the plugin publication created by java-gradle-plugin
+        withType(MavenPublication).configureEach {
+            artifactId = 'platform'
+        }
+    }
+    repositories {
+        maven {
+            name = 'KafMaven'
+            url = project.version.endsWith('-SNAPSHOT')
+                ? 'https://z.kaf.sh/snapshots'
+                : 'https://z.kaf.sh/releases'
+            credentials {
+                username = project.findProperty('maven.kaf.username') ?: System.getenv('MAVEN_PUBLISH_USERNAME')
+                password = project.findProperty('maven.kaf.password') ?: System.getenv('MAVEN_PUBLISH_PASSWORD')
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation gradleApi()
+}
