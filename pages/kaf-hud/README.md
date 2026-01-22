@@ -19,7 +19,7 @@ Toggle the HUD with the keybind (default `N`) and copy your coordinates holding 
 
 ### Current Plan
 
-The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.
+Fixing bugs and adding requested features.
 
 #### Roadmap
 

@@ -7,7 +7,7 @@ A: Make an issue [here](https://github.com/iamkaf/mod-issues) or join the [Disco
 
 **Q: Can you port it to [MC version/Mod loader]?**
 
-A: If enough people request it I'll give it some time, but this really is a 1-man team so it might take a while.
+A: Maybe, if there's enough demand. No promises on timing.
 
 
 **Q: Can I include it in my modpack?**

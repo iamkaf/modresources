@@ -14,13 +14,11 @@ A gear leveling mod for Fabric and NeoForge.
 Requires [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).
 
 
-**Bonded** is a gear-focused mod that encourages you to build a deeper connection with your tools and armor as you play.  
+**Bonded** levels up your gear as you use it.
 
-- ✨ **Level Up Your Gear**: The more you use your tools, weapons, and armor, the stronger they become, gaining bonus stats over time.  
-- 🪵 **New Stations**: Enhance and maintain your equipment using the new **Tool Bench** and **Repair Bench** introduced by the mod.  
-- 🎮 **Progression Through Play**: No complicated systems—just play the game and let your equipment grow alongside you.  
-
-With **Bonded**, every item you craft becomes a companion on your journey.
+- Tools and weapons gain bonus stats through use
+- Repair and upgrade items at the Repair Bench and Tool Bench
+- Works with any tool/armor mod; upgrade paths need compat mods
 
 ![Bonded Benches GIF](https://i.imgur.com/mHjZWtm.gif)
 
@@ -38,7 +36,7 @@ Use an item on the **Tool Bench** to upgrade it to the next tier. The item must 
 
 ### Current Plan
 
-The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.
+Fixing bugs and adding requested features.
 
 
 

@@ -21,7 +21,7 @@
 
 {{mod_roadmap}}
 
-Thank you for the support!{{mod_additional}}
+Thanks for using my mods!{{mod_additional}}
 
 ## Pics
 

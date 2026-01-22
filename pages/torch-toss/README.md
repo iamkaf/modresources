@@ -7,11 +7,7 @@
 [![Discord](https://img.shields.io/discord/1207469438719492176?style=for-the-badge&logo=discord&label=DISCORD&color=%235865F2)](https://discord.gg/HV5WgTksaB)
 [![KoFi](https://img.shields.io/badge/KoFi-iamkaf?style=for-the-badge&logo=kofi&logoColor=%2330d1e3&label=Support%20Me&color=%2330d1e3)](https://ko-fi.com/iamkaffe)
 
-With Torch Toss, you can throw torches ahead of you, lighting up caves, tunnels, and dark paths with ease!
-
-It's works with Redstone Torches too! You can activate redstone circuits by throwing torches in front of them.
-
-Torch Toss is a great addition to any Minecraft server!
+Throw torches to light up caves and tunnels. Works with redstone torches too.
 
 
 
@@ -29,7 +25,7 @@ Combine two torches on the crafting grid to make the throwable torch. Place it i
 
 ### Current Plan
 
-The development plan is to make the mod more customizable and update it to the latest versions of Minecraft. If you have any requests for features or mod compats let me know.
+Fixing bugs and adding requested features.
 
 
 
