@@ -4,5 +4,6 @@
   "modrinth_id": "VTnHoofC",
   "curseforge_id": null,
   "icon_url": "https://cdn.modrinth.com/data/VTnHoofC/0a3db6a091ccc1a37ac7f55957b4cf63643d327c.png",
-  "project_type": "mod"
+  "project_type": "mod",
+  "curseforge_slug": "liteminer"
 }
