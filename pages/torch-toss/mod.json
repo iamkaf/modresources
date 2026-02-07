@@ -4,5 +4,6 @@
   "modrinth_id": "AIYW9sHq",
   "curseforge_id": "1191803",
   "icon_url": "https://cdn.modrinth.com/data/AIYW9sHq/1da752edf297cbfb8cd916b0b02238c64afb2474_96.webp",
-  "project_type": "mod"
+  "project_type": "mod",
+  "curseforge_slug": "torch-toss"
 }

@@ -2,7 +2,8 @@
   "id": "kafs-valentine-special",
   "name": "Kaf's Valentine Special",
   "modrinth_id": "BAlSr7dy",
-  "curseforge_id": null,
+  "curseforge_id": "974853",
   "icon_url": "https://cdn.modrinth.com/data/BAlSr7dy/203051cd82e0ce33cb81151ef242ae1bf8891f37.png",
-  "project_type": "mod"
+  "project_type": "mod",
+  "curseforge_slug": "kafs-valentine-special"
 }

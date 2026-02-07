@@ -1,5 +1,9 @@
 {
   "id": "hot-fireworks",
   "name": "Hot Fireworks",
+  "modrinth_id": "RTP9YAOj",
+  "curseforge_id": "1450340",
+  "curseforge_slug": "hot-fireworks",
+  "icon_url": "https://cdn.modrinth.com/data/RTP9YAOj/f02b068c7c8e39808ec41ccd2c614b17d1ceb856_96.webp",
   "project_type": "mod"
 }
