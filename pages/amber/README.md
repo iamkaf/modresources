@@ -11,7 +11,6 @@ Amber is a library api of common code utilized by iamkaf mods.
 
 Requires [Fabric API](https://modrinth.com/mod/fabric-api).
 
-
 ### How To Use It
 
 Just install it and the mods that require it will be good to go!

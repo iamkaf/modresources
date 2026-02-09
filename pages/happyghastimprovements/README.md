@@ -32,3 +32,7 @@ Feed Happy Ghasts to give them temporary speed boosts with different power level
 2. Feed for speed boost: Right-click the ghast or use the item while riding
 3. Choose your fuel: Sugar (moderate), Honey (fast), Dragon's Breath (fastest)
 4. Enjoy enhanced mobility for 20 seconds
+
+{{snippet:qa}}
+
+{{snippet:promo mods=exploding-sheep,gentlehurtcam,hot-fireworks}}
