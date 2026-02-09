@@ -23,6 +23,8 @@ No.
 
 Yes.
 
+{{snippet:qa}}
+
 ## Compatibility
 
 - Fabric, Forge, NeoForge

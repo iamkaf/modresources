@@ -31,6 +31,8 @@ I'd say yes.
 - Fabric, Forge, NeoForge
 - Needs Amber
 
+{{snippet:qa}}
+
 ## How to use
 
 1. Put fireworks in your pocket
