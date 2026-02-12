@@ -35,6 +35,8 @@ Thank you for the support!
 
 Let me know if you find any issues.
 
+{{snippet:promo mods=gentlehurtcam,mochila,snapshears}}
+
 ## Credits
 
 - My awesome community.

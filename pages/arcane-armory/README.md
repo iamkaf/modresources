@@ -33,13 +33,4 @@ You can see the recipes in JEI/REI.
 
 If you have questions, suggestions or just want to hang out feel free to [Join our Discord](https://discord.gg/HV5WgTksaB).
 
-## FAQ
-
-**Q: Forge?** <br />
-A: Not right now. But if you're able to do so you have my permission.
-
-**Q: Port to Minecraft version X?** <br />
-A: Not right now. But if you're able to do so you have my permission.
-
-**Q: Can I add your mod to my modpack?** <br />
-A: Yup!
+{{snippet:qa}}

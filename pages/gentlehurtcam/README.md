@@ -10,8 +10,11 @@ When you take damage that's fully absorbed (by armor, enchantments, or other pro
 
 ## Compatibility
 
-- Loaders: Fabric, Forge, NeoForge
-- Dependencies: Amber
+Let me know if you find any issues!
+
+{{snippet:qa}}
+
+{{snippet:promo mods=kaf-hud,liteminer,torch-toss}}
 
 ## How It Works
 
