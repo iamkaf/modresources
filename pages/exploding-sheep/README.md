@@ -23,15 +23,12 @@ No.
 
 Yes.
 
-{{snippet:qa}}
-
-## Compatibility
-
-- Fabric, Forge, NeoForge
-- Uses Mojang mappings
-
 ## How to use
 
 1. Find a sheep
 2. Wait for it to eat grass
 3. Enjoy the fireworks
+
+{{snippet:qa}}
+
+{{snippet:promo mods=gentlehurtcam,happyghastimprovements,hot-fireworks,torch-toss}}
