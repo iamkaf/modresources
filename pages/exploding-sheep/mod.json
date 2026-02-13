@@ -5,5 +5,9 @@
   "curseforge_id": "1450176",
   "curseforge_slug": "exploding-sheep",
   "icon_url": "https://cdn.modrinth.com/data/ZRaAKTTQ/b5225e9fd48ceac5f880923e07c85c96adfefb76_96.webp",
-  "project_type": "mod"
+  "project_type": "mod",
+  "source": {
+    "path": "/home/kaf/code/mods/exploding-sheep",
+    "format": "legacy"
+  }
 }
