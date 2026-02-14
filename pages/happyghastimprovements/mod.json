@@ -5,5 +5,9 @@
   "curseforge_id": "1449981",
   "curseforge_slug": "happy-ghast-improvements",
   "icon_url": "https://cdn.modrinth.com/data/OhsFQ3v9/99064352985cca7d7255360bfb682c964f5a457f_96.webp",
-  "project_type": "mod"
+  "project_type": "mod",
+  "source": {
+    "path": "/home/kaf/code/mods/happy-ghast-improvements",
+    "format": "legacy"
+  }
 }
