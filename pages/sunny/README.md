@@ -23,21 +23,7 @@ The development plan is to make the mod more customizable and port it to 1.20.1 
 
 _pix 4 clix go here_
 
-## Q&A
-
-**Q: Where can I ask something that is not listed here?**
-
-A: Make an issue [here](https://github.com/iamkaf/mod-issues) or join the [Discord](https://discord.gg/HV5WgTksaB) and shoot me a message.
-
-
-**Q: Can you port it to [MC version/Mod loader]?**
-
-A: If enough people request it I'll give it some time, but this really is a 1-man team so it might take a while.
-
-
-**Q: Can I include it in my modpack?**
-
-A: Yes, no need to give credit or ask.
+{{snippet:qa}}
 
 ## Compatibility
 

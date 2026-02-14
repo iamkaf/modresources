@@ -23,7 +23,6 @@ Let me know if you find any issues.
 
 For versions 2.X and below Amber requires [Architectury API](https://modrinth.com/mod/architectury-api).
 
-
 ## Credits
 
 - You!
