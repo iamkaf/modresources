@@ -35,4 +35,4 @@ Feed Happy Ghasts to give them temporary speed boosts with different power level
 
 {{snippet:qa}}
 
-{{snippet:promo mods=exploding-sheep,gentlehurtcam,hot-fireworks}}
+{{snippet:promo mods=exploding-sheep,gentlehurtcam,hot-fireworks,torch-toss}}
