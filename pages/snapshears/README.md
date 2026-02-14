@@ -27,14 +27,13 @@ In the config `snapshears.json5` you can configure which mods are considered she
 
 Add item ids like `minecraft:shears` or prefix a tag with `#` (e.g. `#c:tools/shear`).
 
-
-{{snippet:qa}}
-
-
 ## Compatibility
 
 SnapShears calls Minecraft’s built-in shear() method, so any sheep variant that responds to normal shears will work too. If you find any problems, let me know.
 
+{{snippet:qa}}
+
+{{snippet:promo mods=gentlehurtcam,liteminer,mochila,torch-toss}}
 
 ## Credits
 
