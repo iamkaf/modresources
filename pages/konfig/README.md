@@ -66,6 +66,8 @@ public final class ExampleConfig {
 }
 ```
 
+{{snippet:translate}}
+
 {{snippet:qa}}
 
 {{snippet:promo mods=bonded,liteminer,mochila}}
