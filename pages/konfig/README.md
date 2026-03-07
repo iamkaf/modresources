@@ -19,6 +19,16 @@ It gives you a typed API, side-aware config scopes (`CLIENT`, `COMMON`, `SERVER`
 - Fabric + Forge support across old and new versions
 - NeoForge support on modern versions
 
+## Pics
+
+![konfig1.png](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/konfig/konfig1.png)
+
+![konfig2.png](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/konfig/konfig2.png)
+
+![konfig3.png](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/konfig/konfig3.png)
+
+![konfig4.png](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/konfig/konfig4.png)
+
 ## Supported Versions
 
 | Minecraft | Fabric | Forge | NeoForge |
