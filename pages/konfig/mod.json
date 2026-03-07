@@ -1,0 +1,13 @@
+{
+  "id": "konfig",
+  "name": "Konfig",
+  "modrinth_id": "pp7kIrlM",
+  "curseforge_id": "1479633",
+  "curseforge_slug": "konfig",
+  "icon_url": "https://cdn.modrinth.com/data/pp7kIrlM/df8291ece738e6b790e5acae0da172c73b818006_96.webp",
+  "project_type": "mod",
+  "source": {
+    "path": "/home/kaf/code/mods/konfig",
+    "format": "monorepo"
+  }
+}
