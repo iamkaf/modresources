@@ -28,24 +28,7 @@ The available shapes are: Shapeless (mines connected blocks), 3x3, Small Tunnel,
 
 ### Current Plan
 
-I've completed all the features I wanted to add to the mod when I started the project, and I'm happy with how it turned out. The next steps are fixing bugs that might come up and adding new features that I think of or that are requested by the community starting with the Forge port.
-
-#### Roadmap
-
-
-- ~~Configuration File - 0.2.0.beta.1~~
-- ~~Food Exhaustion - 0.2.0.beta.1~~
-- ~~Toggle Mode - 0.2.0.beta.1~~
-- ~~Increased Harvest Time - 0.2.0.beta.1~~
-- ~~Mining Shapes (3x3, staircase, etc)~~ - 0.3.0-beta.2
-- ~~Axe Stripping~~ - 0.3.0-beta.2
-- ~~Shovel Pathing~~ - 0.3.0-beta.2
-- ~~Hoe Hoeing~~ - 0.3.0-beta.2
-- ~~Port to 1.20.1~~ - 0.4.0-beta.6
-- ~~Port to 1.20.4~~ - 0.5.0-beta.7
-- ~~Tool Blacklist / Whitelist~~ - 1.0
-- ~~Block Blacklist / Whitelist~~ - 1.0
-- ~~Release v1.0~~ - ✅
+I've completed all the features I wanted to add to the mod when I started the project, and I'm happy with how it turned out. The next steps are fixing bugs that might come up and adding new features that I think of or that are requested by the community.
 
 Thank you for the support!
 
@@ -82,23 +65,11 @@ Thank you for the support!
 
 ![Configuration Screen](https://cdn.modrinth.com/data/cached_images/0255cf113d51e9ebec132a6d0ce0f5fa9c595da5_0.webp)
 
-## Q&A
+{{snippet:translate}}
 
-**Q: Where can I ask something that is not listed here?**
+{{snippet:qa}}
 
-A: Make an issue [here](https://github.com/iamkaf/mod-issues) or join the [Discord](https://discord.gg/HV5WgTksaB) and shoot me a message.
-
-
-**Q: Can you port it to [MC version/Mod loader]?**
-
-A: If enough people request it I'll give it some time, but this really is a 1-man team so it might take a while.
-
-
-**Q: Can I include it in my modpack?**
-
-A: Yes, no need to give credit or ask.
-
-[![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
+{{snippet:promo mods=bonded,gentlehurtcam,mochila,torch-toss}}
 
 ## Compatibility
 

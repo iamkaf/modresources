@@ -29,13 +29,15 @@ Thank you for the support!
 
 ![It works with soul and redstone torches!](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/torchtoss/screenshot4.png)
 
+{{snippet:translate}}
+
 {{snippet:qa}}
+
+{{snippet:promo mods=gentlehurtcam,mochila,snapshears}}
 
 ## Compatibility
 
 Let me know if you find any issues.
-
-{{snippet:promo mods=gentlehurtcam,mochila,snapshears}}
 
 ## Credits
 

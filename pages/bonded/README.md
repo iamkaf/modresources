@@ -35,8 +35,6 @@ Use an item on the **Tool Bench** to upgrade it to the next tier. The item must 
 
 Fixing bugs and adding requested features.
 
-
-
 Thank you for the support!
 
 ## Pics
@@ -51,7 +49,11 @@ Thank you for the support!
 
 ![Repair Bench Overlay](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot6.png)
 
+{{snippet:translate}}
+
 {{snippet:qa}}
+
+{{snippet:promo mods=gentlehurtcam,liteminer,mochila,torch-toss}}
 
 ## Compatibility
 
