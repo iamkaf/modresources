@@ -8,6 +8,6 @@
   "project_type": "mod",
   "source": {
     "path": "/home/kaf/code/mods/happy-ghast-improvements",
-    "format": "legacy"
+    "format": "monorepo"
   }
 }
