@@ -62,3 +62,4 @@ temp/
 # Specific to this project
 tmp-event-summaries/
 .gemini_commit_message.txt
+.cache
