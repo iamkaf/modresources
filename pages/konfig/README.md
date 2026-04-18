@@ -80,4 +80,4 @@ public final class ExampleConfig {
 
 {{snippet:qa}}
 
-{{snippet:promo mods=bonded,liteminer,mochila}}
+{{snippet:promo mods=bonded,kafs-valentine-special,liteminer,mochila,torch-toss}}
