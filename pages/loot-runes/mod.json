@@ -1,0 +1,13 @@
+{
+  "id": "loot-runes",
+  "name": "Loot Runes",
+  "modrinth_id": "jVtBevly",
+  "curseforge_id": "1152772",
+  "icon_url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/lootrunes/icon-mr.png",
+  "project_type": "mod",
+  "curseforge_slug": "loot-runes",
+  "source": {
+    "path": "${MOD_WORKSPACE}/mods/loot-runes",
+    "format": "monorepo"
+  }
+}
