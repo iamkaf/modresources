@@ -9,7 +9,8 @@
 
 Kaf's Valentine Special adds a bunch of cookies and other valentine's day themed additions to Minecraft, made originally to celebrate Valentine's day.
 
-Requires [Architectury API](https://modrinth.com/mod/architectury-api).
+Available for Fabric, Forge, and NeoForge. Requires [Amber](https://modrinth.com/mod/amber). Fabric files also require
+[Fabric API](https://modrinth.com/mod/fabric-api).
 
 🌸 **This mod is dedicated to my valentine, Aris.** 🌸
 
@@ -18,16 +19,18 @@ Requires [Architectury API](https://modrinth.com/mod/architectury-api).
 #### Cotton Candy
 
 
-By breaking tall grass you may find Cotton Candy Seeds which grow into Cotton Candy.
+By breaking grass or tall grass you may find Cotton Candy Seeds which grow into Cotton Candy.
 
-You can eat the Cotton Candy or use it to make the Special Chocolate Cookie or the Lovey Dovey Infuser.
+You can eat the Cotton Candy or use it to make the Special Chocolate Cookie or the Lovey Dovey Infuser. Use it on a
+honey block to make Candied Cotton Candy Candy. Sometimes the honey block breaks.
 
 ![cotton candy](https://cdn.modrinth.com/data/cached_images/fc0ef3002b42f05bccf430319710a0d98658f563.jpeg)
 
 #### Special Cookies!
 
 
-You can make **20 different cookies** each one with its own flavor and effects.
+You can make **20 different cookies** each one with its own flavor and effects. Most of them also turn up in village
+house chests.
 
 ![Many Cookies!](https://i.imgur.com/m79PyE4.png)
 
@@ -63,26 +66,16 @@ And this is what it does:
 
 #### Headpats
 
-You can give your friends headpats.
+You can give your friends headpats. Sneak and right-click another player with an empty hand.
 
 ![Headpats](https://i.imgur.com/RKWOyUr.gif)
 
 
-### Current Plan
-
-Keep supporting the mod and updating to new Minecraft versions.
-
-Thank you for the support!
-
 {{snippet:qa}}
-
-## Compatibility
-
-Let me know if you find any issues.
 
 ## Credits
 
-- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
+- My awesome community.
 - And most importantly, **Aris**, for always being there for me.
 
 #### Old 1.20.1 Details

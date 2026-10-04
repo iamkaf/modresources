@@ -5,11 +5,11 @@
 ![Modrinth Downloads](https://img.shields.io/modrinth/dt/BwvGX21P?style=for-the-badge&logo=modrinth&color=1bd96a)
 ![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/BwvGX21P?style=for-the-badge)
 
-Embark on a journey through the realms of wonder and mystery with Arcane Armory! This enchanting addition to your Minecraft world introduces a vast array of fantastical materials, each possessing unique properties waiting to be harnessed in the creation of powerful weapons and armor.
+Arcane Armory adds new ores and the gear you make from them, for Fabric on Minecraft 1.20.1. Mine ruby, sapphire, titanium, and more across the Overworld, the Nether, and the End, then craft tools, weapons, and armor that each have their own stats.
 
 **This mod adds 17 ores, 14 armor/tool sets, bows, shields, working hammers and building blocks.**
 
-Requires Fabric API and optionally [Alloy Forgery](https://modrinth.com/mod/alloy-forgery) (for alloy recipes).
+Requires [Fabric API](https://modrinth.com/mod/fabric-api). Alloy recipes need [Alloy Forgery](https://modrinth.com/mod/alloy-forgery), which is optional.
 
 This is my first serious mod so I'm open to all suggestions. :)
 
@@ -19,7 +19,9 @@ This is my first serious mod so I'm open to all suggestions. :)
 
 17 ores, 14 armor/tool sets, bows, shields, working hammers, building blocks and... an interesting explosive. :)
 
-# Working Hammers! 🔨
+# Working Hammers!
+
+Hammers mine a 3×3 area facing the block you hit. Sneak to mine a single block.
 
 ![Hammer mining](https://i.imgur.com/vuhFvGS.gif)
 

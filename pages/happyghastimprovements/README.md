@@ -1,37 +1,33 @@
 # Happy Ghast Improvements
 
-A Minecraft mod that makes Happy Ghasts quieter and allows you to boost their speed by feeding them different items.
+Makes Happy Ghasts quieter and lets you feed them sugar, honey, or dragon's breath for a speed boost.
 
-## Features
+Available for Fabric, Forge, and NeoForge. Requires [Amber](https://modrinth.com/mod/amber) and
+[Konfig](https://modrinth.com/mod/konfig). Fabric files also require [Fabric API](https://modrinth.com/mod/fabric-api).
 
-**Quieter Happy Ghasts**
-Normal ambient sounds occur every 36 seconds instead of 6 seconds. When being ridden, sounds occur every 60 seconds instead of 36 seconds.
+## Quieter Happy Ghasts
 
-**Speed Boost System**
-Feed Happy Ghasts to give them temporary speed boosts with different power levels:
-- Sugar gives Speed II for 20 seconds (2x speed boost)
-- Honey gives Speed III for 20 seconds (2.5x speed boost)
-- Dragon's Breath gives Speed IV for 20 seconds (3x speed boost)
+A Happy Ghast waits at least 36 seconds between ambient sounds instead of 6. While you ride it, that goes up to
+60 seconds instead of 36.
 
-**Enhanced Riding Experience**
-- Increased reach distance of +1 block when riding a Happy Ghast
-- Sound effect plays when speed effect expires to let you know it's time to feed your happy ghast again
+## Speed boosts
 
-**Feeding Methods**
-- Ground feeding: Right-click on a Happy Ghast with any feedable item
-- Mounted feeding: Use items while riding a Happy Ghast
+Right-click a Happy Ghast with one of these, or use it while riding:
 
-## Compatibility
+- Sugar gives Speed II for 20 seconds, flying 2x as fast
+- Honey Bottle gives Speed III for 20 seconds, flying 2.5x as fast
+- Dragon's Breath gives Speed IV for 20 seconds, flying 3x as fast
 
-- Loaders: Fabric, NeoForge
-- Dependencies: Amber
+A sound plays when the boost runs out, so you know it's time to feed your happy ghast again. Feeding doesn't use up
+the item in Creative mode.
 
-## How to Use
+While riding a Happy Ghast, you can reach blocks and entities 1 block farther.
 
-1. Tame a Happy Ghast (if not already tamed)
-2. Feed for speed boost: Right-click the ghast or use the item while riding
-3. Choose your fuel: Sugar (moderate), Honey (fast), Dragon's Breath (fastest)
-4. Enjoy enhanced mobility for 20 seconds
+## Configuration
+
+Open the settings from your loader's mod list. On Fabric, install [Mod Menu](https://modrinth.com/mod/modmenu) to add
+the configuration button. You can change the ambient sound intervals, the boost length, the Speed level each item gives,
+how much faster each level flies, the extra reach, and whether the boost-ended sound plays.
 
 {{snippet:qa}}
 

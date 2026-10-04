@@ -2,7 +2,9 @@
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber) [![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues) [![Discord](https://img.shields.io/discord/1207469438719492176?style=for-the-badge&logo=discord&label=DISCORD&color=%235865F2)](https://discord.gg/HV5WgTksaB) [![KoFi](https://img.shields.io/badge/KoFi-iamkaf?style=for-the-badge&logo=kofi&logoColor=%2330d1e3&label=Support%20Me&color=%2330d1e3)](https://ko-fi.com/iamkaffe)
 
-Harness the power of the End! When holding an **Ender Pearl** or **Eye of Ender**, you can **see Endermen through walls**, revealing their ghostly outlines in the dark. Perfect for hunting Endermen, navigating the End, or just keeping an eye on these elusive creatures!
+Hold an **Ender Pearl** or **Eye of Ender** in either hand and every Enderman around you gets a purple outline you can see through walls. For Fabric and NeoForge on Minecraft 1.21.1.
+
+Requires [Amber](https://www.curseforge.com/minecraft/mc-mods/amber-lib) and [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api). Fabric files also require [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api).
 
 ## How To Use
 

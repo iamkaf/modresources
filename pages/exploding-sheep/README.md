@@ -1,3 +1,4 @@
+
 # Exploding Sheep
 
 Baa... BOOM!
@@ -8,12 +9,13 @@ Sheep explode when they eat grass.
 
 That's it. That's the whole mod.
 
+The blast is as strong as TNT and breaks blocks unless mob griefing is turned off. The sheep doesn't make it.
+
 ## When does this happen?
 
 Whenever a sheep decides it's snack time:
-- Munching on tall grass? Kaboom!
+- Munching on short grass? Kaboom!
 - Nibbling on grass blocks? Boom!
-- Eating any grass-related thing? Bang!
 
 ## Is this useful?
 
@@ -28,6 +30,11 @@ Yes.
 1. Find a sheep
 2. Wait for it to eat grass
 3. Enjoy the fireworks
+
+## Compatibility
+
+- Fabric, Forge, NeoForge
+- Needs [Amber](https://modrinth.com/mod/amber), plus [Fabric API](https://modrinth.com/mod/fabric-api) on Fabric
 
 {{snippet:qa}}
 

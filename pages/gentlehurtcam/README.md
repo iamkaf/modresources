@@ -8,16 +8,18 @@ A Minecraft Q&L accessibility mod that cancels the hurt camera effect when you t
 
 When you take damage that's fully absorbed (by armor, enchantments, or other protection), the hurt camera shake effect is cancelled. Your screen won't shake when you don't actually take any damage.
 
-## Compatibility
-
-Let me know if you find any issues!
-
-{{snippet:qa}}
-
-{{snippet:promo mods=kaf-hud,liteminer,torch-toss}}
-
 ## How It Works
 
 The mod monitors the hurt camera effect and cancels it when the damage is less than half a heart.
 
 This means when you have full netherite armor or other damage reduction that absorbs all incoming damage, your view stays steady.
+
+## Compatibility
+
+- Loaders: Fabric, Forge, NeoForge
+- Dependencies: [Amber](https://modrinth.com/mod/amber) and [Fabric API](https://modrinth.com/mod/fabric-api) on Fabric
+- Client-side only
+
+{{snippet:qa}}
+
+{{snippet:promo mods=kaf-hud,liteminer,torch-toss}}

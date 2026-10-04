@@ -7,21 +7,63 @@
 [![Discord](https://img.shields.io/discord/1207469438719492176?style=for-the-badge&logo=discord&label=DISCORD&color=%235865F2)](https://discord.gg/HV5WgTksaB)
 [![KoFi](https://img.shields.io/badge/KoFi-iamkaf?style=for-the-badge&logo=kofi&logoColor=%2330d1e3&label=Support%20Me&color=%2330d1e3)](https://ko-fi.com/iamkaffe)
 
-Amber is a library api of common code utilized by iamkaf mods.
+Amber is the shared library behind my mods, for Fabric, Forge, and NeoForge.
 
-Requires [Fabric API](https://modrinth.com/mod/fabric-api).
+Fabric files require [Fabric API](https://modrinth.com/mod/fabric-api). Amber 2.x and older also require
+[Architectury API](https://modrinth.com/mod/architectury-api).
 
-### How To Use It
+## For players
 
-Just install it and the mods that require it will be good to go!
+If one of my mods told you to install Amber, install the version for your Minecraft version and loader. Amber
+adds no gameplay of its own.
+
+Run `/amber doctor` when something isn't working. It reports your loader, Amber's networking status, and the Amber
+mods you have installed, along with any diagnostics those mods add. The report ends with buttons that help when
+you ask for support:
+
+- `[Open game folder]`, `[Open logs folder]`, and `[Open crash reports]` when there are any.
+- `[Upload log]` uploads `latest.log` to mclo.gs and copies the link. It asks first, since anyone with the link can
+  read it.
+- `[Join Discord]` links to the Discord.
+
+`/amber doctor server` shows the server's side of the report.
+
+## For mod developers
+
+Amber gives Fabric, Forge, and NeoForge one common API for the code every mod ends up writing:
+
+- Registry helpers
+- Common and client events, including client connect and disconnect
+- Permission checks that defer to each loader's permission system
+- Networking helpers
+- In-world billboards for text, textures, items, and block models
+- Diagnostics hooks for `/amber doctor`
+- Command, HUD, keybind, and other small helpers
+
+Add the Kaf Maven repository:
+
+```groovy
+repositories {
+    maven { url = "https://maven.kaf.sh" }
+}
+```
+
+Use the loader artifact for the Minecraft line you target:
+
+```groovy
+modImplementation "com.iamkaf.amber:amber-fabric:<version>"
+modImplementation "com.iamkaf.amber:amber-forge:<version>"
+modImplementation "com.iamkaf.amber:amber-neoforge:<version>"
+```
+
+The `+<mc>` suffix on each version tells you which Minecraft version the artifact targets, for example
+`11.7.0+26.3`.
 
 {{snippet:qa}}
 
 ## Compatibility
 
 Let me know if you find any issues.
-
-For versions 2.X and below Amber requires [Architectury API](https://modrinth.com/mod/architectury-api).
 
 ## Credits
 

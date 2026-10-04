@@ -1,83 +1,56 @@
-### **ARISTEA Modpack** ✨🌍
+# ARISTEA
 
-ARISTEA is a chill Minecraft modpack that keeps things simple while adding a few cool features to make your game smoother and more fun. It’s perfect if you want to enjoy Minecraft the way it’s meant to be played—without anything too complicated or over-the-top. 🌍✨
+ARISTEA is a Fabric modpack for Minecraft 1.21.1 that stays close to vanilla. It adds new terrain and
+structures, gear that levels up as you use it, and a lot of small quality-of-life and performance mods. There
+are no new tech trees or quest books to follow.
 
----
+## What's in it
 
-### **Features** 🛠️
+- **World:** Terralith biomes and terrain, with structures from Towns and Towers and Dungeons and
+  Taverns. Distant Horizons draws terrain far beyond your normal render distance.
+- **Gear:** Bonded levels up your tools, weapons, and armor as you use them. Basic Weapons adds more weapon
+  types, and Bonded supports them.
+- **Gathering:** Liteminer for vein mining, Tree Harvester for felling whole trees, and Right Click Harvest for
+  replanting crops.
+- **Inventory:** Mochila backpacks, Inventory Profiles Next for sorting, Chest Tracker, Easy Shulker Boxes, and
+  Torch Toss.
+- **Information:** Xaero's World Map, Roughly Enough Items, AppleSkin, and Kaf HUD.
+- **Looks and sound:** Sodium and Iris with Complementary shaders and Euphoria Patches, Sound Physics
+  Remastered, Presence Footsteps, Falling Leaves, Not Enough Animations, and Vanilla Tweaks resource packs.
+- **Datapacks:** extra wandering trader trades, more mob heads, and Endermen that don't pick up blocks.
+- **Multiplayer:** Essential lets you invite friends into your single-player world without running a server.
 
-- **Enhanced Vanilla Experience**: Quality-of-life tweaks and performance improvements, while keeping the core Minecraft feel intact.
-- **Stunning New Landscapes**: Explore the world like never before with **Terralith**, adding gorgeous biomes and unique terrain. 🌳🌋
+Each version page lists every mod in the pack.
 
-[TODO, add image: Image of a beautiful new biome from **Terralith**]
+## Installing
 
-- **New Structures**: Discover new, vanilla-friendly structures throughout the world. 🏚️🔍
-- **Bonding with Tools & Creations**: Enjoy personal progression and craftsmanship with mods that make your tools feel unique. ⚒️🛡️
-- **Seamless Multiplayer**: Play with friends using **Essential** for fun cosmetics and smooth, server-free multiplayer. 👥🎮
+Install ARISTEA from the Modrinth or CurseForge app, or import the `.mrpack` file into a launcher that supports
+Modrinth packs, such as Prism Launcher.
 
-[TODO, add image: Image of two players enjoying multiplayer with unique cosmetics]
+## Community
 
----
-
-### **The Kaffé Community** ☕️
-
-Join **The Kaffé**, a community of like-minded players who love the world of Minecraft. Whether you're exploring solo or adventuring with friends, we’d love to have you! Share your builds, ideas, and experiences as we grow together. 🏡
-
-- Chat with fellow adventurers in our **Discord**!
-- Get updates, sneak peeks, and share your creations.
-- Help steer the development of the mods and modpacks we're making. 👍🔥
+If you have questions or want to share your world, join the [Discord](https://discord.gg/HV5WgTksaB).
 
 [![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
 
----
-
-### **Roadmap** 📅
-
-We’ve got big plans for **ARISTEA**, and we’re just getting started! Here’s a sneak peek:
-
-- **Next Update**: More custom structures and tweaks to enhance the exploration experience.
-- **Future Plans**: Seasonal content, more gear customization, and deeper crafting mechanics.
-- **Long-Term Vision**: Continue enhancing the vanilla feel while adding fun surprises to keep things fresh! 🎁
-
-![Cake gif.](https://i.imgur.com/m86rg15.gif)
-
-Stay tuned for all the exciting updates! 🌟
-
----
-
-### **Credits** 🎉
-
-A huge thank you to the talented creators who made **ARISTEA** possible:
+## Credits
 
 <details>
-<summary>Spoiler</summary>
+<summary>Credits</summary>
 <ul>
 <li>Terralith by Ciembo.</li>
 <li>Essential by Team Essentials.</li>
-<li><a href="https://vanillatweaks.net/">Vanilla Tweaks</a>
-<li>Other mods that require credits go here...</li>
+<li><a href="https://vanillatweaks.net/">Vanilla Tweaks</a></li>
 </ul>
 <p>
-Note: The following mods are included pre-release mods made by myself and soon to be hosted on Modrinth and CurseForge.
+ARISTEA also includes a few unreleased mods of mine:
 </p>
 <ul>
-<li><a href="https://github.com/iamkaf/sunny">Sunny</a>
-<li><a href="https://github.com/iamkaf/amberdreams">Amber Dreams</a>
-<li><a href="https://github.com/iamkaf/dynamic-edge">Dynamic Edge</a>
-<li><a href="https://github.com/iamkaf/conten-creator-gag">Content Creator Gag</a></li>
+<li><a href="https://github.com/iamkaf/sunny">Sunny</a></li>
+<li><a href="https://github.com/iamkaf/amberdreams">Amber Dreams</a></li>
+<li><a href="https://github.com/iamkaf/dynamic-edge">Dynamic Edge</a></li>
+<li><a href="https://github.com/iamkaf/content-creator-gag">Content Creator Gag</a></li>
 </ul>
 </details>
 
 And most importantly, Aris, for always being there for me.
-
----
-
-### **Install Instructions** 📥
-
-1. **Download** the **ARISTEA modpack** from the [modpack page/download link].
-2. **Install** via your favorite launcher (e.g., **Modrinth**, **CurseForge**, **ATLauncher**, etc.).
-
-[TODO, add image: Screenshot of the download or installation process]  
-3. **Launch** and start your adventure! 🌄
-
-[TODO, add image: Image of the game running with the **ARISTEA** modpack active]

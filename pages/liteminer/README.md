@@ -7,48 +7,70 @@
 [![Discord](https://img.shields.io/discord/1207469438719492176?style=for-the-badge&logo=discord&label=DISCORD&color=%235865F2)](https://discord.gg/HV5WgTksaB)
 [![KoFi](https://img.shields.io/badge/KoFi-iamkaf?style=for-the-badge&logo=kofi&logoColor=%2330d1e3&label=Support%20Me&color=%2330d1e3)](https://ko-fi.com/iamkaffe)
 
-Mine an entire vein of ore, chop an entire tree or break any group of blocks by holding a hotkey. A veinmining mod for Fabric, NeoForge, Forge and Quilt.
+Mine an entire vein of ore, chop an entire tree or break any group of blocks by holding a hotkey. A vein mining
+mod for Fabric, NeoForge, and Forge.
 
-Requires [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).
+Requires [Amber](https://modrinth.com/mod/amber). Fabric files also require [Fabric API](https://modrinth.com/mod/fabric-api).
 
-Versions before Minecraft 1.21.9 (1.21.8 and below) require [Architectury API](https://modrinth.com/mod/architectury-api).
+- Minecraft 26.2 and newer also require [Konfig](https://modrinth.com/mod/konfig).
+- Minecraft 1.21.9 through 26.1.2 also require [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).
+- Minecraft 1.21.8 and older also require Forge Config API Port and [Architectury API](https://modrinth.com/mod/architectury-api).
 
+Install Liteminer on both the client and the server.
 
-![A gif preview of Liteminer, the playing vein mining some diamonds and iron ore.](https://i.imgur.com/ftSpErY.gif)
-### How To Use It
+![A gif preview of Liteminer, the player vein mining some diamonds and iron ore.](https://i.imgur.com/ftSpErY.gif)
 
-Hold the Tilde/Grave key, look at a block, and mine it. The outlines should show what you're about to mine.
+## How to use it
 
-![Keybord Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot5.png)
+Hold the Tilde/Grave key, look at a block, and mine it. The outlines show what you're about to mine, and the HUD
+shows how many blocks are selected.
 
-There are a few shapes you can mine with and to switch between them hold the Liteminer key and scroll your mouse wheel.
+![Keyboard Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot5.png)
 
-The available shapes are: Shapeless (mines connected blocks), 3x3, Small Tunnel, Staircase Up and Staircase Down.
+To switch shapes, hold the Liteminer key and scroll your mouse wheel. The shapes are:
 
+- **Shapeless:** mines connected blocks of the same kind, like an ore vein or a tree
+- **3x3**
+- **Small Tunnel**
+- **Staircase Up** and **Staircase Down**
 
-### Current Plan
+Hold the key and right-click with a tool to use it on the whole selection, like tilling a field with a hoe.
 
-I've completed all the features I wanted to add to the mod when I started the project, and I'm happy with how it turned out. The next steps are fixing bugs that might come up and adding new features that I think of or that are requested by the community.
+## Settings
 
-Thank you for the support!
+- **Key Mode:** hold the key to stay active, or press it to toggle vein mining on and off.
+- **Block Break Limit:** the most blocks one action can break. Defaults to 64.
+- **How should blocks drop:** `Together` drops a vein's items and experience where you broke the first block.
+  `At each block` drops them where each block was, like mining each block by hand.
+- **Prevent Tool Breaking:** stops before your tool's last durability point. On by default.
+- **Require Correct Tool:** only breaks blocks your tool can harvest. Off by default.
+- **Food Exhaustion:** vein mining drains hunger for each block it breaks. **Allow Vein Mining at Zero Hunger**
+  decides whether you can keep going on an empty hunger bar.
+- **Increased Harvesting Time:** larger selections take longer to break. Off by default.
+- **Distinguish Grown Crops** and **Match Deepslate Ore Variants** control what Shapeless counts as the same block.
+- **Show HUD**, **HUD Scale**, **Show Block Highlights**, and the highlight colors change what you see while vein
+  mining.
 
-### Tags
+Vein mining also respects the `block_drops` game rule. Farmer's Delight's Nourishment effect stops vein mining from
+draining hunger.
 
-#### Item Tags
+## Tags
 
-* `liteminer:excluded_tools` - items in this tag can't be used for litemining (applies to main hand slot)
-* `liteminer:included_tools` - if `require_tool` is true in server config, by default only "tool" items can be used (tiered items with durability); this can be used to allow extra items
+### Item Tags
 
-#### Block Tags
+* `liteminer:excluded_tools` - items in this tag can't be used for vein mining (applies to the main hand slot)
+* `liteminer:included_tools` - when **Require Correct Tool** is on, items in this tag count as the correct tool
 
-* `liteminer:excluded_blocks` - blocks in this tag may never be litemined
-* `liteminer:block_whitelist` - if this tag is non-empty, then _only_ blocks in this tag may be litemined
+### Block Tags
+
+* `liteminer:excluded_blocks` - blocks in this tag can never be vein mined
+* `liteminer:block_whitelist` - if this tag is not empty, _only_ blocks in this tag can be vein mined
 
 > Note: these tags are compatible with the FTB Ultimine tags, so you can use the same tags for both mods if you already have a setup you like.
 
-### Addon API
+## Addon API
 
-Liteminer 3.1.0 adds a public addon API for integrations.
+Liteminer has a public addon API for integrations.
 
 * `LiteminerApi` exposes server-side helpers for checking veinmine state, reading or changing the selected shape, and reading the active block limit.
 * `LiteminerEvents` exposes `BEFORE_VEINMINE`, `ALLOW_BLOCK`, and `AFTER_VEINMINE` for permission, protection, quest, and logging integrations.
@@ -93,6 +115,6 @@ Let me know if you find any issues.
 
 - [FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-fabric) for the inspiration for the mod.
 - [Simply Tools](https://modrinth.com/mod/simply-tools) for some client side code.
-- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup in which the mod is built upon.
+- [Architectury API](https://modrinth.com/mod/architectury-api) for the multiloader setup older versions were built on.
 - [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe) for teaching me how to mod.
 - And most importantly, **Aris**, for always being there for me.
