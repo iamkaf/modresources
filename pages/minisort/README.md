@@ -1,6 +1,6 @@
 # Minisort
 
-![Minisort banner](https://i.kaf.sh/i/168f9b61-d21c-4a38-bea1-d189283e39bb.gif)
+![Minisort banner](https://i.kaf.sh/i/1d82e078-7e8d-4211-a522-d6d7ae8282db.gif)
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Konfig](https://img.shields.io/badge/Konfig-iamkaf?style=for-the-badge&label=Requires&color=%2375c46b)](https://modrinth.com/mod/konfig)
