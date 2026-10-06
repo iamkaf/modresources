@@ -1,6 +1,6 @@
 # Minisort
 
-![Minisort banner](https://i.kaf.sh/i/1d82e078-7e8d-4211-a522-d6d7ae8282db.gif)
+![Minisort banner](https://i.kaf.sh/i/570a4de0-5b97-4c31-b54d-df902c988b92.webp)
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Konfig](https://img.shields.io/badge/Konfig-iamkaf?style=for-the-badge&label=Requires&color=%2375c46b)](https://modrinth.com/mod/konfig)
@@ -53,7 +53,7 @@ Dropping an item or putting on armor never triggers a refill, and Creative mode 
 
 ## Configuration
 
-![The Minisort config screen, sliding from setting to setting: each setting shows a picture of what it changes](https://i.kaf.sh/i/5899d984-2145-4903-ad93-c90813d1c183.gif)
+![The Minisort config screen, sliding from setting to setting: each setting shows a picture of what it changes](https://i.kaf.sh/i/3274f0bc-52f3-4b34-9af5-0a25b0d039a2.webp)
 
 Open Minisort's settings from your loader's mod list. On Fabric, install [Mod Menu](https://modrinth.com/mod/modmenu) to add the configuration button.
 
