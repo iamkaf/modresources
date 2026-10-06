@@ -1,11 +1,12 @@
 {
-  "id": "minisort",
-  "name": "Minisort",
-  "modrinth_id": null,
-  "curseforge_id": null,
-  "icon_url": null,
-  "project_type": "mod",
+  "curseforge_id": "1730907",
   "curseforge_slug": null,
+  "icon_url": null,
+  "id": "minisort",
+  "modrinth_id": "u6c6EQt9",
+  "modrinth_slug": null,
+  "name": "Minisort",
+  "project_type": "mod",
   "source": {
     "path": "${MOD_WORKSPACE}/mods/minisort",
     "format": "monorepo"
