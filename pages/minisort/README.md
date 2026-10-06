@@ -51,7 +51,9 @@ The replacement has to match exactly, enchantments and names included. Tools are
 
 Dropping an item or putting on armor never triggers a refill, and Creative mode doesn't refill at all.
 
-## Settings
+## Configuration
+
+![The Minisort config screen, sliding from setting to setting: each setting shows a picture of what it changes](https://i.kaf.sh/i/5899d984-2145-4903-ad93-c90813d1c183.gif)
 
 Open Minisort's settings from your loader's mod list. On Fabric, install [Mod Menu](https://modrinth.com/mod/modmenu) to add the configuration button.
 
