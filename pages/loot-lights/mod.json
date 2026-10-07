@@ -1,0 +1,13 @@
+{
+  "id": "loot-lights",
+  "name": "Loot Lights",
+  "modrinth_id": null,
+  "curseforge_id": null,
+  "icon_url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/loot-lights/icon.png",
+  "project_type": "mod",
+  "curseforge_slug": null,
+  "source": {
+    "path": "${MOD_WORKSPACE}/mods/loot-lights",
+    "format": "monorepo"
+  }
+}
