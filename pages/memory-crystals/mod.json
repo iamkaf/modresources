@@ -1,0 +1,13 @@
+{
+  "id": "memory-crystals",
+  "name": "Memory Crystals",
+  "modrinth_id": null,
+  "curseforge_id": null,
+  "icon_url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/memory-crystals/icon.png",
+  "project_type": "mod",
+  "curseforge_slug": null,
+  "source": {
+    "path": "${MOD_WORKSPACE}/mods/memory-crystals",
+    "format": "monorepo"
+  }
+}
