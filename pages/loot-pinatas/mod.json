@@ -1,0 +1,13 @@
+{
+  "id": "loot-pinatas",
+  "name": "Loot Piñatas",
+  "modrinth_id": null,
+  "curseforge_id": null,
+  "icon_url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/loot-pinatas/icon.png",
+  "project_type": "mod",
+  "curseforge_slug": null,
+  "source": {
+    "path": "${MOD_WORKSPACE}/mods/loot-pinatas",
+    "format": "monorepo"
+  }
+}
