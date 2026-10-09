@@ -13,7 +13,7 @@
 
 Minisort lets you sort storage, put matching items away, and collect supplies with three buttons: **Sort**, **Deposit**, and **Retrieve**. You can sort your inventory as well. Automatic hand refill replaces used-up stacks and broken tools with matching items you're carrying.
 
-Install Minisort on your client and server, together with [Amber](https://modrinth.com/mod/amber) and [Konfig](https://modrinth.com/mod/konfig). Add [Fabric API](https://modrinth.com/mod/fabric-api) if you use Fabric. Downloads cover Fabric, Forge, and NeoForge for Minecraft 1.21.11, 26.1.2, 26.2, and 26.3.
+Install Minisort on your client and server, together with [Amber](https://modrinth.com/mod/amber) and [Konfig](https://modrinth.com/mod/konfig). Add [Fabric API](https://modrinth.com/mod/fabric-api) if you use Fabric. Downloads cover Fabric, Forge, and NeoForge for Minecraft 1.21.11, 26.1.2, 26.2, and 26.3. You can still join servers without Minisort; the buttons stay hidden there.
 
 ## The buttons
 
