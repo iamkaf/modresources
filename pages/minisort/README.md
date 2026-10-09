@@ -1,6 +1,6 @@
 # Minisort
 
-![Minisort sorting a chest with its Sort button](https://i.kaf.sh/i/570a4de0-5b97-4c31-b54d-df902c988b92.webp)
+![Minisort sorting a chest with its Sort button](https://i.kaf.sh/i/e2e081fc-1d38-4a69-866f-93d929dcc5d1.webp)
 
 ![Minecraft 1.21.11, 26.1.2, 26.2, and 26.3](https://shieldcn.dev/badge/Minecraft-1.21.11%20%C2%B7%2026.1.2%20%C2%B7%2026.2%20%C2%B7%2026.3-4ade80.svg?logo=lu:Pickaxe&variant=secondary&mode=dark)
 ![Fabric, Forge, and NeoForge](https://shieldcn.dev/badge/Loaders-Fabric%20%C2%B7%20Forge%20%C2%B7%20NeoForge-5cd2ff.svg?logo=lu:Layers&variant=secondary&mode=dark)
@@ -11,7 +11,7 @@
 [![Discord](https://shieldcn.dev/discord/1207469438719492176.svg?variant=secondary&mode=dark)](https://discord.gg/HV5WgTksaB)
 [![Support me on Ko-fi](https://shieldcn.dev/badge/Support%20Me-Ko--fi-30d1e3.svg?logo=kofi&variant=secondary&mode=dark)](https://ko-fi.com/iamkaffe)
 
-Minisort lets you sort storage, put matching items away, and collect supplies with three buttons: **Sort**, **Deposit**, and **Retrieve**. You can sort your inventory as well. Automatic hand refill replaces used-up stacks and broken tools with matching items you're carrying.
+Minisort lets you sort storage, put matching items away, and collect supplies with three buttons: **Sort**, **Deposit**, and **Retrieve**. You can sort your inventory as well. Automatic hand refill replaces used-up stacks and broken tools with matching items you're carrying. It fits into a modpack, too: storage from other mods gets the buttons, JEI and REI make room for them, and controller players can sort through Controlify.
 
 Install Minisort on your client and server, together with [Amber](https://modrinth.com/mod/amber) and [Konfig](https://modrinth.com/mod/konfig). Add [Fabric API](https://modrinth.com/mod/fabric-api) if you use Fabric. Downloads cover Fabric, Forge, and NeoForge for Minecraft 1.21.11, 26.1.2, 26.2, and 26.3. You can still join servers without Minisort; the buttons stay hidden there.
 
@@ -20,14 +20,26 @@ Install Minisort on your client and server, together with [Amber](https://modrin
 You'll find the controls along the right edge of an open chest.
 
 - **Sort** combines stacks where there's room, then arranges the chest's contents. Your carried items aren't rearranged.
-- **Deposit** checks what the chest contains and stores matching items from your inventory and hotbar. Put some cobblestone in a chest, and you can send the rest of your cobblestone there with one click.
+- **Deposit** checks what the chest contains and stores matching items from your main inventory. Your hotbar stays put. Put some cobblestone in a chest, and you can send the rest of your cobblestone there with one click.
 - **Retrieve** uses your carried items as the filter. If you have a torch, clicking it collects the chest's torches, up to the space available in your inventory.
 
 Holding **Shift** removes the matching-item filter. **Shift-Deposit** stores as much of your main inventory as the chest can hold, without moving hotbar items. **Shift-Retrieve** collects whatever fits, using the main inventory slots before the hotbar. Each button has a tooltip explaining its action.
 
-![Chest contents before and after using Sort](https://i.kaf.sh/i/03b0a1eb-da75-408b-aaea-78b661318dda.png)
+![Chest contents before and after using Sort](https://i.kaf.sh/i/1db01a74-5619-4d36-84aa-d20ac33a84cb.png)
 
 Supported storage includes regular and ender chests, barrels, shulker boxes, dispensers, droppers, and hoppers. Screens for crafting, smelting, repairing, trading, and similar tasks don't have these controls.
+
+## Works with your modpack
+
+- **Storage from other mods.** Minisort recognizes storage by its slots, so other mods' chests and storage blocks get Sort, Deposit, and Retrieve without a patch for each mod. Machines, crafting grids, and storage-network terminals such as AE2 and Refined Storage are left alone, and their own controls and middle-click keep working. If the buttons show up somewhere they don't belong, add that menu's ID to **Turned Off In** in the settings.
+- **Modded items sort with their tabs.** The default order follows the creative inventory, so each mod's items land beside their own creative tab instead of piling up at the end.
+- **JEI and REI.** Their item lists and bookmarks make room for Minisort's buttons instead of drawing over them. Both work on Fabric and NeoForge.
+- **Controllers.** With Controlify, pressing the right stick sorts the container, or the side under the cursor. The cursor snaps to Minisort's buttons, and Controlify's Shift input turns them into their "everything" versions. Controlify runs on Fabric and NeoForge.
+- **Smooth Swapping.** When it's installed, Minisort leaves sort animations to it.
+- **Servers without Minisort.** You can still join them; the buttons stay hidden there.
+- **One file per version.** Each Minecraft version has a single download that runs on Fabric, Forge, and NeoForge.
+
+![A chest with Minisort's buttons beside JEI's item list](https://i.kaf.sh/i/44b0d50c-2302-4f44-ac53-829fd0d609a8.png)
 
 ## Sorting your inventory
 
@@ -35,11 +47,17 @@ The inventory screen's **Sort** button arranges your 27 main inventory slots. Ho
 
 Middle-click works as a shortcut: click a storage slot to sort that container, or an inventory slot to sort your carried items. Creative mode retains Minecraft's usual middle-click item copying.
 
+The **Sort** key, R by default, does the same without a middle mouse button: it sorts the side under the cursor, or the open container when the cursor isn't over a slot. Change it in the Controls settings.
+
 ## Sort order
 
-The default order uses registry IDs. Items from the same mod appear together, ordered by their ID names.
+Items sort in the creative inventory's order: building blocks first, then colored and natural blocks, tools, combat gear, food, and ingredients. Items from other mods follow their creative tabs too. An item that isn't on any tab sits next to related items.
 
-Choose the experimental **Categories** option to group blocks, tools, combat equipment, armor, food, potions, materials, and spawn eggs. Related building blocks share a group: oak logs, planks, stairs, and doors, for example. Equipment is sorted by tier; colored items use the dye sequence.
+Pick **Registry ID** in the settings to sort alphabetically by item ID instead, which keeps each mod's items together.
+
+## Sort animation
+
+After a sort, each item glides from its old slot to its new one in about a tenth of a second, and merged stacks fly into the same slot. Only Minisort's own sorts animate; clicks and other mods' sorting don't. Turn it off with **Sort Animation** in the settings.
 
 ## Hand refill
 
@@ -56,11 +74,11 @@ Refill is disabled in Creative mode. Throwing items away and equipping armor don
 
 ## Configuration
 
-![Minisort settings with illustrations of their effects](https://i.kaf.sh/i/3274f0bc-52f3-4b34-9af5-0a25b0d039a2.webp)
+![Minisort settings with illustrations of their effects](https://i.kaf.sh/i/53a1951b-351a-4b8e-a7f6-956df4cbde9b.webp)
 
 Use the mod list to reach Minisort's configuration screen. Fabric users need [Mod Menu](https://modrinth.com/mod/modmenu) for this entry.
 
-- Each player chooses their **Sort Mode** and button placement independently.
+- Each player chooses their **Sort Mode**, **Sort Animation**, **Button Style** (eight woods or Stone), and the menus Minisort is **Turned Off In**.
 - The server controls **Hand Refill**, with separate switches for blocks, tool breakage, food and drinks, and other items used by right-clicking. Disable **Search Hotbar First** to look for replacements in your main inventory before checking other hotbar slots.
 
 {{snippet:translate}}
