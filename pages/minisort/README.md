@@ -45,6 +45,8 @@ Pick the look of the buttons in the settings: Oak, Spruce, Birch, Dark Oak, Cher
 
 ## Works with your modpack
 
+![AE2, Refined Storage, JEI, REI, Controlify, and Smooth Swapping](https://i.kaf.sh/i/9e4d92af-3c2a-486b-bfa9-0592fa6614fd.png)
+
 - **Storage from other mods.** Minisort recognizes storage by its slots, so other mods' chests and storage blocks get Sort, Deposit, and Retrieve without a patch for each mod. Machines, crafting grids, and storage-network terminals such as AE2 and Refined Storage are left alone, and their own controls and middle-click keep working. If the buttons show up somewhere they don't belong, add that menu's ID to **Turned Off In** in the settings.
 - **Modded items sort with their tabs.** The default order follows the creative inventory, so each mod's items land beside their own creative tab instead of piling up at the end.
 - **JEI and REI.** Their item lists and bookmarks make room for Minisort's buttons instead of drawing over them. Both work on Fabric and NeoForge.
