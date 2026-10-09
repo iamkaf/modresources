@@ -25,15 +25,15 @@ You'll find the controls along the right edge of an open chest.
 
 **Deposit** checks what the chest contains and stores matching items from your main inventory. Your hotbar stays put. Put some cobblestone in a chest, and you can send the rest of your cobblestone there with one click.
 
-![Deposit moving matching items from the inventory into a chest](https://i.kaf.sh/i/d8d09df5-100c-41bb-a518-8f455c7f25f0.webp)
+![Deposit moving matching items from the inventory into a chest](https://i.kaf.sh/i/5307826c-75e7-4971-857c-f6ce83e2592f.webp)
 
 **Retrieve** uses your carried items as the filter. If you have a torch, clicking it collects the chest's torches, up to the space available in your inventory.
 
-![Retrieve taking matching items out of a chest](https://i.kaf.sh/i/744831c5-9b97-472a-9610-d08e5249852b.webp)
+![Retrieve taking matching items out of a chest](https://i.kaf.sh/i/19a4dded-e1c5-4a20-96b7-83819a160d68.webp)
 
 Holding **Shift** removes the matching-item filter. **Shift-Deposit** stores as much of your main inventory as the chest can hold, without moving hotbar items. **Shift-Retrieve** collects whatever fits, using the main inventory slots before the hotbar. Each button has a tooltip explaining its action.
 
-![Shift-Deposit storing the whole main inventory](https://i.kaf.sh/i/322b844d-3089-4aac-9088-1075746e1027.webp)
+![Shift-Deposit storing the whole main inventory](https://i.kaf.sh/i/e6e1c755-5739-451e-b551-efe2dff9ad39.webp)
 
 Supported storage includes regular and ender chests, barrels, shulker boxes, dispensers, droppers, and hoppers. Screens for crafting, smelting, repairing, trading, and similar tasks don't have these controls.
 
@@ -59,7 +59,7 @@ Pick the look of the buttons in the settings: Oak, Spruce, Birch, Dark Oak, Cher
 
 The inventory screen's **Sort** button arranges your 27 main inventory slots. Hotbar positions stay fixed.
 
-![The inventory screen's Sort button arranging the main inventory](https://i.kaf.sh/i/9535e21f-2000-448f-9c2c-e4b19ef5bb54.webp)
+![The inventory screen's Sort button arranging the main inventory](https://i.kaf.sh/i/2064f9f0-dab9-4921-9d57-b2d2e43247df.webp)
 
 Middle-click works as a shortcut: click a storage slot to sort that container, or an inventory slot to sort your carried items. Creative mode retains Minecraft's usual middle-click item copying.
 
@@ -77,7 +77,7 @@ Pick **Registry ID** in the settings to sort alphabetically by item ID instead, 
 
 When you sort, deposit, or retrieve, each item glides from its old slot to its new one in about a tenth of a second, and merged stacks fly into the same slot. Only Minisort's own actions animate; clicks and other mods' sorting don't. Turn it off with **Item Animation** in the settings.
 
-![Sorted items gliding to their new slots](https://i.kaf.sh/i/24dd22e2-87f6-4b96-8f0f-9ead76614351.webp)
+![Sorted items gliding to their new slots](https://i.kaf.sh/i/9b7ed22e-0969-4dce-8491-629d0972021c.webp)
 
 ## Hand refill
 
