@@ -62,3 +62,4 @@ temp/
 # Specific to this project
 tmp-event-summaries/
 .cache
+hosted-images.json.lock
