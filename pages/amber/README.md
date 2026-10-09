@@ -1,6 +1,6 @@
 # Amber
 
-![Amber Banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot1.png)
+![Amber Banner](https://i.kaf.sh/i/9707b0fc-82c0-4413-9877-c729296bdad6.png)
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues)

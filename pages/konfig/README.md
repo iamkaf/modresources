@@ -32,17 +32,17 @@ sync, and the generated screen. Loader-specific integration stays in the loader 
 
 ## Pics
 
-![Konfig overview with inline documentation and info panel](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/konfig/konfig1.png)
+![Konfig overview with inline documentation and info panel](https://i.kaf.sh/i/4e48f5ab-9a5d-425c-a7f6-c7f06a63a052.png)
 
-![Konfig boolean, enum, and number controls](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/konfig/konfig2.png)
+![Konfig boolean, enum, and number controls](https://i.kaf.sh/i/584bd83f-bfa7-4907-a63e-148dc347d1a8.png)
 
-![Konfig registry-backed string and color controls](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/konfig/konfig3.png)
+![Konfig registry-backed string and color controls](https://i.kaf.sh/i/5a3960bf-4085-4470-81a5-6b0d1b5c0c58.png)
 
-![Konfig string list controls with registry icons](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/konfig/konfig4.png)
+![Konfig string list controls with registry icons](https://i.kaf.sh/i/c7dbd687-e2e5-4bc5-a8d3-2f256754d05b.png)
 
-![Konfig registry-backed string list editor](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/konfig/konfig5.png)
+![Konfig registry-backed string list editor](https://i.kaf.sh/i/9944e6a0-32ca-4ff6-b707-5567a93ec00a.png)
 
-![Konfig ARGB color editor with channel sliders](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/konfig/konfig6.png)
+![Konfig ARGB color editor with channel sliders](https://i.kaf.sh/i/f79a15c2-38cd-46fe-a9a1-1f1d29b11041.png)
 
 ## Supported Versions
 

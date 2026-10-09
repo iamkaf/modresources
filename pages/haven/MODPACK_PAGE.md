@@ -31,7 +31,7 @@ Modrinth packs, such as Prism Launcher.
 
 If you have questions or want to share your world, join the [Discord](https://discord.gg/HV5WgTksaB).
 
-[![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
+[![Join our Discord](https://i.kaf.sh/i/045f0e6f-04e7-4326-a471-1aad1ee180eb.png)](https://discord.gg/HV5WgTksaB)
 
 ## Credits
 

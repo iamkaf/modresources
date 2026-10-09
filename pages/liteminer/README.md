@@ -25,7 +25,7 @@ Install Liteminer on both the client and the server.
 Hold the Tilde/Grave key, look at a block, and mine it. The outlines show what you're about to mine, and the HUD
 shows how many blocks are selected.
 
-![Keyboard Hotkey](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot5.png)
+![Keyboard Hotkey](https://i.kaf.sh/i/a1691653-4ef4-4679-9c88-07d03283e814.png)
 
 To switch shapes, hold the Liteminer key and scroll your mouse wheel. The shapes are:
 
@@ -85,13 +85,13 @@ Public API packages:
 
 ## Pics
 
-![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot1.png)
+![Mining Shapes](https://i.kaf.sh/i/fc75cb94-889e-46be-9082-56b50cbdfc2d.png)
 
-![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot2.png)
+![Mining Shapes](https://i.kaf.sh/i/a54e5ce0-8a0f-4b92-ab77-6ed04f374095.png)
 
-![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot3.png)
+![Mining Shapes](https://i.kaf.sh/i/07ecb7e5-bd24-45f1-befa-e70d9ed9a63c.png)
 
-![Mining Shapes](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/liteminer/screenshot4.png)
+![Mining Shapes](https://i.kaf.sh/i/ac329af2-3158-4493-a4b0-974d88eb6094.png)
 
 ![Liteminer outlines on a tree.](https://cdn.modrinth.com/data/cached_images/2b8d30774e17ff51cf5f2b257f6cb1970f826c3d_0.webp)
 

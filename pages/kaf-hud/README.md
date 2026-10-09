@@ -1,6 +1,6 @@
 # Kaf HUD
 
-![Kaf HUD banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/banner.png)
+![Kaf HUD banner](https://i.kaf.sh/i/6891de82-bbb0-4445-8972-671f9184ccbb.png)
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Konfig](https://img.shields.io/badge/Konfig-iamkaf?style=for-the-badge&label=Requires&color=%2375c46b)](https://modrinth.com/mod/konfig)
@@ -32,11 +32,11 @@ to add the configuration button.
 
 ## Pics
 
-![Showing the coordinates](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot1.png)
+![Showing the coordinates](https://i.kaf.sh/i/c0ff913e-2d57-493c-a04f-848f55460d03.png)
 
-![Showing the copy feature](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot2.png)
+![Showing the copy feature](https://i.kaf.sh/i/a6263ffe-54a6-49c7-91c7-6f29a27fc950.png)
 
-![Showing modded biome](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/kaf-hud/screenshot3.png)
+![Showing modded biome](https://i.kaf.sh/i/83dfa05b-f261-4cf4-a486-85f3f009332b.png)
 
 {{snippet:qa}}
 

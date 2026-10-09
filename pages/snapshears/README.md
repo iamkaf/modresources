@@ -1,6 +1,6 @@
 # SnapShears
 
-![Amber Banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/snapshears/banner.png)
+![Amber Banner](https://i.kaf.sh/i/c076e8be-2e2b-4212-b874-4dc37aba854e.png)
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues)

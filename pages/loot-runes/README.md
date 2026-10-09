@@ -1,6 +1,6 @@
 # Loot Runes
 
-![Loot Runes banner placeholder](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/lootrunes/banner.png)
+![Loot Runes banner placeholder](https://i.kaf.sh/i/e9d35272-06e6-43f3-8360-8a437da91ea8.png)
 
 [![Requires Amber](https://img.shields.io/badge/Requires-Amber-ebb134?style=for-the-badge)](https://modrinth.com/mod/amber)
 [![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=eeeeee)](https://github.com/iamkaf/mod-issues)

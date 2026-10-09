@@ -14,4 +14,4 @@ A: Maybe, if there's enough demand. No promises on timing.
 
 A: Yes, no need to give credit or ask.
 
-[![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
+[![Join our Discord](https://i.kaf.sh/i/045f0e6f-04e7-4326-a471-1aad1ee180eb.png)](https://discord.gg/HV5WgTksaB)

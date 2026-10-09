@@ -1,6 +1,6 @@
 # Bonded
 
-![Bonded banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/banner.png)
+![Bonded banner](https://i.kaf.sh/i/028cc363-9564-46b8-a668-678601796563.png)
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Issues](https://img.shields.io/github/issues/iamkaf/bonded?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues)
@@ -68,15 +68,15 @@ Rules for items from a removed mod stay dormant. Reinstalling the mod activates 
 
 ## Screenshots
 
-![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot1.png)
+![Tool Bench recipe](https://i.kaf.sh/i/39e89c99-17c6-4163-8fdd-f9eecf869171.png)
 
-![Tool Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot2.png)
+![Tool Bench recipe](https://i.kaf.sh/i/de890a5c-7357-4728-8f29-75c600424719.png)
 
-![Repair Bench recipe](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot3.png)
+![Repair Bench recipe](https://i.kaf.sh/i/bf57e661-5289-4407-85b4-ac63dea3aeb6.png)
 
-![Tool Bench Overlay](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot5.png)
+![Tool Bench Overlay](https://i.kaf.sh/i/0155c8f3-45df-43d8-8241-f310257071a3.png)
 
-![Repair Bench Overlay](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot6.png)
+![Repair Bench Overlay](https://i.kaf.sh/i/be5dd418-9330-4a6f-b106-05bd95622bc8.png)
 
 {{snippet:translate}}
 

@@ -1,6 +1,6 @@
 # Bonded: Basic Weapons Compat
 
-![Now part of Bonded](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/compat-retired.png)
+![Now part of Bonded](https://i.kaf.sh/i/db463fa0-953b-4feb-953f-e648590f04c2.png)
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues)
@@ -17,7 +17,7 @@ Requires [Bonded](https://modrinth.com/mod/bonded) and [Basic Weapons](https://m
 
 Available for Fabric on Minecraft 1.21, 1.21.1, and 1.21.4, and NeoForge on Minecraft 1.21 and 1.21.1.
 
-![A basic weapon with the Bonded tooltip](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/bonded/screenshot4.png)
+![A basic weapon with the Bonded tooltip](https://i.kaf.sh/i/a7fee907-8fdb-4fbb-931b-d0c9da92cd4b.png)
 
 To make another gear mod work with Bonded, use Gear Rules or let me know.
 

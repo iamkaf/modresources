@@ -25,13 +25,13 @@ The Ender Backpack opens your ender chest. Right-click it or use its hotkey (def
 
 ### Recipes
 
-![Recipe for a leather backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe1.png)
+![Recipe for a leather backpack.](https://i.kaf.sh/i/d8ea65ff-2cb6-4b05-95cc-b9d7f1d955d3.png)
 
-![Upgrade and coloring recipes.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe2.png)
+![Upgrade and coloring recipes.](https://i.kaf.sh/i/ddbd3f04-d7f3-4783-a9a2-5770f886f2b8.png)
 
-![Recipe for a netherite backpack upgrade.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/recipe3.png)
+![Recipe for a netherite backpack upgrade.](https://i.kaf.sh/i/0a743ebc-b21b-4d45-8c07-d960449a6875.png)
 
-![Ender backpack recipe.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot5.png)
+![Ender backpack recipe.](https://i.kaf.sh/i/c0bb7905-f8e3-4206-86ba-52e49b491709.png)
 
 ### Quick Stashing
 
@@ -51,13 +51,13 @@ You can turn quick stashing off, choose which blocks count as stash targets, and
 
 ## Pics
 
-![Several backpacks being displayed.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot1.png)
+![Several backpacks being displayed.](https://i.kaf.sh/i/9707b0fc-82c0-4413-9877-c729296bdad6.png)
 
-![Several backpacks being displayed.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot2.png)
+![Several backpacks being displayed.](https://i.kaf.sh/i/c6ba2862-d96e-4c21-ae41-ccc64a1e51a3.png)
 
-![A leather backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot3.png)
+![A leather backpack.](https://i.kaf.sh/i/0628d992-4362-4992-908e-0ecb5fa7f3a2.png)
 
-![A gold backpack.](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/mochila/screenshot4.png)
+![A gold backpack.](https://i.kaf.sh/i/75a9d0ad-7ff1-431f-8750-5a03e5cd06a7.png)
 
 {{snippet:translate}}
 

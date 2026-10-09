@@ -1,6 +1,6 @@
 # Dynamic Edge
 
-![Dynamic Edge banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/dynamicedge/banner.png)
+![Dynamic Edge banner](https://i.kaf.sh/i/5b6adabf-d588-405d-b04b-08b72e18f7b6.png)
 
 
 
@@ -68,7 +68,7 @@ A: If enough people request it I'll give it some time, but this really is a 1-ma
 
 A: Yes, no need to give credit or ask.
 
-[![Join our Discord](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/common/discord.png)](https://discord.gg/HV5WgTksaB)
+[![Join our Discord](https://i.kaf.sh/i/045f0e6f-04e7-4326-a471-1aad1ee180eb.png)](https://discord.gg/HV5WgTksaB)
 
 ## Compatibility
 

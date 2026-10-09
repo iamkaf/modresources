@@ -1,6 +1,6 @@
 # Kaf's Valentine Special
 
-![Kaf's Valentine Special banner](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/banner.png)
+![Kaf's Valentine Special banner](https://i.kaf.sh/i/574955da-09ce-4478-ab01-c82dbef9a6a7.png)
 
 [![Amber](https://img.shields.io/badge/Amber-iamkaf?style=for-the-badge&label=Requires&color=%23ebb134)](https://modrinth.com/mod/amber)
 [![Issues](https://img.shields.io/github/issues/iamkaf/mod-issues?style=for-the-badge&color=%23eee)](https://github.com/iamkaf/mod-issues)
@@ -39,26 +39,26 @@ house chests.
 
 You can use the Lovey Dovey Infuser to infuse all the cookies in the mod. **The infused versions grant more powerful effects**.
 
-![Lovey Dovey Infuser](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot4.png)
+![Lovey Dovey Infuser](https://i.kaf.sh/i/cd038ed6-a641-4677-b634-cb75d5a9e540.png)
 
-![Lovey Dovey Infuser](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot5.png)
+![Lovey Dovey Infuser](https://i.kaf.sh/i/c69dff22-725c-4004-990c-1ea1fe9ba8ae.png)
 
 #### Aristea
 
 
 **Aristea** is a new flower added to Minecraft, you can find it randomly generating in the world.
 
-![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot1.png)
+![Aristea](https://i.kaf.sh/i/0f6e5435-dfe3-43f8-a84a-0dd66fe02d4f.png)
 
-![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot2.png)
+![Aristea](https://i.kaf.sh/i/2002732a-6abb-4fbc-a778-e0cc6edc0388.png)
 
-![Aristea](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot3.png)
+![Aristea](https://i.kaf.sh/i/ccbe8794-c5d0-499c-8d4c-15ab3c72acee.png)
 
 #### Lovely Potion
 
 It's a potion, it's lovely, this is how you make it:
 
-![Lovely Potion](https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/valentine/screenshot6.png)
+![Lovely Potion](https://i.kaf.sh/i/f95c6b66-53d3-4182-ac27-0a361e948c97.png)
 
 And this is what it does:
 
