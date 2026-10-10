@@ -1,0 +1,13 @@
+{
+  "id": "veteran-golems",
+  "name": "Veteran Golems",
+  "modrinth_id": null,
+  "curseforge_id": null,
+  "icon_url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/veteran-golems/icon.png",
+  "project_type": "mod",
+  "curseforge_slug": null,
+  "source": {
+    "path": "${MOD_WORKSPACE}/mods/veteran-golems",
+    "format": "monorepo"
+  }
+}

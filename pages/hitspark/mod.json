@@ -1,0 +1,13 @@
+{
+  "id": "hitspark",
+  "name": "Hitspark",
+  "modrinth_id": null,
+  "curseforge_id": null,
+  "icon_url": "https://raw.githubusercontent.com/iamkaf/modresources/refs/heads/main/pages/hitspark/icon.png",
+  "project_type": "mod",
+  "curseforge_slug": null,
+  "source": {
+    "path": "${MOD_WORKSPACE}/mods/hitspark",
+    "format": "monorepo"
+  }
+}
