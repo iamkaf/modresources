@@ -2,14 +2,14 @@
 
 ![Hitspark: a sword hits a training dummy for a gold critical 9, a combo counter climbs to tier 1, and a red ! pops over a zombie that spots you](IKAF:banner-store.webp)
 
-![Minecraft 1.21.11, 26.1.2, 26.2, and 26.3](https://shieldcn.dev/badge/Minecraft-1.21.11%20%C2%B7%2026.1.2%20%C2%B7%2026.2%20%C2%B7%2026.3-4ade80.svg?logo=lu:Pickaxe&variant=secondary&mode=dark)
-![Fabric, Forge, and NeoForge](https://shieldcn.dev/badge/Loaders-Fabric%20%C2%B7%20Forge%20%C2%B7%20NeoForge-5cd2ff.svg?logo=lu:Layers&variant=secondary&mode=dark)
+![Minecraft 1.21.11, 26.1.2, 26.2, and 26.3](https://shieldcn.dev/badge/Minecraft-1.21.11_%C2%B7_26.1.2_%C2%B7_26.2_%C2%B7_26.3-4ade80.svg?logo=lu:Pickaxe&variant=secondary&mode=dark)
+![Fabric, Forge, and NeoForge](https://shieldcn.dev/badge/Loaders-Fabric_%C2%B7_Forge_%C2%B7_NeoForge-5cd2ff.svg?logo=lu:Layers&variant=secondary&mode=dark)
 [![Requires Amber](https://shieldcn.dev/badge/Requires-Amber-ebb134.svg?logo=lu:Gem&variant=secondary&mode=dark)](https://modrinth.com/mod/amber)
 [![Requires Konfig](https://shieldcn.dev/badge/Requires-Konfig-a78bfa.svg?logo=lu:SlidersHorizontal&variant=secondary&mode=dark)](https://modrinth.com/mod/konfig)
-[![PolyForm Shield license](https://shieldcn.dev/badge/License-PolyForm%20Shield-eeeeee.svg?logo=lu:Scale&variant=secondary&mode=dark)](https://polyformproject.org/licenses/shield/1.0.0)
+[![PolyForm Shield license](https://shieldcn.dev/badge/License-PolyForm_Shield-eeeeee.svg?logo=lu:Scale&variant=secondary&mode=dark)](https://polyformproject.org/licenses/shield/1.0.0)
 [![Issues](https://shieldcn.dev/github/open-issues/iamkaf/mod-issues.svg?variant=secondary&mode=dark)](https://github.com/iamkaf/mod-issues/issues)
 [![Discord](https://shieldcn.dev/discord/1207469438719492176.svg?variant=secondary&mode=dark)](https://discord.gg/HV5WgTksaB)
-[![Support me on Ko-fi](https://shieldcn.dev/badge/Support%20Me-Ko--fi-30d1e3.svg?logo=kofi&variant=secondary&mode=dark)](https://ko-fi.com/iamkaffe)
+[![Support me on Ko-fi](https://shieldcn.dev/badge/Support_Me-Ko--fi-30d1e3.svg?logo=kofi&variant=secondary&mode=dark)](https://ko-fi.com/iamkaffe)
 
 Hitspark makes every fight tell you what just happened. A red **!** pops over a mob the moment it starts hunting you. Every hit throws a damage number, colored by why it landed hard. Charged hits build a combo that adds damage, hits from behind and on mobs that haven't noticed you hit harder, and a training dummy shows your DPS while you practice.
 

@@ -2,14 +2,14 @@
 
 ![Pocket Arcade: three chips hop into a handheld console one at a time, and each one redraws the game on its screen in more color](UPLOAD:banner-store.webp)
 
-![Minecraft 1.21.11, 26.1.2, 26.2, and 26.3](https://shieldcn.dev/badge/Minecraft-1.21.11%20%C2%B7%2026.1.2%20%C2%B7%2026.2%20%C2%B7%2026.3-4ade80.svg?logo=lu:Pickaxe&variant=secondary&mode=dark)
-![Fabric, Forge, and NeoForge](https://shieldcn.dev/badge/Loaders-Fabric%20%C2%B7%20Forge%20%C2%B7%20NeoForge-5cd2ff.svg?logo=lu:Layers&variant=secondary&mode=dark)
+![Minecraft 1.21.11, 26.1.2, 26.2, and 26.3](https://shieldcn.dev/badge/Minecraft-1.21.11_%C2%B7_26.1.2_%C2%B7_26.2_%C2%B7_26.3-4ade80.svg?logo=lu:Pickaxe&variant=secondary&mode=dark)
+![Fabric, Forge, and NeoForge](https://shieldcn.dev/badge/Loaders-Fabric_%C2%B7_Forge_%C2%B7_NeoForge-5cd2ff.svg?logo=lu:Layers&variant=secondary&mode=dark)
 [![Requires Amber](https://shieldcn.dev/badge/Requires-Amber-ebb134.svg?logo=lu:Gem&variant=secondary&mode=dark)](https://modrinth.com/mod/amber)
 [![Requires Konfig](https://shieldcn.dev/badge/Requires-Konfig-a78bfa.svg?logo=lu:SlidersHorizontal&variant=secondary&mode=dark)](https://modrinth.com/mod/konfig)
-[![PolyForm Shield license](https://shieldcn.dev/badge/License-PolyForm%20Shield-eeeeee.svg?logo=lu:Scale&variant=secondary&mode=dark)](https://polyformproject.org/licenses/shield/1.0.0)
+[![PolyForm Shield license](https://shieldcn.dev/badge/License-PolyForm_Shield-eeeeee.svg?logo=lu:Scale&variant=secondary&mode=dark)](https://polyformproject.org/licenses/shield/1.0.0)
 [![Issues](https://shieldcn.dev/github/open-issues/iamkaf/mod-issues.svg?variant=secondary&mode=dark)](https://github.com/iamkaf/mod-issues/issues)
 [![Discord](https://shieldcn.dev/discord/1207469438719492176.svg?variant=secondary&mode=dark)](https://discord.gg/HV5WgTksaB)
-[![Support me on Ko-fi](https://shieldcn.dev/badge/Support%20Me-Ko--fi-30d1e3.svg?logo=kofi&variant=secondary&mode=dark)](https://ko-fi.com/iamkaffe)
+[![Support me on Ko-fi](https://shieldcn.dev/badge/Support_Me-Ko--fi-30d1e3.svg?logo=kofi&variant=secondary&mode=dark)](https://ko-fi.com/iamkaffe)
 
 Pocket Arcade adds a handheld game console you craft, carry, and play anywhere. It starts out with a 1-bit screen and two games. Each upgrade adds two more games and redraws the ones you already have in more color, up to a full-color console with eight games.
 
