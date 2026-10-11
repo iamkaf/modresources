@@ -2,8 +2,8 @@
 
 ![Using Minisort to organize chest contents](https://i.kaf.sh/i/e2e081fc-1d38-4a69-866f-93d929dcc5d1.webp)
 
-![Minecraft 1.21.11, 26.1.2, 26.2, and 26.3](https://shieldcn.dev/badge/Minecraft-1.21.11_%C2%B7_26.1.2_%C2%B7_26.2_%C2%B7_26.3-4ade80.svg?logo=lu:Pickaxe&variant=secondary&mode=dark)
-![Fabric, Forge, and NeoForge](https://shieldcn.dev/badge/Loaders-Fabric_%C2%B7_Forge_%C2%B7_NeoForge-5cd2ff.svg?logo=lu:Layers&variant=secondary&mode=dark)
+![Minecraft 1.21.11, 26.1.2, 26.2, and 26.3](https://shieldcn.dev/badge/Minecraft-1.21.11,_26.1.2,_26.2,_26.3-4ade80.svg?logo=lu:Pickaxe&variant=secondary&mode=dark)
+![Fabric, Forge, and NeoForge](https://shieldcn.dev/badge/Loaders-Fabric,_Forge,_NeoForge-5cd2ff.svg?logo=lu:Layers&variant=secondary&mode=dark)
 [![Requires Amber](https://shieldcn.dev/badge/Requires-Amber-ebb134.svg?logo=lu:Gem&variant=secondary&mode=dark)](https://modrinth.com/mod/amber)
 [![Requires Konfig](https://shieldcn.dev/badge/Requires-Konfig-a78bfa.svg?logo=lu:Settings2&variant=secondary&mode=dark)](https://modrinth.com/mod/konfig)
 [![PolyForm Shield license](https://shieldcn.dev/badge/License-PolyForm_Shield-eeeeee.svg?logo=lu:Scale&variant=secondary&mode=dark)](https://github.com/iamkaf/minisort/blob/main/LICENSE)

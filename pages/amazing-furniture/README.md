@@ -2,8 +2,8 @@
 
 ![Amazing Furniture: planks and wool drop into the Carpenter's Bench and a row of furniture changes to that wood and fabric](https://i.kaf.sh/i/df3bcaa3-e631-456b-8959-759e6c36a4a1.webp)
 
-![Minecraft 1.21.11, 26.1.2, 26.2, and 26.3](https://shieldcn.dev/badge/Minecraft-1.21.11_%C2%B7_26.1.2_%C2%B7_26.2_%C2%B7_26.3-4ade80.svg?logo=lu:Pickaxe&variant=secondary&mode=dark)
-![Fabric, Forge, and NeoForge](https://shieldcn.dev/badge/Loaders-Fabric_%C2%B7_Forge_%C2%B7_NeoForge-5cd2ff.svg?logo=lu:Layers&variant=secondary&mode=dark)
+![Minecraft 1.21.11, 26.1.2, 26.2, and 26.3](https://shieldcn.dev/badge/Minecraft-1.21.11,_26.1.2,_26.2,_26.3-4ade80.svg?logo=lu:Pickaxe&variant=secondary&mode=dark)
+![Fabric, Forge, and NeoForge](https://shieldcn.dev/badge/Loaders-Fabric,_Forge,_NeoForge-5cd2ff.svg?logo=lu:Layers&variant=secondary&mode=dark)
 [![Requires Amber](https://shieldcn.dev/badge/Requires-Amber-ebb134.svg?logo=lu:Gem&variant=secondary&mode=dark)](https://modrinth.com/mod/amber)
 [![PolyForm Shield license](https://shieldcn.dev/badge/License-PolyForm_Shield-eeeeee.svg?logo=lu:Scale&variant=secondary&mode=dark)](https://polyformproject.org/licenses/shield/1.0.0)
 [![Issues](https://shieldcn.dev/github/open-issues/iamkaf/mod-issues.svg?variant=secondary&mode=dark)](https://github.com/iamkaf/mod-issues/issues)
