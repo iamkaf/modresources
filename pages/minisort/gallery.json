@@ -1,10 +1,26 @@
 {
   "images": [
     {
+      "file": "gallery/minisort-banner.webp",
+      "title": "Minisort",
+      "description": "Sort, Deposit, and Retrieve buttons for your storage.",
+      "featured": true,
+      "modrinth": {
+        "sha256": "6616e66a462d61bd373d88db6f0441108cf15059fdc8bda953a48b28c53f7e8f",
+        "url": "https://cdn.modrinth.com/data/u6c6EQt9/images/f1095b2e8e5acbdd01999f95a06e681ff7d33865_350.webp"
+      },
+      "curseforge": {
+        "sha256": "6616e66a462d61bd373d88db6f0441108cf15059fdc8bda953a48b28c53f7e8f",
+        "title": "Minisort",
+        "description": "Sort, Deposit, and Retrieve buttons for your storage.",
+        "position": 0,
+        "syncedAt": "2026-10-10T19:01:49.487Z"
+      }
+    },
+    {
       "file": "gallery/sort-before-after.png",
       "title": "A chest before and after sorting",
       "description": "Sort combines partial stacks and puts the chest in order while leaving your inventory as it was.",
-      "featured": true,
       "modrinth": {
         "sha256": "630c307699877c2e09c77a5948f0f1abd384d78ef254a5d7c00ecdef3a85bb12",
         "url": "https://cdn.modrinth.com/data/u6c6EQt9/images/35bdb1a1cc42d748f5013bde68c8f043ddc96adb.png"
@@ -13,7 +29,7 @@
         "sha256": "630c307699877c2e09c77a5948f0f1abd384d78ef254a5d7c00ecdef3a85bb12",
         "title": "A chest before and after sorting",
         "description": "Sort combines partial stacks and puts the chest in order while leaving your inventory as it was.",
-        "position": 0,
+        "position": 1,
         "syncedAt": "2026-10-10T18:22:43.894Z"
       }
     },
@@ -29,7 +45,7 @@
         "sha256": "90537f1e1a763e280c3316b30259dceec7ae0aea1bcf900d3e8c0e12deff3de3",
         "title": "Deposit matching items",
         "description": "Send items from your main inventory to a chest that already holds them. Your hotbar keeps its items.",
-        "position": 1,
+        "position": 2,
         "syncedAt": "2026-10-10T18:23:16.205Z"
       }
     },
@@ -45,7 +61,7 @@
         "sha256": "fa9a8df1c9d77ee4dc76b15a462fbcf54598280159a102d95af2b1bfd54507af",
         "title": "Restock with Retrieve",
         "description": "Take more of the items you're carrying from the chest, up to the space available in your inventory.",
-        "position": 2,
+        "position": 3,
         "syncedAt": "2026-10-10T18:23:39.482Z"
       }
     },
@@ -61,7 +77,7 @@
         "sha256": "9d9654e71f0446eb082f883b573809f9e440c10b5ca1feb0545dae34657d29cf",
         "title": "Unload with Shift-Deposit",
         "description": "Hold Shift while using Deposit to store anything from your main inventory that fits in the chest. Hotbar items stay put.",
-        "position": 3,
+        "position": 4,
         "syncedAt": "2026-10-10T18:24:13.461Z"
       }
     },
@@ -77,7 +93,7 @@
         "sha256": "d31a25465d65872ae03d6e60669800d46d5dac68928ca448275f8beca7ebd4cf",
         "title": "Sort your inventory",
         "description": "Organize the 27 main inventory slots without rearranging your hotbar.",
-        "position": 4,
+        "position": 5,
         "syncedAt": "2026-10-10T18:24:37.329Z"
       }
     },
@@ -93,7 +109,7 @@
         "sha256": "21133c954f79f2a1520c829796d2ce0b5db2f4c17deae8732fcaa8c90fa7abe1",
         "title": "Items move between slots",
         "description": "Watch items slide to their new slots when you sort, deposit, or retrieve.",
-        "position": 5,
+        "position": 6,
         "syncedAt": "2026-10-10T18:25:02.898Z"
       }
     },
@@ -109,7 +125,7 @@
         "sha256": "1b1ebdafd6f7652649c22540b8f6305549da2a16f9afc43b6505c65185562fb1",
         "title": "Keep building with hand refill",
         "description": "When you place the last block in a stack, a matching stack from your inventory takes its place in your hand.",
-        "position": 6,
+        "position": 7,
         "syncedAt": "2026-10-10T18:25:24.150Z"
       }
     },
@@ -125,7 +141,7 @@
         "sha256": "6738be8994f898981c75259012a330b43fe351815118c8aa6f5ea7cb4d01b892",
         "title": "Replace a broken tool",
         "description": "Hand refill finds another tool in your inventory with matching item data. Its remaining durability can differ.",
-        "position": 7,
+        "position": 8,
         "syncedAt": "2026-10-10T18:25:44.781Z"
       }
     },
@@ -141,7 +157,7 @@
         "sha256": "2a735adb0f40a9f1e562a99650d4612b908983022dfe2e0e885f6a51c3f9f898",
         "title": "Nine button styles",
         "description": "Choose Oak, Spruce, Birch, Dark Oak, Cherry, Bamboo, Crimson, Warped, or Stone. Each style has a hover animation.",
-        "position": 8,
+        "position": 9,
         "syncedAt": "2026-10-10T18:26:06.038Z"
       }
     },
@@ -157,7 +173,7 @@
         "sha256": "1f77a74381be00229082b99aaf699335779d8ae89001ca85903af4a82c4cd740",
         "title": "Room for JEI",
         "description": "JEI's item list leaves room for Minisort's storage buttons.",
-        "position": 9,
+        "position": 10,
         "syncedAt": "2026-10-10T18:26:29.135Z"
       }
     },
@@ -168,6 +184,13 @@
       "modrinth": {
         "sha256": "89da065d4a898a51bdfbdba6203005ba9504e11efb1e6a5b224d4dc649006f55",
         "url": "https://cdn.modrinth.com/data/u6c6EQt9/images/53d57349e1383053c2e67e0992967d52082c11fd_350.webp"
+      },
+      "curseforge": {
+        "sha256": "89da065d4a898a51bdfbdba6203005ba9504e11efb1e6a5b224d4dc649006f55",
+        "title": "Minisort settings",
+        "description": "Choose the sorting order and button style, or adjust the hand refill options.",
+        "position": 11,
+        "syncedAt": "2026-10-10T18:53:46.625Z"
       }
     }
   ]
